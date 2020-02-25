@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block css %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+            {% block header %}
+                {% include('includes/header/header.html.twig') %}
+            {% endblock %}
+
+            <section style="min-height: 80vh">
+                {% block content %}
+                {% endblock %}
+            </section>
+
+
+            {% block footer %}
+                {% include('includes/footer/footer.html.twig') %}
+            {% endblock %}
+
+        {% endblock %}
+
+
+
+
+
+
+        {% block javascripts %}
+
+            <script>
+
+                {#        SCRIPT POUR VERIF NOMBRE DANS FORMULAIRE          #}
+                function verif_nombre(champ)
+                {
+                    var chiffres = new RegExp("[0-9]");
+                    var verif;
+                    var points = 0;
+
+                    for(x = 0; x < champ.value.length; x++)
+                    {
+                        verif = chiffres.test(champ.value.charAt(x));
+                        if(champ.value.charAt(x) == "."){points++;}
+                        if(points > 1){verif = false; points = 1;}
+                        if(verif == false){champ.value = champ.value.substr(0,x) + champ.value.substr(x+1,champ.value.length-x+1); x--;}
+                    }
+                }
+
+                function verif_nombre_max(champ, max){
+
+                    let x = champ.value;
+                    let xsub = x.toString().substr(0,max);
+                    champ.value = xsub;
+
+                }
+                {#        FIN DE SCRIPT         #}
+
+
+
+
+
+                {#     SCRIPT POUR POPUP       #}
+                document.querySelector('#open-modal').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var modal = document.querySelector('.modal');  // assuming you have only 1
+                    var html = document.querySelector('html');
+                    modal.classList.add('is-active');
+                    html.classList.add('is-clipped');
+
+                    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modal.classList.remove('is-active');
+                        html.classList.remove('is-clipped');
+                    });
+
+                    modal.querySelector('.modal-close').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modal.classList.remove('is-active');
+                        html.classList.remove('is-clipped');
+                    });
+
+                    modal.querySelector('.close-popup').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modal.classList.remove('is-active');
+                        html.classList.remove('is-clipped');
+                    });
+                });
+                {#        FIN DE SCRIPT         #}
+
+            </script>
+
+        {% endblock %}
+    </body>
+</html>
