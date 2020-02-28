@@ -7,17 +7,17 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="has-background-white-bis">
         {% block body %}
 
             {% block header %}
                 {% include('includes/header/header.html.twig') %}
             {% endblock %}
 
-            <section style="min-height: 80vh">
+            <div style="min-height: 80vh">
                 {% block content %}
                 {% endblock %}
-            </section>
+            </div>
 
 
             {% block footer %}

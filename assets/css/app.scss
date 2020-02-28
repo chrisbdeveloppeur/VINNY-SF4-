@@ -3,7 +3,24 @@
 //}
 
 
+$navbar-height : 5 rem;
+//$footer-background-color : ;
+$primary : #124490;
+$link : #66cde4;
+$link-hover: #30aae4;
+$strong-color : #cdcdcd;
+$text : black;
+
+
+
+
 // Importer Bulma
 @import "~bulma";
 
-$navbar-height : 5em;
+
+
+
+.button{
+  border-radius: 2px;
+  transition : .2s;
+}

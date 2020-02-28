@@ -1,4 +1,4 @@
-<nav class="navbar has-background-info" role="navigation" aria-label="main navigation">
+<nav class="navbar has-background-black-bis" role="navigation" aria-label="main navigation">
     <div class="navbar-brand" style="align-items: center;">
         <a class="" href="{{ path('home') }}">
             <img src="{{ asset('build/images/vinny_logo_circulo.df62343d.png') }}" alt="" width="150">
@@ -11,76 +11,29 @@
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu" style="align-items: end;">
+    <div id="navbarBasicExample" class="navbar-menu">
 
-{#        <div class="navbar-start">#}
-{#            <div class="navbar-item">#}
-{#                <div class="buttons">#}
-{#                    <a class="button is-primary">#}
-{#                        <strong>Sign up</strong>#}
-{#                    </a>#}
-{#                    <a class="button is-light">#}
-{#                        Log in#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
 
-        <div class="navbar-start">
+        <div class="is-flex" style="width: 100%;justify-content: center;">
             <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
+                <div class="buttons are-normal">
+
+                    <a href="{{ path('about') }}" class="button is-outlined is-link">
+                        <strong>About</strong>
                     </a>
-                    <a class="button is-light">
-                        Log in
+                    <a href="{{ path('beats') }}" class="button is-outlined is-link">
+                        <strong>Beats</strong>
+                    </a>
+                    <a href="{{ path('videos') }}" class="button is-outlined is-link">
+                        <strong>Videos</strong>
+                    </a>
+                    <a href="{{ path('licences') }}" class="button is-outlined is-link">
+                        <strong>Licences</strong>
+                    </a>
+                    <a href="{{ path('contact') }}" class="button is-outlined is-link">
+                        <strong>Contact</strong>
                     </a>
 
-                    <div class="dropdown is-hoverable is-right">
-                        <div class="dropdown-trigger">
-                            <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu2">
-                                <strong>Vous êtes connecté : # </strong>
-                                <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu is-primary" id="dropdown-menu2" role="menu">
-                            <div class="dropdown-content has-backgrouis-primary">
-
-
-                                <a class="button is-primary is-fullwidth" href="#">
-                                    <span>Accueil</span>
-                                </a>
-
-                                <hr class="dropdown-divider">
-                                <a class="button is-primary is-fullwidth" href="#">
-                                    <span>Gestion des comptes Locataires</span>
-                                </a>
-
-                                <hr class="dropdown-divider">
-                                <a class="button is-primary is-fullwidth" href="#">
-                                    <span>Gestion des comptes Propriétaires</span>
-                                </a>
-
-                                {#                                        <hr class="dropdown-divider">#}
-                                {#                                        <a class="button is-primary is-fullwidth" href="{{ path('admin_register') }}">#}
-                                {#                                            <span>Gestion des comptes Admins</span>#}
-                                {#                                        </a>#}
-
-                                {#                                        <hr class="dropdown-divider">#}
-                                {#                                        <a class="button is-primary is-fullwidth" href="#">#}
-                                {#                                            <span>Modifier mon compte</span>#}
-                                {#                                        </a>#}
-
-                                <hr class="dropdown-divider">
-                                <a class="button is-primary is-fullwidth" href="#">
-                                    <span>Déconnexion</span>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
