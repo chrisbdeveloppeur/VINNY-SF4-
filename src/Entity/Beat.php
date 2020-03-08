@@ -20,6 +20,21 @@ class Beat
     private $id;
 
     /**
+     *
+     * @Vich\UploadableField(mapping="beat_file", fileNameProperty="beatName")
+     *
+     * @var File|null
+     */
+    private $beatFile;
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @var string|null
+     */
+    private $beatName;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $titre;
@@ -91,4 +106,41 @@ class Beat
 
         return $this;
     }
+
+    /**
+     * @return File|null
+     */
+    public function getBeatFile(): ?File
+    {
+        return $this->beatFile;
+    }
+
+    /**
+     * @param File|null $beatFile
+     * @return Beat
+     */
+    public function setBeatFile(?File $beatFile): Beat
+    {
+        $this->beatFile = $beatFile;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBeatName(): ?string
+    {
+        return $this->beatName;
+    }
+
+    /**
+     * @param string|null $beatName
+     * @return Beat
+     */
+    public function setBeatName(?string $beatName): Beat
+    {
+        $this->beatName = $beatName;
+        return $this;
+    }
+
 }
