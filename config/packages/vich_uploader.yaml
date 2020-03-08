@@ -1,0 +1,10 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        beat_image:
+            uri_prefix: /beats/images
+            upload_destination: '%kernel.project_dir%/public/beats/images'
+        beat_file:
+            uri_prefix: /beats/file
+            upload_destination: '%kernel.project_dir%/public/beats/file'
