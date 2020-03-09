@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
-{% block title %}{% include('includes/nav_title.html.twig') %} Admin{% endblock %}
+{% block title %}{% include('includes/nav_title.html.twig') %} Login{% endblock %}
 
 {% block content %}
 
@@ -17,8 +17,15 @@
     <section class="section">
         <div class="container">
             <form method="post">
+
+                {% include 'includes/flash_message.html.twig' %}
+
+
                 {% if error %}
-                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    <div class="form-error notification is-danger">
+                        <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
+                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                    </div>
                 {% endif %}
 
                 {% if app.user %}

@@ -1,0 +1,66 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}{% include('includes/nav_title.html.twig') %} Login{% endblock %}
+
+{% block content %}
+
+    <section class="section is-flex" style="justify-content: center;">
+
+        <div class="column is-two-fifths is-flex" style="justify-content: center;">
+
+
+
+            {{ form_start(registrationForm) }}
+
+            <div class="field has-text-centered">
+                <h1>Enregistrement de compte Administrateur</h1>
+            </div>
+
+            {% include 'includes/flash_message.html.twig' %}
+            {% if form_errors(registrationForm) != null %}
+                <div class="form-error notification is-danger">
+                    <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
+                    {{ form_errors(registrationForm) }}
+                </div>
+            {% endif %}
+
+            <div class="field">
+                <label class="label">Email *</label>
+
+                <div class="">
+
+                    {{ form_row(registrationForm.email, {'attr' : {'class' : 'input', 'alt' : 'email'}
+                    }) }}
+
+                </div>
+
+            </div>
+
+            <div class="field">
+                <label class="label">Mot de passe *</label>
+                <div class="control">
+                    {{ form_row(registrationForm.plainPassword.first, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez votre Mot de passe', 'class' : 'input', 'alt' : 'password'}
+                    }) }}
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label class="label">Comfirmez votre mot de passe *</label>
+                <div class="control">
+                    {{ form_row(registrationForm.plainPassword.second, {'attr' : {'class' : 'input', 'placeholder' : 'Répétez votre mot de passe', 'class' : 'input', 'alt' : 'confirm password'}
+                    }) }}
+                </div>
+            </div>
+
+            <div class="field is-flex" style="justify-content: center">
+                <button class="button is-info">S'enregistrer</button>
+            </div>
+
+
+            {{ form_end(registrationForm) }}
+        </div>
+
+    </section>
+
+{% endblock %}

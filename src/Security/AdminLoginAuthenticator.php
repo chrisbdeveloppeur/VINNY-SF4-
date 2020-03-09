@@ -39,7 +39,7 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
 
     public function supports(Request $request)
     {
-        return 'app_login' === $request->attributes->get('_route')
+        return 'admin_login' === $request->attributes->get('_route')
             && $request->isMethod('POST');
     }
 
@@ -67,9 +67,11 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
 
         $user = $this->entityManager->getRepository(Admin::class)->findOneBy(['email' => $credentials['email']]);
 
+//        dd($user);
+
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException('L\'adresse email entrée n\'est pas reconnue');
         }
 
         return $user;
@@ -77,6 +79,10 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
 
     public function checkCredentials($credentials, UserInterface $user)
     {
+//        dd($credentials);
+        if (!$credentials){
+            throw new CustomUserMessageAuthenticationException('Mot de passe incorrect');
+        }
         return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
     }
 
@@ -93,13 +99,10 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
         if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
             return new RedirectResponse($targetPath);
         }
-
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
     protected function getLoginUrl()
     {
-        return $this->urlGenerator->generate('app_login');
+        return $this->urlGenerator->generate('admin_login');
     }
 }
