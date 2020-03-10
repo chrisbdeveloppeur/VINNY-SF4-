@@ -11,7 +11,15 @@
         {% block body %}
 
             {% block header %}
-                {% include('includes/header/header.html.twig') %}
+                {% if is_granted('ROLE_USER') %}
+
+                        {% include('includes/header/admin_header.html.twig') %}
+
+                {% else %}
+
+                        {% include('includes/header/header.html.twig') %}
+
+                {% endif %}
             {% endblock %}
 
             <div style="min-height: 80vh">

@@ -38,7 +38,7 @@
 
         <div class="navbar-end is-size-4">
             {% if is_granted('ROLE_USER') %}
-                <a href="{{ path('admin_app_logout') }}" class="navbar-item has-text-danger">
+                <a href="{{ path('admin_app_logout') }}" class="navbar-item" id="deco">
                     Deconnexion
                 </a>
             {% else %}
