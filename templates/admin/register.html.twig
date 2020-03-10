@@ -9,7 +9,6 @@
         <div class="column is-two-fifths is-flex" style="justify-content: center;">
 
 
-
             {{ form_start(registrationForm) }}
 
             <div class="field has-text-centered">
@@ -17,12 +16,14 @@
             </div>
 
             {% include 'includes/flash_message.html.twig' %}
+
             {% if form_errors(registrationForm) != null %}
                 <div class="form-error notification is-danger">
                     <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                     {{ form_errors(registrationForm) }}
                 </div>
             {% endif %}
+
 
             <div class="field">
                 <label class="label">Email *</label>

@@ -10,9 +10,12 @@
     <body class="has-background-white-bis">
         {% block body %}
 
-            {% block header %}
-                {% include('includes/header/admin_header.html.twig') %}
-            {% endblock %}
+            <header>
+                {% block header %}
+                    {% include('includes/header/admin_header.html.twig') %}
+                {% endblock %}
+            </header>
+
 
             <div style="min-height: 80vh">
                 {% block content %}

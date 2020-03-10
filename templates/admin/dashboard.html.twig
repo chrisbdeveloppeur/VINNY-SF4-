@@ -14,6 +14,8 @@
         </div>
     </section>
 
+    {% if is_granted('ROLE_USER') %}
+
     <section class="section">
         <div class="container">
             <h1 class="title">Espace d'aministration</h1>
@@ -23,6 +25,21 @@
             <a class="button" href="{{ path('admin_app_logout') }}">Se deconnecter</a>
         </div>
     </section>
+
+    {% else %}
+
+        <section class="hero is-large">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                        Vous n'êtes pas éligible à cette page
+                    </h1>
+                    <a class="button is-large" style="margin: auto" href="{{ path('home') }}">Revenir à l'Accueil</a>
+                </div>
+            </div>
+        </section>
+
+    {% endif %}
 
 
 {% endblock %}

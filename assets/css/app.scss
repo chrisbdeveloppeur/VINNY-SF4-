@@ -3,24 +3,42 @@
 //}
 
 
-$navbar-height : 5 rem;
+//$navbar-height : 5 rem;
 //$footer-background-color : ;
 $primary : #124490;
 $link : #66cde4;
 $link-hover: #30aae4;
 $strong-color : #cdcdcd;
 $text : black;
-
-
+$navbar-burger-color : #66cde4;
+$navbar-item-color : #66cde4;
+$navbar-item-hover-color: black;
+$navbar-item-hover-background-color: #30aae4;
 
 
 // Importer Bulma
 @import "~bulma";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-
-
+.navbar-item
+{
+  font-weight: bold;
+  transition: 0.5s;
+}
+.navbar-end .navbar-item
+{
+  color: $warning;
+}
+.navbar-end .navbar-item:hover
+{
+  background: $warning;
+}
 
 .button{
-  border-radius: 2px;
-  transition : .2s;
+  border-radius: 5px;
+  transition : .5s;
 }
+
+
+
+

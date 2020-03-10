@@ -4,38 +4,38 @@
             <img src="{{ asset('build/images/vinny_logo_circulo.df62343d.png') }}" alt="" width="150">
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active')">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active')"
+           style="border: solid #66cde4 1px;border-radius: 2px;right: 25px">
             <span ></span>
             <span ></span>
             <span ></span>
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu has-background-black-bis">
 
 
-        <div class="is-flex" style="width: 100%;justify-content: center;">
-            <div class="navbar-item">
-                <div class="buttons are-normal">
 
-                    <a href="{{ path('about') }}" class="button is-outlined is-link">
-                        <strong>About</strong>
-                    </a>
-                    <a href="{{ path('beats') }}" class="button is-outlined is-link">
-                        <strong>Beats</strong>
-                    </a>
-                    <a href="{{ path('videos') }}" class="button is-outlined is-link">
-                        <strong>Videos</strong>
-                    </a>
-                    <a href="{{ path('licences') }}" class="button is-outlined is-link">
-                        <strong>Licences</strong>
-                    </a>
-                    <a href="{{ path('contact') }}" class="button is-outlined is-link">
-                        <strong>Contact</strong>
-                    </a>
+        <div class="navbar-start is-size-4">
 
-                </div>
-            </div>
+            <a href="{{ path('about') }}" class="navbar-item is-outlined is-link">
+                About
+            </a>
+            <a href="{{ path('beats') }}" class="navbar-item is-outlined is-link">
+                Beats
+            </a>
+            <a href="{{ path('videos') }}" class="navbar-item is-outlined is-link">
+                Videos
+            </a>
+            <a href="{{ path('licences') }}" class="navbar-item is-outlined is-link">
+                Licences
+            </a>
+            <a href="{{ path('contact') }}" class="navbar-item is-outlined is-link">
+                Contact
+            </a>
+
         </div>
+
+
     </div>
 </nav>
