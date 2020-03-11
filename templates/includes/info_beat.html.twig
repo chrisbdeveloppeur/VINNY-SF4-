@@ -4,6 +4,7 @@
     <td>
         {% if beat.beatname %}
             <img src="{{ vich_uploader_asset(beat, 'beatFile') | imagine_filter('thumb') }}" alt="">
+        {% else %}
         {% endif %}
     </td>
     <td>{{ beat.beatname }}</td>

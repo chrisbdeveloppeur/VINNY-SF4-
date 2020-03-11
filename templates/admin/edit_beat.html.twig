@@ -96,6 +96,13 @@
 
             </div>
 
+            <div class="column is-flex" style="justify-content: center">
+                {% if beat.beatname %}
+                    <img src="{{ vich_uploader_asset(beat, 'beatFile') | imagine_filter('normal_size') }}" alt="">
+                {% endif %}
+            </div>
+
+
             <div class="field">
                 <label class="label">Fichier</label>
 
