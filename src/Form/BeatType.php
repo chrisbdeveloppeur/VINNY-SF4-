@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Beat;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -32,6 +33,12 @@ class BeatType extends AbstractType
             ->add('genre', TextType::class, [
                 'label' => false,
                 'error_bubbling' => true,
+            ])
+
+            ->add('beatFile', FileType::class, [
+                'label' => false,
+                'error_bubbling' => true,
+                'required' => false,
             ])
         ;
     }

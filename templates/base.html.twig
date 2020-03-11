@@ -5,6 +5,8 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block css %}
             {{ encore_entry_link_tags('app') }}
+            <link href="/node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
+
         {% endblock %}
     </head>
     <body class="has-background-white-bis">
@@ -40,6 +42,33 @@
 
 
         {% block javascripts %}
+
+            <script src="/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+
+            <script src="/node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"></script>
+
+            <script>
+                // Initialize all div with carousel class
+                var carousels = bulmaCarousel.attach('.carousel', options);
+
+
+                // Loop on each carousel initialized
+                for(var i = 0; i < carousels.length; i++) {
+                    // Add listener to  event
+                    carousels[i].on('before:show', state => {
+                        console.log(state);
+                    });
+                }
+
+                // Access to bulmaCarousel instance of an element
+                var element = document.querySelector('#my-element');
+                if (element && element.bulmaCarousel) {
+                    // bulmaCarousel instance is available as element.bulmaCarousel
+                    element.bulmaCarousel.on('before-show', function(state) {
+                        console.log(state);
+                    });
+                }
+            </script>
 
             <script>
 

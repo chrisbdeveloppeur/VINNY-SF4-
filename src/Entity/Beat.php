@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BeatRepository")
@@ -24,6 +26,7 @@ class Beat
      * @Vich\UploadableField(mapping="beat_file", fileNameProperty="beatName")
      *
      * @var File|null
+     * @Assert\Image(mimeTypes="image/jpeg")
      */
     private $beatFile;
 
@@ -53,6 +56,11 @@ class Beat
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $genre;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
 
     public function getId(): ?int
     {
@@ -122,6 +130,9 @@ class Beat
     public function setBeatFile(?File $beatFile): Beat
     {
         $this->beatFile = $beatFile;
+        if ($this->beatFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
         return $this;
     }
 
@@ -140,6 +151,18 @@ class Beat
     public function setBeatName(?string $beatName): Beat
     {
         $this->beatName = $beatName;
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
         return $this;
     }
 

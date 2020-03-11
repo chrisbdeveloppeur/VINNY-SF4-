@@ -1,11 +1,21 @@
 {% for beat in beat %}
 
 <tr>
+    <td>
+        {% if beat.beatname %}
+            <img src="{{ vich_uploader_asset(beat, 'beatFile') | imagine_filter('thumb') }}" alt="">
+        {% endif %}
+    </td>
     <td>{{ beat.beatname }}</td>
     <td>{{ beat.titre }}</td>
     <td>{{ beat.artiste }}</td>
     <td>{{ beat.album }}</td>
     <td>{{ beat.genre }}</td>
+    <td>
+        <a href="{{ path('admin_edit_beat', {id: beat.id} ) }}" class="button is-success is-outlined">
+            <span>Modifier</span>
+        </a>
+    </td>
 </tr>
 
 {% endfor %}

@@ -8,13 +8,17 @@ use App\Form\BeatType;
 use App\Form\RegistrationFormType;
 use App\Repository\BeatRepository;
 use App\Security\AdminLoginAuthenticator;
+use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 /**
  * @Route("/admin", name="admin_")
@@ -111,6 +115,48 @@ class AdminController extends AbstractController
 
         return $this->render('admin/add_beat.html.twig', [
             'addBeatForm' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/edit_beat_{id}", name="edit_beat")
+     * @IsGranted("ROLE_USER")
+     */
+    public function editAnnonce(Request $request, BeatRepository $beatRepository, $id){
+
+
+        $beat = $beatRepository->find($id);
+        $form = $this->createForm(BeatType::class, $beat);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+//            if($beat->getBeatFile() instanceof  UploadedFile){
+//                $cacheManager->remove($helper->asset($beat, 'beatFile'));
+//            }
+
+            // Formulaire lié à une classe entité: getData() retourne l'entité
+            $beat = $form->getData();
+
+            // Mise à jour de l'entité en BDD
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($beat);
+            $entityManager->flush();
+
+
+            // Ajout d'un message flash
+            $this->addFlash('success', 'Le Beat a été modifié');
+
+
+
+        }else if ($form->isSubmitted()) {
+            $this->addFlash('danger', 'Echec de modification.');
+        }
+
+        return $this->render('admin/edit_beat.html.twig', [
+            'editBeatForm' => $form->createView(),
+            'beat' => $beat,
         ]);
     }
 

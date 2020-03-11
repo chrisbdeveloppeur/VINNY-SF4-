@@ -2,7 +2,6 @@
 //    background-color: lightgray;
 //}
 
-
 //$navbar-height : 5 rem;
 //$footer-background-color : ;
 $primary : #124490;
@@ -19,7 +18,10 @@ $title-size : 2.5rem;
 
 // Importer Bulma
 @import "~bulma";
+@import '~bulma-extensions';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
 
 .navbar-item
 {
@@ -49,6 +51,7 @@ $title-size : 2.5rem;
   border-radius: 5px;
   transition : .5s;
 }
+
 
 
 
