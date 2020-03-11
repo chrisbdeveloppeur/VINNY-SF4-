@@ -8,7 +8,7 @@
     <section class="hero is-link is-small is-bold">
         <div class="hero-body has-text-centered">
             <div class="container">
-                <h1 class="title">
+                <h1 class="title has-text-weight-bold">
                     Beats
                 </h1>
             </div>
@@ -23,9 +23,7 @@
 
             <article>
                 <h3>H3 Article</h3>
-                {% for beat in beat %}
-                {{ beat.titre }}
-                {% endfor %}
+                {% include('includes/tableau_beat.html.twig') %}
             </article>
 
         </div>
