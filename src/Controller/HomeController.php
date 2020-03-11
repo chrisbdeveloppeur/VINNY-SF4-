@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\BeatRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -44,10 +45,12 @@ class HomeController extends AbstractController
     /**
      * @Route("/beats", name="beats")
      */
-    public function beats()
+    public function beats(BeatRepository $beatRepository)
     {
-        return $this->render('beats/beats.html.twig', [
+        $beat = $beatRepository->findAll();
 
+        return $this->render('beats/beats.html.twig', [
+            'beat' => $beat,
         ]);
     }
 

@@ -16,13 +16,27 @@
 
     {% if is_granted('ROLE_USER') %}
 
+
     <section class="section">
+
         <div class="container">
+
+            <div class="columns is-centered">
+                {% include 'includes/flash_message.html.twig' %}
+            </div>
+
+
             <h1 class="title">Espace d'aministration</h1>
             <h2 class="subtitle">
                 Vous êtes connecté {{ app.user.email }}
             </h2>
-            <a class="button" href="{{ path('admin_app_logout') }}">Se deconnecter</a>
+            <a class="button is-info" href="{{ path('admin_add_beat') }}">Ajouter un beat</a>
+        </div>
+
+        <div class="container">
+
+            {% include('includes/tableau_beat.html.twig') %}
+
         </div>
     </section>
 

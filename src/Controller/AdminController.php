@@ -3,7 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Admin;
+use App\Entity\Beat;
+use App\Form\BeatType;
 use App\Form\RegistrationFormType;
+use App\Repository\BeatRepository;
 use App\Security\AdminLoginAuthenticator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -77,9 +80,38 @@ class AdminController extends AbstractController
     /**
      * @Route("/dashboard", name="dashboard")
      */
-    public function dashboard()
+    public function dashboard(BeatRepository $beatRepository)
     {
-        return $this->render('admin/dashboard.html.twig');
+        $beat = $beatRepository->findAll();
+        return $this->render('admin/dashboard.html.twig', [
+            'beat' => $beat,
+        ]);
+    }
+
+    /**
+     * @Route("/add_beat", name="add_beat")
+     */
+    public function addBeat(Request $request)
+    {
+        $beat = new Beat();
+        $form = $this->createForm(BeatType::class, $beat);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $beat = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($beat);
+            $entityManager->flush();
+
+            $this->addFlash('info', 'Le Beat a bien été ajouter !');
+
+            return $this->redirectToRoute('admin_dashboard');
+
+        }
+
+        return $this->render('admin/add_beat.html.twig', [
+            'addBeatForm' => $form->createView(),
+        ]);
     }
 
     /**

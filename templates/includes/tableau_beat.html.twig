@@ -1,0 +1,30 @@
+<h2 class="title is-3 has-text-centered">Liste des Beats : </h2>
+
+<table class="table" style="margin: auto">
+    <thead>
+    <tr>
+        <th><abbr title="Nom">Beat name</abbr></th>
+        <th><abbr title="email">Titre</abbr></th>
+        <th><abbr title="Telephone">Artiste</abbr></th>
+        <th><abbr title="Adresse">Album</abbr></th>
+        <th><abbr title="Code_postale">Genre</abbr></th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% include 'includes/info_beat.html.twig' with {beat: beat} %}
+
+    </tbody>
+
+
+    <tfoot>
+    <tr>
+        <th><abbr title="Nom">Beat name</abbr></th>
+        <th><abbr title="email">Titre</abbr></th>
+        <th><abbr title="Telephone">Artiste</abbr></th>
+        <th><abbr title="Adresse">Album</abbr></th>
+        <th><abbr title="Code_postale">Genre</abbr></th>
+    </tr>
+    </tfoot>
+</table>
