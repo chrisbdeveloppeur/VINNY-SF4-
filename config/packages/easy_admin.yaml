@@ -1,0 +1,22 @@
+easy_admin:
+    entities:
+        Beat :
+            class : App\Entity\Beat
+#            image_base_path: '%kernel.project_dir%/public/beats/file'
+            form :
+                fields :
+                    - {property: 'beatFile' , type : 'vich_image'}
+                    - {property: 'titre' , type : 'text'}
+                    - {property: 'artiste' , type : 'text'}
+                    - {property: 'album' , type : 'text'}
+                    - {property: 'genre' , type : 'text'}
+            list:
+                fields:
+                    - {property: 'beatName', type: 'image', template: 'includes/vich_uploader_image.html.twig' }
+                    - {property: 'titre' , type: 'text'}
+                    - {property: 'artiste' , type: 'text'}
+                    - {property: 'album' , type: 'text'}
+                    - {property: 'genre' , type: 'text'}
+#            show:
+#                fields:
+#                    - { property: 'beatName', type: 'image', template: 'vich_uploader_image.html.twig' }

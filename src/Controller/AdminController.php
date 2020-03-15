@@ -21,7 +21,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 /**
- * @Route("/admin", name="admin_")
+ * @Route("/adm", name="admin_")
  */
 class AdminController extends AbstractController
 {
