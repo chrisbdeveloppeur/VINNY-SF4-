@@ -23,10 +23,33 @@ class Beat
 
     /**
      *
+     * @Vich\UploadableField(mapping="beat_image", fileNameProperty="beatImageName")
+     *
+     * @var File|null
+     * @Assert\Image(
+     *     maxSize="8Mi",
+     *     mimeTypes="image/jpeg",
+     *     mimeTypesMessage = "Seul les fichier jpg/jpeg sont accepter")
+     */
+    private $beatImage;
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @var string|null
+     */
+    private $beatImageName;
+
+
+
+    /**
+     *
      * @Vich\UploadableField(mapping="beat_file", fileNameProperty="beatName")
      *
      * @var File|null
-     * @Assert\Image(mimeTypes="image/jpeg")
+     * @Assert\File(
+     *     maxSize="20Mi",
+     *     mimeTypes="audio/mpeg")
      */
     private $beatFile;
 
@@ -151,6 +174,45 @@ class Beat
     public function setBeatName(?string $beatName): Beat
     {
         $this->beatName = $beatName;
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getBeatImage(): ?File
+    {
+        return $this->beatImage;
+    }
+
+    /**
+     * @param File|null $beatImage
+     * @return Beat
+     */
+    public function setBeatImage(?File $beatImage): Beat
+    {
+        $this->beatImage = $beatImage;
+        if ($this->beatImage instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBeatImageName(): ?string
+    {
+        return $this->beatImageName;
+    }
+
+    /**
+     * @param string|null $beatImageName
+     * @return Beat
+     */
+    public function setBeatImageName(?string $beatImageName): Beat
+    {
+        $this->beatImageName = $beatImageName;
         return $this;
     }
 
