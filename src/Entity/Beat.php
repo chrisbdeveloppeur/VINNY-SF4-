@@ -28,8 +28,8 @@ class Beat
      * @var File|null
      * @Assert\Image(
      *     maxSize="8Mi",
-     *     mimeTypes="image/jpeg",
-     *     mimeTypesMessage = "Seul les fichier jpg/jpeg sont accepter")
+     *     mimeTypes={"image/jpeg", "image/png"},
+     *     mimeTypesMessage = "Seul les fichier jpg/jpeg/png sont acceptés")
      */
     private $beatImage;
 

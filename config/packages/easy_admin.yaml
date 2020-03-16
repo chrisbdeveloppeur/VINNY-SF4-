@@ -16,7 +16,7 @@ easy_admin:
             list:
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
-                    - {property: 'beatName', type: 'file'}
+                    - {property: 'beatName', type: 'text', label : "Nom du fichier audio"}
                     - { property: 'beatFile', type : 'audio', template: 'includes/vich_uploader_audio.html.twig' }
                     - {property: 'titre' , type: 'text'}
                     - {property: 'artiste' , type: 'text'}
