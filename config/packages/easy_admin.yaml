@@ -1,4 +1,6 @@
 easy_admin:
+    list:
+        actions: ['edit', 'search']
     entities:
         Beat :
             class : App\Entity\Beat
@@ -13,7 +15,6 @@ easy_admin:
                     - {property: 'genre' , type : 'text'}
             list:
                 fields:
-                    - actions: ['edit', 'search']
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
                     - {property: 'beatName', type: 'file'}
                     - { property: 'beatFile', type : 'audio', template: 'includes/vich_uploader_audio.html.twig' }
