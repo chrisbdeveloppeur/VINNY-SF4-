@@ -71,7 +71,7 @@ class AdminController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
-            return $this->redirectToRoute('admin_dashboard');
+            return $this->redirectToRoute('easyadmin');
         }
 
         $error = $authenticationUtils->getLastAuthenticationError();

@@ -1,23 +1,52 @@
 {% for beat in beat %}
 
-<tr>
-    <td>
-        {% if beat.beatname %}
-            <img src="{{ vich_uploader_asset(beat, 'beatFile') | imagine_filter('thumb') }}" alt="">
-        {% else %}
-        {% endif %}
-    </td>
-    <td>{{ beat.beatname }}</td>
-    <td>{{ beat.titre }}</td>
-    <td>{{ beat.artiste }}</td>
-    <td>{{ beat.album }}</td>
-    <td>{{ beat.genre }}</td>
-    <td>
-        <a href="{{ path('admin_edit_beat', {id: beat.id} ) }}" class="button is-success is-outlined">
-            <span>Modifier</span>
-        </a>
-    </td>
-</tr>
+<div class="column is-vcentered box" style="background-color: rgba(0,0,0,0.2)">
+
+        <div class="columns is-centered is-vcentered has-text-centered">
+                {% if beat.beatname %}
+                        <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('thumb') }}" alt="">
+                {% else %}
+                {% endif %}
+
+
+                <div class="column is-flex" style="justify-content: center;align-items: center">
+                        <div class="">
+                                <label for=""><strong class="has-text-black">Titre : </strong></label>
+                                {{ beat.titre }}
+                        </div>
+                </div>
+
+
+                <div class="column">
+                        <label for=""><strong class="has-text-black">Artiste : </strong></label>
+                        {{ beat.artiste }}
+                </div>
+                <div class="column">
+                        <label for=""><strong class="has-text-black">Album : </strong></label>
+                        {{ beat.album }}
+                </div>
+                <div class="column">
+                        <label for=""><strong class="has-text-black">Genre : </strong></label>
+                        {{ beat.genre }}
+                </div>
+        </div>
+
+                <audio id="player" class="js-player" style="width: 100%">
+                        <source src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
+                </audio>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
 {% endfor %}
 

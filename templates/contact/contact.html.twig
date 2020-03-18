@@ -16,14 +16,91 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="subtitle">
+
+            <h2 class="subtitle has-text-centered">
                 Section <strong class="has-text-link">Contact</strong>
             </h2>
 
-            <article>
-                <h3>H3 Article</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque blanditiis dolores doloribus dolorum eius eveniet magni nesciunt omnis! Cumque dolore fugiat harum illo, magni maxime odio omnis soluta voluptatem.</p>
-            </article>
+            <div class="columns is-vcentered is-centered">
+                <article class="column is-half-desktop has-text-centered">
+
+                    <div class="field">
+                        <label class="label">Nom</label>
+                        <div class="control">
+                            <input class="input is-link" type="text" placeholder="Entrez votre nom">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Prénom</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-link" type="text" placeholder="Entrez votre prénom">
+                            <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                        </span>
+                        </div>
+{#                        <p class="help is-success">This username is available</p>#}
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email *</label>
+                        <div class="control has-icons-left has-icons-right">
+
+                            <input class="input is-link" type="email" placeholder="Entrez votre adresse mail">
+
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+
+                        </div>
+{#                        <p class="help is-danger">This email is invalid</p>#}
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Objet</label>
+                        <div class="control">
+                            <input class="input is-link" type="email" placeholder="Email input" value="">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea is-link" placeholder="Ecrivez votre message" style="resize: none;"></textarea>
+                        </div>
+                    </div>
+
+{#                    <div class="field">#}
+{#                        <div class="control">#}
+{#                            <label class="checkbox">#}
+{#                                <input type="checkbox">#}
+{#                                I agree to the <a href="#">terms and conditions</a>#}
+{#                            </label>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="field">#}
+{#                        <div class="control">#}
+{#                            <label class="radio">#}
+{#                                <input type="radio" name="question">#}
+{#                                Yes#}
+{#                            </label>#}
+{#                            <label class="radio">#}
+{#                                <input type="radio" name="question">#}
+{#                                No#}
+{#                            </label>#}
+{#                        </div>#}
+{#                    </div>#}
+
+                    <div class="field is-grouped justify-content-center">
+                        <div class="control">
+                            <button class="button is-success">Envoyer</button>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
 
         </div>
     </section>

@@ -1,4 +1,21 @@
 easy_admin:
+    design:
+#        assets:
+#            # all kinds of assets are supported and linked accordingly
+#            css:
+#                - '//example.org/css/admin1.css'
+#                - 'http://example.org/css/admin2.css'
+#                - 'https://example.org/css/admin3.css'
+#                - '/bundles/user/css/admin4.css'
+#                - 'bundles/app/css/admin5.css'
+#            js:
+#                - '//example.org/js/admin1.js'
+#                - 'http://example.org/js/admin2.js'
+#                - 'https://example.org/js/admin3.js'
+#                - '/bundles/user/js/admin4.js'
+#                - 'bundles/app/js/admin5.js'
+#        brand_color: 'rgba(0, 0, 0, 0.85)'
+
     list:
         actions: ['edit', 'search']
     entities:
@@ -7,17 +24,16 @@ easy_admin:
             form :
                 fields :
                     - {property: 'beatImage' , type : 'vich_image', label : "Illustration"}
-                    - {property: 'beatName' , type : 'text', label : "Nom du fichier audio actuel"}
                     - {property: 'beatFile' , type : 'file', label : "Fichier audio"}
                     - {property: 'titre' , type : 'text'}
-                    - {property: 'artiste' , type : 'text'}
+                    - {property: 'artiste' , type : 'text', placeholder : 'Vinny Vixi'}
                     - {property: 'album' , type : 'text'}
-                    - {property: 'genre' , type : 'text'}
+                    - {property: 'genre' , type : 'select'}
             list:
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
                     - {property: 'beatName', type: 'text', label : "Nom du fichier audio"}
-                    - { property: 'beatFile', type : 'audio', template: 'includes/vich_uploader_audio.html.twig' }
+                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
                     - {property: 'titre' , type: 'text'}
                     - {property: 'artiste' , type: 'text'}
                     - {property: 'album' , type: 'text'}
