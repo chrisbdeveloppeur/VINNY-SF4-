@@ -44,38 +44,42 @@
 
         {% block javascripts %}
 
+            {#     POUR BOOSTRAP     #}
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
+
             <script src="/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
 
-            <script src="/node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"></script>
+{#            <script src="/node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"></script>#}
+
+{#            <script>#}
+{#                // Initialize all div with carousel class#}
+{#                var carousels = bulmaCarousel.attach('.carousel', options);#}
+
+
+{#                // Loop on each carousel initialized#}
+{#                for(var i = 0; i < carousels.length; i++) {#}
+{#                    // Add listener to  event#}
+{#                    carousels[i].on('before:show', state => {#}
+{#                        console.log(state);#}
+{#                    });#}
+{#                }#}
+
+{#                // Access to bulmaCarousel instance of an element#}
+{#                var element = document.querySelector('#my-element');#}
+{#                if (element && element.bulmaCarousel) {#}
+{#                    // bulmaCarousel instance is available as element.bulmaCarousel#}
+{#                    element.bulmaCarousel.on('before-show', function(state) {#}
+{#                        console.log(state);#}
+{#                    });#}
+{#                }#}
+{#            </script>#}
 
             <script>
-                // Initialize all div with carousel class
-                var carousels = bulmaCarousel.attach('.carousel', options);
 
-
-                // Loop on each carousel initialized
-                for(var i = 0; i < carousels.length; i++) {
-                    // Add listener to  event
-                    carousels[i].on('before:show', state => {
-                        console.log(state);
-                    });
-                }
-
-                // Access to bulmaCarousel instance of an element
-                var element = document.querySelector('#my-element');
-                if (element && element.bulmaCarousel) {
-                    // bulmaCarousel instance is available as element.bulmaCarousel
-                    element.bulmaCarousel.on('before-show', function(state) {
-                        console.log(state);
-                    });
-                }
-            </script>
-
-            <script>
 
                 {#        SCRIPT POUR VERIF NOMBRE DANS FORMULAIRE          #}
                 function verif_nombre(champ)

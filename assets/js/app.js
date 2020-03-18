@@ -9,7 +9,9 @@
 import '../css/app.scss';
 
 const logo = require('../images/logo/vinny_logo_circulo.png');
-const BMSTARS = require('../images/BMSTARS.jpg')
+const BMSTARS = require('../images/BMSTARS.jpg');
+const BM = require('../images/BM.jpg');
+const CDC2 = require('../images/CDC2.jpg');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

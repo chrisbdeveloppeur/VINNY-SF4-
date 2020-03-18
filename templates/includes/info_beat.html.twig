@@ -1,35 +1,40 @@
 {% for beat in beat %}
+<div class="columns is-centered is-vcentered">
 
-<div class="column is-vcentered box" style="background-color: rgba(0,0,0,0.2)">
-
-        <div class="columns is-centered is-vcentered has-text-centered">
+        <div class="is-flex is-centered is-vcentered justify-content-center">
                 {% if beat.beatname %}
-                        <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('thumb') }}" alt="">
+                        <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration">
                 {% else %}
                 {% endif %}
+        </div>
+
+        <div class="column is-vcentered box" style="background-color: rgba(0,0,0,0.1)">
+
+                <div class="columns is-centered is-vcentered has-text-centered">
 
 
-                <div class="column is-flex" style="justify-content: center;align-items: center">
-                        <div class="">
-                                <label for=""><strong class="has-text-black">Titre : </strong></label>
-                                {{ beat.titre }}
+
+                        <div class="column is-flex" style="justify-content: center;align-items: center">
+                                <div class="">
+                                        <label for=""><strong class="has-text-black">Titre : </strong></label>
+                                        {{ beat.titre }}
+                                </div>
+                        </div>
+
+
+                        <div class="column">
+                                <label for=""><strong class="has-text-black">Artiste : </strong></label>
+                                {{ beat.artiste }}
+                        </div>
+                        <div class="column">
+                                <label for=""><strong class="has-text-black">Album : </strong></label>
+                                {{ beat.album }}
+                        </div>
+                        <div class="column">
+                                <label for=""><strong class="has-text-black">Genre : </strong></label>
+                                {{ beat.genre }}
                         </div>
                 </div>
-
-
-                <div class="column">
-                        <label for=""><strong class="has-text-black">Artiste : </strong></label>
-                        {{ beat.artiste }}
-                </div>
-                <div class="column">
-                        <label for=""><strong class="has-text-black">Album : </strong></label>
-                        {{ beat.album }}
-                </div>
-                <div class="column">
-                        <label for=""><strong class="has-text-black">Genre : </strong></label>
-                        {{ beat.genre }}
-                </div>
-        </div>
 
                 <audio id="player" class="js-player" style="width: 100%">
                         <source src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
@@ -37,7 +42,9 @@
 
 
 
+        </div>
 </div>
+
 
 
 

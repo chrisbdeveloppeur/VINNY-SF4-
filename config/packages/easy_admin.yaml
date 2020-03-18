@@ -1,6 +1,9 @@
 easy_admin:
     design:
-#        assets:
+        menu:
+            - { label: 'Retour au site', url: 'http://127.0.0.1:8000', rel: 'index', icon: home }
+            - { entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+    #        assets:
 #            # all kinds of assets are supported and linked accordingly
 #            css:
 #                - '//example.org/css/admin1.css'
@@ -22,13 +25,15 @@ easy_admin:
         Beat :
             class : App\Entity\Beat
             form :
+                title : 'Modification du Beat'
                 fields :
+#                    - 'beatName'
                     - {property: 'beatImage' , type : 'vich_image', label : "Illustration"}
                     - {property: 'beatFile' , type : 'file', label : "Fichier audio"}
                     - {property: 'titre' , type : 'text'}
-                    - {property: 'artiste' , type : 'text', placeholder : 'Vinny Vixi'}
+                    - {property: 'artiste' , type : 'text'}
                     - {property: 'album' , type : 'text'}
-                    - {property: 'genre' , type : 'select'}
+                    - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
             list:
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
