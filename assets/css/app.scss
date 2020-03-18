@@ -4,6 +4,7 @@
 
 //$navbar-height : 5 rem;
 //$footer-background-color : ;
+
 $primary : #124490;
 $link : #66cde4;
 $link-hover: #30aae4;
@@ -23,33 +24,43 @@ $title-size : 2.5rem;
 
 
 
-.navbar-item
+.nav-item, .nav-link
 {
   font-weight: bold;
   transition: 0.5s;
+  border-radius: 2px;
 }
-.navbar-end .navbar-item
+.nav-link:hover
+{
+  background: $link-dark;
+  //color: $dark;
+}
+
+#dashboard
 {
   color: $warning;
+  border-radius: 2px;
 }
-.navbar-end .navbar-item:hover
+#dashboard:hover
 {
   background: $warning;
+  color: $dark;
 }
 
 #deco
 {
   color: $danger;
+  border-radius: 2px;
 }
 #deco:hover
 {
   background: $danger;
-  color: #000;
+  color: $dark;
 }
 
 .button{
   border-radius: 5px;
-  transition : .5s;
+  transition : 0.5s;
 }
 
 a
@@ -61,6 +72,8 @@ a
 {
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
 }
+
+
 
 
 

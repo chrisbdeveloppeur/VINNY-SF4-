@@ -2,23 +2,23 @@
 
 {% block navbarend %}
 
-    <div class="navbar-end is-size-4">
+    <div class="navbar-nav is-size-4">
 
         {% if is_granted('ROLE_USER') %}
-            <a href="{{ path('easyadmin') }}" class="navbar-item">
+            <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard">
                 Dashboard
             </a>
 
-            <a href="{{ path('admin_app_logout') }}" class="navbar-item" id="deco">
+            <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco">
                 Deconnexion
             </a>
         {% else %}
-            <a href="{{ path('admin_login') }}" class="navbar-item">
+            <a href="{{ path('admin_login') }}" class="nav-link">
                 Connexion Admin
             </a>
         {% endif %}
 
-    </div>
+{#    </div>#}
 
 {% endblock %}
 
