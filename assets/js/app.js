@@ -13,6 +13,7 @@ const logo2 = require('../images/logo/vinny_logo_reducidisimo.png');
 const BMSTARS = require('../images/BMSTARS.jpg');
 const BM = require('../images/BM.jpg');
 const CDC2 = require('../images/CDC2.jpg');
+const shop = require('../images/icons/shop.png')
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

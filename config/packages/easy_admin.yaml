@@ -34,6 +34,7 @@ easy_admin:
                     - {property: 'artiste' , type : 'text'}
                     - {property: 'album' , type : 'text'}
                     - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+
             edit:
                 title: 'Modifier un Beat'
                 fields:
@@ -43,6 +44,7 @@ easy_admin:
                     - {property: 'artiste' , type: 'text'}
                     - {property: 'album' , type: 'text'}
                     - {property: 'genre' , type: 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+
             list:
                 batch_actions: ['delete']
                 fields:
@@ -68,3 +70,5 @@ easy_admin:
                     - {property: 'objet' , type: 'text'}
                     - {property: 'message' , type: 'text'}
                     - {property: 'date' , type: 'date', format: 'j/n/Y'}
+
+
