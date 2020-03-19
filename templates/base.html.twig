@@ -6,6 +6,7 @@
 
         <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
         <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Handlee|Permanent+Marker&display=swap" rel="stylesheet">
 
         {% block css %}
             {{ encore_entry_link_tags('app') }}
@@ -52,31 +53,6 @@
 
 
             <script src="/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
-
-{#            <script src="/node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"></script>#}
-
-{#            <script>#}
-{#                // Initialize all div with carousel class#}
-{#                var carousels = bulmaCarousel.attach('.carousel', options);#}
-
-
-{#                // Loop on each carousel initialized#}
-{#                for(var i = 0; i < carousels.length; i++) {#}
-{#                    // Add listener to  event#}
-{#                    carousels[i].on('before:show', state => {#}
-{#                        console.log(state);#}
-{#                    });#}
-{#                }#}
-
-{#                // Access to bulmaCarousel instance of an element#}
-{#                var element = document.querySelector('#my-element');#}
-{#                if (element && element.bulmaCarousel) {#}
-{#                    // bulmaCarousel instance is available as element.bulmaCarousel#}
-{#                    element.bulmaCarousel.on('before-show', function(state) {#}
-{#                        console.log(state);#}
-{#                    });#}
-{#                }#}
-{#            </script>#}
 
             <script>
 
@@ -140,12 +116,24 @@
 
             </script>
 
-            {# PLYR JS #}
-            <script src="path/to/plyr.js"></script>
+{#             PLYR JS#}
+{#            <script src="path/to/plyr.js"></script>#}
+{#            <script> const players = Plyr.setup('.js-player');</script>#}
+{#             END PLYR JS#}
+
+
+            {#  AUTO PAUSE MUSIC  #}
             <script>
-                const players = Plyr.setup('.js-player');
+                document.addEventListener('play', function(e){
+                    var audios = document.getElementsByTagName('audio');
+                    for(var i = 0, len = audios.length; i < len;i++){
+                        if(audios[i] != e.target){
+                            audios[i].pause();
+                        }
+                    }
+                }, true);
             </script>
-            {# END PLYR JS #}
+            {#        FIN DE SCRIPT         #}
 
         {% endblock %}
     </body>

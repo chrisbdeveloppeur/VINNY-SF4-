@@ -1,0 +1,20 @@
+
+<h1>Salut Vinny</h1>
+
+<h3>
+    {% if message.prenom %}
+    <strong class="is-info">{{ message.prenom }}</strong> viens de t'envoyer un message !
+    {% else %}
+        Un visiteur vien de t'envoyer une message !
+    {% endif %}
+</h3>
+
+<label for=""><strong>Infos de l'expéditeur :</strong></label>
+<p><strong>Email :</strong> {{ message.email }}</p>
+<p><strong>Nom :</strong> {{ message.nom }}</p>
+<p><strong>Prénom :</strong> {{ message.prenom }}</p>
+
+<h4><strong>Objet :</strong> {{ message.objet }}
+<h4><strong>Message :</strong></h4>
+<p>{{ message.message }}</p>
+

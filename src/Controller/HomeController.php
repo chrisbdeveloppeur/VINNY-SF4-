@@ -2,8 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Message;
+use App\Form\MessageType;
+use App\Notif\NotifMessage;
 use App\Repository\BeatRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -77,10 +82,32 @@ class HomeController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact()
+    public function contact(Request $request, EntityManagerInterface $entityManager, NotifMessage $notifMessage)
     {
-        return $this->render('contact/contact.html.twig', [
+        $form = $this->createForm(MessageType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
 
+            /**
+             * @var Message $message
+             */
+            $message = $form->getData();
+
+            $entityManager->persist($message);
+            $entityManager->flush();
+
+            $notifMessage->sendMessage($message);
+
+//            dd($message);
+
+            $this->addFlash('info', 'Votre mail à bien été envoyé');
+
+
+            return $this->redirectToRoute('contact');
+        }
+        return $this->render('contact/contact.html.twig', [
+            'messageForm' => $form->createView(),
         ]);
     }
+
 }

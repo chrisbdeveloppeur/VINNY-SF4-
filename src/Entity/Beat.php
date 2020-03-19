@@ -34,7 +34,7 @@ class Beat
     private $beatImage;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
      * @var string|null
      */
@@ -49,7 +49,7 @@ class Beat
      * @var File|null
      * @Assert\File(
      *     maxSize="20Mi",
-     *     mimeTypes="audio/mpeg")
+     *     mimeTypes={"audio/mpeg","application/x-font-gdos"})
      */
     private $beatFile;
 
@@ -61,12 +61,12 @@ class Beat
     private $beatName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $artiste;
 

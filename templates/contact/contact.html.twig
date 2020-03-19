@@ -18,8 +18,21 @@
         <div class="container">
 
             <h2 class="subtitle has-text-centered">
-                Section <strong class="has-text-link">Contact</strong>
+                Une <strong class="has-text-link">question </strong>? un <strong class="has-text-link">avis </strong>?<br>
+                N'hésite pas à m'envoyer un message !
             </h2>
+
+            {% include 'includes/flash_message.html.twig' %}
+
+            {% if form_errors(messageForm) != null %}
+                <div class="form-error notification is-danger">
+                    <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
+                    {{ form_errors(messageForm) }}
+                </div>
+            {% endif %}
+
+            {{ form_start(messageForm) }}
+
 
             <div class="columns is-vcentered is-centered">
                 <article class="column is-half-desktop has-text-centered">
@@ -27,79 +40,63 @@
                     <div class="field">
                         <label class="label">Nom</label>
                         <div class="control">
-                            <input class="input is-link" type="text" placeholder="Entrez votre nom">
+                            {{ form_row(messageForm.nom, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez votre nom', 'alt' : 'nom'}
+                            }) }}
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Prénom</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input is-link" type="text" placeholder="Entrez votre prénom">
+                            {{ form_row(messageForm.prenom, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez votre prénom', 'alt' : 'prénom'}
+                            }) }}
                             <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                        </span>
+                                <i class="fas fa-user"></i>
+                            </span>
                         </div>
-{#                        <p class="help is-success">This username is available</p>#}
+
                     </div>
 
                     <div class="field">
                         <label class="label">Email *</label>
                         <div class="control has-icons-left has-icons-right">
-
-                            <input class="input is-link" type="email" placeholder="Entrez votre adresse mail">
-
+                            {{ form_row(messageForm.email, {'attr' : {'class' : 'input', 'placeholder' : 'ex : mail@mail.com', 'alt' : 'email'}
+                            }) }}
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
 
                         </div>
-{#                        <p class="help is-danger">This email is invalid</p>#}
+
                     </div>
 
                     <div class="field">
                         <label class="label">Objet</label>
                         <div class="control">
-                            <input class="input is-link" type="email" placeholder="Email input" value="">
+                            {{ form_row(messageForm.objet, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez l\'objet de votre message', 'alt' : 'email'}
+                            }) }}
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Message</label>
                         <div class="control">
-                            <textarea class="textarea is-link" placeholder="Ecrivez votre message" style="resize: none;"></textarea>
+{#                            <textarea class="textarea is-link" placeholder="Ecrivez votre message" style="resize: none;"></textarea>#}
+                            {{ form_row(messageForm.message, {'attr' : {'class' : 'textarea', 'placeholder' : 'Entrez votre message', 'alt' : 'message'}
+                            }) }}
                         </div>
                     </div>
 
-{#                    <div class="field">#}
-{#                        <div class="control">#}
-{#                            <label class="checkbox">#}
-{#                                <input type="checkbox">#}
-{#                                I agree to the <a href="#">terms and conditions</a>#}
-{#                            </label>#}
-{#                        </div>#}
-{#                    </div>#}
-
-{#                    <div class="field">#}
-{#                        <div class="control">#}
-{#                            <label class="radio">#}
-{#                                <input type="radio" name="question">#}
-{#                                Yes#}
-{#                            </label>#}
-{#                            <label class="radio">#}
-{#                                <input type="radio" name="question">#}
-{#                                No#}
-{#                            </label>#}
-{#                        </div>#}
-{#                    </div>#}
-
                     <div class="field is-grouped justify-content-center">
                         <div class="control">
-                            <button class="button is-success">Envoyer</button>
+                            <button class="button is-success" type="submit">Envoyer</button>
                         </div>
                     </div>
 
                 </article>
             </div>
+
+            {{ form_end(messageForm) }}
 
 
         </div>

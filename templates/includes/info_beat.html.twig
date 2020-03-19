@@ -1,14 +1,15 @@
 {% for beat in beat %}
-<div class="columns is-centered is-vcentered">
+<div class="columns is-centered is-vcentered container" style="background-color: rgba(0,0,0,0.1);margin-bottom: 30px;">
 
         <div class="is-flex is-centered is-vcentered justify-content-center">
-                {% if beat.beatname %}
-                        <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration">
-                {% else %}
-                {% endif %}
+                        {% if beat.beatimagename %}
+                                <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0">
+                        {% else %}
+                                <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0">
+                        {% endif %}
         </div>
 
-        <div class="column is-vcentered box" style="background-color: rgba(0,0,0,0.1)">
+        <div class="column is-vcentered" >
 
                 <div class="columns is-centered is-vcentered has-text-centered">
 
@@ -17,26 +18,42 @@
                         <div class="column is-flex" style="justify-content: center;align-items: center">
                                 <div class="">
                                         <label for=""><strong class="has-text-black">Titre : </strong></label>
-                                        {{ beat.titre }}
+                                        {% if beat.titre %}
+                                                {{ beat.titre }}
+                                        {% else %}
+                                                N/C
+                                        {% endif %}
                                 </div>
                         </div>
 
 
                         <div class="column">
                                 <label for=""><strong class="has-text-black">Artiste : </strong></label>
-                                {{ beat.artiste }}
+                                {% if beat.artiste %}
+                                        {{ beat.artiste }}
+                                {% else %}
+                                        Vinny Vixi
+                                {% endif %}
                         </div>
                         <div class="column">
                                 <label for=""><strong class="has-text-black">Album : </strong></label>
-                                {{ beat.album }}
+                                {% if beat.album %}
+                                        {{ beat.album }}
+                                {% else %}
+                                        N/C
+                                {% endif %}
                         </div>
                         <div class="column">
                                 <label for=""><strong class="has-text-black">Genre : </strong></label>
-                                {{ beat.genre }}
+                                {% if beat.genre %}
+                                        {{ beat.genre }}
+                                {% else %}
+                                   N/C
+                                {% endif %}
                         </div>
                 </div>
 
-                <audio id="player" class="js-player" style="width: 100%">
+                <audio controls preload="metadata" id="player" class="js-player" style="width: 100%">
                         <source src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                 </audio>
 

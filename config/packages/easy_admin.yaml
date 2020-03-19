@@ -2,7 +2,8 @@ easy_admin:
     design:
         menu:
             - { label: 'Retour au site', url: 'http://127.0.0.1:8000', rel: 'index', icon: home }
-            - { entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
     #        assets:
 #            # all kinds of assets are supported and linked accordingly
 #            css:
@@ -25,16 +26,25 @@ easy_admin:
         Beat :
             class : App\Entity\Beat
             form :
-                title : 'Modification du Beat'
+                title : 'Ajouter un Beat'
                 fields :
-#                    - 'beatName'
                     - {property: 'beatImage' , type : 'vich_image', label : "Illustration"}
-                    - {property: 'beatFile' , type : 'file', label : "Fichier audio"}
+                    - {property: 'beatFile' , type : 'file', label : "Fichier audio",type_options: { required: true }}
                     - {property: 'titre' , type : 'text'}
                     - {property: 'artiste' , type : 'text'}
                     - {property: 'album' , type : 'text'}
                     - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+            edit:
+                title: 'Modifier un Beat'
+                fields:
+                    - {property: 'beatImage' , type: 'vich_image', label: "Illustration"}
+                    - {property: 'beatFile' , type: 'file', label: "Fichier audio", type_options: { required: false }}
+                    - {property: 'titre' , type: 'text'}
+                    - {property: 'artiste' , type: 'text'}
+                    - {property: 'album' , type: 'text'}
+                    - {property: 'genre' , type: 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
             list:
+                batch_actions: ['delete']
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
                     - {property: 'beatName', type: 'text', label : "Nom du fichier audio"}
@@ -43,3 +53,18 @@ easy_admin:
                     - {property: 'artiste' , type: 'text'}
                     - {property: 'album' , type: 'text'}
                     - {property: 'genre' , type: 'text'}
+
+        Message:
+            class: App\Entity\Message
+            disabled_actions: ['new', 'edit']
+
+            list:
+                actions: ['show']
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'nom' , type: 'text'}
+                    - {property: 'prenom', type: 'text'}
+                    - {property: 'email', type: 'text'}
+                    - {property: 'objet' , type: 'text'}
+                    - {property: 'message' , type: 'text'}
+                    - {property: 'date' , type: 'date', format: 'j/n/Y'}

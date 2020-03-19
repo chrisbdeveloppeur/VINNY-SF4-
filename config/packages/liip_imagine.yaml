@@ -22,4 +22,4 @@ liip_imagine :
         normal_size :
             quality : 100
             filters :
-                thumbnail : { size : [140, 140], mode : outbound }
+                thumbnail : { size : [132, 132], mode : outbound }
