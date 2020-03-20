@@ -7,6 +7,7 @@
 
 $primary : #124490;
 $link : #66cde4;
+$danger : #e11a1a;
 $link-hover: #30aae4;
 $strong-color : #cdcdcd;
 $text : black;
@@ -17,7 +18,7 @@ $navbar-item-hover-background-color: #30aae4;
 $title-size : 2.5rem;
 $family-primary : 'Handlee', cursive;
 $family-secondary :'Permanent Marker', cursive;
-$family-code : 'Caveat', cursive;
+$family-code : 'Source Sans Pro', sans-serif;
 
 // Importer Bulma
 @import "~bulma";
@@ -26,10 +27,9 @@ $family-code : 'Caveat', cursive;
 
 *
 {
-  font-family: $family-primary;
+  font-family: $family-code;
   //font-size: 1.5rem;
 }
-
 
 .nav-item, .nav-link
 {
@@ -70,6 +70,17 @@ $family-code : 'Caveat', cursive;
   transition : 0.5s;
 }
 
+.open-modal
+{
+  transition: 0.2s;
+}
+
+.open-modal:hover
+{
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.1);
+}
+
 a
 {
  text-decoration: none !important;
@@ -78,6 +89,11 @@ a
 .pricing-plan:hover
 {
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+.textarea
+{
+  resize: none;
 }
 
 

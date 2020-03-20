@@ -2,17 +2,11 @@
 
 {% block title %}{% include('includes/nav_title.html.twig') %} Contact{% endblock %}
 
-{% block content %}
+{% block titre %}
+    Contact
+{% endblock %}
 
-    <section class="hero is-link is-small is-bold">
-        <div class="hero-body has-text-centered">
-            <div class="container">
-                <h1 class="title has-text-weight-bold">
-                    Contact
-                </h1>
-            </div>
-        </div>
-    </section>
+{% block content %}
 
     <section class="section">
         <div class="container">
@@ -39,15 +33,18 @@
 
                     <div class="field">
                         <label class="label">Nom</label>
-                        <div class="control">
+                        <div class="control has-icons-left">
                             {{ form_row(messageForm.nom, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez votre nom', 'alt' : 'nom'}
                             }) }}
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Prénom</label>
-                        <div class="control has-icons-left has-icons-right">
+                        <div class="control has-icons-left">
                             {{ form_row(messageForm.prenom, {'attr' : {'class' : 'input', 'placeholder' : 'Entrez votre prénom', 'alt' : 'prénom'}
                             }) }}
                             <span class="icon is-small is-left">
@@ -59,7 +56,7 @@
 
                     <div class="field">
                         <label class="label">Email *</label>
-                        <div class="control has-icons-left has-icons-right">
+                        <div class="control has-icons-left">
                             {{ form_row(messageForm.email, {'attr' : {'class' : 'input', 'placeholder' : 'ex : mail@mail.com', 'alt' : 'email'}
                             }) }}
                             <span class="icon is-small is-left">
@@ -79,7 +76,7 @@
                     </div>
 
                     <div class="field">
-                        <label class="label">Message</label>
+                        <label class="label">Message *</label>
                         <div class="control">
 {#                            <textarea class="textarea is-link" placeholder="Ecrivez votre message" style="resize: none;"></textarea>#}
                             {{ form_row(messageForm.message, {'attr' : {'class' : 'textarea', 'placeholder' : 'Entrez votre message', 'alt' : 'message'}

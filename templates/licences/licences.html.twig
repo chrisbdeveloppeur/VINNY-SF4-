@@ -2,17 +2,11 @@
 
 {% block title %}{% include('includes/nav_title.html.twig') %} Licences{% endblock %}
 
-{% block content %}
+{% block titre %}
+    Licences
+{% endblock %}
 
-    <section class="hero is-link is-small is-bold">
-        <div class="hero-body has-text-centered">
-            <div class="container">
-                <h1 class="title has-text-weight-bold">
-                    Licences
-                </h1>
-            </div>
-        </div>
-    </section>
+{% block content %}
 
     <section class="section">
         <div class="container">
@@ -28,47 +22,55 @@
 
             <div class="pricing-table">
 
-                <div class="pricing-plan is-link">
-                    <div class="plan-header">Tarif Primaire</div>
-                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>30</span></div>
-                    <div class="plan-items">
-                        <div class="plan-item">Instrumentale taguée au format .mp3</div>
-                        <div class="plan-item">Le son reste en vente</div>
-                        <div class="plan-item">Pas de déclaration SACEM</div>
-                        <div class="plan-item">-</div>
-                    </div>
-                    <div class="plan-footer">
-                        <button class="button is-fullwidth">Choisir</button>
-                    </div>
-                </div>
+                {% for licence in licence %}
+                <div class="pricing-plan is-{{ licence.color }}">
+                    <div class="plan-header has-background-{{ licence.color }} has-text-white">{{ licence.titre }}</div>
+                    <div class="plan-price">
 
-                <div class="pricing-plan is-link">
-                    <div class="plan-header">Tarif Secondedaire</div>
-                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>50</span></div>
-                    <div class="plan-items">
-                        <div class="plan-item">Instrumentale taguée au format .mp3 & .wave</div>
-                        <div class="plan-item">Instrumentale taguée au format .wave</div>
-                        <div class="plan-item">Le son reste en vente</div>
-                        <div class="plan-item">Pas de déclaration SACEM</div>
+                        {% if licence.dollar and licence.euro %}
+                            <span class="plan-price-amount"><span class="plan-price-currency">$</span>{{ licence.dollar }}</span>
+                            <span class="is-size-3">/</span>
+                            <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>
+                        {% else %}
+                            <span class="plan-price-amount">Tarif à négocier</span>
+                        {% endif %}
                     </div>
-                    <div class="plan-footer">
-                        <button class="button is-fullwidth">Choisir</button>
-                    </div>
-                </div>
 
-                <div class="pricing-plan is-danger">
-                    <div class="plan-header">Exclusivité</div>
-                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>Tarif négocié</span></div>
                     <div class="plan-items">
-                        <div class="plan-item">Instrumentale taguée au format .mp3 & .wave</div>
-                        <div class="plan-item">Instrumentale taguée au format .wave</div>
-                        <div class="plan-item">Le son est retiré de la vente</div>
-                        <div class="plan-item">Déclaration SACEM</div>
+
+                        {% if licence.info1 %}
+                            <div class="plan-item">{{ licence.info1 }}</div>
+                        {% else %}
+                            <div class="plan-item">-</div>
+                        {% endif %}
+
+                        {% if licence.info2 %}
+                            <div class="plan-item">{{ licence.info2 }}</div>
+                        {% else %}
+                            <div class="plan-item">-</div>
+                        {% endif %}
+
+                        {% if licence.info3 %}
+                            <div class="plan-item">{{ licence.info3 }}</div>
+                        {% else %}
+                            <div class="plan-item">-</div>
+                        {% endif %}
+
+                        {% if licence.info4 %}
+                            <div class="plan-item">{{ licence.info4 }}</div>
+                        {% else %}
+                            <div class="plan-item">-</div>
+                        {% endif %}
+
                     </div>
+
                     <div class="plan-footer">
-                        <button class="button is-fullwidth">Choisir</button>
+                        <button class="button is-fullwidth has-text-weight-bold has-text-white">Choisir</button>
                     </div>
                 </div>
+                {% endfor %}
+
+
             </div>
 
 

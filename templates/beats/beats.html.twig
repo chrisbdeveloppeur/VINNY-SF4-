@@ -2,25 +2,21 @@
 
 {% block title %}{% include('includes/nav_title.html.twig') %} Beats{% endblock %}
 
+{% block titre %}
+Beats
+{% endblock %}
+
 {% block content %}
 
 
-    <section class="hero is-link is-small is-bold">
-        <div class="hero-body has-text-centered">
-            <div class="container">
-                <h1 class="title has-text-weight-bold">
-                    Beats
-                </h1>
-            </div>
-        </div>
-    </section>
+
 
     <section class="section">
         <div class="container">
 
-            <article>
+{#            <article>#}
                 {% include('includes/tableau_beat.html.twig') %}
-            </article>
+{#            </article>#}
 
         </div>
     </section>

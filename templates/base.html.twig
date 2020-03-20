@@ -6,7 +6,11 @@
 
         <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
         <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+
+        {% block fonts %}
         <link href="https://fonts.googleapis.com/css?family=Caveat|Handlee|Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+        {% endblock %}
 
         {% block css %}
             {{ encore_entry_link_tags('app') }}
@@ -29,9 +33,33 @@
                 {% endif %}
             {% endblock %}
 
-            <div style="min-height: 80vh">
-                {% block content %}
-                {% endblock %}
+
+            <div style="min-height: 80vh;background:center no-repeat url('{{ asset('build/images/headphones.64ab74be.jpg')}}')">
+                <div class="layer" style="height: 100%;width: 100%; background: rgba(255,255,255,0.7)">
+
+                    <section class="hero is-link is-small is-bold" style="background:center url('{{ asset('build/images/sound_2-2.25d7a5b3.jpg') }}')">
+                        <div class="hero-body has-text-centered">
+                            <div class="container">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="hero bg-dark is-small is-bold">
+                        <div class="hero-body has-text-centered">
+                            <div class="container">
+                                <h1 class="title has-text-weight-bold text-white">
+                                    {% block titre %}
+
+                                    {% endblock %}
+                                </h1>
+                            </div>
+                        </div>
+                    </section>
+
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
             </div>
 
 
@@ -87,31 +115,36 @@
 
 
                 {#     SCRIPT POUR POPUP       #}
-                document.querySelector('#open-modal').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var modal = document.querySelector('.modal');  // assuming you have only 1
-                    var html = document.querySelector('html');
-                    modal.classList.add('is-active');
-                    html.classList.add('is-clipped');
-
-                    modal.querySelector('.modal-background').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        modal.classList.remove('is-active');
-                        html.classList.remove('is-clipped');
-                    });
-
-                    modal.querySelector('.modal-close').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        modal.classList.remove('is-active');
-                        html.classList.remove('is-clipped');
-                    });
-
-                    modal.querySelector('.close-popup').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        modal.classList.remove('is-active');
-                        html.classList.remove('is-clipped');
-                    });
-                });
+                // var popup = document.querySelectorAll('.open-modal');
+                // console.log(popup);
+                // for (i = 0; i < popup.length; i++){
+                //
+                //     popup[i].addEventListener('click', function(event) {
+                //         event.preventDefault();
+                //         var modal = document.querySelector('.modal');  // assuming you have only 1
+                //         var html = document.querySelector('html');
+                //         modal.classList.add('is-active');
+                //         html.classList.add('is-clipped');
+                //
+                //         modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                //             e.preventDefault();
+                //             modal.classList.remove('is-active');
+                //             html.classList.remove('is-clipped');
+                //         });
+                //
+                //         modal.querySelector('.modal-close').addEventListener('click', function(e) {
+                //             e.preventDefault();
+                //             modal.classList.remove('is-active');
+                //             html.classList.remove('is-clipped');
+                //         });
+                //
+                //         modal.querySelector('.close-popup').addEventListener('click', function(e) {
+                //             e.preventDefault();
+                //             modal.classList.remove('is-active');
+                //             html.classList.remove('is-clipped');
+                //         });
+                //     });
+                // }
                 {#        FIN DE SCRIPT         #}
 
             </script>

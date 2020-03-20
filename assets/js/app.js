@@ -13,7 +13,11 @@ const logo2 = require('../images/logo/vinny_logo_reducidisimo.png');
 const BMSTARS = require('../images/BMSTARS.jpg');
 const BM = require('../images/BM.jpg');
 const CDC2 = require('../images/CDC2.jpg');
-const shop = require('../images/icons/shop.png')
+const shop = require('../images/icons/shop.png');
+const main_background = require('../images/caisson.png');
+const second_background = require('../images/headphones.jpg');
+const baner1 = require('../images/sound_2.jpg');
+const baner2 = require('../images/sound_2-2.jpg')
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

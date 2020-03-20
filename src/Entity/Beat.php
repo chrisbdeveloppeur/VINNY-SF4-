@@ -87,6 +87,11 @@ class Beat
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $bpm;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -226,6 +231,18 @@ class Beat
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getBpm(): ?float
+    {
+        return $this->bpm;
+    }
+
+    public function setBpm(?float $bpm): self
+    {
+        $this->bpm = $bpm;
 
         return $this;
     }

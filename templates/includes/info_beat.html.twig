@@ -1,11 +1,11 @@
 {% for beat in beat %}
-<div class="columns is-centered is-vcentered container" style="background-color: rgba(0,0,0,0.1);margin-bottom: 30px;">
+<div class="columns is-centered is-vcentered container bg-dark has-text-link" style="margin-bottom: 30px;">
 
         <div class="is-flex is-centered is-vcentered justify-content-center">
                         {% if beat.beatimagename %}
-                                <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0">
+                                <img src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0; background: rgba(255,255,255,0.1)">
                         {% else %}
-                                <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0">
+                                <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') | imagine_filter('normal_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); margin: 10px 10px 10px 0; background: rgba(255,255,255,0.1)">
                         {% endif %}
         </div>
 
@@ -15,7 +15,7 @@
 
                         <div class="column is-flex" style="justify-content: center;align-items: center">
                                 <div class="">
-                                        <label for=""><strong class="has-text-black">Titre : </strong></label>
+                                        <label for=""><strong class="">Titre : </strong></label>
                                         {% if beat.titre %}
                                                 {{ beat.titre }}
                                         {% else %}
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="column">
-                                <label for=""><strong class="has-text-black">Artiste : </strong></label>
+                                <label for=""><strong class="">Prod. by : </strong></label>
                                 {% if beat.artiste %}
                                         {{ beat.artiste }}
                                 {% else %}
@@ -34,16 +34,16 @@
                         </div>
 
                         <div class="column">
-                                <label for=""><strong class="has-text-black">Album : </strong></label>
-                                {% if beat.album %}
-                                        {{ beat.album }}
+                                <label for=""><strong class="">BPM : </strong></label>
+                                {% if beat.bpm %}
+                                        {{ beat.bpm }}
                                 {% else %}
                                         N/C
                                 {% endif %}
                         </div>
 
                         <div class="column">
-                                <label for=""><strong class="has-text-black">Genre : </strong></label>
+                                <label for=""><strong class="">Genre : </strong></label>
                                 {% if beat.genre %}
                                         {{ beat.genre }}
                                 {% else %}
@@ -60,45 +60,156 @@
 
         <div class="is-flex is-centered is-vcentered justify-content-center">
 
-                <button class="" id="open-modal">
-                        <img src="{{ asset('build/images/shop.ea0d13d0.png') | imagine_filter('small_size') }}" alt="Illustration" style="box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+                        <img class="open-modal" src="{{ asset('build/images/shop.ea0d13d0.png') | imagine_filter('small_size') }}" alt="Illustration" style="">
                 </button>
 
-                <div class="modal">
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
 
-                                <header class="modal-card-head has-background-warning">
-                                        <p class="modal-card-title">Attention</p>
-                                </header>
+                                        <div class="pricing-table">
 
-                                <section class="modal-card-body">
-                                        L'annonce : <strong>#</strong> est actuellement <div class="tag is-success">publiée</div> . <br>
-                                        Souhaitez vous tout de même la supprimer définitivement? <br>
-                                        <i>(Cette annonce ne sera donc plus consultable)</i>
-                                </section>
+                                                {% for licence in licence %}
+                                                        <div class="pricing-plan is-{{ licence.color }}">
+                                                                <div class="plan-header has-background-{{ licence.color }} has-text-white">{{ licence.titre }}</div>
+                                                                <div class="plan-price">
 
-                                <footer class="modal-card-foot" style="justify-content: space-between;">
-                                        <button class="button close-popup">Annuler</button>
-                                        <button class="button is-success">Confirmer</button>
-                                </footer>
+                                                                        {% if licence.dollar and licence.euro %}
+                                                                                <span class="plan-price-amount"><span class="plan-price-currency">$</span>{{ licence.dollar }}</span>
+                                                                                <span class="is-size-3">/</span>
+                                                                                <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>
+                                                                        {% else %}
+                                                                                <span class="plan-price-amount">Tarif à négocier</span>
+                                                                        {% endif %}
+                                                                </div>
 
+                                                                <div class="plan-items">
+
+                                                                        {% if licence.info1 %}
+                                                                                <div class="plan-item">{{ licence.info1 }}</div>
+                                                                        {% else %}
+                                                                                <div class="plan-item">-</div>
+                                                                        {% endif %}
+
+                                                                        {% if licence.info2 %}
+                                                                                <div class="plan-item">{{ licence.info2 }}</div>
+                                                                        {% else %}
+                                                                                <div class="plan-item">-</div>
+                                                                        {% endif %}
+
+                                                                        {% if licence.info3 %}
+                                                                                <div class="plan-item">{{ licence.info3 }}</div>
+                                                                        {% else %}
+                                                                                <div class="plan-item">-</div>
+                                                                        {% endif %}
+
+                                                                        {% if licence.info4 %}
+                                                                                <div class="plan-item">{{ licence.info4 }}</div>
+                                                                        {% else %}
+                                                                                <div class="plan-item">-</div>
+                                                                        {% endif %}
+
+                                                                </div>
+
+                                                                <div class="plan-footer">
+                                                                        <button class="button is-fullwidth has-text-weight-bold has-text-white">Choisir</button>
+                                                                </div>
+                                                        </div>
+                                                {% endfor %}
+
+
+                                        </div>
+
+
+                                </div>
                         </div>
-                        <button class="modal-close is-large" aria-label="close">MODAL</button>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+{#                <div class="modal">#}
+{#                        <div class="modal-background"></div>#}
+{#                        <div class="modal-card">#}
+
+{#                                <header class="modal-card-head has-background-warning">#}
+{#                                        <p class="modal-card-title is-family-code">Attention</p>#}
+{#                                </header>#}
+
+{#                                <section class="modal-card-body">#}
+
+
+{#                                        <div class="pricing-table">#}
+
+{#                                                <div class="pricing-plan is-link">#}
+{#                                                        <div class="plan-header">Tarif Primaire</div>#}
+{#                                                        <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>30</span></div>#}
+{#                                                        <div class="plan-items">#}
+{#                                                                <div class="plan-item">Instrumentale taguée au format .mp3</div>#}
+{#                                                                <div class="plan-item">Le son reste en vente</div>#}
+{#                                                                <div class="plan-item">Pas de déclaration SACEM</div>#}
+{#                                                                <div class="plan-item">-</div>#}
+{#                                                        </div>#}
+{#                                                        <div class="plan-footer">#}
+{#                                                                <button class="button is-fullwidth">Choisir</button>#}
+{#                                                        </div>#}
+{#                                                </div>#}
+
+{#                                                <div class="pricing-plan is-link">#}
+{#                                                        <div class="plan-header">Tarif Secondedaire</div>#}
+{#                                                        <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>50</span></div>#}
+{#                                                        <div class="plan-items">#}
+{#                                                                <div class="plan-item">Instrumentale taguée au format .mp3 & .wave</div>#}
+{#                                                                <div class="plan-item">Instrumentale taguée au format .wave</div>#}
+{#                                                                <div class="plan-item">Le son reste en vente</div>#}
+{#                                                                <div class="plan-item">Pas de déclaration SACEM</div>#}
+{#                                                        </div>#}
+{#                                                        <div class="plan-footer">#}
+{#                                                                <button class="button is-fullwidth">Choisir</button>#}
+{#                                                        </div>#}
+{#                                                </div>#}
+
+{#                                                <div class="pricing-plan is-danger">#}
+{#                                                        <div class="plan-header">Exclusivité</div>#}
+{#                                                        <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">€</span>Tarif négocié</span></div>#}
+{#                                                        <div class="plan-items">#}
+{#                                                                <div class="plan-item">Instrumentale taguée au format .mp3 & .wave</div>#}
+{#                                                                <div class="plan-item">Instrumentale taguée au format .wave</div>#}
+{#                                                                <div class="plan-item">Le son est retiré de la vente</div>#}
+{#                                                                <div class="plan-item">Déclaration SACEM</div>#}
+{#                                                        </div>#}
+{#                                                        <div class="plan-footer">#}
+{#                                                                <button class="button is-fullwidth">Choisir</button>#}
+{#                                                        </div>#}
+{#                                                </div>#}
+{#                                        </div>#}
+
+
+{#                                </section>#}
+
+
+
+{#                                <footer class="modal-card-foot" style="justify-content: space-between;">#}
+{#                                        <button class="button close-popup is-family-code">Annuler</button>#}
+{#                                        <button class="button is-success is-family-code">Confirmer</button>#}
+{#                                </footer>#}
+
+{#                        </div>#}
+{#                        <button class="modal-close is-large" aria-label="close"></button>#}
+{#                </div>#}
 
         </div>
 
 
 </div>
-
-
-
-
-
-
-
-
 
 
 

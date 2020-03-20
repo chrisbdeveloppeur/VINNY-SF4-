@@ -6,6 +6,7 @@ use App\Entity\Message;
 use App\Form\MessageType;
 use App\Notif\NotifMessage;
 use App\Repository\BeatRepository;
+use App\Repository\LicenceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -50,12 +51,14 @@ class HomeController extends AbstractController
     /**
      * @Route("/beats", name="beats")
      */
-    public function beats(BeatRepository $beatRepository)
+    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository)
     {
         $beat = $beatRepository->findAll();
+        $licence = $licenceRepository->findAll();
 
         return $this->render('beats/beats.html.twig', [
             'beat' => $beat,
+            'licence' => $licence,
         ]);
     }
 
@@ -72,10 +75,12 @@ class HomeController extends AbstractController
     /**
      * @Route("/licences", name="licences")
      */
-    public function licences()
+    public function licences(LicenceRepository $licenceRepository)
     {
-        return $this->render('licences/licences.html.twig', [
+        $licence = $licenceRepository->findAll();
 
+        return $this->render('licences/licences.html.twig', [
+            'licence' => $licence
         ]);
     }
 
