@@ -47,7 +47,7 @@
                     <section class="hero bg-dark is-small is-bold">
                         <div class="hero-body has-text-centered">
                             <div class="container">
-                                <h1 class="title has-text-weight-bold text-white">
+                                <h1 class="title has-text-weight-bold text-white is-uppercase">
                                     {% block titre %}
 
                                     {% endblock %}
@@ -111,42 +111,6 @@
                 {#        FIN DE SCRIPT         #}
 
 
-
-
-
-                {#     SCRIPT POUR POPUP       #}
-                // var popup = document.querySelectorAll('.open-modal');
-                // console.log(popup);
-                // for (i = 0; i < popup.length; i++){
-                //
-                //     popup[i].addEventListener('click', function(event) {
-                //         event.preventDefault();
-                //         var modal = document.querySelector('.modal');  // assuming you have only 1
-                //         var html = document.querySelector('html');
-                //         modal.classList.add('is-active');
-                //         html.classList.add('is-clipped');
-                //
-                //         modal.querySelector('.modal-background').addEventListener('click', function(e) {
-                //             e.preventDefault();
-                //             modal.classList.remove('is-active');
-                //             html.classList.remove('is-clipped');
-                //         });
-                //
-                //         modal.querySelector('.modal-close').addEventListener('click', function(e) {
-                //             e.preventDefault();
-                //             modal.classList.remove('is-active');
-                //             html.classList.remove('is-clipped');
-                //         });
-                //
-                //         modal.querySelector('.close-popup').addEventListener('click', function(e) {
-                //             e.preventDefault();
-                //             modal.classList.remove('is-active');
-                //             html.classList.remove('is-clipped');
-                //         });
-                //     });
-                // }
-                {#        FIN DE SCRIPT         #}
-
             </script>
 
 {#             PLYR JS#}
@@ -167,6 +131,15 @@
                 }, true);
             </script>
             {#        FIN DE SCRIPT         #}
+
+            <script>
+                $(document).ready(function(){
+                    $('#nav-icon3').click(function(){
+                        $(this).toggleClass('open');
+                    });
+                });
+            </script>
+
 
         {% endblock %}
     </body>
