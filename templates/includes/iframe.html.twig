@@ -1,0 +1,46 @@
+<label class="columns is-centered has-icons-right">
+    <h2 class="column has-text-weight-bold text-uppercase has-text-white" style="background: #dd0000">
+        <figure class="has-background-black-bis" style="padding: 10px; margin-bottom: 0">
+            <img src="{{ asset('build/images/beatstars.9a4fbdae.png') }}" alt="" style="max-height: 50px">
+        </figure>
+    </h2>
+</label>
+
+{% for beat in beat %}
+
+    {% if beat.iframe %}
+
+        <iframe src="{{ beat.iframe }}" width="100%" height="140" style="border: none;"></iframe>
+
+{#    {% else %}#}
+
+{#        <div class="alert alert-danger" role="alert">#}
+{#            <h4 class="alert-heading">Well done!</h4>#}
+{#            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>#}
+{#            <hr>#}
+{#            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>#}
+{#        </div>#}
+
+    {% endif %}
+
+{% endfor %}
+
+
+<script>
+    let _iframe = document.getElementsByTagName('iframe');
+
+    for (i = 0; i < _iframe.length; i++){
+        console.log(_iframe[i].attributes[0].ownerElement);
+        let iframe = _iframe[i].attributes[0].ownerElement;
+        let nextBeat = _iframe[i+1];
+        iframe.onplay = function (){console.log('PLAY OK');};
+        iframe.onpause = function (){console.log('PAUSE OK');};
+        _iframe[i].onended = function(){
+            if(i === _iframe.length){
+                nextBeat = _iframe[0];
+            }
+            nextBeat.play();
+
+        };
+    }
+</script>

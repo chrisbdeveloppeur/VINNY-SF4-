@@ -19,6 +19,7 @@ $title-size : 2.5rem;
 $family-primary : 'Handlee', cursive;
 $family-secondary :'Permanent Marker', cursive;
 $family-code : 'Source Sans Pro', sans-serif;
+$footer-padding: 1rem 1.5rem 0rem;
 
 // Importer Bulma
 @import "~bulma";
@@ -39,8 +40,8 @@ $family-code : 'Source Sans Pro', sans-serif;
 }
 .nav-link:hover
 {
-  background: $link-dark;
-  //color: $dark;
+  background: $info;
+  color: black !important;
 }
 
 #dashboard

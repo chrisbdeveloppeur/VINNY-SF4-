@@ -15,7 +15,7 @@ return new class extends DefaultDeployer
             ->repositoryUrl('git@github.com:K4gur0/VINNY-SF4-.git')
             // the repository branch to deploy
             ->repositoryBranch('master')
-        ;
+            ;
     }
 
     // run some local or remote commands before the deployment is started

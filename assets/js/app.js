@@ -17,7 +17,8 @@ const shop = require('../images/icons/shop.png');
 const main_background = require('../images/caisson.png');
 const second_background = require('../images/headphones.jpg');
 const baner1 = require('../images/sound_2.jpg');
-const baner2 = require('../images/sound_2-2.jpg')
+const baner2 = require('../images/sound_2-2.jpg');
+const beatstars_1 = require('../images/icons/beatstars.png');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

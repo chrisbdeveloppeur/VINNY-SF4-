@@ -56,7 +56,7 @@ class Beat
     private $beatFile;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
      * @var string|null
      */
@@ -83,7 +83,7 @@ class Beat
     private $genre;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
 
@@ -91,6 +91,11 @@ class Beat
      * @ORM\Column(type="float", nullable=true)
      */
     private $bpm;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $iframe;
 
     public function getId(): ?int
     {
@@ -243,6 +248,18 @@ class Beat
     public function setBpm(?float $bpm): self
     {
         $this->bpm = $bpm;
+
+        return $this;
+    }
+
+    public function getIframe(): ?string
+    {
+        return $this->iframe;
+    }
+
+    public function setIframe(?string $iframe): self
+    {
+        $this->iframe = $iframe;
 
         return $this;
     }
