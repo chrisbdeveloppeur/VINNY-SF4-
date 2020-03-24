@@ -5,6 +5,7 @@ easy_admin:
             - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
     #        assets:
 #            # all kinds of assets are supported and linked accordingly
 #            css:
@@ -111,4 +112,24 @@ easy_admin:
                     - {property: 'info_4' , type: 'text'}
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'link','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
-
+        Admin :
+            class : App\Entity\Admin
+            form :
+                title : 'Ajouter un compte Administrateur'
+                fields :
+                    - {property: 'email' , type : 'text', label : "email"}
+                    - {property: 'roles' , type : 'text', label : "Roles"}
+                    - {property: 'password' , type : 'text', label : "Mot de passe"}
+#
+#            edit:
+#                title: 'Modifier un compte Administrateur'
+#                fields:
+#                    - {property: 'email' , type: 'text', label: "email"}
+#                    - {property: 'roles' , type: 'text', label: "Roles"}
+#                    - {property: 'password' , type: 'text', label: "Mot de passe"}
+#
+#            list:
+#                batch_actions: ['delete']
+#                fields:
+#                    - {property: 'email' , type: 'text', label: "email"}
+#                    - {property: 'roles' , type: 'text', label: "Roles"}
