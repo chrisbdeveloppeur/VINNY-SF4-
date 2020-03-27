@@ -56,6 +56,16 @@ class Licence
      */
     private $color;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $info_5;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $info_6;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +163,30 @@ class Licence
     public function setColor(?string $color): self
     {
         $this->color = $color;
+
+        return $this;
+    }
+
+    public function getInfo5(): ?string
+    {
+        return $this->info_5;
+    }
+
+    public function setInfo5(?string $info_5): self
+    {
+        $this->info_5 = $info_5;
+
+        return $this;
+    }
+
+    public function getInfo6(): ?string
+    {
+        return $this->info_6;
+    }
+
+    public function setInfo6(?string $info_6): self
+    {
+        $this->info_6 = $info_6;
 
         return $this;
     }

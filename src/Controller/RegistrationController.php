@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Admin;
 use App\Form\RegistrationFormType;
 use App\Security\AdminLoginAuthenticator;
+use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,15 +18,21 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="app_register")
+     * @IsGranted("ROLE_USER")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, AdminLoginAuthenticator $authenticator): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, EntityManagerInterface $entityManager): Response
     {
 //        $user = new Admin();
         $form = $this->createForm(RegistrationFormType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /**
+             * @var Admin $user
+             */
             $user = $form->getData();
+
             $user->setPassword(
                 $passwordEncoder->encodePassword(
                     $user,
@@ -32,18 +40,11 @@ class RegistrationController extends AbstractController
                 )
             );
 
-            $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
+
             $entityManager->flush();
 
             $this->addFlash('info', 'Votre compte administrateur a bien été créé !');
-
-//            return $guardHandler->authenticateUserAndHandleSuccess(
-//                $user,
-//                $request,
-//                $authenticator,
-//                'main' // firewall name in security.yaml
-//            );
 
             return $this->redirectToRoute('admin_login');
 

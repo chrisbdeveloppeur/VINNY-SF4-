@@ -38,19 +38,17 @@
 
             <div class="columns is-centered is-vcentered has-text-centered">
 
-                <div class="column is-flex" style="justify-content: center;align-items: center">
-                    <div class="">
-                        <label for=""><strong class="">Titre : </strong></label>
-                        {% if beat.titre %}
-                            {{ beat.titre }}
-                        {% else %}
-                            N/C
-                        {% endif %}
-                    </div>
+                <div class="column">
+                    <label for="titre" style="margin: auto"><strong class="">Titre : </strong></label>
+                    {% if beat.titre %}
+                        {{ beat.titre }}
+                    {% else %}
+                        N/C
+                    {% endif %}
                 </div>
 
                 <div class="column">
-                    <label for=""><strong class="">Prod. by : </strong></label>
+                    <label for="artiste" style="margin: auto"><strong class="">Prod. by : </strong></label>
                     {% if beat.artiste %}
                         {{ beat.artiste }}
                     {% else %}
@@ -59,7 +57,7 @@
                 </div>
 
                 <div class="column">
-                    <label for=""><strong class="">BPM : </strong></label>
+                    <label for="bpm" style="margin: auto"><strong class="">BPM : </strong></label>
                     {% if beat.bpm %}
                         {{ beat.bpm }}
                     {% else %}
@@ -68,7 +66,7 @@
                 </div>
 
                 <div class="column">
-                    <label for=""><strong class="">Genre : </strong></label>
+                    <label for="genre" style="margin: auto"><strong class="">Genre : </strong></label>
                     {% if beat.genre %}
                         {{ beat.genre }}
                     {% else %}
@@ -116,7 +114,7 @@
                                                 <span class="is-size-3">/</span>
                                                 <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>
                                             {% else %}
-                                                <span class="plan-price-amount">Tarif à négocier</span>
+                                                <span class="plan-price-amount is-size-3">Tarif à négocier</span>
                                             {% endif %}
                                         </div>
 
@@ -142,6 +140,18 @@
 
                                             {% if licence.info4 %}
                                                 <div class="plan-item">{{ licence.info4 }}</div>
+                                            {% else %}
+                                                <div class="plan-item">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info5 %}
+                                                <div class="plan-item">{{ licence.info5 }}</div>
+                                            {% else %}
+                                                <div class="plan-item">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info6 %}
+                                                <div class="plan-item">{{ licence.info6 }}</div>
                                             {% else %}
                                                 <div class="plan-item">-</div>
                                             {% endif %}

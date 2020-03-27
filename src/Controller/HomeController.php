@@ -49,7 +49,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/beats", name="beats")
+     * @Route("/beat", name="beats")
      */
     public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository)
     {
@@ -60,6 +60,7 @@ class HomeController extends AbstractController
             'beat' => $beat,
             'licence' => $licence,
         ]);
+
     }
 
     /**

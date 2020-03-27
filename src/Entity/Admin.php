@@ -30,9 +30,39 @@ class Admin implements UserInterface
     private $roles = [];
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var string A "Y-m-d H:i:s" formatted value
+     */
+    private $date;
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
+
+    /**
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param string $date
+     * @return Admin
+     */
+    public function setDate(string $date): Admin
+    {
+        $this->date = $date;
+        return $this;
+    }
 
     public function getId(): ?int
     {
@@ -67,7 +97,6 @@ class Admin implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);

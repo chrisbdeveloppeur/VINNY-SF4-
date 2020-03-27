@@ -32,7 +32,7 @@
                                 <span class="is-size-3">/</span>
                                 <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>
                             {% else %}
-                                <span class="plan-price-amount">Tarif à négocier</span>
+                                <span class="plan-price-amount is-size-3">Tarif à négocier</span>
                             {% endif %}
                         </div>
 
@@ -58,6 +58,18 @@
 
                             {% if licence.info4 %}
                                 <div class="plan-item">{{ licence.info4 }}</div>
+                            {% else %}
+                                <div class="plan-item">-</div>
+                            {% endif %}
+
+                            {% if licence.info5 %}
+                                <div class="plan-item">{{ licence.info5 }}</div>
+                            {% else %}
+                                <div class="plan-item">-</div>
+                            {% endif %}
+
+                            {% if licence.info6 %}
+                                <div class="plan-item">{{ licence.info6 }}</div>
                             {% else %}
                                 <div class="plan-item">-</div>
                             {% endif %}

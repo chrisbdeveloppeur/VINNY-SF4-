@@ -1,27 +1,28 @@
 easy_admin:
+    site_name: '<strong>VinnyVixi.com DASHBOARD</strong>'
+    formats:
+        date: 'j/m/Y'
     design:
+        assets:
+            # all kinds of assets are supported and linked accordingly
+            css:
+                - '//example.org/css/admin1.css'
+                - 'http://example.org/css/admin2.css'
+                - 'https://example.org/css/admin3.css'
+                - '/bundles/user/css/admin4.css'
+                - 'bundles/app/css/admin5.css'
+            js:
+                - '//example.org/js/admin1.js'
+                - 'http://example.org/js/admin2.js'
+                - 'https://example.org/js/admin3.js'
+                - '/bundles/user/js/admin4.js'
+                - 'bundles/app/js/admin5.js'
         menu:
-            - { label: 'Retour au site', url: 'http://127.0.0.1:8000', rel: 'index', icon: home }
+            - { label: 'Retour au site', url: 'https://vinnyvixi.com/adm', rel: 'index', icon: home }
             - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-    #        assets:
-#            # all kinds of assets are supported and linked accordingly
-#            css:
-#                - '//example.org/css/admin1.css'
-#                - 'http://example.org/css/admin2.css'
-#                - 'https://example.org/css/admin3.css'
-#                - '/bundles/user/css/admin4.css'
-#                - 'bundles/app/css/admin5.css'
-#            js:
-#                - '//example.org/js/admin1.js'
-#                - 'http://example.org/js/admin2.js'
-#                - 'https://example.org/js/admin3.js'
-#                - '/bundles/user/js/admin4.js'
-#                - 'bundles/app/js/admin5.js'
-#        brand_color: 'rgba(0, 0, 0, 0.85)'
-
+            - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
     entities:
@@ -87,6 +88,8 @@ easy_admin:
                     - {property: 'info_2' , type: 'text'}
                     - {property: 'info_3' , type: 'text'}
                     - {property: 'info_4' , type: 'text'}
+                    - {property: 'info_5' , type: 'text'}
+                    - {property: 'info_6' , type: 'text'}
                     - {property: 'color' , type: 'text'}
             form:
                 batch_actions: ['delete']
@@ -98,6 +101,8 @@ easy_admin:
                     - {property: 'info_2' , type: 'text'}
                     - {property: 'info_3' , type: 'text'}
                     - {property: 'info_4' , type: 'text'}
+                    - {property: 'info_5' , type: 'text'}
+                    - {property: 'info_6' , type: 'text'}
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'link','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
             edit:
@@ -110,6 +115,8 @@ easy_admin:
                     - {property: 'info_2' , type: 'text'}
                     - {property: 'info_3' , type: 'text'}
                     - {property: 'info_4' , type: 'text'}
+                    - {property: 'info_5' , type: 'text'}
+                    - {property: 'info_6' , type: 'text'}
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'link','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
         Admin :
@@ -118,18 +125,20 @@ easy_admin:
                 title : 'Ajouter un compte Administrateur'
                 fields :
                     - {property: 'email' , type : 'text', label : "email"}
-                    - {property: 'roles' , type : 'text', label : "Roles"}
-                    - {property: 'password' , type : 'text', label : "Mot de passe"}
-#
-#            edit:
-#                title: 'Modifier un compte Administrateur'
-#                fields:
-#                    - {property: 'email' , type: 'text', label: "email"}
-#                    - {property: 'roles' , type: 'text', label: "Roles"}
-#                    - {property: 'password' , type: 'text', label: "Mot de passe"}
-#
-#            list:
-#                batch_actions: ['delete']
-#                fields:
-#                    - {property: 'email' , type: 'text', label: "email"}
-#                    - {property: 'roles' , type: 'text', label: "Roles"}
+                    - {property: 'password' , type : 'password', label : "Mot de passe"}
+#                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+            edit:
+                title: 'Modifier un compte Administrateur'
+                fields:
+                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'password' , type: 'text', label: "Mot de passe"}
+#                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+
+
+            list:
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'roles' , type: 'array', label: "Roles"}
+                    - {property: 'date' , type: 'date', format: 'j/n/Y'}
+
