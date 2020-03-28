@@ -7,6 +7,8 @@ use App\Form\MessageType;
 use App\Notif\NotifMessage;
 use App\Repository\BeatRepository;
 use App\Repository\LicenceRepository;
+use App\Repository\SectionVideoRepository;
+use App\Repository\VideoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -66,10 +68,15 @@ class HomeController extends AbstractController
     /**
      * @Route("/videos", name="videos")
      */
-    public function videos()
+    public function videos(SectionVideoRepository $sectionVideoRepository, VideoRepository $videoRepository)
     {
-        return $this->render('videos/videos.html.twig', [
+        $section = $sectionVideoRepository->findAll();
+        $video = $videoRepository->findAll();
+//        $video = $videoRepository->findBySection($section);
 
+        return $this->render('videos/videos.html.twig', [
+            'section' => $section,
+            'video' => $video
         ]);
     }
 

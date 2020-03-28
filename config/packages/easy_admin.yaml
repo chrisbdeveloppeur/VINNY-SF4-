@@ -22,6 +22,9 @@ easy_admin:
             - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - label: 'Videos'
+              children: ['SectionVideo','Video']
+              permission: 'ROLE_USER'
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
@@ -142,3 +145,46 @@ easy_admin:
                     - {property: 'roles' , type: 'array', label: "Roles"}
                     - {property: 'date' , type: 'date', format: 'j/n/Y'}
 
+
+        SectionVideo:
+            label: 'Sections'
+            class: App\Entity\SectionVideo
+            form:
+                title: 'Ajouter une rubrique de videos'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'couleur' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
+            edit:
+                title: 'Modifier une rubrique de videos'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'couleur' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune': 'warning'}}}
+
+            list:
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'couleur' , type: 'text', label: "Couleur"}
+
+        Video:
+            label: 'Videos'
+            class: App\Entity\Video
+            form:
+                title: 'Ajouter une video'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'section' ,type: 'easyadmin_autocomplete'}
+            edit:
+                title: 'Modifier une video'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'section' ,type: 'easyadmin_autocomplete'}
+
+            list:
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'section' , type: 'text'}

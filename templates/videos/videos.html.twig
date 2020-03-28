@@ -10,14 +10,28 @@
 
     <section class="section" style="min-height: 80vh">
         <div class="container">
-            <h2 class="subtitle">
-                Section <strong class="has-text-link">Videos</strong>
-            </h2>
 
-            <article>
-                <h3>H3 Article</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque blanditiis dolores doloribus dolorum eius eveniet magni nesciunt omnis! Cumque dolore fugiat harum illo, magni maxime odio omnis soluta voluptatem.</p>
-            </article>
+            {% for sectionvideo in section %}
+                <div class="column box">
+
+                    <div class="columns has-background-{{ sectionvideo.couleur }}">
+                        <label for="titre" class="title text-uppercase" style="margin: auto; color: white">
+                            {{ sectionvideo.titre }}
+                        </label>
+                    </div>
+
+                    {% for video in video %}
+
+                        {% if video.section == sectionvideo.titre %}
+
+                            {{ video.titre }}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                </div>
+            {% endfor %}
 
         </div>
     </section>
