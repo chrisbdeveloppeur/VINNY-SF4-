@@ -123,4 +123,12 @@ class HomeController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/cookies", name="cookies")
+     */
+    public function cookies()
+    {
+        return $this->render('includes/cookies.html.twig');
+    }
+
 }

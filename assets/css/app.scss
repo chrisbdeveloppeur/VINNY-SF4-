@@ -182,6 +182,68 @@ a
 
 
 
+// COOKIE //
+
+#cookies_alert {
+  bottom: 0px;
+  height: auto;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 998;
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#cookies_alert.hide{
+  display: none;
+}
+
+#cookies_alert.closed {
+  bottom: -120px;
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#cookies_alert .cookies_container {
+  background-color: rgba(0,0,0,0.85);
+  padding: 15px;
+  padding-right: 35px;
+  position: relative;
+}
+
+//#cookies_alert .cookies_close {
+//  flex: 1;
+//}
+
+#cookies_alert .cookies_close:hover {
+  cursor: pointer;
+}
+
+#cookies_alert .cookies_text {
+  color: #FFF;
+  font-size: 0.8em;
+}
+
+#cookies_alert .cookies_text a { color: #EA504E; }
+
+#cookies_alert .cookies_text a:hover { text-decoration: underline; }
+
+// FIN COOKIE //
+
+
+
+
+
 
 
 
