@@ -1,10 +1,41 @@
-{#<h2 class="title is-3 has-text-centered">Liste des Beats : </h2>#}
 
+    <div class="column is-flex align-items-center has-background-black-bis">
+        <label class="is-flex align-items-center" for="" style="margin: auto 0;">
+            <div class="column">
+                <strong class="has-text-white">Genres :</strong>
+            </div>
+        </label>
 
+{#        <select name="" id="" class="is-small button">#}
+
+{#            <option value="-" selected>-</option>#}
+        <div id="myBtnContainer" class="buttons are-small column is-flex" style="margin: auto 0;">
+
+                <div class="column is-flex align-items-center justify-content-center">
+                    <button class="button tag active is-danger is-outlined text-uppercase" style="margin: auto 0;" type="submit" onclick="filterSelection('all')"> Tout</button>
+                </div>
+
+            {% for filtre in filtre %}
+
+                <div class="column is-flex align-items-center justify-content-center">
+
+                    <button class="button tag is-danger is-outlined" value="{{ filtre.genre }}" style="margin: auto 0;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
+                        {{ filtre.genre }}
+                    </button>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+{#        </select>#}
+    </div>
 
     <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7)">
 
         {% include 'includes/info_beat.html.twig' with {beat: beat} %}
+{#        {% if filtre.genre %}#}
 
     </div>
 

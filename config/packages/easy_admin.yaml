@@ -25,6 +25,7 @@ easy_admin:
             - label: 'Videos'
               children: ['SectionVideo','Video']
               permission: 'ROLE_USER'
+            - { entity: 'Filtre',label : 'Filtres', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
@@ -40,7 +41,9 @@ easy_admin:
                     - {property: 'titre' , type : 'text'}
                     - {property: 'artiste' , type : 'text', label : 'Prod. by'}
                     - {property: 'bpm' , type : 'text'}
-                    - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+                    - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
+#                    - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+
 
             edit:
                 title: 'Modifier un Beat'
@@ -51,7 +54,8 @@ easy_admin:
                     - {property: 'titre' , type: 'text'}
                     - {property: 'artiste' , type: 'text', label : 'Prod. by'}
                     - {property: 'bpm' , type: 'text'}
-                    - {property: 'genre' , type: 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
+                    - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
+#                    - {property: 'genre' , type: 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
 
             list:
                 batch_actions: ['delete']
@@ -173,13 +177,13 @@ easy_admin:
                 title: 'Ajouter une video'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
-                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
                     - {property: 'section' ,type: 'easyadmin_autocomplete'}
             edit:
                 title: 'Modifier une video'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
-                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
                     - {property: 'section' ,type: 'easyadmin_autocomplete'}
 
             list:
@@ -188,3 +192,19 @@ easy_admin:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'link' , type: 'text', label: "lien url"}
                     - {property: 'section' , type: 'text'}
+
+        Filtre:
+            label: 'Filtres'
+            class: App\Entity\Filtre
+            form:
+                title: 'Ajouter un filtre'
+                fields:
+                    - {property: 'genre' }
+            edit:
+                title: 'Modifier un filtre'
+                fields:
+                    - {property: 'genre' }
+            list:
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'genre'}

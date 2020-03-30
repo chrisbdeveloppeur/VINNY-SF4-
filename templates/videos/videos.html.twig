@@ -15,20 +15,51 @@
                 <div class="column box">
 
                     <div class="columns has-background-{{ sectionvideo.couleur }}">
-                        <label for="titre" class="title text-uppercase" style="margin: auto; color: white">
+                        <label for="titre" class="title text-uppercase has-text-black" style="margin: auto; color: white">
                             {{ sectionvideo.titre }}
                         </label>
                     </div>
 
+                    <div class="columns is-multiline bg-dark">
                     {% for video in video %}
 
                         {% if video.section == sectionvideo.titre %}
 
-                            {{ video.titre }}
+                            <div class="column is-one-third has-text-centered">
+
+{#                                <div class="column has-text-centered" style="background: rgba(0,0,0,0.5)">#}
+
+                                    <label for="titre" title="titre video" class="has-text-weight-bold is-flex justify-content-center has-background-{{ sectionvideo.couleur }}">
+                                        {{ video.titre }}
+                                    </label>
+
+                                    {% if video.link %}
+                                        {#Resolutions :
+                                            240p = 352 x 240
+                                            360 p = 480 x 360
+                                            480p = 858 x 480 — also known as SD
+                                            720p = 1280 x 720 — the old TVs of this resolution were marked HDready
+                                            1080p = 1920 x 1080 — FullHD
+                                            2160p = 3860 x 2160 —Ultra-HD, also known as 4K (that’s a marketing trick)
+                                        #}
+                                    <figure class="is-flex justify-content-center align-items-center" style="background: rgba(0,0,0,0.2)">
+                                        <iframe width="352px" height="240px" src="https://www.youtube.com/embed/{{ video.link }}" title="video">
+                                        </iframe>
+                                    </figure>
+
+                                    {% else %}
+                                        <figure style="background: rgba(0,0,0,0.2)">
+                                            <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="no video link" title="no video" style="height:240px;">
+                                        </figure>
+                                    {% endif %}
+{#                                </div>#}
+                            </div>
 
                         {% endif %}
 
                     {% endfor %}
+
+                    </div>
 
                 </div>
             {% endfor %}

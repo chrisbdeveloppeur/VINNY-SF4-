@@ -2,10 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\FiltresSelected;
 use App\Entity\Message;
+use App\Form\FiltresType;
 use App\Form\MessageType;
 use App\Notif\NotifMessage;
 use App\Repository\BeatRepository;
+use App\Repository\FiltreRepository;
 use App\Repository\LicenceRepository;
 use App\Repository\SectionVideoRepository;
 use App\Repository\VideoRepository;
@@ -24,7 +27,7 @@ class HomeController extends AbstractController
 
     public function home()
     {
-        return $this->render('index.html.twig', [
+        return $this->render('about/about.html.twig', [
 
         ]);
     }
@@ -53,14 +56,16 @@ class HomeController extends AbstractController
     /**
      * @Route("/beat", name="beats")
      */
-    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository)
+    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository)
     {
         $beat = $beatRepository->findAll();
         $licence = $licenceRepository->findAll();
+        $filtre = $filtreRepository->findAll();
 
         return $this->render('beats/beats.html.twig', [
             'beat' => $beat,
             'licence' => $licence,
+            'filtre' => $filtre,
         ]);
 
     }
