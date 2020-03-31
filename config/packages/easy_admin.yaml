@@ -18,7 +18,7 @@ easy_admin:
                 - '/bundles/user/js/admin4.js'
                 - 'bundles/app/js/admin5.js'
         menu:
-            - { label: 'Retour au site', url: 'https://vinnyvixi.com/adm', rel: 'index', icon: home }
+            - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
             - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }

@@ -15,7 +15,7 @@ $navbar-item-hover-background-color: #30aae4;
 $title-size : 2.5rem;
 $family-primary : 'Handlee', cursive;
 $family-secondary :'Permanent Marker', cursive;
-$family-code : 'Source Sans Pro', sans-serif;
+$family-code :'Teko', sans-serif;
 $footer-padding: 1rem 1.5rem 0rem;
 
 // Importer Bulma
@@ -108,22 +108,24 @@ a
 //    ICON BURGER BOOSTRAP   //
 /* Icon 3 */
 
+
+
 #nav-icon3 span:nth-child(1) {
-  top: 0px;
+  top: 10px;
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 13px;
+  top: 20px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 26px;
+  top: 30px;
 }
 
 #nav-icon3.open span:nth-child(1) {
   top: 18px;
   width: 0%;
-  left: 50%;
+  left: 20%;
 }
 
 #nav-icon3.open span:nth-child(2) {
@@ -143,10 +145,10 @@ a
 #nav-icon3.open span:nth-child(4) {
   top: 18px;
   width: 0%;
-  left: 50%;
+  left: 20%;
 }
 
-#nav-icon3{
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
   width: 60px;
   height: 45px;
   //position: relative;
@@ -162,15 +164,15 @@ a
   cursor: pointer;
 }
 
-#nav-icon3 span{
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
   display: block;
   position: absolute;
-  height: 5px;
-  width: 75%;
+  height: 4px;
+  width: 60%;
   background: #999c9f;
   border-radius: 9px;
   opacity: 1;
-  left: 0;
+  //left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -277,6 +279,31 @@ a
 }
 
 
+
+
+//   POUR AUDIO WAVE
+//#thefile {
+//  position: fixed;
+//  top: 10px;
+//  left: 10px;
+//  z-index: 100;
+//}
+//
+//#canvas {
+//  //position: fixed;
+//  //left: 0;
+//  top: 214px;
+//  width: 100%;
+//  height: 101px;
+//}
+//
+//audio {
+//  position: fixed;
+//  left: 10px;
+//  bottom: 10px;
+//  width: calc(100% - 20px);
+//}
+//    FIN AUDIO WAVE
 
 
 

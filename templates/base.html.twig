@@ -7,10 +7,13 @@
 
         <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
         <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
         {% block fonts %}
-        <link href="https://fonts.googleapis.com/css?family=Caveat|Handlee|Permanent+Marker&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Caveat|Handlee|Permanent+Marker&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block css %}
@@ -35,25 +38,44 @@
             {% endblock %}
 
 
-{#            <div class="layer"></div>#}
             <div style="min-height: 80vh;background:center no-repeat url('{{ asset('build/images/headphones.64ab74be.jpg')}}')">
                 <div class="layer" style="height: 100%;width: 100%; background: rgb(255,255,255);
-background: -moz-linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
-background: -webkit-linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
-background: linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1); ">
+                                                                    background: -moz-linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
+                                                                    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
+                                                                    background: linear-gradient(180deg, rgba(255,255,255,0.748319396117822) 20%, rgba(203,224,255,0.499019676229867) 50%, rgba(255,255,255,0.748319396117822) 80%);
+                                                                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1); ">
 
-                    <section class="hero is-link is-small is-bold" style="background:center url('{{ asset('build/images/sound_2-2.25d7a5b3.jpg') }}')">
+
+
+{#                {% if is_granted('ROLE_USER') %}#}
+
+{#                <section class="hero is-link is-small is-bold" style="background:center / 100% 100% no-repeat url('{{ asset('build/images/sound_2-2.25d7a5b3.jpg') }}')">#}
+{#                    <input type="file" id="thefile" accept="audio/*" />#}
+{#                    <canvas id="canvas"></canvas>#}
+{#                    <audio id="audio" controls></audio>#}
+{#                </section>#}
+
+{#                {% else %}#}
+
+                    <section class="hero is-link is-small is-bold" style="background:center / 100% 100% no-repeat url('{{ asset('build/images/sound_2-2.25d7a5b3.jpg') }}')">
                         <div class="hero-body has-text-centered">
                             <div class="container">
                             </div>
                         </div>
                     </section>
 
+{#                {% endif %}#}
+
+
+
+
+
+
+
                     <section class="hero has-background-black-bis is-small is-bold">
                         <div class="hero-body has-text-centered">
                             <div class="container">
-                                <h1 class="title has-text-weight-bold text-white is-uppercase">
+                                <h1 class="title has-text-weight-bold has-text-black-bis is-uppercase is-family-secondary" style="text-shadow:rgba(255,255,255,1) 0px 0px 5px  ;">
                                     {% block titre %}
 
                                     {% endblock %}
@@ -157,7 +179,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
                     }
                 }, true);
             </script>
-            {#        FIN DE SCRIPT         #}
+            {#        FIN DE SCRIPT AUTO PAUSE        #}
 
             <script>
                 $(document).ready(function(){
@@ -254,8 +276,81 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
                 });
 
             </script>
-
             {# FIN SCRIPT COOKIE    #}
+
+
+
+            {#  SCRIPT VISU SOUND WAVE    #}
+
+            <script>
+                window.onload = function() {
+
+                    var file = document.getElementById("thefile");
+                    console.log(file);
+                    var audio = document.getElementById("audio");
+
+                    file.onchange = function() {
+                        var files = this.files;
+                        audio.src = URL.createObjectURL(files[0]);
+                        audio.load();
+                        audio.play();
+                        var context = new AudioContext();
+                        var src = context.createMediaElementSource(audio);
+                        var analyser = context.createAnalyser();
+
+                        var canvas = document.getElementById("canvas");
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight * 0.3 ;
+                        var ctx = canvas.getContext("2d");
+
+                        src.connect(analyser);
+                        analyser.connect(context.destination);
+
+                        analyser.fftSize = 512;
+
+                        var bufferLength = analyser.frequencyBinCount;
+                        console.log(bufferLength);
+
+                        var dataArray = new Uint8Array(bufferLength);
+
+                        var WIDTH = canvas.width;
+                        var HEIGHT = canvas.height;
+
+                        var barWidth = (WIDTH / bufferLength) * 2.5;
+                        var barHeight;
+                        var x = 0;
+
+                        function renderFrame() {
+                            requestAnimationFrame(renderFrame);
+
+                            x = 0;
+
+                            analyser.getByteFrequencyData(dataArray);
+
+                            ctx.fillStyle = "rgba(0,0,0,0.2)";
+                            ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+                            for (var i = 0; i < bufferLength; i++) {
+                                barHeight = dataArray[i];
+
+                                var r = barHeight;
+                                var g = barHeight;
+                                var b = 2;
+
+                                ctx.fillStyle = "rgb(" + r + "," + g + ",255)";
+                                ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+                                x += barWidth + 1;
+                            }
+                        }
+
+                        audio.play();
+                        renderFrame();
+                    };
+                };
+            </script>
+
+            {# FIN SCRIPT VISU SOUND WAVE    #}
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 

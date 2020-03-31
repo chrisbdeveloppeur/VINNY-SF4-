@@ -2,19 +2,13 @@
 
 {% block title %}{% include('includes/nav_title.html.twig') %} Login{% endblock %}
 
+{% block titre %}
+    Connexion
+{% endblock %}
+
 {% block content %}
 
-    <section class="hero is-link is-small is-bold">
-        <div class="hero-body has-text-centered">
-            <div class="container">
-                <h1 class="title has-text-weight-bold">
-                    Login Admin
-                </h1>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="min-height: 80vh">
+    <section class="section is-flex align-items-center" style="min-height: 80vh">
         <div class="container column is-full-touch is-two-fifths-desktop is-one-quarter-fullhd">
             <form method="post">
 
@@ -33,8 +27,6 @@
                         You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                     </div>
                 {% endif %}
-
-
 
                 <div class="field">
 
@@ -70,21 +62,12 @@
                     </p>
                 </div>
 
-{#                <h1 class="h3 mb-3 font-weight-normal">Veuillez entrer vos identifiants administrateur</h1>#}
-{#                <label for="inputEmail">Email</label>#}
-{#                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>#}
-{#                <label for="inputPassword">Password</label>#}
-{#                <input type="password" name="password" id="inputPassword" class="form-control" required>#}
-
-{#                #}
-
-{#                <button class="btn btn-lg btn-primary" type="submit">#}
-{#                    Se connecter#}
-{#                </button>#}
-
             </form>
         </div>
     </section>
 
 
 {% endblock %}
+
+
+

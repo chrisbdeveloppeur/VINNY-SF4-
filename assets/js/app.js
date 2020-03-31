@@ -18,6 +18,7 @@ const main_background = require('../images/caisson.png');
 const second_background = require('../images/headphones.jpg');
 const baner1 = require('../images/sound_2.jpg');
 const baner2 = require('../images/sound_2-2.jpg');
+const baner3 = require('../images/sound_light_b.jpg')
 const beatstars_1 = require('../images/icons/beatstars.png');
 
 
