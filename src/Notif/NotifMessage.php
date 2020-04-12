@@ -26,13 +26,13 @@ class NotifMessage
 
     public function sendMessage(Message $message)
     {
-        $mail = (new \Swift_Message('Votre message à bien été envoyé'))
-            ->setFrom('qleaq@gmail.com')
+        $mail = (new \Swift_Message('Message en provenance de vinnyvixi.com'))
+            ->setFrom('admin@vinnyvixi.com')
             /**
              * Ci dessous entrez l'adresse de l'utilisateur concerné : $message->getEmail()
              */
-            ->setTo('kenshin91cb@gmail.com')
-            ->setReplyTo($message->getEmail())
+            ->setTo(['christian.boungou@gmail.com','yohannboungou@gmail.com','admin@vinnyvixi.com'])
+            ->setReplyTo('admin@vinnyvixi.com')
             ->setBody($this->renderer->render('emails/message.html.twig',[
                 'message' => $message,
             ]), 'text/html' );

@@ -2,7 +2,7 @@
 
 {% block navbarend %}
 
-    <div class="navbar-nav is-size-4">
+    <div class="navbar-nav is-size-1-touch is-size-3-desktop">
 
         {% if is_granted('ROLE_USER') %}
             <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard">
@@ -10,11 +10,11 @@
             </a>
 
             <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco">
-                Deconnexion
+                Log out
             </a>
         {% else %}
             <a href="{{ path('admin_login') }}" class="nav-link">
-                Connexion
+                Log in
             </a>
         {% endif %}
 

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark has-background-black-bis">
-    <a class="" href="{{ path('home') }}">
-        <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="logo" title="logo" width="150px" decoding="auto">
+<nav class="navbar navbar-expand-lg navbar-dark has-background-black-bis" style="z-index: 0">
+    <a class="" href="{{ path('home') }}" style="width: 75px">
+        <img src="{{ asset('build/images/vinny_logo_circulo.df62343d.png') }}" alt="logo" title="logo" decoding="auto">
     </a>
 
     <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
@@ -12,7 +12,7 @@
 
 
     <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
-        <ul class="navbar-nav is-size-4 mr-auto">
+        <ul class="navbar-nav is-size-1-touch is-size-3-desktop mr-auto">
 
             <li class="nav-item">
                 <a href="{{ path('about') }}" class="nav-link">
@@ -30,8 +30,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ path('licences') }}" class="nav-link">
-                    Licences
+                <a href="{{ path('licenses') }}" class="nav-link">
+                    Licenses
                 </a>
             </li>
             <li class="nav-item">
@@ -44,7 +44,7 @@
 
         {% block navbarend %}
 
-        <div class="navbar-nav is-size-4">
+        <div class="navbar-nav is-size-1-touch is-size-3-desktop">
 
             {% if is_granted('ROLE_USER') %}
                 <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard">
@@ -52,11 +52,11 @@
                 </a>
 
                 <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco">
-                    Deconnexion
+                    Log out
                 </a>
             {% else %}
                 <a href="{{ path('admin_login') }}" class="nav-link">
-                    Connexion
+                    Log in
                 </a>
             {% endif %}
 
@@ -64,5 +64,7 @@
 
 
     </div>
+
+
 </nav>
 

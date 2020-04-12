@@ -8,28 +8,36 @@
 
 {% block content %}
 
-    <section class="section" style="min-height: 80vh">
-        <div class="container">
+
 
             {% for sectionvideo in section %}
-                <div class="column box">
+                <div class="column box" style="background: rgba(0,0,0,0)">
 
-                    <div class="columns has-background-{{ sectionvideo.couleur }} has-text-centered justify-content-center align-items-center">
-                        <label for="titre" class="title text-uppercase has-text-black is-family-code" style="color: white;margin: auto;">
-                            {{ sectionvideo.titre }}
-                        </label>
-                    </div>
+                    <label class="label columns is-centered">
+                        <h2 class="column text-uppercase has-text-white has-background-{{ sectionvideo.couleur }} has-text-centered justify-content-center align-items-center" style="margin-bottom: 0">
 
-                    <div class="columns is-multiline bg-dark">
+                            <p class="has-background-black-bis has-icons-left is-family-code is-size-2" style="padding: 10px; margin-bottom: 0">
+
+                            <span class="icon is-small has-text-{{ sectionvideo.couleur }}" style="margin:0 10px">
+                                <i class="fab fa-youtube-square"></i>
+                            </span>
+
+                                {{ sectionvideo.titre }}
+
+                            </p>
+
+                        </h2>
+
+                    </label>
+
+                    <div class="columns is-multiline" style="background: rgba(0,0,0,0.4)">
                     {% for video in video %}
 
                         {% if video.section == sectionvideo.titre %}
 
-                            <div class="column is-one-third has-text-centered">
+                            <div class="column is-one-third is-full-touch has-text-centered">
 
-{#                                <div class="column has-text-centered" style="background: rgba(0,0,0,0.5)">#}
-
-                                    <label for="titre" title="titre video" class="has-text-weight-bold is-flex justify-content-center has-background-{{ sectionvideo.couleur }}">
+                                    <label for="titre" title="titre video" class="has-text-weight-bold is-flex justify-content-center has-text-white-bis has-background-black-bis">
                                         {{ video.titre }}
                                     </label>
 
@@ -42,7 +50,7 @@
                                             1080p = 1920 x 1080 — FullHD
                                             2160p = 3860 x 2160 —Ultra-HD, also known as 4K (that’s a marketing trick)
                                         #}
-                                    <figure class="is-flex justify-content-center align-items-center" style="background: rgba(0,0,0,0.2)">
+                                    <figure class="is-flex justify-content-center align-items-center" style="background: #121212">
                                         <iframe width="352px" height="240px" src="https://www.youtube.com/embed/{{ video.link }}" title="video">
                                         </iframe>
                                     </figure>
@@ -64,8 +72,7 @@
                 </div>
             {% endfor %}
 
-        </div>
-    </section>
+
 
 
 {% endblock %}

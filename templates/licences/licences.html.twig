@@ -1,24 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% include('includes/nav_title.html.twig') %} Licences{% endblock %}
+{% block title %}{% include('includes/nav_title.html.twig') %} Licenses{% endblock %}
 
 {% block titre %}
-    Licences
+    Licenses
 {% endblock %}
 
 {% block content %}
 
-    <section class="section" style="min-height: 80vh">
-        <div class="">
-            <h2 class="subtitle">
-                Section <strong class="has-text-link">Licences</strong>
-            </h2>
 
-            <article>
-                <h3>H3 Article</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque blanditiis dolores doloribus dolorum eius eveniet magni nesciunt omnis! Cumque dolore fugiat harum illo, magni maxime odio omnis soluta voluptatem.</p>
-            </article>
-
+{#            <h2 class="subtitle has-text-centered is-2 is-family-monospace">#}
+{#                Licenses information#}
+{#            </h2>#}
 
             <div class="pricing-table columns">
 
@@ -27,12 +20,12 @@
                         <div class="plan-header has-background-{{ licence.color }} has-text-white text-uppercase" style="border-radius: 0px">{{ licence.titre }}</div>
                         <div class="plan-price">
 
-                            {% if licence.dollar and licence.euro %}
-                                <span class="plan-price-amount"><span class="plan-price-currency">$</span>{{ licence.dollar }}</span>
-                                <span class="is-size-3">/</span>
-                                <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>
+                            {% if licence.dollar or licence.euro %}
+                                <span class="plan-price-amount"><span class="plan-price-currency is-family-secondary has-text-grey-light">$</span>{{ licence.dollar }}</span>
+{#                                <span class="is-size-3">/</span>#}
+{#                                <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>#}
                             {% else %}
-                                <span class="plan-price-amount is-size-3">Tarif à négocier</span>
+                                <span class="plan-price-amount is-size-3">~</span>
                             {% endif %}
                         </div>
 
@@ -77,7 +70,7 @@
                         </div>
 
                         <div class="plan-footer">
-                            <button class="button is-fullwidth has-text-weight-bold has-text-white" style="border-radius: 0px;">Choisir</button>
+                            <a href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-white" style="border-radius: 0px;">Select</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -86,8 +79,7 @@
             </div>
 
 
-        </div>
-    </section>
+
 
 
 {% endblock %}

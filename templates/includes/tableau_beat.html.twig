@@ -9,14 +9,14 @@
         <div id="myBtnContainer" class="buttons are-small column is-flex" style="margin: auto 0;">
 
                 <div class="column is-flex align-items-center justify-content-center">
-                    <button class="button tag active is-danger is-outlined text-uppercase is-family-sans-serif" style="margin: auto 0;" type="submit" onclick="filterSelection('all')"> Tout</button>
+                    <button class="button is-small active is-danger is-outlined text-uppercase is-family-sans-serif" style="margin: auto 0;padding: 2px auto;" type="submit" onclick="filterSelection('all')"> All</button>
                 </div>
 
             {% for filtre in filtre %}
 
                 <div class="column is-flex align-items-center justify-content-center">
 
-                    <button class="button tag is-danger is-outlined is-family-sans-serif" value="{{ filtre.genre }}" style="margin: auto 0;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
+                    <button class="button is-small is-danger is-outlined is-family-sans-serif" value="{{ filtre.genre }}" style="margin: auto 0;padding: 2px auto;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
                     </button>
 

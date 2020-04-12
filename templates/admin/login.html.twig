@@ -1,15 +1,14 @@
-{% extends 'base_admin.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}{% include('includes/nav_title.html.twig') %} Login{% endblock %}
 
 {% block titre %}
-    Connexion
+    Log in
 {% endblock %}
 
 {% block content %}
 
-    <section class="section is-flex align-items-center" style="min-height: 80vh">
-        <div class="container column is-full-touch is-two-fifths-desktop is-one-quarter-fullhd">
+        <div class="container column is-full-touch is-two-fifths-desktop">
             <form method="post">
 
                 {% include 'includes/flash_message.html.twig' %}
@@ -19,12 +18,6 @@
                     <div class="form-error notification is-danger">
                         <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                         {{ error.messageKey|trans(error.messageData, 'security') }}
-                    </div>
-                {% endif %}
-
-                {% if app.user %}
-                    <div class="mb-3">
-                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                     </div>
                 {% endif %}
 
@@ -57,14 +50,13 @@
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
                         <button class="button is-info">
-                            Se connecter
+                            Log in
                         </button>
                     </p>
                 </div>
 
             </form>
         </div>
-    </section>
 
 
 {% endblock %}

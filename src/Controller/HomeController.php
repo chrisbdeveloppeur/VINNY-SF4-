@@ -33,17 +33,6 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/adm", name="adm")
-     */
-
-    public function admin()
-    {
-        return $this->render('admin/login.html.twig', [
-
-        ]);
-    }
-
-    /**
      * @Route("/about", name="about")
      */
     public function about()
@@ -86,7 +75,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/licences", name="licences")
+     * @Route("/licenses", name="licenses")
      */
     public function licences(LicenceRepository $licenceRepository)
     {

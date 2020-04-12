@@ -4,33 +4,27 @@ easy_admin:
         date: 'j/m/Y'
     design:
         assets:
-            # all kinds of assets are supported and linked accordingly
             css:
-                - '//example.org/css/admin1.css'
-                - 'http://example.org/css/admin2.css'
-                - 'https://example.org/css/admin3.css'
-                - '/bundles/user/css/admin4.css'
-                - 'bundles/app/css/admin5.css'
-            js:
-                - '//example.org/js/admin1.js'
-                - 'http://example.org/js/admin2.js'
-                - 'https://example.org/js/admin3.js'
-                - '/bundles/user/js/admin4.js'
-                - 'bundles/app/js/admin5.js'
+                # ...
+                - 'css/admin.css'
+
         menu:
             - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
-            - { entity: 'Beat',label : 'Beats', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - label: 'BEATS'
+              children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER'}
+                         { entity: 'Filtre',rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }]
+              permission: 'ROLE_USER'
             - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - label: 'Videos'
+            - label: 'VIDEOS'
               children: ['SectionVideo','Video']
               permission: 'ROLE_USER'
-            - { entity: 'Filtre',label : 'Filtres', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
     entities:
         Beat :
+            label: 'Beats'
             class : App\Entity\Beat
             form :
                 title : 'Ajouter un Beat'
@@ -42,7 +36,6 @@ easy_admin:
                     - {property: 'artiste' , type : 'text', label : 'Prod. by'}
                     - {property: 'bpm' , type : 'text'}
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
-#                    - {property: 'genre' , type : 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
 
 
             edit:
@@ -55,7 +48,6 @@ easy_admin:
                     - {property: 'artiste' , type: 'text', label : 'Prod. by'}
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
-#                    - {property: 'genre' , type: 'choice',type_options: {choices: {'RAP FR':'RAP FR','RAP US':'RAP US','DRILL':'DRILL','GRIME':'GRIME','TRAP':'TRAP','TRAP SOUL':'TRAP SOUL'}}}
 
             list:
                 batch_actions: ['delete']
@@ -70,6 +62,7 @@ easy_admin:
                     - {property: 'genre' , type: 'text'}
 
         Message:
+            label: 'Messages'
             class: App\Entity\Message
             disabled_actions: ['new', 'edit']
 
@@ -82,8 +75,17 @@ easy_admin:
                     - {property: 'email', type: 'text'}
                     - {property: 'objet' , type: 'text'}
                     - {property: 'message' , type: 'text'}
-                    - {property: 'date' , type: 'date', format: 'j/n/Y'}
+                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
+            show:
+                fields:
+                    - {property: 'nom' , type: 'text'}
+                    - {property: 'prenom', type: 'text'}
+                    - {property: 'email', type: 'text'}
+                    - {property: 'objet' , type: 'text'}
+                    - {property: 'message' , type: 'text'}
+                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
         Licence:
+            label: 'Licences'
             class: App\Entity\Licence
             list:
                 batch_actions: ['delete']
@@ -110,7 +112,7 @@ easy_admin:
                     - {property: 'info_4' , type: 'text'}
                     - {property: 'info_5' , type: 'text'}
                     - {property: 'info_6' , type: 'text'}
-                    - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'link','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
+                    - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
             edit:
                 batch_actions: ['delete']
@@ -124,9 +126,10 @@ easy_admin:
                     - {property: 'info_4' , type: 'text'}
                     - {property: 'info_5' , type: 'text'}
                     - {property: 'info_6' , type: 'text'}
-                    - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'link','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
+                    - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
         Admin :
+            label: 'Comptes Administrateur'
             class : App\Entity\Admin
             form :
                 title : 'Ajouter un compte Administrateur'
@@ -178,13 +181,13 @@ easy_admin:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
-                    - {property: 'section' ,type: 'easyadmin_autocomplete'}
+                    - {property: 'section' ,type: 'easyadmin_autocomplete', type_options: { class: 'App\Entity\SectionVideo' } }
             edit:
                 title: 'Modifier une video'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
-                    - {property: 'section' ,type: 'easyadmin_autocomplete'}
+                    - {property: 'section' ,type: 'easyadmin_autocomplete', type_options: { class: 'App\Entity\SectionVideo' } }
 
             list:
                 batch_actions: ['delete']
@@ -199,12 +202,12 @@ easy_admin:
             form:
                 title: 'Ajouter un filtre'
                 fields:
-                    - {property: 'genre' }
+                    - {property: 'genre',type: 'text', label: "Genre" }
             edit:
                 title: 'Modifier un filtre'
                 fields:
-                    - {property: 'genre' }
+                    - {property: 'genre',type: 'text', label: "Genre" }
             list:
                 batch_actions: ['delete']
                 fields:
-                    - {property: 'genre'}
+                    - {property: 'genre',type: 'text', label: "Genre"}

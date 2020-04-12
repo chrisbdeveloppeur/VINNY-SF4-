@@ -78,11 +78,6 @@ class Beat
     private $album;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $genre;
-
-    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
@@ -96,6 +91,12 @@ class Beat
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $iframe;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Filtre", inversedBy="beats")
+     */
+    private $genre;
+
 
     public function getId(): ?int
     {
@@ -134,18 +135,6 @@ class Beat
     public function setAlbum(?string $album): self
     {
         $this->album = $album;
-
-        return $this;
-    }
-
-    public function getGenre(): ?string
-    {
-        return $this->genre;
-    }
-
-    public function setGenre(?string $genre): self
-    {
-        $this->genre = $genre;
 
         return $this;
     }
@@ -263,5 +252,19 @@ class Beat
 
         return $this;
     }
+
+    public function getGenre(): ?Filtre
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(?Filtre $genre): self
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+
 
 }
