@@ -276,7 +276,7 @@ a
 
 /* Add a dark background to the active button */
 .button.active {
-  background-color: $danger;
+  background-color: $light;
   color: white;
 }
 
@@ -285,9 +285,6 @@ a
 
 //   POUR AUDIO WAVE
 #thefile {
-  //position: absolute;
-  //top: 10px;
-  //left: 10px;
   z-index: 100;
 }
 
@@ -296,13 +293,6 @@ a
   height: 100%
 }
 
-//audio
-//{
-//  position: fixed;
-//  left: 10px;
-//  bottom: 10px;
-//  width: calc(100% - 20px);
-//}
 //    FIN AUDIO WAVE
 
 
