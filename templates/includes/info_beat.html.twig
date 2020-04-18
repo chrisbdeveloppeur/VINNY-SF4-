@@ -44,13 +44,11 @@
                     </div>
                 </div>
 
-{#                <div class="column">#}
-
 
 
                     <div class="column">
 
-                        <div class="columns is-centered is-vcentered has-text-centered is-size-4-mobile" style=" color: white;margin: 0">
+                        <div class="columns is-centered is-vcentered has-text-centered is-size-4-mobile" style=" color: white;margin: 0;padding:0;height:50%">
 
                             <div class="column">
                                 <label for="titre" style="margin: auto"><strong class="">Title : </strong></label>
@@ -100,16 +98,13 @@
 
                         </div>
 
-                        <div class="columns is-centered is-vcentered has-text-centered is-halfheight" style=" color: white;padding: 0">
-                            {#                    <audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="width: 100%" onplay="visualizer('{{ beat.titre }}')">#}
-                            <audio controls controlsList="nodownload" preload="metadata" class="column js-player beatFormBeatList" style="width: 100%;background: rgba(0,0,0,0)">
+                        <div class="columns is-centered align-items-end has-text-centered" style=" color: white;margin:0;padding: 0;height: 50%">
+
+                            <audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="width: 100%;background: rgba(0,0,0,0);padding:0">
                                 <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                             </audio>
 
                         </div>
-
-{#                    </div>#}
-
 
 
                 </div>
