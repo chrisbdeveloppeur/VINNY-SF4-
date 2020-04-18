@@ -19,6 +19,9 @@ $family-secondary:'Days One', sans-serif;
 $family-code :'Khand', sans-serif;
 $family-monospace : 'Permanent Marker', cursive;
 $footer-padding: 1rem 1.5rem 0rem;
+$size-1: 7rem;
+$size-2: 5rem;
+$size-3: 2.5rem;
 
 // Importer Bulma
 @import "~bulma";
@@ -304,7 +307,10 @@ a
 
 //    FIN AUDIO WAVE
 
-
-
+//@media(max-width: 500px){
+//  h1{
+//    font-size: 7rem;
+//  }
+//}
 
 
