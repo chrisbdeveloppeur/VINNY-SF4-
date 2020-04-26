@@ -43,7 +43,9 @@
                         {% endif %}
 
                         {#<img style="position: absolute" height="45px" width="45px" src="{{ asset('build/images/play_w.73a5583a.svg') }}" alt="play button">#}
-                        <i class="icon fas fa-3x fa-play-circle has-text-light playButton" style="position: absolute;"></i>
+                        <i class="icon fas fa-3x fa-play-circle has-text-light playButton" style="position: absolute;">
+                            <audio src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3"></audio>
+                        </i>
                     </div>
                 </div>
 
@@ -146,16 +148,44 @@
 
 {#   SCRIPT PLAYER PERSO   #}
 <script>
-    function playerPerso(){
-        let playButton = document.querySelectorAll('.playButton');
-        console.log(playButton);
-        for (i = 0; i < playButton.length; i++){
-            playButton[i].onclick = function(){
-                console.log(playButton);
-            };
-        }
-    }
-    playerPerso();
+        $(document).ready(function() {
+            let playing = false;
 
+            $('.playButton').click(function() {
+                $(this).toggleClass("playing");
+                let song = $(this).find('audio');
+
+                if (playing === false) {
+                    $(this).removeClass('fa-play-circle');
+                    $(this).addClass('fa-pause-circle');
+                    song[0].play();
+                    playing = true;
+                    currentSong = song[0];
+                    console.log(currentSong);
+                } else {
+                    $(this).addClass('fa-play-circle');
+                    $(this).removeClass('fa-pause-circle');
+                    song[0].pause();
+                    playing = false;
+                }
+            });
+        });
 </script>
 {#   FIN SCRIPT PLAYER PERSO   #}
+
+{#  AUTO PAUSE MUSIC  #}
+<script>
+
+    function autoPause(){
+        document.addEventListener('play', function(e){
+            let audios = document.getElementsByTagName('audio');
+            for(let i = 0, len = audios.length; i < len;i++){
+                if(audios[i] !== e.target){
+                    audios[i].pause();
+                }
+            }
+        }, true);
+    }
+
+</script>
+{#        FIN DE SCRIPT AUTO PAUSE        #}
