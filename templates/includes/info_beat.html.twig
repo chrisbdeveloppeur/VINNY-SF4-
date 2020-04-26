@@ -35,12 +35,15 @@
             <div class="columns has-text-centered" style="background: rgba(26,26,26,.8);">
 
                 <div class="is-hidden-mobile">
-                    <div class="column is-flex is-centered is-vcentered justify-content-center">
+                    <div class="column is-flex is-centered is-vcentered justify-content-center align-items-center">
                         {% if beat.beatimagename %}
                             <img height="110px" width="110px" src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
                         {% else %}
                             <img height="110px" width="110px" src="{{ asset('build/images/logo_vinny_letra_2.a861ac20.png') }}" alt="Illustration" style="height: 110px;width: 100px;border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
                         {% endif %}
+
+                        {#<img style="position: absolute" height="45px" width="45px" src="{{ asset('build/images/play_w.73a5583a.svg') }}" alt="play button">#}
+                        <i class="icon fas fa-3x fa-play-circle has-text-light play-button" style="position: absolute;height: 110px;width: 100px;"></i>
                     </div>
                 </div>
 

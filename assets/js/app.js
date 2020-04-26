@@ -24,6 +24,7 @@ const baner4 = require('../images/audio_bars.png');
 const beatstars_1 = require('../images/icons/beatstars.png');
 const favicon = require('../images/logo/vinny_logo_reducidisimo_favicon.png');
 const favicon2 = require('../images/logo/vinny_logo_circulo_favicon.png');
+const icon_play = require('../images/icons/player/play_w.svg');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

@@ -25,11 +25,18 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      */
 
-    public function home()
+    public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository)
     {
-        return $this->render('about/about.html.twig', [
+        $beat = $beatRepository->findAll();
+        $licence = $licenceRepository->findAll();
+        $filtre = $filtreRepository->findAll();
 
+        return $this->render('beats/beats.html.twig', [
+            'beat' => $beat,
+            'licence' => $licence,
+            'filtre' => $filtre,
         ]);
+
     }
 
     /**
