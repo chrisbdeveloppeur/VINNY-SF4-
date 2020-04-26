@@ -307,8 +307,14 @@ a
 
 //    FIN AUDIO WAVE
 
-.play-button:hover{
-  opacity: .5;
+.playButton{
+  opacity: .7;
+  transition: .2s;
+}
+
+.playButton:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 
 //@media(max-width: 500px){
