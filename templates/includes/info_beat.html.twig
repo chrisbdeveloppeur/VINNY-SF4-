@@ -44,7 +44,9 @@
 
                         {#<img style="position: absolute" height="45px" width="45px" src="{{ asset('build/images/play_w.73a5583a.svg') }}" alt="play button">#}
                         <i class="icon fas fa-3x fa-play-circle has-text-light playButton" style="position: absolute;">
-                            <audio src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3"></audio>
+                            <audio controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList">
+                                <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
+                            </audio>
                         </i>
                     </div>
                 </div>
@@ -105,9 +107,9 @@
 
                         <div class="columns is-centered align-items-end has-text-centered" style=" color: white;margin:0;padding: 0;height: 50%">
 
-                            <audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="width: 100%;background: rgba(0,0,0,0);padding:0">
-                                <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
-                            </audio>
+                            {#<audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="width: 100%;background: rgba(0,0,0,0);padding:0">
+                            <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
+                            </audio>#}
 
                         </div>
 
@@ -171,7 +173,7 @@
                 }
             });
         });
-</script>
+</script>#}
 {#   FIN SCRIPT PLAYER PERSO   #}
 
 {#  AUTO PAUSE MUSIC  #}
@@ -179,6 +181,7 @@
 
         document.addEventListener('play', function(e){
             let audios = document.getElementsByTagName('audio');
+            console.log(audios);
             for(let i = 0, len = audios.length; i < len;i++){
                 if(audios[i] !== e.target){
                     audios[i].pause();
