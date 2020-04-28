@@ -149,6 +149,7 @@
 {#   SCRIPT PLAYER PERSO   #}
 <script>
         $(document).ready(function() {
+
             let playing = false;
 
             $('.playButton').click(function() {
@@ -160,13 +161,13 @@
                     $(this).addClass('fa-pause-circle');
                     song[0].play();
                     playing = true;
-                    currentSong = song[0];
-                    console.log(currentSong);
+                    console.log('PLAY');
                 } else {
                     $(this).addClass('fa-play-circle');
                     $(this).removeClass('fa-pause-circle');
                     song[0].pause();
                     playing = false;
+                    console.log('PAUSE');
                 }
             });
         });
@@ -176,7 +177,6 @@
 {#  AUTO PAUSE MUSIC  #}
 <script>
 
-    function autoPause(){
         document.addEventListener('play', function(e){
             let audios = document.getElementsByTagName('audio');
             for(let i = 0, len = audios.length; i < len;i++){
@@ -185,7 +185,6 @@
                 }
             }
         }, true);
-    }
 
 </script>
 {#        FIN DE SCRIPT AUTO PAUSE        #}
