@@ -10,16 +10,16 @@ easy_admin:
 
         menu:
             - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
-            - label: 'BEATS'
+            - label: 'Beats'
               children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER'}
                          { entity: 'Filtre',rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }]
               permission: 'ROLE_USER'
-            - { entity: 'Licence',label : 'Licences', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - label: 'VIDEOS'
+            - label: 'Videos'
               children: ['SectionVideo','Video']
               permission: 'ROLE_USER'
+            - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Diapo',label : 'Carrousel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Diapo',label : 'Caroussel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
@@ -214,13 +214,13 @@ easy_admin:
                     - {property: 'genre',type: 'text', label: "Genre"}
 
         Diapo:
-            label: 'Caroussel'
+            label: 'Diapositives'
             class: App\Entity\Diapo
             form:
                 title: 'Ajouter un Diapo'
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
-                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
+                    - {property: 'texte' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo" }
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
 
@@ -228,13 +228,13 @@ easy_admin:
             edit:
                 title: 'Modifier un Beat'
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
-                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
+                    - {property: 'texte' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo" }
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
             list:
                 batch_actions: ['delete']
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
-                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre dde la diapo"}
+                    - {property: 'texte' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo" }
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
