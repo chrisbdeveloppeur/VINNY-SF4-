@@ -112,7 +112,19 @@
                             <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                             </audio>#}
 
-                            <audio controls controlsList="nodownload" preload="metadata" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered" style="width: 100%;height: 50%;--plyr-color-main:black;--plyr-audio-controls-background:rgba(0,0,0,0)">
+                            <audio controls controlsList="nodownload" preload="metadata" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered"
+                                   style="width: 100%;
+                                   height: 50%;
+                                   --plyr-color-main:rgba(0,0,0,0);
+                                   --plyr-audio-controls-background:rgba(0,0,0,0);
+                                   --plyr-range-thumb-background:rgb(255,255,255);
+                                   --plyr-audio-range-thumb-active-shadow-color:rgba(48,170,228,0.4);
+                                   --plyr-range-fill-background:rgba(48,170,228,1);
+                                   --plyr-audio-control-color:white;
+                                   --plyr-audio-control-color-hover:rgba(48,170,228,1);
+                                   --plyr-line-height:1;
+                                ">
+
                                 <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                                 <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/ogg" />
                             </audio>
@@ -134,62 +146,6 @@
 
 
 {% endfor %}
-
-{#      SCRIPT POUR FILTRE BEATS      #}
-
-<script>
-    filterSelection("all")
-    function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        if (c === "all") c = "";
-        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-        for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-    }
-
-    // Show filtered elements
-    function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {
-                element.className += " " + arr2[i];
-            }
-        }
-    }
-
-    // Hide elements that are not selected
-    function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);
-            }
-        }
-        element.className = arr1.join(" ");
-    }
-
-    // Add active class to the current control button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("button");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
-</script>
-
-{#      FIN SCRIPT POUR FILTRE BEATS      #}
-
-
 
 
             {#  SCRIPT VISU SOUND WAVE    #}
@@ -268,21 +224,25 @@
 {# FIN SCRIPT VISU SOUND WAVE    #}
 
 
+
+
+
+
 {#  AUTO PAUSE MUSIC  #}
-            {#<script>
+            <script>
 
-                document.addEventListener('play', function(e){
-                    let audios = document.getElementsByTagName('audio');
-                    console.log(audios);
-                    for(let i = 0, len = audios.length; i < len;i++){
-                        if(audios[i] !== e.target){
-                            audios[i].pause();
-                        }
-                    }
-                }, true);
+                // document.addEventListener('play', function(e){
+                //     let audios = document.getElementsByTagName('audio');
+                //     console.log(audios);
+                //     for(let i = 0, len = audios.length; i < len;i++){
+                //         if(audios[i] !== e.target){
+                //             audios[i].pause();
+                //         }
+                //     }
+                // }, true);
 
-            </script>#}
-            {#        FIN DE SCRIPT AUTO PAUSE        #}
+            </script>
+{#        FIN DE SCRIPT AUTO PAUSE        #}
 
 
 {#   SCRIPT POUR AUTO NEXT SONG   #}
