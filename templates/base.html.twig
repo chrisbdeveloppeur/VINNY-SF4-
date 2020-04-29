@@ -5,10 +5,10 @@
         <meta name="author" content="BOUNGOU Christian">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
-        <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
+        <script src="https://cdn.plyr.io/3.6.1/plyr.polyfilled.js"></script>
         <link rel="shortcut icon" type="image/png" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}"/>
         <link rel="icon" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}" type="image/png">
-        <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.1/plyr.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -229,26 +229,26 @@
 
             {#      FIN SCRIPT POUR FILTRE BEATS      #}
 
+            {#  AUTO PAUSE MUSIC  #}
+            <script>
 
+                document.addEventListener('play', function(e){
+                    let audios = document.getElementsByTagName('audio');
+                    console.log(audios);
+                    for(let i = 0, len = audios.length; i < len;i++){
+                        if(audios[i] !== e.target){
+                            audios[i].pause();
+                        }
+                    }
+                }, true);
+
+            </script>
+            {#        FIN DE SCRIPT AUTO PAUSE        #}
 
 
             {#  SCRIPT VISU SOUND WAVE    #}
 
             <script>
-
-
-                // let Beat = document.getElementsByClassName("js-player");
-                //
-                // for (i=0;i<Beat.length;i++){
-                //     // Beat[i].addEventListener("play", targetBeat(Beat[i]));
-                //     Beat[i].onplay
-                // }
-                //
-                // function targetBeat(selectedBeat){
-                //     console.log(selectedBeat.currentSrc);
-                // }
-
-
 
                 window.onload = function() {
 
@@ -276,7 +276,6 @@
                         analyser.fftSize = 512;
 
                         var bufferLength = analyser.frequencyBinCount;
-                        // console.log(bufferLength);
 
                         var dataArray = new Uint8Array(bufferLength);
 
@@ -355,30 +354,16 @@
                 });
             </script>
 
-{#            <script>#}
-{#                window.cookieconsent.initialise({#}
-{#                    "palette": {#}
-{#                        "popup": {#}
-{#                            "background": "rgba(0,0,0,0.8)"#}
-{#                        },#}
-{#                        "button": {#}
-{#                            "background": "#f1d600"#}
-{#                        }#}
-{#                    },#}
-{#                    "showLink": false,#}
-{#                    "theme": "edgeless",#}
-{#                    "position": "bottom-right",#}
-{#                    "type": "opt-out",#}
-{#                    "content": {#}
-{#                        "message": "Nous utilisons des cookies pour nous permettre de mieux comprendre comment le site est utilisé.\nEn continuant à utiliser ce site, vous acceptez cette politique. ",#}
-{#                        "dismiss": "Ok",#}
-{#                        "allow": "Autoriser",#}
-{#                        "deny": "Refuser",#}
-{#                        "link": "en savoir plus"#}
-{#                    }#}
-{#                });#}
-{#            </script>#}
             {#    FIN SCRIPT POUR COOKIE CONSENT     #}
+
+
+
+            {#   SCRIPT PLYR   #}
+            <script src="path/to/plyr.js"></script>
+            <script>
+                const players = Plyr.setup('.js-player');
+            </script>
+            {#  FIN SCRIPT PLYR   #}
 
         {% endblock %}
     </body>
