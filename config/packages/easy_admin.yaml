@@ -221,7 +221,7 @@ easy_admin:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
                     - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
-                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format .jpeg/jpg/png" }
+                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
 
 
@@ -230,7 +230,7 @@ easy_admin:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
                     - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
-                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format .jpeg/jpg/png" }
+                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
             list:
                 batch_actions: ['delete']
