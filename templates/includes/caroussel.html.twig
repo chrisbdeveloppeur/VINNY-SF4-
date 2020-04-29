@@ -20,9 +20,9 @@
 
             <div class="carousel-item active">
             {% if diapo.diapoimagename %}
-                <img height="200px" class="d-block w-100" src="{{ vich_uploader_asset(diapo, 'diapoImage')  }}" alt="First slide">
+                <img class="d-block w-100" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="First slide">
             {% else %}
-                <img height="200px" class="d-block w-100" src="{{ asset('build/images/BMSTARS.52ea32d7.jpg')  }}" alt="slide">
+                <img class="d-block w-100" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
             {% endif %}
                 <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0,0,0,0.7)">
                     <h5 class="is-size-3">{{ diapo.titre }}</h5>
@@ -34,9 +34,9 @@
 
                 <div class="carousel-item">
                     {% if diapo.diapoimagename %}
-                        <img height="200px" class="d-block w-100" src="{{ vich_uploader_asset(diapo, 'diapoImage')  }}" alt="slide">
+                        <img class="d-block w-100" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide">
                     {% else %}
-                        <img height="200px" class="d-block w-100" src="{{ asset('build/images/BM.09ac0c25.jpg')  }}" alt="slide">
+                        <img class="d-block w-100" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
                     {% endif %}
                     <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0,0,0,0.7)">
                         <h5 class="is-size-3">{{ diapo.titre }}</h5>
