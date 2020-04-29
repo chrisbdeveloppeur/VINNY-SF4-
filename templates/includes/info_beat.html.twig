@@ -189,21 +189,7 @@
 
 {#      FIN SCRIPT POUR FILTRE BEATS      #}
 
-            {#  AUTO PAUSE MUSIC  #}
-            {#<script>
 
-                document.addEventListener('play', function(e){
-                    let audios = document.getElementsByTagName('audio');
-                    console.log(audios);
-                    for(let i = 0, len = audios.length; i < len;i++){
-                        if(audios[i] !== e.target){
-                            audios[i].pause();
-                        }
-                    }
-                }, true);
-
-            </script>#}
-            {#        FIN DE SCRIPT AUTO PAUSE        #}
 
 
             {#  SCRIPT VISU SOUND WAVE    #}
@@ -280,6 +266,23 @@
 </script>
 
 {# FIN SCRIPT VISU SOUND WAVE    #}
+
+
+{#  AUTO PAUSE MUSIC  #}
+            {#<script>
+
+                document.addEventListener('play', function(e){
+                    let audios = document.getElementsByTagName('audio');
+                    console.log(audios);
+                    for(let i = 0, len = audios.length; i < len;i++){
+                        if(audios[i] !== e.target){
+                            audios[i].pause();
+                        }
+                    }
+                }, true);
+
+            </script>#}
+            {#        FIN DE SCRIPT AUTO PAUSE        #}
 
 
 {#   SCRIPT POUR AUTO NEXT SONG   #}
