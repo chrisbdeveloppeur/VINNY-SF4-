@@ -6,9 +6,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         <script src="https://cdn.plyr.io/3.6.1/plyr.polyfilled.js"></script>
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.1/plyr.css" />
         <link rel="shortcut icon" type="image/png" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}"/>
         <link rel="icon" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}" type="image/png">
-        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.1/plyr.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -173,154 +173,6 @@
 
 
 
-
-
-            {#      SCRIPT POUR FILTRE BEATS      #}
-
-            <script>
-                filterSelection("all")
-                function filterSelection(c) {
-                    var x, i;
-                    x = document.getElementsByClassName("filterDiv");
-                    if (c === "all") c = "";
-                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-                    for (i = 0; i < x.length; i++) {
-                        w3RemoveClass(x[i], "show");
-                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                    }
-                }
-
-                // Show filtered elements
-                function w3AddClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {
-                            element.className += " " + arr2[i];
-                        }
-                    }
-                }
-
-                // Hide elements that are not selected
-                function w3RemoveClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);
-                        }
-                    }
-                    element.className = arr1.join(" ");
-                }
-
-                // Add active class to the current control button (highlight it)
-                var btnContainer = document.getElementById("myBtnContainer");
-                var btns = btnContainer.getElementsByClassName("button");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function() {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
-            </script>
-
-            {#      FIN SCRIPT POUR FILTRE BEATS      #}
-
-            {#  AUTO PAUSE MUSIC  #}
-            <script>
-
-                document.addEventListener('play', function(e){
-                    let audios = document.getElementsByTagName('audio');
-                    console.log(audios);
-                    for(let i = 0, len = audios.length; i < len;i++){
-                        if(audios[i] !== e.target){
-                            audios[i].pause();
-                        }
-                    }
-                }, true);
-
-            </script>
-            {#        FIN DE SCRIPT AUTO PAUSE        #}
-
-
-            {#  SCRIPT VISU SOUND WAVE    #}
-
-            <script>
-
-                window.onload = function() {
-
-                    var file = document.getElementById("thefile");
-
-                    var audio = document.getElementById("audio");
-
-                    file.onchange = function() {
-                        var files = this.files;
-                        audio.src = URL.createObjectURL(files[0]);
-                        audio.load();
-                        audio.play();
-                        var context = new AudioContext();
-                        var src = context.createMediaElementSource(audio);
-                        var analyser = context.createAnalyser();
-
-                        var canvas = document.getElementById("canvas");
-                        canvas.width = window.innerWidth;
-                        canvas.height = window.innerHeight * 0.3 ;
-                        var ctx = canvas.getContext("2d");
-
-                        src.connect(analyser);
-                        analyser.connect(context.destination);
-
-                        analyser.fftSize = 512;
-
-                        var bufferLength = analyser.frequencyBinCount;
-
-                        var dataArray = new Uint8Array(bufferLength);
-
-                        var WIDTH = canvas.width;
-                        var HEIGHT = canvas.height;
-
-                        var barWidth = (WIDTH / bufferLength) * 2.5;
-                        var barHeight;
-                        var x = 0;
-
-                        function renderFrame() {
-                            requestAnimationFrame(renderFrame);
-
-                            x = 0;
-
-                            analyser.getByteFrequencyData(dataArray);
-
-                            ctx.fillStyle = "#121212";
-                            ctx.strokeStyle = "rgba(0,0,0,1)";
-                            ctx.lineCap = 'round';
-                            ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-                            for (var i = 0; i < bufferLength; i++) {
-                                barHeight = dataArray[i];
-
-                                var r = barHeight;
-                                var g = barHeight;
-                                var b = 2;
-
-                                ctx.fillStyle = "rgb(" + r + "," + g + ",255)";
-                                ctx.lineCap = 'round';
-                                ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
-
-                                x += barWidth + 1;
-                            }
-                        }
-
-                        audio.play();
-                        renderFrame();
-                    };
-                };
-            </script>
-
-            {# FIN SCRIPT VISU SOUND WAVE    #}
-
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -359,9 +211,8 @@
 
 
             {#   SCRIPT PLYR   #}
-            <script src="path/to/plyr.js"></script>
             <script>
-                const players = Plyr.setup('.js-player');
+                const players = Plyr.setup('.js-plyr');
             </script>
             {#  FIN SCRIPT PLYR   #}
 

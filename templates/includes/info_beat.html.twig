@@ -106,18 +106,18 @@
 
                         </div>
 
-                        <div class="columns is-centered align-items-end has-text-centered" style=" color: white;margin:0;padding: 0;height: 50%">
+                        {#<div class="columns is-centered align-items-end has-text-centered" style=" color: white;margin:0;padding: 0;height: 50%">
 
                             {#<audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="width: 100%;background: rgba(0,0,0,0);padding:0">
                             <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                             </audio>#}
 
-                            <audio controls controlsList="nodownload" preload="metadata" class="js-player beatFormBeatList" style="--plyr-color-main:black;">
+                            <audio controls controlsList="nodownload" preload="metadata" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered" style="width: 100%;height: 50%;--plyr-color-main:black;--plyr-audio-controls-background:rgba(0,0,0,0)">
                                 <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />
                                 <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/ogg" />
                             </audio>
 
-                        </div>
+                        {#</div>#}
 
 
                 </div>
@@ -135,9 +135,155 @@
 
 {% endfor %}
 
+{#      SCRIPT POUR FILTRE BEATS      #}
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c === "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+
+    // Show filtered elements
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("button");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+{#      FIN SCRIPT POUR FILTRE BEATS      #}
+
+            {#  AUTO PAUSE MUSIC  #}
+            {#<script>
+
+                document.addEventListener('play', function(e){
+                    let audios = document.getElementsByTagName('audio');
+                    console.log(audios);
+                    for(let i = 0, len = audios.length; i < len;i++){
+                        if(audios[i] !== e.target){
+                            audios[i].pause();
+                        }
+                    }
+                }, true);
+
+            </script>#}
+            {#        FIN DE SCRIPT AUTO PAUSE        #}
+
+
+            {#  SCRIPT VISU SOUND WAVE    #}
+
+<script>
+
+    window.onload = function() {
+
+        var file = document.getElementById("thefile");
+
+        var audio = document.getElementById("audio");
+
+        file.onchange = function() {
+            var files = this.files;
+            audio.src = URL.createObjectURL(files[0]);
+            audio.load();
+            audio.play();
+            var context = new AudioContext();
+            var src = context.createMediaElementSource(audio);
+            var analyser = context.createAnalyser();
+
+            var canvas = document.getElementById("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight * 0.3 ;
+            var ctx = canvas.getContext("2d");
+
+            src.connect(analyser);
+            analyser.connect(context.destination);
+
+            analyser.fftSize = 512;
+
+            var bufferLength = analyser.frequencyBinCount;
+
+            var dataArray = new Uint8Array(bufferLength);
+
+            var WIDTH = canvas.width;
+            var HEIGHT = canvas.height;
+
+            var barWidth = (WIDTH / bufferLength) * 2.5;
+            var barHeight;
+            var x = 0;
+
+            function renderFrame() {
+                requestAnimationFrame(renderFrame);
+
+                x = 0;
+
+                analyser.getByteFrequencyData(dataArray);
+
+                ctx.fillStyle = "#121212";
+                ctx.strokeStyle = "rgba(0,0,0,1)";
+                ctx.lineCap = 'round';
+                ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+                for (var i = 0; i < bufferLength; i++) {
+                    barHeight = dataArray[i];
+
+                    var r = barHeight;
+                    var g = barHeight;
+                    var b = 2;
+
+                    ctx.fillStyle = "rgb(" + r + "," + g + ",255)";
+                    ctx.lineCap = 'round';
+                    ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+                    x += barWidth + 1;
+                }
+            }
+
+            audio.play();
+            renderFrame();
+        };
+    };
+</script>
+
+{# FIN SCRIPT VISU SOUND WAVE    #}
+
 
 {#   SCRIPT POUR AUTO NEXT SONG   #}
-<script>
+{#<script>
     let _audio = document.getElementsByClassName('beatFormBeatList');
     for (i = 0; i < _audio.length; i++){
         let nextBeat = _audio[i+1];
@@ -149,7 +295,7 @@
 
         };
     }
-</script>
+</script>#}
 {#   FIN SCRIPT POUR AUTO NEXT SONG   #}
 
 

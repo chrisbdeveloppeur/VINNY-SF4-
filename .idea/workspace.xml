@@ -74,14 +74,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="114" column="154" selection-start-line="114" selection-start-column="154" selection-end-line="114" selection-end-column="154" />
+            <state relative-caret-position="1317">
+              <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
               <folding>
                 <element signature="e#285#305#0#HTML" expanded="true" />
                 <element signature="e#553#599#0#HTML" expanded="true" />
                 <element signature="e#1017#1077#0#HTML" expanded="true" />
                 <element signature="e#1142#1168#0#HTML" expanded="true" />
                 <element signature="e#1911#2042#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="362" column="20" selection-start-line="362" selection-start-column="20" selection-end-line="362" selection-end-column="20" />
+            <state relative-caret-position="510">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
             </state>
           </provider>
         </entry>
@@ -111,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="319" selection-start-line="319" selection-end-line="321" selection-end-column="1" />
+            <state relative-caret-position="260">
+              <caret line="319" selection-start-line="319" selection-end-line="319" />
             </state>
           </provider>
         </entry>
@@ -188,8 +189,8 @@
         <option value="$PROJECT_DIR$/templates/contact/contact.html.twig" />
         <option value="$PROJECT_DIR$/.env.local" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/app.scss" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/info_beat.html.twig" />
       </list>
     </option>
@@ -441,12 +442,12 @@
       <workItem from="1586679538377" duration="4987000" />
       <workItem from="1586891990333" duration="15415000" />
       <workItem from="1587229301313" duration="10973000" />
-      <workItem from="1587883614008" duration="22432000" />
+      <workItem from="1587883614008" duration="24378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427343000" />
+    <option name="totallyTimeSpent" value="429289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -802,30 +803,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="362" column="20" selection-start-line="362" selection-start-column="20" selection-end-line="362" selection-end-column="20" />
+        <state relative-caret-position="260">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="319" selection-start-line="319" selection-end-line="321" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="114" column="154" selection-start-line="114" selection-start-column="154" selection-end-line="114" selection-end-column="154" />
+        <state relative-caret-position="1317">
+          <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
           <folding>
             <element signature="e#285#305#0#HTML" expanded="true" />
             <element signature="e#553#599#0#HTML" expanded="true" />
             <element signature="e#1017#1077#0#HTML" expanded="true" />
             <element signature="e#1142#1168#0#HTML" expanded="true" />
             <element signature="e#1911#2042#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
