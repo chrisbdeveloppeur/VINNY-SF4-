@@ -8,6 +8,7 @@ use App\Form\FiltresType;
 use App\Form\MessageType;
 use App\Notif\NotifMessage;
 use App\Repository\BeatRepository;
+use App\Repository\DiapoRepository;
 use App\Repository\FiltreRepository;
 use App\Repository\LicenceRepository;
 use App\Repository\SectionVideoRepository;
@@ -42,10 +43,15 @@ class HomeController extends AbstractController
     /**
      * @Route("/about", name="about")
      */
-    public function about()
+    public function about(DiapoRepository $diapoRepository)
     {
+        $diapo = $diapoRepository->findAll();
+        $nombre = 1;
+        $active = 'active';
         return $this->render('about/about.html.twig', [
-
+            'diapo' => $diapo,
+            'nombre' => $nombre,
+            'active' => $active,
         ]);
     }
 

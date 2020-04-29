@@ -1,0 +1,141 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\DiapoRepository")
+ * @Vich\Uploadable
+ */
+class Diapo
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $titre;
+
+    /**
+     *
+     * @Vich\UploadableField(mapping="diapo", fileNameProperty="diapoImageName")
+     *
+     * @var File|null
+     * @Assert\Image(
+     *     maxSize="8Mi",
+     *     mimeTypes={"image/jpeg", "image/png"},
+     *     mimeTypesMessage = "Seul les fichier jpg/jpeg/png sont acceptés")
+     */
+    private $diapoImage;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $diapoImageName;
+
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $texte;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTitre(): ?string
+    {
+        return $this->titre;
+    }
+
+    public function setTitre(?string $titre): self
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getTexte(): ?string
+    {
+        return $this->texte;
+    }
+
+    public function setTexte(?string $texte): self
+    {
+        $this->texte = $texte;
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getDiapoImage(): ?File
+    {
+        return $this->diapoImage;
+    }
+
+    /**
+     * @param File|null $diapoImage
+     * @return Diapo
+     */
+    public function setDiapoImage(?File $diapoImage): Diapo
+    {
+        $this->diapoImage = $diapoImage;
+        if ($this->diapoImage instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDiapoImageName(): ?string
+    {
+        return $this->diapoImageName;
+    }
+
+    /**
+     * @param string|null $diapoImageName
+     * @return Diapo
+     */
+    public function setDiapoImageName(?string $diapoImageName): Diapo
+    {
+        $this->diapoImageName = $diapoImageName;
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+
+
+}

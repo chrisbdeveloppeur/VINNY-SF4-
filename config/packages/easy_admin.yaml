@@ -19,6 +19,7 @@ easy_admin:
               children: ['SectionVideo','Video']
               permission: 'ROLE_USER'
             - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
+            - { entity: 'Diapo',label : 'Caroussel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
     list:
         actions: ['edit', 'search']
@@ -211,3 +212,29 @@ easy_admin:
                 batch_actions: ['delete']
                 fields:
                     - {property: 'genre',type: 'text', label: "Genre"}
+
+        Diapo:
+            label: 'Caroussel'
+            class: App\Entity\Diapo
+            form:
+                title: 'Ajouter un Diapo'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
+                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format .jpeg/jpg/png" }
+
+
+
+            edit:
+                title: 'Modifier un Beat'
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
+                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format .jpeg/jpg/png" }
+
+            list:
+                batch_actions: ['delete']
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre du diapo"}
+                    - {property: 'texte' , type: 'text', label: "Text", help: "Entrez ici le corps de texte du diapo" }
+                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}

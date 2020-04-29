@@ -28,3 +28,12 @@ liip_imagine :
             quality: 100
             filters:
                 thumbnail: { size: [50, 50], mode: outbound }
+
+        diapo_size:
+            quality: 100
+            filters:
+#                thumbnail: { size: [720, 420], mode: outbound }
+                upscale:
+
+                    # input 1980x1280px -> output 3960x2560px
+                    min: [720, 200]
