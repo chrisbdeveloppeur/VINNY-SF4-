@@ -44,16 +44,15 @@ class Diapo
     private $diapoImageName;
 
 
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $texte;
-
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $text;
 
 
     public function getId(): ?int
@@ -69,18 +68,6 @@ class Diapo
     public function setTitre(?string $titre): self
     {
         $this->titre = $titre;
-
-        return $this;
-    }
-
-    public function getTexte(): ?string
-    {
-        return $this->texte;
-    }
-
-    public function setTexte(?string $texte): self
-    {
-        $this->texte = $texte;
 
         return $this;
     }
@@ -132,6 +119,18 @@ class Diapo
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getText(): ?string
+    {
+        return $this->text;
+    }
+
+    public function setText(?string $text): self
+    {
+        $this->text = $text;
 
         return $this;
     }
