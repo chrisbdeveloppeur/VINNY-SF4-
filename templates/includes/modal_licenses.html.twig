@@ -5,8 +5,8 @@
 
         <div class="modal-content" style="border-radius: 0px; border: none;position: absolute;width: 90vw;">
 
-            <div class="modal-header is-centered" style="background: #343a40;border-radius: 0px">
-                <h5 class="modal-title has-text-weight-bold" style="color: #999c9f;">Licenses</h5>
+            <div class="modal-header is-centered justify-content-center" style="background: #343a40;border-radius: 0px">
+                <h5 class="modal-title has-text-weight-bold is-size-3-touch" style="color: #999c9f;">Licenses</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #999c9f;">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -17,7 +17,7 @@
 
                     {% for licence in licence %}
                         <div class="pricing-plan is-{{ licence.color }} is-full-touch is-1 column" style="padding: 0;border:none;border-radius: 0px">
-                            <div class="plan-header has-background-{{ licence.color }} has-text-white text-uppercase" style="border-radius: 0px">{{ licence.titre }}</div>
+                            <div class="plan-header has-background-{{ licence.color }} has-text-white text-uppercase is-size-3-touch style="border-radius: 0px">{{ licence.titre }}</div>
                             <div class="plan-price">
 
                                 {% if licence.dollar or licence.euro %}
@@ -29,7 +29,7 @@
                                 {% endif %}
                             </div>
 
-                            <div class="plan-items is-size-5">
+                            <div class="plan-items is-size-5 is-size-3-touch">
 
                                 {% if licence.info1 %}
                                     <div class="plan-item">{{ licence.info1 }}</div>
@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="plan-footer">
-                                <a href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-white" style="border-radius: 0px;">Select</a>
+                                <a href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-white is-size-3-touch" style="border-radius: 0px;">Select</a>
                             </div>
                         </div>
                     {% endfor %}

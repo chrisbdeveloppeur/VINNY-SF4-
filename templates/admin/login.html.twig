@@ -24,12 +24,12 @@
                 <div class="field">
 
                     <div class="column has-text-weight-bold has-text-centered">
-                        <label class="" for="">Veuillez entrer vos identifiants administrateur</label>
+                        <label class="is-size-3-touch" for="">Veuillez entrer vos identifiants administrateur</label>
                     </div>
 
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required>
-                        <span class="icon is-small is-left" style="z-index: 0;">
+                        <input class="input is-size-3-touch" type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required>
+                        <span class="icon is-small is-left is-size-3-touch" style="z-index: 0;">
                           <i class="fas fa-envelope"></i>
                         </span>
                     </p>
@@ -38,8 +38,8 @@
 
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input" type="password" name="password" id="inputPassword" placeholder="Password" required>
-                        <span class="icon is-small is-left" style="z-index: 0;">
+                        <input class="input is-size-3-touch" type="password" name="password" id="inputPassword" placeholder="Password" required>
+                        <span class="icon is-small is-left is-size-3-touch" style="z-index: 0;">
                             <i class="fas fa-lock"></i>
                         </span>
                     </p>
@@ -49,7 +49,7 @@
 
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                        <button class="button is-info">
+                        <button class="button is-info is-size-3-touch">
                             Log in
                         </button>
                     </p>
