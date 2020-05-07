@@ -146,4 +146,12 @@ class HomeController extends AbstractController
         return $this->render('mentions_legales/mentions_legales.html.twig');
     }
 
+    /**
+     * @Route("/politique-confidentialite", name="politique-confidentialite")
+     */
+    public function politiqueConfidentialite()
+    {
+        return $this->render('politique_confidentialite/politique_confidentialite.html.twig');
+    }
+
 }
