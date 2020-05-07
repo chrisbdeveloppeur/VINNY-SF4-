@@ -264,7 +264,29 @@
 
             {#   SCRIPT PLYR   #}
             <script>
-                const players = Plyr.setup('.js-plyr');
+                var players = Plyr.setup('.js-plyr');
+
+                {#   AUTOPAUSE   #}
+                var i = 1;
+                players.forEach(function (instance) {
+                    instance.on('ready', function (event) {
+                        console.log(instance);
+                        instance.elements.container.setAttribute('id', 'plyId-' + i);
+                        instance.plyId = 'plyr-' + i;
+                        console.log(instance.pid);
+                        i++;
+                    });
+                    instance.on('play', function (event) {
+                        var currentPid = instance.plyId;
+                        players.forEach(function (instance) {
+                            if (currentPid != instance.plyId) {
+                                instance.pause();
+                            }
+                        });
+                    });
+                });
+                {#  FIN AUTOPAUSE   #}
+
             </script>
             {#  FIN SCRIPT PLYR   #}
 
