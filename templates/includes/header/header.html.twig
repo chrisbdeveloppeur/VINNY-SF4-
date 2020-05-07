@@ -13,7 +13,7 @@
 
 
     <div class="collapse navbar-collapse has-text-centered has-text-weight-bold" id="navbarNav">
-        <ul class="navbar-nav is-size-2-touch is-size-3-desktop mr-auto">
+        <ul class="navbar-nav is-size-3-touch is-size-3-desktop mr-auto">
 
             <li class="nav-item">
                 <a href="{{ path('beats') }}" class="nav-link">
@@ -45,7 +45,7 @@
 
         {% block navbarend %}
 
-        <div class="navbar-nav is-size-2-touch is-size-3-desktop">
+        <div class="navbar-nav is-size-3-touch is-size-3-desktop">
 
             {% if is_granted('ROLE_USER') %}
                 <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard">
