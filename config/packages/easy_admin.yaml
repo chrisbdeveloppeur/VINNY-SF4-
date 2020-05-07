@@ -181,12 +181,14 @@ easy_admin:
                 title: 'Ajouter une video'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'info' , type: 'text', label: "Info"}
                     - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
                     - {property: 'section' ,type: 'easyadmin_autocomplete', type_options: { class: 'App\Entity\SectionVideo' } }
             edit:
                 title: 'Modifier une video'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'info' , type: 'text', label: "Info"}
                     - {property: 'link' , type: 'text', label: "lien url", help: "Entrez ici l'ID de la video youtube<br>Exemple : dans l'url https://www.youtube.com/embed/<strong>HhQTPqq4XFY</strong><br>L'ID est <strong>HhQTPqq4XFY</strong>"}
                     - {property: 'section' ,type: 'easyadmin_autocomplete', type_options: { class: 'App\Entity\SectionVideo' } }
 
@@ -194,6 +196,7 @@ easy_admin:
                 batch_actions: ['delete']
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'info' , type: 'text', label: "Info"}
                     - {property: 'link' , type: 'text', label: "lien url"}
                     - {property: 'section' , type: 'text'}
 

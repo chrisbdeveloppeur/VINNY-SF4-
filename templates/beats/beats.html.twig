@@ -6,6 +6,19 @@
 Beats
 {% endblock %}
 
+{% block audiocontrol %}
+    {% if is_granted('ROLE_USER') %}
+        {#                            <audio style="box-shadow: black 0 0 20px 1px;background:#121212;width: 100%;height: 25px" id="audio" controls></audio>#}
+        {% block player %}
+            {% include 'includes/player.html.twig' %}
+        {% endblock %}
+    {% else %}
+        <div style="box-shadow: black 0 0 20px 1px;background: #121212;width: 100%;height: 5px;">
+
+        </div>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 
                 {% include('includes/tableau_beat.html.twig') %}

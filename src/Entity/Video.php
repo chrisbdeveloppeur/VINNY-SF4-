@@ -32,6 +32,11 @@ class Video
      */
     private $section;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $info;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Video
     public function setSection(?SectionVideo $section): self
     {
         $this->section = $section;
+
+        return $this;
+    }
+
+    public function getInfo(): ?string
+    {
+        return $this->info;
+    }
+
+    public function setInfo(?string $info): self
+    {
+        $this->info = $info;
 
         return $this;
     }
