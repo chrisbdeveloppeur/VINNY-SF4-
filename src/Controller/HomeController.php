@@ -138,4 +138,12 @@ class HomeController extends AbstractController
         return $this->render('includes/cookies.html.twig');
     }
 
+    /**
+     * @Route("/mentions-legales", name="mentions-legales")
+     */
+    public function mentionsLegales()
+    {
+        return $this->render('mentions_legales/mentions_legales.html.twig');
+    }
+
 }
