@@ -23,6 +23,7 @@ $size-1: 7rem;
 $size-2: 5rem;
 $size-3: 2.5rem;
 
+
 // Importer Bulma
 @import "~bulma";
 @import '~bulma-extensions';
@@ -318,11 +319,5 @@ a
 }
 
 
-
-//@media(max-width: 500px){
-//  h1{
-//    font-size: 7rem;
-//  }
-//}
 
 
