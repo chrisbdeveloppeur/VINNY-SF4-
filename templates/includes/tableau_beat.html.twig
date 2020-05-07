@@ -2,21 +2,21 @@
     <div class="columns is-flex align-items-center has-background-black-bis" style="margin: 0;">
         <label class="is-flex align-items-center" for="" style="margin: auto 0;">
             <div class="column">
-                <strong class="has-text-white is-size-4">Genres :</strong>
+                <strong class="has-text-white is-size-4 is-size-3-touch">Genres :</strong>
             </div>
         </label>
 
         <div id="myBtnContainer" class="buttons are-small column is-flex" style="margin: auto 0;">
 
                 <div class="column is-flex align-items-center justify-content-center">
-                    <button class="button is-small active is-light is-outlined is-family-sans-serif font-weight-bold is-size-3-touch" style="margin: auto 0;padding: 2px auto;" type="submit" onclick="filterSelection('all')"> All</button>
+                    <button class="button is-small active is-light is-outlined is-family-sans-serif font-weight-bold is-size-4-touch" style="margin: auto 0;padding: 2px auto;" type="submit" onclick="filterSelection('all')"> All</button>
                 </div>
 
             {% for filtre in filtre %}
 
                 <div class="column is-flex align-items-center justify-content-center">
 
-                    <button class="button is-small is-light is-outlined is-family-sans-serif font-weight-bold is-size-3-touch" value="{{ filtre.genre }}" style="margin: auto 0;padding: 2px auto;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
+                    <button class="button is-small is-light is-outlined is-family-sans-serif font-weight-bold is-size-4-touch" value="{{ filtre.genre }}" style="margin: auto 0;padding: 2px auto;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
                     </button>
 
