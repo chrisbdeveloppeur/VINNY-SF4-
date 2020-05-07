@@ -268,13 +268,25 @@
 
                 {#   AUTOPAUSE   #}
                 var i = 1;
+
+
                 players.forEach(function (instance) {
                     instance.on('ready', function (event) {
-                        console.log(instance);
                         instance.elements.container.setAttribute('id', 'plyId-' + i);
                         instance.plyId = 'plyr-' + i;
-                        console.log(instance.pid);
+                        let lenght = players.length;
+                        var j = i+1;
+                        if (j > lenght){
+                             j = 1;
+                        }
+                        let nextId = 'plyId-' + j;
                         i++;
+                        instance.on('ended', function (event) {
+                            console.log(nextId);
+                            let nextBeat = document.getElementById(nextId);
+                            console.log(nextBeat.children[1]);
+                            nextBeat.children[1].play();
+                        });
                     });
                     instance.on('play', function (event) {
                         var currentPid = instance.plyId;
@@ -284,7 +296,13 @@
                             }
                         });
                     });
+
+
                 });
+
+
+
+
                 {#  FIN AUTOPAUSE   #}
 
             </script>
