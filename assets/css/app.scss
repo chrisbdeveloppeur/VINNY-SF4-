@@ -328,4 +328,23 @@ a
   .plyr__volume{
     display: none;
   }
+
+  .cc-window{
+    font-size: x-large;
+  }
+  .cc-window.cc-floating{
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .cc-bottom{
+    font-size: x-large;
+    bottom: 0em;
+  }
+  .cc-right{
+    right: 0em;
+  }
+  .cc-message{
+    text-align: center;
+  }
+
 }
