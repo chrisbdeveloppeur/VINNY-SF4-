@@ -50,7 +50,6 @@ class MessageType extends AbstractType
                     'error_bubbling' => true,
                     'constraints' => [
                     new NotBlank(['message' => 'Please fill this field']),
-                    new Email(['message' => 'Your message cannot contain special characters (ex: / {} <>)']),
                     ]
                 )
             )
