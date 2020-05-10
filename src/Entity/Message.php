@@ -42,7 +42,7 @@ class Message
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
-     *     message="Votre message ne peut contenir de caractères spéciaux (ex : /{}<> )",
+     *     message="Your message cannot contain special characters (ex: / {} <>)",
      * )
      */
 
