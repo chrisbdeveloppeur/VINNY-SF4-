@@ -30,9 +30,9 @@
                 <article class="column is-half-desktop has-text-centered">
 
                     <div class="field">
-                        <label class="label is-size-3-touch">Last name</label>
+                        <label class="label is-hidden-touch">Last name</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.nom, {'attr' : {'class' : 'is-size-3-touch input', 'placeholder' : 'Enter your Last name', 'alt' : 'Last name'}
+                            {{ form_row(messageForm.nom, {'attr' : {'class' : 'is-size-3-touch input','title' : 'Last name', 'placeholder' : 'Enter your Last name', 'alt' : 'Last name'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-male"></i>
@@ -41,9 +41,9 @@
                     </div>
 
                     <div class="field">
-                        <label class="label is-size-3-touch">First name</label>
+                        <label class="label is-hidden-touch">First name</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.prenom, {'attr' : {'class' : 'is-size-3-touch input', 'placeholder' : 'Enter your First name', 'alt' : 'First name'}
+                            {{ form_row(messageForm.prenom, {'attr' : {'class' : 'is-size-3-touch input','title' : 'First name', 'placeholder' : 'Enter your First name', 'alt' : 'First name'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-user"></i>
@@ -53,9 +53,9 @@
                     </div>
 
                     <div class="field">
-                        <label class="label is-size-3-touch">Email *</label>
+                        <label class="label is-hidden-touch">Email *</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.email, {'attr' : {'class' : 'is-size-3-touch input', 'placeholder' : 'ex : mail@mail.com', 'alt' : 'email'}
+                            {{ form_row(messageForm.email, {'attr' : {'class' : 'is-size-3-touch input','title' : 'Email *', 'placeholder' : 'ex : mymail@gmail.com', 'alt' : 'email'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-envelope"></i>
@@ -66,9 +66,9 @@
                     </div>
 
                     <div class="field">
-                        <label class="label is-size-3-touch">Subject</label>
+                        <label class="label is-hidden-touch">Subject</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.objet, {'attr' : {'class' : 'is-size-3-touch input', 'placeholder' : 'Enter the subject', 'alt' : 'subject'}
+                            {{ form_row(messageForm.objet, {'attr' : {'class' : 'is-size-3-touch input','title' : 'Subject', 'placeholder' : 'Enter the subject', 'alt' : 'subject'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-hashtag"></i>
@@ -78,15 +78,14 @@
                     </div>
 
                     <div class="field">
-                        <label class="label is-size-3-touch">Message *</label>
+                        <label class="label is-hidden-touch">Message *</label>
                         <div class="control">
-{#                            <textarea class="textarea is-link" placeholder="Ecrivez votre message" style="resize: none;"></textarea>#}
-                            {{ form_row(messageForm.message, {'attr' : {'class' : 'is-size-3-touch textarea', 'placeholder' : 'Enter your message', 'alt' : 'message'}
+                            {{ form_row(messageForm.message, {'attr' : {'class' : 'is-size-3-touch textarea','title' : 'Message *', 'placeholder' : 'Enter your message', 'alt' : 'message'}
                             }) }}
                         </div>
                     </div>
 
-                    <div class="field is-grouped justify-content-center">
+                    <div class="field is-grouped justify-content-center" title="Submit">
                         <div class="control">
                             <button class="button is-info is-size-3-touch" type="submit">Submit</button>
                         </div>
