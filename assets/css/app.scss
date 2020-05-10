@@ -318,4 +318,11 @@ a
   cursor: pointer;
 }
 
-
+@media screen and (max-width: 1026px){
+  .plyr{
+    --plyr-font-size-small : 30px;
+    --plyr-control-icon-size: 30px;
+    --plyr-range-thumb-height: 25px;
+    --plyr-range-track-height: 15px;
+  }
+}

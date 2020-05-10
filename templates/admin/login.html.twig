@@ -6,6 +6,12 @@
     Log in
 {% endblock %}
 
+{% block entete %}
+    <div class="column has-text-weight-bold has-text-centered" style="position: relative">
+        <label class="subtitle has-text-centered is-3 is-family-monospace is-size-3-touch" for="">Please enter your administrator credentials</label>
+    </div>
+{% endblock %}
+
 {% block content %}
 
         <div class="container column is-full-touch is-two-fifths-desktop">
@@ -15,17 +21,13 @@
 
 
                 {% if error %}
-                    <div class="form-error notification is-danger">
+                    <div class="form-error notification is-danger is-size-3-touch">
                         <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                         {{ error.messageKey|trans(error.messageData, 'security') }}
                     </div>
                 {% endif %}
 
                 <div class="field">
-
-                    <div class="column has-text-weight-bold has-text-centered">
-                        <label class="is-size-3-touch" for="">Veuillez entrer vos identifiants administrateur</label>
-                    </div>
 
                     <p class="control has-icons-left has-icons-right">
                         <input class="input is-size-3-touch" type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required>

@@ -6,16 +6,18 @@
     Contact
 {% endblock %}
 
-{% block content %}
+{% block entete %}
+    <h2 class="subtitle has-text-centered is-3 is-family-monospace is-size-3-touch" style="position: relative">
+        Feel free to chat with me by  filling the form down below
+    </h2>
+{% endblock %}
 
-            <h2 class="subtitle has-text-centered is-3 is-family-monospace is-size-2-touch">
-                Feel free to chat with me by  filling the form down below
-            </h2>
+{% block content %}
 
             {% include 'includes/flash_message.html.twig' %}
 
             {% if form_errors(messageForm) != null %}
-                <div class="form-error notification is-danger is-flex justify-content-center align-items-center column has-text-weight-bold">
+                <div class="form-error notification is-danger is-flex justify-content-center align-items-center column has-text-weight-bold is-size-3-touch">
                     <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                     {{ form_errors(messageForm) }}
                 </div>

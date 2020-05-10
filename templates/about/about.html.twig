@@ -8,18 +8,22 @@
     About
 {% endblock %}
 
+{% block entete %}
+    <h2 class="subtitle has-text-centered is-3 is-family-monospace is-size-3-touch" style="position: relative">
+
+        What you need to know about the Beatmaker
+
+        {#                Ce que vous devez savoir sur l'artiste <strong class="has-text-info">Vinny Vixi</strong>#}
+
+    </h2>
+{% endblock %}
+
 {% block content %}
 
 
 
 
-            <h2 class="subtitle has-text-centered is-3 is-family-monospace is-size-2-touch">
 
-                What you need to know about the Beatmaker
-
-{#                Ce que vous devez savoir sur l'artiste <strong class="has-text-info">Vinny Vixi</strong>#}
-
-            </h2>
 
             {% include('includes/caroussel.html.twig') %}
 
