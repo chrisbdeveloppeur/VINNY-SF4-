@@ -40,12 +40,10 @@ class Message
     /**
      * @ORM\Column(type="text")
      * @Assert\Regex(
-     *     pattern="/\d/",
-     *     match=false,
+     *     pattern="/^\w+/",
      *     message="Your message cannot contain special characters (ex: / {} <>)",
      * )
      */
-
     private $message;
 
     /**
