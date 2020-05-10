@@ -47,6 +47,7 @@ class MessageType extends AbstractType
 
             ->add('message', TextareaType::class,
                 array('label' => false,
+                    'error_bubbling' => true,
                     'constraints' => [
                     new NotBlank(['message' => 'Please fill this field']),
                     new Email(['message' => 'Please enter a valid email address. Example: mymail@gmail.com']),
