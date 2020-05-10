@@ -18,7 +18,7 @@
             {% include 'includes/flash_message.html.twig' %}
 
             {% if form_errors(registrationForm) != null %}
-                <div class="form-error notification is-danger">
+                <div class="form-error notification is-danger is-size-3-touch">
                     <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                     {{ form_errors(registrationForm) }}
                 </div>

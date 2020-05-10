@@ -34,8 +34,8 @@ class MessageType extends AbstractType
                 'error_bubbling' => true,
                 'attr' => ['class' => 'input'],
                 'constraints' => [
-                    new NotBlank(['message' => 'Veuillez remplir ce champ.']),
-                    new Email(['message' => 'Veuillez indiquer une adresse mail valide. Exemple : mon_adresse_mail@gmail.com']),
+                    new NotBlank(['message' => 'Please fill this field']),
+                    new Email(['message' => 'Please enter a valid email address. Example: mymail@gmail.com']),
                 ]
             ])
 
