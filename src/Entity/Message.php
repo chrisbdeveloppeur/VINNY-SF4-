@@ -38,10 +38,15 @@ class Message
     private $objet;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", length=500)
      * @Assert\Regex(
-     *     pattern="/^\w+/",
+     *     pattern="/^[<>{}\/]/",
+     *     match=false,
      *     message="Your message cannot contain special characters (ex: / {} <>)",
+     * )
+     * @Assert\Length(
+     *     max="1000",
+     *     maxMessage="Your message is too long !"
      * )
      */
     private $message;

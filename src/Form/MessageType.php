@@ -49,7 +49,7 @@ class MessageType extends AbstractType
                 array('label' => false,
                     'error_bubbling' => true,
                     'constraints' => [
-                    new NotBlank(['message' => 'Please fill this field']),
+                        new NotBlank(['message' => 'Please fill this field']),
                     ]
                 )
             )
