@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/info_beat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/info_beat.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,10 +82,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="100" column="110" selection-start-line="100" selection-start-column="110" selection-end-line="100" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/includes/iframe.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="346" column="22" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -157,7 +174,6 @@
         <option value="$PROJECT_DIR$/templates/includes/flash_message.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/about/about.html.twig" />
-        <option value="$PROJECT_DIR$/templates/includes/info_beat.html.twig" />
         <option value="$PROJECT_DIR$/src/Notif/NotifMessage.php" />
         <option value="$PROJECT_DIR$/templates/admin/register.html.twig" />
         <option value="$PROJECT_DIR$/templates/contact/contact.html.twig" />
@@ -167,6 +183,7 @@
         <option value="$PROJECT_DIR$/templates/emails/message.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/app.scss" />
+        <option value="$PROJECT_DIR$/templates/includes/info_beat.html.twig" />
       </list>
     </option>
   </component>
@@ -448,19 +465,19 @@
     <property name="settings.editor.selected.configurable" value="PhpAnnotations.SettingsForm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\templates\includes" />
-      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-" />
-      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\public\beats\images" />
-      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\public\beats\file" />
-      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\src\Notif" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\src\Listener" />
       <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\templates\admin" />
       <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY\templates\includes" />
       <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY\templates\header" />
       <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY\templates\footer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\templates\includes" />
+      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-" />
+      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\public\beats\images" />
+      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\public\beats\file" />
+      <recent name="C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-\src\Notif" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -534,15 +551,16 @@
       <workItem from="1588234658287" duration="3442000" />
       <workItem from="1588857837276" duration="10904000" />
       <workItem from="1588881285839" duration="6590000" />
-      <workItem from="1589114851461" duration="15621000" />
+      <workItem from="1589114851461" duration="16664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="483702000" />
+    <option name="totallyTimeSpent" value="484745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
@@ -711,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/iframe.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -792,13 +803,6 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="124" column="56" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -951,8 +955,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="346" column="22" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/iframe.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="100" column="110" selection-start-line="100" selection-start-column="110" selection-end-line="100" selection-end-column="110" />
         </state>
       </provider>
     </entry>

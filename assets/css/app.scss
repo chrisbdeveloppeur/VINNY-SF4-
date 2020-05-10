@@ -5,6 +5,7 @@
 $primary : #1f2041;
 $link : #bccce0;
 $danger : #a44a3f;
+$warning : yellow ;
 $link-hover: #30aae4;
 //$strong-color : #cdcdcd;
 $text : black;
@@ -345,6 +346,10 @@ a
   }
   .cc-message{
     text-align: center;
+  }
+
+  img.open-modal{
+    width: 100px;
   }
 
 }
