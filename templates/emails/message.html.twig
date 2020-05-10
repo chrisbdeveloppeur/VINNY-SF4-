@@ -302,17 +302,21 @@
                                         <p><strong>Email :</strong> {{ message.email }}</p>
 
                                         {% if message.nom %}
-                                        <p><strong>Nom :</strong> {{ message.nom }}</p>
+                                            <p><strong>Nom :</strong> {{ message.nom }}</p>
                                         {% endif %}
 
                                         {% if message.prenom %}
-                                        <p><strong>Prénom :</strong> {{ message.prenom }}</p> <br>
+                                            <p><strong>Prénom :</strong> {{ message.prenom }}</p>
                                         {% endif %}
 
                                         {% if message.objet %}
-                                        <h4><strong>Objet :</strong> {{ message.objet }}</h4>
+                                            <h4><strong>Objet :</strong> {{ message.objet }}</h4>
+                                        {% else %}
+                                            <h4><strong style="font-style: italic">Sans objet</strong></h4>
                                         {% endif %}
+
                                         <p style="background: rgba(0,0,0,0.1)">{{ message.message }}</p>
+
                                     </div>
                                 </td>
                             </tr>
