@@ -116,6 +116,10 @@ a
   resize: none;
 }
 
+a#logo-header-vinny{
+  width: 100px;
+}
+
 
 
 
@@ -363,7 +367,7 @@ div.plyr__time:hover{
     width: 100px;
   }
 
-  a.logo-header-vinny{
+  a#logo-header-vinny{
     width: 150px;
   }
 
@@ -373,9 +377,9 @@ div.plyr__time:hover{
 
   div#navbarNav{
     width: 100vw;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 205px;
+    //background: rgba(0,0,0,0.9);
+    //position: absolute;
+    //top: 205px;
     left: 0;
   }
 
