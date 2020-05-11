@@ -50,7 +50,11 @@ class Diapo
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text",nullable=true)
+     * @Assert\Length(
+     *     max="250",
+     *     maxMessage="250 caractères maximum"
+     * )
      */
     private $text;
 

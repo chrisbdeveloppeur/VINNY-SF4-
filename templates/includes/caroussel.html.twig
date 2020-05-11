@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide is-hidden-mobile" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide is-hidden-touch" data-ride="carousel">
     <ol class="carousel-indicators" style="z-index: 1">
 
         {% for diapo in diapo %}
@@ -58,6 +58,27 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Suivant</span>
     </a>
+</div>
+
+
+
+<div class="is-hidden-desktop">
+    {% for diapo in diapo %}
+
+            <div class="columns align-items-center justify-content-center" style="position: relative;margin-bottom: 40px; box-shadow: 0 0 10px 3px rgb(0, 0, 0);">
+                {% if diapo.diapoimagename %}
+                    <img class="d-block w-100" height="200px" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide">
+                {% else %}
+                    <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
+                {% endif %}
+                <div class="column" style="position: absolute;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8)">
+                    <h5 style="height: 30%;" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center">{{ diapo.titre }}</h5>
+                    <p style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center">{{ diapo.text }}</p>
+                </div>
+
+            </div>
+
+    {% endfor %}
 </div>
 
 
