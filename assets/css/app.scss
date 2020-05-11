@@ -332,6 +332,10 @@ div.plyr__time:hover{
   cursor: pointer;
 }
 
+div.social-share{
+  display: flex;
+}
+
 //    MEDIA QUERIES
 @media screen and (max-width: 1000px){
   .plyr{
@@ -381,6 +385,10 @@ div.plyr__time:hover{
     //position: absolute;
     //top: 205px;
     left: 0;
+  }
+  
+  div.social-share{
+    display: block;
   }
 
 }
