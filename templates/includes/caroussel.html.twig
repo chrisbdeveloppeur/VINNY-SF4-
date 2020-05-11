@@ -72,7 +72,7 @@
                     <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
                 {% endif %}
                 <div class="column" style="position: absolute;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8)">
-                    <h5 style="height: 30%;" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center">{{ diapo.titre }}</h5>
+                    <h5 style="{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center">{{ diapo.titre }}</h5>
                     <p style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center">{{ diapo.text }}</p>
                 </div>
 
