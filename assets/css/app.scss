@@ -23,6 +23,9 @@ $footer-padding: 1rem 1.5rem 0rem;
 $size-1: 7rem;
 $size-2: 5rem;
 $size-3: 2.5rem;
+$size-4: 2rem;
+
+
 
 
 // Importer Bulma
@@ -265,6 +268,8 @@ a
   overflow: hidden;
 }
 
+
+// FILTRE CSS //
 .filterDiv {
   display: none;
 }
@@ -293,7 +298,7 @@ a
   background-color: $light;
   color: white;
 }
-
+// FIN FILTRE CSS //
 
 
 
@@ -319,12 +324,18 @@ a
   cursor: pointer;
 }
 
-@media screen and (max-width: 1026px){
+div.plyr__time:hover{
+  cursor: pointer;
+}
+
+//    MEDIA QUERIES
+@media screen and (max-width: 1000px){
   .plyr{
     --plyr-font-size-small : 40px;
     --plyr-control-icon-size: 50px;
-    --plyr-range-thumb-height: 30px;
-    --plyr-range-track-height: 15px;
+    --plyr-range-thumb-height: 40px;
+    --plyr-range-track-height: 10px;
+    --plyr-range-thumb-active-shadow-width:10px;
   }
   .plyr__volume{
     display: none;
@@ -350,6 +361,22 @@ a
 
   img.open-modal{
     width: 100px;
+  }
+
+  a.logo-header-vinny{
+    width: 150px;
+  }
+
+  div.modal-content{
+    height: 75vh;
+  }
+
+  div#navbarNav{
+    width: 100vw;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 205px;
+    left: 0;
   }
 
 }
