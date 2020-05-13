@@ -20,12 +20,14 @@ class MessageType extends AbstractType
             ->add('nom', TextType::class,
                 array('label' => false,
                     'required' => false,
+                    'error_bubbling' => true,
                 )
             )
 
             ->add('prenom', TextType::class,
                 array('label' => false,
                     'required' => false,
+                    'error_bubbling' => true,
                 )
             )
 
@@ -42,6 +44,7 @@ class MessageType extends AbstractType
             ->add('objet', TextType::class,
                 array('label' => false,
                     'required' => false,
+                    'error_bubbling' => true,
                 )
             )
 

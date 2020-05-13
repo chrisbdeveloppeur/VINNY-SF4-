@@ -19,34 +19,67 @@ class Message
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Regex(
+     *     pattern="/[<>{}\/]/",
+     *     match=false,
+     *     message="Your last name cannot contain special characters (ex: / {} <>)",
+     *)
+     * @Assert\Length(
+     *     max="150",
+     *     maxMessage="150 Chars max allowed for your last-name"
+     * )
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(
+     *     pattern="/[<>{}\/]/",
+     *     match=false,
+     *     message="Your first name cannot contain special characters (ex: / {} <>)",
+     *)
+     *  @Assert\Length(
+     *     max="150",
+     *     maxMessage="150 Chars max allowed for your first-name"
+     * )
      */
     private $prenom;
 
+
     /**
      * @ORM\Column(type="text")
+     * @Assert\Regex(
+     *     pattern="/[<>{}\/]/",
+     *     match=false,
+     *     message="Your email cannot contain special characters (ex: / {} <>)",
+     *     )
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(
+     *     pattern="/[<>{}\/]/",
+     *     match=false,
+     *     message="Your subject cannot contain special characters (ex: / {} <>)",
+     * )
+     * @Assert\Length(
+     *     max="50",
+     *     maxMessage="50 Chars max allowed for your subject"
+     * )
      */
     private $objet;
 
     /**
      * @ORM\Column(type="text", length=500)
      * @Assert\Regex(
-     *     pattern="/^[<>{}\/]/",
+     *     pattern="/[<>{}\/]/",
      *     match=false,
      *     message="Your message cannot contain special characters (ex: / {} <>)",
      * )
      * @Assert\Length(
      *     max="1000",
-     *     maxMessage="Your message is too long !"
+     *     maxMessage="1000 Chars max allowed for your subject"
      * )
      */
     private $message;
