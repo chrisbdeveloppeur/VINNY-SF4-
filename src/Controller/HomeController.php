@@ -154,4 +154,5 @@ class HomeController extends AbstractController
         return $this->render('politique_confidentialite/politique_confidentialite.html.twig');
     }
 
+
 }
