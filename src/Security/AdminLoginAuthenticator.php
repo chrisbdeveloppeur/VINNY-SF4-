@@ -67,7 +67,6 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
 
         $user = $this->entityManager->getRepository(Admin::class)->findOneBy(['email' => $credentials['email']]);
 
-//        dd($user);
 
         if (!$user) {
             // fail authentication with a custom error
@@ -79,7 +78,6 @@ class AdminLoginAuthenticator extends AbstractFormLoginAuthenticator implements 
 
     public function checkCredentials($credentials, UserInterface $user)
     {
-//        dd($credentials);
         if (!$credentials){
             throw new CustomUserMessageAuthenticationException('Mot de passe incorrect');
         }

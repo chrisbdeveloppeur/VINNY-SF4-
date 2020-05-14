@@ -44,7 +44,7 @@ class RegistrationController extends AbstractController
 
             $entityManager->flush();
 
-            $this->addFlash('info', 'Votre compte administrateur a bien été créé !');
+            $this->addFlash('warning', 'Le compte administrateur : ' . $user->getEmail() . ' a bien été créé !');
 
             return $this->redirectToRoute('admin_login');
 

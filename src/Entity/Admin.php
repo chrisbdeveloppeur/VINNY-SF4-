@@ -146,5 +146,4 @@ class Admin implements UserInterface
         return $this->getEmail();
     }
 
-
 }
