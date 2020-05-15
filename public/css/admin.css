@@ -2,17 +2,57 @@
     /* make the backend contents as wide as the browser window */
     --body-max-width: 100%;
     /* change the background color of the <body> */
-    --body-bg: #ffffff;
+    --body-bg: rgba(255,255,255,0.7);
     /* make the base font size smaller */
-    --font-size-base: 13px;
+    --font-size-base: 1rem;
     /* remove all border radius to make corners straight */
-    --border-radius: 3px;
+    --border-radius: 2px;
 
 }
 
 .main-sidebar{
-    padding: 10px;
+    padding: 12px;
     box-shadow: var(--box-shadow-lg);
     font-family: 'Khand', sans-serif;
     font-weight: bold;
+    font-size: 1rem;
 }
+
+
+.user{
+    font-size: 1.5rem;
+    color: #4c5367 !important;
+}
+
+body{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: top / cover no-repeat url('../build/images/headphones.64ab74be.jpg');
+}
+
+.content-header{
+    background: #292929;
+}
+
+h1.title{
+    color: white;
+}
+
+#main{
+    background: rgba(255,255,255,0.8);
+}
+
+.content{
+    background-color: rgba(0,0,0,0);
+}
+
+/*body#easyadmin-list-Message{*/
+/*    filter: blur(8px);*/
+/*    -webkit-filter: blur(8px);*/
+/*}*/
+
+
+
+

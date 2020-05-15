@@ -118,10 +118,7 @@ class HomeController extends AbstractController
 
             $notifMessage->sendMessage($message);
 
-//            dd($message);
-
             $this->addFlash('success', 'Your email has been sent');
-
 
             return $this->redirectToRoute('contact');
         }
