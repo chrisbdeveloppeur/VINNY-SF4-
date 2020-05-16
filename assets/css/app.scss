@@ -1,13 +1,9 @@
-
-//$navbar-height : 5 rem;
-//$footer-background-color : ;
+// BULMA VARIABLES :
 
 $primary : #1f2041;
 $link : #bccce0;
 $danger : #a44a3f;
-//$warning : yellow ;
 $link-hover: #30aae4;
-//$strong-color : #cdcdcd;
 $text : black;
 //$navbar-burger-color : #66cde4;
 //$navbar-item-color : #66cde4;
@@ -25,6 +21,7 @@ $size-2: 5rem;
 $size-3: 2.5rem;
 $size-4: 2rem;
 
+//////////////////////////////////
 
 
 
@@ -64,7 +61,6 @@ body {
 #dashboard
 {
   color: $warning !important;
-  //text-shadow: 0 0 5px rgba(141,195,0,0.8) !important;
   border-radius: 2px;
 }
 #dashboard:hover
@@ -76,7 +72,6 @@ body {
 #deco
 {
   color: $danger !important;
-  //text-shadow: 0 0 5px rgba(195,0,1,0.8) !important;
   border-radius: 2px;
 }
 #deco:hover
@@ -249,9 +244,6 @@ a#logo-header-vinny{
   position: relative;
 }
 
-//#cookies_alert .cookies_close {
-//  flex: 1;
-//}
 
 #cookies_alert .cookies_close:hover {
   cursor: pointer;
@@ -353,9 +345,6 @@ div.social-share{
     margin-bottom: .5rem !important;
   }
 
-  //.titre-wave{
-  //  display: none;
-  //}
   .titre-landscape{
     font-size: 3rem;
     height: 85px !important;
@@ -442,9 +431,6 @@ div.social-share{
 
   div#navbarNav{
     width: 100vw;
-    //background: rgba(0,0,0,0.9);
-    //position: absolute;
-    //top: 205px;
     left: 0;
   }
 
@@ -480,14 +466,6 @@ div.social-share{
     color: #121212 !important;
   }
 
-  //.titre-wave{
-  //  display: none;
-  //}
-  //.titre-landscape{
-  //  display: flex !important;
-  //  height: 150px !important;
-  //  font-size: 5rem !important;
-  //}
   .titre-wave{
     display: none;
   }
