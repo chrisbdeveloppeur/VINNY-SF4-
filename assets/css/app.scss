@@ -16,7 +16,8 @@ $family-primary : 'Handlee', cursive;
 //$family-monospace: 'Covered By Your Grace', cursive;
 $family-monospace: 'Rock Salt', cursive;
 $family-secondary:'Days One', sans-serif;
-$family-code :'Khand', sans-serif;
+//$family-code :'Khand', sans-serif;
+$family-code : 'Heebo', sans-serif;
 $footer-padding: 1rem 1.5rem 0rem;
 $size-1: 7rem;
 $size-2: 5rem;
@@ -49,7 +50,7 @@ body {
   //font-weight: bold;
   transition: 0.5s;
   border-radius: 2px;
-  font-family: $family-code;
+  font-family: $family-monospace;
   color: #63c5da !important;
 }
 .nav-link:hover
@@ -348,7 +349,7 @@ div.social-share{
   }
 
   .titre-landscape{
-    font-size: 3rem;
+    font-size: 2rem !important;
     height: 85px !important;
   }
 
@@ -457,13 +458,11 @@ div.social-share{
 
   .nav-link:hover
   {
-    //border: 2px white solid;
     background: #63c5da;
     color: #121212 !important;
   }
   .nav-link:checked
   {
-    //border: 2px white solid;
     background: #63c5da;
     color: #121212 !important;
   }
@@ -474,7 +473,7 @@ div.social-share{
   .titre-landscape{
     display: flex !important;
     height: 160px;
-    font-size: 5rem;
+    font-size: 2.5rem;
   }
 
 }

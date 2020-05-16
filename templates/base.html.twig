@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WB20TY7BX"></script>
@@ -13,7 +13,7 @@
 
         <meta charset="UTF-8">
         <meta name="author" content="BOUNGOU Christian">
-        <meta name="description" content=" Site personnel du Beat Maker Vinny Vixi. Ces dernières Prods, Beats, Clip vidéos, et d'autre de contenue. Personal website of the Beat Maker Vinny Vixi. These latest productions, Beats, Video clips, and much more.">
+        <meta name="description" content="Bienvenue sur vinnyvixi.com, le site personnel du Beat Maker Vinny Vixi. Ces dernières Prods, Beats, Clip vidéos, et d'autre de contenue. Welcome to vinnyvixi.com, the personal website of the Beat Maker Vinny Vixi. These latest productions, Beats, Video clips, and much more.">
 
         <title>{% block title %}Vinny Vixi Prod.{% endblock %}</title>
 
@@ -30,11 +30,12 @@
 {#            <link href="https://fonts.googleapis.com/css?family=Caveat|Handlee|Permanent+Marker&display=swap" rel="stylesheet">#}
             <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{#            <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">#}
 {#            <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">#}
             <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
 {#            <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">#}
             <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
 {#        {% endblock %}#}
 
         {% block css %}
@@ -42,13 +43,15 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         {% endblock %}
     </head>
+
+
     <body class="has-background-white-bis">
         {% block body %}
 
             <div style="z-index: 2;position: sticky;top: 0;">
                 {% block header %}
 
-                    <h2 class="titre-landscape title has-text-weight-bold has-text-black-bis is-uppercase is-family-code" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;position: absolute;z-index: 3;left: 50%;transform: translate(-50%);display: none;margin: 5px 0 0 0;justify-content: center;align-items: center;">
+                    <h2 class="titre-landscape title has-text-weight-bold has-text-black-bis is-uppercase is-family-monospace" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;position: absolute;z-index: 3;left: 50%;transform: translate(-50%);display: none;margin: 5px 0 0 0;justify-content: center;align-items: center;">
 
                         {% block titre_landscape %}
 
@@ -70,7 +73,7 @@
                         <section class="titre-wave" style="z-index:1;background:#121212 center / 100% 100% no-repeat url('{{ asset('build/images/audio_bars.62a6b06d.png')}}');width: 100%">
                             <div class="has-text-centered" style="position: relative">
 
-                                    <h1 class="title has-text-weight-bold has-text-black-bis is-uppercase is-family-code is-size-2-touch" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;margin:0;position: relative;z-index: 3">
+                                    <h1 class="title has-text-weight-bold has-text-black-bis is-uppercase is-family-monospace is-size-2-touch" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;margin:0;position: relative;z-index: 3">
 
                                         {% block titre %}
 
