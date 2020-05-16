@@ -337,7 +337,7 @@ div.social-share{
 }
 
 //    MEDIA QUERIES
-@media (max-height: 800px) {
+@media (max-height: 800px) and (max-width: 1000px) {
   h1.title{
     font-size: 2.5rem !important ;
   }
@@ -363,7 +363,10 @@ div.social-share{
     font-size: 2rem !important;
   }
   .landscape{
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
+  }
+  .fa-comments-dollar{
+    font-size: 3rem !important;
   }
   .landscape-padding{
     padding: 0;
@@ -443,7 +446,7 @@ div.social-share{
     //top: 205px;
     left: 0;
   }
-  
+
   div.social-share{
     display: block;
   }
@@ -451,13 +454,13 @@ div.social-share{
   .footer-grid{
     display: grid;
   }
-  .footer-clumn-left{
+  .footer-column-left{
     margin: auto 5px;
   }
-  .footer-clumn-left a span.icon{
+  .footer-column-left a span.icon{
     margin: auto 15px;
   }
-  .footer-clumn-right{
+  .footer-column-right{
     display: flex;
     justify-content: center;
     align-items: center;
