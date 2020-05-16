@@ -337,6 +337,15 @@ div.social-share{
 }
 
 //    MEDIA QUERIES
+@media (max-height: 500px) {
+  h1.title{
+    font-size: 2.5rem !important ;
+  }
+  a#logo-header-vinny{
+    width: 70px !important;
+  }
+}
+
 @media screen and (max-width: 1000px){
   .plyr{
     --plyr-font-size-small : 40px;
@@ -357,14 +366,19 @@ div.social-share{
     width: 100vw;
   }
   .cc-bottom{
-    font-size: x-large;
+    font-size: 2.5rem;
     bottom: 0em;
   }
   .cc-right{
     right: 0em;
   }
+
   .cc-message{
     text-align: center;
+  }
+  .cc-floating.cc-theme-edgeless .cc-message{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   img.open-modal{
@@ -389,6 +403,21 @@ div.social-share{
   
   div.social-share{
     display: block;
+  }
+
+  .footer-grid{
+    display: grid;
+  }
+  .footer-clumn-left{
+    margin: auto 5px;
+  }
+  .footer-clumn-left a span.icon{
+    margin: auto 15px;
+  }
+  .footer-clumn-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
