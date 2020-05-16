@@ -1,6 +1,6 @@
 :root {
     /* make the backend contents as wide as the browser window */
-    --body-max-width: 100%;
+    /*--body-max-width: 100%;*/
     /* change the background color of the <body> */
     --body-bg: rgba(255,255,255,0.7);
     /* make the base font size smaller */
@@ -27,8 +27,8 @@
 body{
     /*position: fixed;*/
     /*top: 0;*/
-    height: 100vh;
-    width: 100vw;
+    /*height: 100vh;*/
+    /*width: 100vw;*/
     background:top no-repeat url('../build/images/vinny_logo_reducidisimo.e28edbc4.png');
 }
 
