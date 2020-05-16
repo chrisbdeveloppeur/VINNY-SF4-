@@ -45,6 +45,16 @@
 
             <div style="z-index: 2;position: sticky;top: 0;">
                 {% block header %}
+
+                    <h2 class="titre-landscape title has-text-weight-bold has-text-black-bis is-uppercase is-family-code is-size-3-touch" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;position: absolute;z-index: 3;left: 50%;transform: translate(-50%);display: none;margin: 5px 0 0 0;height: 85px;justify-content: center;align-items: center;">
+
+                        {% block titre_landscape %}
+
+                        {% endblock %}
+
+                    </h2>
+
+
                     {% if is_granted('ROLE_USER') %}
 
                         {% include('includes/header/admin_header.html.twig') %}
@@ -55,7 +65,7 @@
 
                     {% endif %}
 
-                        <section class="" style="z-index:1;background:#121212 center / 100% 100% no-repeat url('{{ asset('build/images/audio_bars.62a6b06d.png')}}');width: 100%">
+                        <section class="titre-wave" style="z-index:1;background:#121212 center / 100% 100% no-repeat url('{{ asset('build/images/audio_bars.62a6b06d.png')}}');width: 100%">
                             <div class="has-text-centered" style="position: relative">
 
                                     <h1 class="title has-text-weight-bold has-text-black-bis is-uppercase is-family-code is-size-2-touch" style="text-shadow:rgb(205, 201, 255) 0px 0px 5px;margin:0;position: relative;z-index: 3">
@@ -63,6 +73,7 @@
                                         {% block titre %}
 
                                         {% endblock %}
+
                                     </h1>
 
 {#                                <input style="position: absolute;left: 5px;top: 5px;" type="file" id="thebeat" accept="audio/*" />#}

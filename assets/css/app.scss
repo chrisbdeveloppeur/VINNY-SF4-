@@ -337,12 +337,37 @@ div.social-share{
 }
 
 //    MEDIA QUERIES
-@media (max-height: 800px) {
+@media (max-height: 800px) and (orientation: landscape) {
   h1.title{
     font-size: 2.5rem !important ;
   }
   a#logo-header-vinny{
     width: 70px !important;
+  }
+
+  .cc-bottom{
+    font-size: 1.5rem !important;
+  }
+  .cc-floating.cc-theme-edgeless .cc-message{
+    margin-top: .5rem !important;
+    margin-bottom: .5rem !important;
+  }
+
+  .titre-wave{
+    display: none;
+  }
+  .titre-landscape{
+    display: flex !important;
+  }
+  ul.navbar-nav{
+    font-size: 2rem !important;
+  }
+}
+@media screen and (min-width: 1000px){
+  #navbarNav{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
@@ -418,6 +443,19 @@ div.social-share{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .nav-link:hover
+  {
+    //border: 2px white solid;
+    background: #63c5da;
+    color: #121212 !important;
+  }
+  .nav-link:checked
+  {
+    //border: 2px white solid;
+    background: #63c5da;
+    color: #121212 !important;
   }
 
 }
