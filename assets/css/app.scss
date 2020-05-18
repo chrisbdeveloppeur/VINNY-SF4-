@@ -440,10 +440,17 @@ div.social-share{
   div.social-share{
     display: block;
   }
+  div.social{
+    display:none !important;
+  }
 
   .footer-grid{
     display: grid;
   }
+  .block-footer{
+    display: grid !important;
+  }
+
   .footer-column-left{
     margin: auto 5px;
   }
