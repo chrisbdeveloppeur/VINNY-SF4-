@@ -1,21 +1,17 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WB20TY7BX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-{% block title %}{% include('includes/nav_title.html.twig') %} Accueil{% endblock %}
+        gtag('config', 'G-7WB20TY7BX');
+    </script>
 
-{% block titre %}
-    Vinny Vixi Prod.
-{% endblock %}
-
-{% block content %}
-
-    <section class="section" style="min-height: 80vh">
-        <div class="container">
-            <h1 class="title">Accueil</h1>
-            <h2 class="subtitle">
-                Bienvenur sur le site du Beatmaker <strong class="has-text-link">Vinny Vixi</strong>
-            </h2>
-        </div>
-    </section>
+    <meta charset="UTF-8">
+    <meta name="author" content="BOUNGOU Christian">
 
 
-{% endblock %}

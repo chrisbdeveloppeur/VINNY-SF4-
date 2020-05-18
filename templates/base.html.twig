@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WB20TY7BX"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
 
-            gtag('config', 'G-7WB20TY7BX');
-        </script>
+{% include 'index.html.twig' %}
 
-        <meta charset="UTF-8">
-        <meta name="author" content="BOUNGOU Christian">
-        <meta name="description" content="Bienvenue sur vinnyvixi.com, le site personnel du Beat Maker Vinny Vixi. Ces dernières Prods, Beats, Clip vidéos, et d'autre de contenue. Welcome to vinnyvixi.com, the personal website of the Beat Maker Vinny Vixi. These latest productions, Beats, Video clips, and much more.">
+        {% block description %}
+
+        {% endblock %}
 
         <title>{% block title %}Vinny Vixi Prod.{% endblock %}</title>
 
@@ -157,7 +147,7 @@
                 <div class="arrow_up">
 
                     <a href="#top" class="is-flex align-items-center justify-content-center" style="width: 100%;height: 100%;">
-                    <span class="icon justify-content-center align-items-center is-size-4 is-size-3-touch">
+                    <span class="icon justify-content-center align-items-center is-size-4 is-size-1-touch">
                         <i class="fas fa-angle-up"></i>
                     </span>
                     </a>
@@ -377,18 +367,38 @@
             <script>
                 let divScroll = document.getElementsByClassName('arrow_up');
                 let iScroll = document.getElementsByClassName('fas fa-angle-up');
+                let scroll_position = 0;
 
                 divScroll[0].addEventListener("mouseover", function() {
-                    iScroll[0].style.color = "black";
+                    iScroll[0].style.color = "rgba(0,0,0,.8)";
+                    divScroll[0].style.background = "rgba(53,139,193,.8)";
                 }, false);
                 divScroll[0].addEventListener("mouseleave", function() {
-                    iScroll[0].style.color = "darkgrey";
+                    iScroll[0].style.color = "black";
+                    divScroll[0].style.background = "rgba(255,255,255,.5)";
                 }, false);
 
                 $("a[href='#top']").click(function() {
                     $("html, body").animate({ scrollTop: 0 }, "slow");
                     return false;
                 });
+
+
+                window.addEventListener('scroll', function()
+                {
+                    scroll_position = window.scrollY;
+                    if (scroll_position >= 500){
+                        divScroll[0].style.display = 'flex';
+                        divScroll[0].style.opacity = 1;
+                        divScroll[0].style.right = '10px';
+                    } else {
+                        divScroll[0].style.opacity = 0;
+                        divScroll[0].style.right = '-200px';
+                    }
+                });
+
+
+
 
             </script>
             {#   FIN DU SCRIPT SCROLL UP   #}
