@@ -118,6 +118,29 @@ a#logo-header-vinny{
   width: 100px;
 }
 
+.arrow_up{
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  display: flex;
+  z-index: 1500;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.arrow_up:hover, .arrow_up:active{
+  cursor: pointer;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 3px 2px black;
+}
+
+.fa-angle-up{
+  color: darkgrey;
+}
+
 
 
 
@@ -483,4 +506,10 @@ div.social-share{
     font-size: 2.5rem;
   }
 
+  .arrow_up{
+    width: 60px;
+    height: 60px;
+  }
+
 }
+

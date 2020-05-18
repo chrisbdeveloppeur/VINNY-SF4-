@@ -153,7 +153,17 @@
                 </div>
             {% endblock %}
 
+            {% block arrow_up %}
+                <div class="arrow_up">
 
+                    <a href="#top" class="is-flex align-items-center justify-content-center" style="width: 100%;height: 100%;">
+                    <span class="icon justify-content-center align-items-center is-size-4 is-size-3-touch">
+                        <i class="fas fa-angle-up"></i>
+                    </span>
+                    </a>
+
+                </div>
+            {% endblock %}
 
 
             {% block footer %}
@@ -361,6 +371,28 @@
 
             </script>
             {#  FIN SCRIPT PLYR   #}
+
+
+            {#   SCRIPT SCROLL UP   #}
+            <script>
+                let divScroll = document.getElementsByClassName('arrow_up');
+                let iScroll = document.getElementsByClassName('fas fa-angle-up');
+
+                divScroll[0].addEventListener("mouseover", function() {
+                    iScroll[0].style.color = "black";
+                }, false);
+                divScroll[0].addEventListener("mouseleave", function() {
+                    iScroll[0].style.color = "darkgrey";
+                }, false);
+
+                $("a[href='#top']").click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+                    return false;
+                });
+
+            </script>
+            {#   FIN DU SCRIPT SCROLL UP   #}
+
 
         {% endblock %}
     </body>
