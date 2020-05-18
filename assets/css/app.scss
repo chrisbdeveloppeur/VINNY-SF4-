@@ -133,15 +133,9 @@ a#logo-header-vinny{
   transition: .2s;
   opacity: 0;
 }
-.arrow_up:hover, .arrow_up:active{
-  cursor: pointer;
-  background: rgba(255,255,255,0.5);
-  //box-shadow: 0 0 2px 1px black;
-}
 
 .fa-angle-up{
-  color: black;
-  transition: .5s;
+  color: $black-ter;
 }
 
 

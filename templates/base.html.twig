@@ -366,17 +366,7 @@
             {#   SCRIPT SCROLL UP   #}
             <script>
                 let divScroll = document.getElementsByClassName('arrow_up');
-                let iScroll = document.getElementsByClassName('fas fa-angle-up');
                 let scroll_position = 0;
-
-                divScroll[0].addEventListener("mouseover", function() {
-                    iScroll[0].style.color = "rgba(0,0,0,.8)";
-                    divScroll[0].style.background = "rgba(53,139,193,.8)";
-                }, false);
-                divScroll[0].addEventListener("mouseleave", function() {
-                    iScroll[0].style.color = "black";
-                    divScroll[0].style.background = "rgba(255,255,255,.5)";
-                }, false);
 
                 $("a[href='#top']").click(function() {
                     $("html, body").animate({ scrollTop: 0 }, "slow");
