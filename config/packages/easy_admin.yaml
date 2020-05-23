@@ -11,19 +11,27 @@ easy_admin:
         menu:
             - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
             - label: 'Beats'
-              children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER'}
-                         { entity: 'Filtre',rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }]
+              children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: music}
+                         { entity: 'Filtre',rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: filter }]
               permission: 'ROLE_USER'
             - label: 'Videos'
-              children: ['SectionVideo','Video']
+              children:
+                  - { entity: 'Video', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: video}
+                  - { entity: 'SectionVideo', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: columns}
               permission: 'ROLE_USER'
-            - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Diapo',label : 'Carrousel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' }
-            - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' }
+            - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: money-check-alt}
+            - { entity: 'Diapo',label : 'Carrousel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: images}
+            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: envelope-open-text}
+            - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' , icon: users-cog}
     list:
-        actions: ['edit', 'search']
+        batch_actions: ['delete']
+        actions:
+            - {name: 'show', icon: 'search', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-primary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+            - {name: 'search'}
     entities:
+
         Beat :
             label: 'Beats'
             class : App\Entity\Beat
@@ -51,13 +59,18 @@ easy_admin:
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
 
             list:
-                batch_actions: ['delete']
                 fields:
-                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
-                    - {property: 'beatName', type: 'text', label : "Nom du fichier audio"}
-                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
-                    - {property: 'iframe' , type : 'text', label : "Lien iframe" }
+                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration", css_class: 'is-hidden-touch'}
                     - {property: 'titre' , type: 'text'}
+                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig', css_class: 'is-hidden-mobile'}
+                    - {property: 'bpm' , type: 'text', css_class: 'is-hidden-mobile'}
+                    - {property: 'genre' , type: 'text', css_class: 'is-hidden-mobile'}
+            show:
+                fields:
+                    - {property: 'titre' , type: 'text'}
+                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
+                    - {property: 'beatFile', label : "Player", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
+                    - {property: 'iframe' , type : 'text', label : "Iframe"}
                     - {property: 'artiste' , type: 'text', label : 'Prod. by'}
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type: 'text'}
@@ -68,8 +81,6 @@ easy_admin:
             disabled_actions: ['new', 'edit']
 
             list:
-                actions: ['show']
-                batch_actions: ['delete']
                 fields:
                     - {property: 'nom' , type: 'text'}
                     - {property: 'prenom', type: 'text'}
@@ -89,20 +100,18 @@ easy_admin:
             label: 'Licences'
             class: App\Entity\Licence
             list:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'titre' , type: 'text'}
                     - {property: 'euro', type: 'text'}
                     - {property: 'dollar', type: 'text'}
-                    - {property: 'info_1' , type: 'text'}
-                    - {property: 'info_2' , type: 'text'}
-                    - {property: 'info_3' , type: 'text'}
-                    - {property: 'info_4' , type: 'text'}
-                    - {property: 'info_5' , type: 'text'}
-                    - {property: 'info_6' , type: 'text'}
+                    - {property: 'info_1' , type: 'text', css_class: 'is-hidden-touch'}
+                    - {property: 'info_2' , type: 'text', css_class: 'is-hidden-touch'}
+                    - {property: 'info_3' , type: 'text', css_class: 'is-hidden-touch'}
+                    - {property: 'info_4' , type: 'text', css_class: 'is-hidden-touch'}
+                    - {property: 'info_5' , type: 'text', css_class: 'is-hidden-touch'}
+                    - {property: 'info_6' , type: 'text', css_class: 'is-hidden-touch'}
                     - {property: 'color' , type: 'text'}
             form:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'titre' , type: 'text'}
                     - {property: 'euro', type: 'text'}
@@ -116,7 +125,6 @@ easy_admin:
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
 
             edit:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'titre' , type: 'text'}
                     - {property: 'euro', type: 'text'}
@@ -147,7 +155,6 @@ easy_admin:
 
 
             list:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'email' , type: 'text', label: "email"}
                     - {property: 'roles' , type: 'array', label: "Roles"}
@@ -169,7 +176,11 @@ easy_admin:
                     - {property: 'couleur' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune': 'warning'}}}
 
             list:
-                batch_actions: ['delete']
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'couleur' , type: 'text', label: "Couleur"}
+            show:
+#                title: 'Ajouter une rubrique de videos'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'couleur' , type: 'text', label: "Couleur"}
@@ -193,11 +204,10 @@ easy_admin:
                     - {property: 'section' ,type: 'easyadmin_autocomplete', type_options: { class: 'App\Entity\SectionVideo' } }
 
             list:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
-                    - {property: 'info' , type: 'text', label: "Info"}
-                    - {property: 'link' , type: 'text', label: "lien url"}
+                    - {property: 'info' , type: 'text', label: "Info", css_class: 'is-hidden-touch'}
+                    - {property: 'link' , type: 'text', label: "lien url", css_class: 'is-hidden-touch'}
                     - {property: 'section' , type: 'text'}
 
         Filtre:
@@ -212,7 +222,6 @@ easy_admin:
                 fields:
                     - {property: 'genre',type: 'text', label: "Genre" }
             list:
-                batch_actions: ['delete']
                 fields:
                     - {property: 'genre',type: 'text', label: "Genre"}
 
@@ -226,8 +235,6 @@ easy_admin:
                     - {property: 'text' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo (250 caractères max)"}
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
-
-
             edit:
                 title: 'Modifier un Beat'
                 fields:
@@ -236,8 +243,12 @@ easy_admin:
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
             list:
-                batch_actions: ['delete']
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre dde la diapo"}
-                    - {property: 'text' , type: 'text', label: "Text", help: "Entrez ici le texte de la diapo (250 caractères max)" }
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'text' , type: 'text', label: "Text", css_class: 'is-hidden-touch'}
+                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
+            show:
+                fields:
+                    - {property: 'titre' , type: 'text', label: "Titre"}
+                    - {property: 'text' , type: 'text', label: "Text", css_class: 'is-hidden-touch'}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
