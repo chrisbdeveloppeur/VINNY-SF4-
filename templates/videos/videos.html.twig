@@ -16,9 +16,18 @@
 
 {% block content %}
 
+    {% if section is empty %}
 
+        {{ include('includes/comming_soon.html.twig') }}
+
+    {% elseif video is empty %}
+
+        {{ include('includes/comming_soon.html.twig') }}
+
+    {% else %}
 
             {% for sectionvideo in section %}
+
                 <div class="column box" style="background: rgba(0,0,0,0)">
 
                     <label class="label columns is-centered">
@@ -39,64 +48,57 @@
                     </label>
 
                     <div class="columns is-multiline justify-content-center" style="background: rgba(0,0,0,0.4)">
-                    {% for video in video %}
 
-                        {% if video.section == sectionvideo.titre %}
+                            {% for video in video %}
 
-                            <div class="column is-one-third is-full-touch has-text-centered">
+                                {% if video.section == sectionvideo.titre %}
 
-                                {% if video.titre is not null %}
-                                    <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
-                                        {{ video.titre }}
-                                    </label>
-                                {% else %}
-                                    <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
-                                        ~
-                                    </label>
+                                    <div class="column is-one-third is-full-touch has-text-centered">
+
+                                        {% if video.titre is not null %}
+                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                                {{ video.titre }}
+                                            </label>
+                                        {% else %}
+                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                                ~
+                                            </label>
+                                        {% endif %}
+
+                                            {% if video.link %}
+
+                                            <figure class="is-flex justify-content-center align-items-center" style="background: #121212;margin: 0;">
+                                                <iframe width="100%" height="240px" src="https://www.youtube.com/embed/{{ video.link }}" title="video">
+                                                </iframe>
+                                            </figure>
+
+                                            {% else %}
+                                                <figure style="background: rgba(0,0,0,0.2);margin: 0;">
+                                                    <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="no video link" title="no video" style="height:240px;">
+                                                </figure>
+                                            {% endif %}
+
+                                        {% if video.info is not null %}
+                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="has-text-weight-light is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                                {{ video.info }}
+                                            </label>
+                                        {% else %}
+                                            <label style="align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class=" is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                                ~
+                                            </label>
+                                        {% endif %}
+
+                                    </div>
+
                                 {% endif %}
 
-                                    {% if video.link %}
-                                        {#Resolutions :
-                                            240p = 352 x 240
-                                            360 p = 480 x 360
-                                            480p = 858 x 480 — also known as SD
-                                            720p = 1280 x 720 — the old TVs of this resolution were marked HDready
-                                            1080p = 1920 x 1080 — FullHD
-                                            2160p = 3860 x 2160 —Ultra-HD, also known as 4K (that’s a marketing trick)
-                                        #}
-                                    <figure class="is-flex justify-content-center align-items-center" style="background: #121212;margin: 0;">
-                                        <iframe width="100%" height="240px" src="https://www.youtube.com/embed/{{ video.link }}" title="video">
-                                        </iframe>
-                                    </figure>
-
-                                    {% else %}
-                                        <figure style="background: rgba(0,0,0,0.2);margin: 0;">
-                                            <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="no video link" title="no video" style="height:240px;">
-                                        </figure>
-                                    {% endif %}
-
-                                {% if video.info is not null %}
-                                    <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="has-text-weight-light is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
-                                        {{ video.info }}
-                                    </label>
-                                {% else %}
-                                    <label style="align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class=" is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
-                                        ~
-                                    </label>
-                                {% endif %}
-
-{#                                </div>#}
-                            </div>
-
-                        {% endif %}
-
-                    {% endfor %}
+                            {% endfor %}
 
                     </div>
 
                 </div>
             {% endfor %}
-
+    {% endif %}
 
 
 {% endblock %}

@@ -79,7 +79,6 @@ class HomeController extends AbstractController
     {
         $section = $sectionVideoRepository->findAll();
         $video = $videoRepository->findAll();
-//        $video = $videoRepository->findBySection($section);
 
         return $this->render('videos/videos.html.twig', [
             'section' => $section,

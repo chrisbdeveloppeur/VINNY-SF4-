@@ -168,7 +168,7 @@ easy_admin:
                 title: 'Ajouter une rubrique de videos'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
-                    - {property: 'couleur' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
+                    - {property: 'couleur' , type: 'choice', help: 'gris foncé par défaut', type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
             edit:
                 title: 'Modifier une rubrique de videos'
                 fields:
