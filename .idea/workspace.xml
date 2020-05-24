@@ -7,14 +7,42 @@
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beats/file/NLE_Chopa_type_beat_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beats/file/free-blueface-type-beat-hole-in-a-donut-pord-vinny-vixi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beats/file/free-dababy-type-beat-juicy-prod-vinny-vixi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beats/file/free-nle-choppa-x-blueface-type-beat-gestu-mortelle-pord-vinny-vixi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beats/file/free-nle-choppa-x-dababy-type-beat-stick-prod-vinny-vixi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/vich_uploader_audio.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/vich_uploader_audio.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/SectionVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/SectionVideo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200309090537.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200311083927.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200316181822.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319081241.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319082016.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319095231.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319095307.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319095713.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319102524.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319113035.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319164513.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200319165746.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200320115328.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200320141029.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200324093950.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200324094616.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200324094638.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200324095127.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200327121653.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200327185657.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200327224014.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200327230859.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200327231210.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200330134958.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200330144445.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200330161414.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200403211854.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200403212105.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200429164640.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200429181603.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200430083338.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200430085912.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200518104504.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/videos/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/videos/videos.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,15 +106,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/about/about.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -104,29 +123,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/admin.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/variables.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="249" column="17" lean-forward="true" selection-start-line="249" selection-start-column="17" selection-end-line="249" selection-end-column="17" />
+            <state relative-caret-position="504">
+              <caret line="203" column="126" selection-start-line="203" selection-start-column="126" selection-end-line="203" selection-end-column="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -134,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="116" column="96" selection-start-line="116" selection-start-column="96" selection-end-line="116" selection-end-column="96" />
+            <state relative-caret-position="170">
+              <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -146,7 +156,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="6953">
               <caret line="409" selection-start-line="409" selection-end-line="409" selection-end-column="37" />
             </state>
           </provider>
@@ -155,8 +165,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/SectionVideo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="459">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="28" column="134" selection-start-line="28" selection-start-column="134" selection-end-line="28" selection-end-column="134" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#h2#0;n#label#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +195,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Filtre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
+            <state relative-caret-position="1394">
               <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="88" />
             </state>
           </provider>
@@ -200,7 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Entity/Filtre.php" />
         <option value="$PROJECT_DIR$/deploy.bat" />
         <option value="$PROJECT_DIR$/templates/includes/audio_vizu.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Beat.php" />
@@ -209,7 +239,6 @@
         <option value="$PROJECT_DIR$/templates/includes/vich_uploader_image.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/vich_uploader_diapo_image.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Video.php" />
         <option value="$PROJECT_DIR$/templates/includes/player.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/tableau_beat.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/flash_message.html.twig" />
@@ -222,7 +251,6 @@
         <option value="$PROJECT_DIR$/templates/includes/modal_licenses.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Entity/Admin.php" />
-        <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/Security/AdminLoginAuthenticator.php" />
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
@@ -232,7 +260,6 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/templates/includes/footer/footer.html.twig" />
         <option value="$PROJECT_DIR$/templates/politique_confidentialite/politique_confidentialite.html.twig" />
-        <option value="$PROJECT_DIR$/templates/videos/videos.html.twig" />
         <option value="$PROJECT_DIR$/templates/mentions_legales/mentions_legales.html.twig" />
         <option value="$PROJECT_DIR$/templates/licences/licences.html.twig" />
         <option value="$PROJECT_DIR$/templates/contact/contact.html.twig" />
@@ -250,6 +277,10 @@
         <option value="$PROJECT_DIR$/templates/includes/vich_uploader_audio.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/info_beat.html.twig" />
         <option value="$PROJECT_DIR$/public/css/admin.css" />
+        <option value="$PROJECT_DIR$/src/Entity/SectionVideo.php" />
+        <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Video.php" />
+        <option value="$PROJECT_DIR$/templates/videos/videos.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
       </list>
     </option>
@@ -438,6 +469,12 @@
               <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
               <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -518,70 +555,6 @@
               <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="videos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-theme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-theme" type="462c0819:PsiDirectoryNode" />
-              <item name="variables.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="easycorp" type="462c0819:PsiDirectoryNode" />
-              <item name="easyadmin-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -700,17 +673,18 @@
       <workItem from="1589916845978" duration="1916000" />
       <workItem from="1589991498874" duration="2133000" />
       <workItem from="1590254138486" duration="10591000" />
+      <workItem from="1590321941307" duration="1608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="607501000" />
+    <option name="totallyTimeSpent" value="609109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2457356" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24840085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -760,13 +734,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="401" column="4" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.symbol.wellknown.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -799,17 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#1598#1611#1#PHP" expanded="true" />
-            <element signature="e#1655#1681#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,16 +803,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/bundles/easyadmin/app.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bundles/easyadmin/app.css" />
+    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/app.scss" />
     <entry file="file://$PROJECT_DIR$/templates/base_admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -864,9 +812,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/base.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/base.scss" />
     <entry file="file://$PROJECT_DIR$/templates/includes/modal_licenses.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -906,13 +852,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -972,13 +911,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env.local">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.local" />
     <entry file="file://$PROJECT_DIR$/templates/admin/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1027,37 +960,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about/about.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <element signature="e#7#22#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php" />
     <entry file="file://$PROJECT_DIR$/templates/includes/header/admin_header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1079,20 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Filtre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/SectionVideo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/vich_uploader_audio.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1103,41 +992,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/variables.scss" />
+    <entry file="file://$PROJECT_DIR$/public/css/admin.css" />
+    <entry file="file://$PROJECT_DIR$/templates/about/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="6953">
           <caret line="409" selection-start-line="409" selection-end-line="409" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Filtre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/SectionVideo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/info_beat.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="116" column="96" selection-start-line="116" selection-start-column="96" selection-end-line="116" selection-end-column="96" />
+        <state relative-caret-position="170">
+          <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/variables.scss">
+    <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="28" column="134" selection-start-line="28" selection-start-column="134" selection-end-line="28" selection-end-column="134" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#h2#0;n#label#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="249" column="17" lean-forward="true" selection-start-line="249" selection-start-column="17" selection-end-line="249" selection-end-column="17" />
+        <state relative-caret-position="504">
+          <caret line="203" column="126" selection-start-line="203" selection-start-column="126" selection-end-line="203" selection-end-column="126" />
         </state>
       </provider>
     </entry>

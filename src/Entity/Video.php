@@ -28,7 +28,7 @@ class Video
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\SectionVideo", inversedBy="videos")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $section;
 

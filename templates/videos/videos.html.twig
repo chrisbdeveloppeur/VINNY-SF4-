@@ -22,12 +22,12 @@
                 <div class="column box" style="background: rgba(0,0,0,0)">
 
                     <label class="label columns is-centered">
-                        <h2 class="column text-uppercase has-text-white has-background-{{ sectionvideo.couleur }} has-text-centered justify-content-center align-items-center" style="margin-bottom: 0">
+                        <h2 class="column text-uppercase has-text-white {% if sectionvideo.couleur %}has-background-{{ sectionvideo.couleur }}{% else %}has-background-dark{% endif %} has-text-centered justify-content-center align-items-center" style="margin-bottom: 0">
 
                             <p class="has-background-black-bis has-icons-left is-family-code is-size-3" style="padding: 10px; margin-bottom: 0">
 
-                            <span class="icon is-small has-text-{{ sectionvideo.couleur }}" style="margin:0 10px">
-                                <i class="fab fa-youtube-square"></i>
+                            <span class="icon is-small {% if sectionvideo.couleur %}has-text-{{ sectionvideo.couleur }}{% else %}has-text-grey{% endif %}" style="margin:0 10px">
+                                <i class="fa fa-film"></i>
                             </span>
 
                                 {{ sectionvideo.titre }}
