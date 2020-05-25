@@ -143,17 +143,11 @@ button.modal-close{
   top: 5px;
 }
 
-//div.modal-body{
-//  padding: 0px 1rem;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//}
 div.modal-content{
   height: 70vh;
   border: none;
 }
-div.pricing-table{
+div.pricing-table-beats{
   width: 95vw;
   height: 65vh;
 }
@@ -531,7 +525,7 @@ div.social-share{
     bottom: 30vh;
   }
 
-  div.pricing-table{
+  div.pricing-table-beats{
     height: 85vh;
   }
   div.modal-body{
