@@ -47,7 +47,6 @@ body {
 
 .nav-item, .nav-link
 {
-  //font-weight: bold;
   transition: 0.5s;
   border-radius: 2px;
   font-family: $family-monospace;
@@ -56,7 +55,8 @@ body {
 .nav-link:hover
 {
   background: none;
-  color: #266a91 !important;
+  color: white !important;
+  text-shadow:rgb(0, 63, 255) 0px 0px 15px;
 }
 
 
@@ -501,13 +501,15 @@ div.social-share{
 
   .nav-link:hover
   {
-    background: #63c5da;
-    color: #121212 !important;
+    color: white !important;
+    text-shadow:rgb(0, 63, 255) 0px 0px 15px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 15px;
   }
   .nav-link:checked
   {
-    background: #63c5da;
-    color: #121212 !important;
+    color: white !important;
+    text-shadow:rgb(0, 63, 255) 0px 0px 15px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 15px;
   }
 
   .titre-wave{
