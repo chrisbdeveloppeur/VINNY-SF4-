@@ -138,8 +138,13 @@ a#logo-header-vinny{
   color: $black-ter;
 }
 
-.modal-content{
-  width: 90% !important;
+button.modal-close{
+  right: 5px;
+  top: 5px;
+}
+
+div.modal-body{
+  padding: 0px 1rem;
 }
 
 
