@@ -16,11 +16,6 @@
 
 {% block content %}
 
-
-{#            <h2 class="subtitle has-text-centered is-2 is-family-monospace">#}
-{#                Licenses information#}
-{#            </h2>#}
-
             <div class="pricing-table columns" style="margin: 50px">
 
                 {% for licence in licence %}
@@ -30,8 +25,6 @@
 
                             {% if licence.dollar or licence.euro %}
                                 <span class="plan-price-amount"><span class="plan-price-currency is-family-secondary has-text-grey-light">$</span>{{ licence.dollar }}</span>
-{#                                <span class="is-size-3">/</span>#}
-{#                                <span class="plan-price-amount"><span class="plan-price-currency">€</span>{{ licence.euro }}</span>#}
                             {% else %}
                                 <span class="plan-price-amount is-size-3">~</span>
                             {% endif %}
