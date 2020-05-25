@@ -63,5 +63,107 @@
 
                 {% include('includes/tableau_beat.html.twig') %}
 
+    {#      SCRIPT POUR FILTRE BEATS      #}
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c === "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("button");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    {#      FIN SCRIPT POUR FILTRE BEATS      #}
+
+
+    {#   SCRIPT PLYR   #}
+    <script>
+        var players = Plyr.setup('.js-plyr', {
+            "controls":['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions','pip', 'airplay', 'fullscreen']
+        });
+
+        {#   AUTOPAUSE   #}
+        var i = 1;
+
+
+        players.forEach(function (instance) {
+            instance.on('ready', function (event) {
+                instance.elements.container.setAttribute('id', 'plyId-' + i);
+                instance.plyId = 'plyr-' + i;
+                let lenght = players.length;
+                var j = i+1;
+                if (j > lenght){
+                    j = 1;
+                }
+                let nextId = 'plyId-' + j;
+                i++;
+                instance.on('ended', function (event) {
+                    console.log(nextId);
+                    let nextBeat = document.getElementById(nextId);
+                    console.log(nextBeat.children[1]);
+                    nextBeat.children[1].play();
+                });
+            });
+            instance.on('play', function (event) {
+                var currentPid = instance.plyId;
+                players.forEach(function (instance) {
+                    if (currentPid != instance.plyId) {
+                        instance.pause();
+                    }
+                });
+            });
+
+        });
+
+        {#  FIN AUTOPAUSE   #}
+
+    </script>
+    {#  FIN SCRIPT PLYR   #}
+
 {% endblock %}
+
+
+
 
