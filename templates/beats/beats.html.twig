@@ -29,7 +29,7 @@
 {% endblock %}
 
 {% block filtre %}
-    <div class="columns is-flex align-items-center has-background-black-bis" style="margin: 0;position: relative">
+    <div class="columns is-flex align-items-center has-background-black-bis" style="margin: 0;position: fixed;z-index: 1;width: 100%;">
         <label class="is-flex align-items-center" for="genres" style="margin: auto 0;">
             <div class="column">
                 <strong class="has-text-white is-size-4 is-size-3-touch landscape" style="white-space: nowrap">Genres :</strong>
@@ -61,7 +61,7 @@
 
 {% block content %}
 
-    <div class="column">
+    <div class="column" style="margin-top: 20%">
         <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
 
             {% include 'beats/original_beats.html.twig' with {beat: beat} %}
