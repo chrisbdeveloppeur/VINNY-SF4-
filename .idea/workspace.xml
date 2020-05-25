@@ -5,9 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/config/packages/easy_admin.yaml" line="39" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/contact/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/contact.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/contact/contact.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="91" column="153" selection-start-line="91" selection-start-column="153" selection-end-line="91" selection-end-column="153" />
+            <state relative-caret-position="408">
+              <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -146,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+            <state relative-caret-position="273">
+              <caret line="487" column="3" lean-forward="true" selection-start-line="487" selection-start-column="3" selection-end-line="487" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -611,18 +609,18 @@
       <workItem from="1590254138486" duration="10591000" />
       <workItem from="1590321941307" duration="9816000" />
       <workItem from="1590395108931" duration="17895000" />
-      <workItem from="1590422507307" duration="7191000" />
+      <workItem from="1590422507307" duration="7589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="642403000" />
+    <option name="totallyTimeSpent" value="642801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -637,7 +635,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Floobits" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.3033586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.3033586" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5021322" side_tool="true" weight="0.24160346" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -989,13 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1055,8 +1046,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="91" column="153" selection-start-line="91" selection-start-column="153" selection-end-line="91" selection-end-column="153" />
+        <state relative-caret-position="408">
+          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="487" column="3" lean-forward="true" selection-start-line="487" selection-start-column="3" selection-end-line="487" selection-end-column="3" />
         </state>
       </provider>
     </entry>
