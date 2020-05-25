@@ -75,6 +75,7 @@
         </div>
     </div>
 
+    {% include 'lightbox/modal_lightbox.html.twig' %}
 
     {#      SCRIPT POUR FILTRE BEATS      #}
 
@@ -251,6 +252,22 @@
     </script>
 
     {# FIN SCRIPT VISU SOUND WAVE    #}
+
+    {#   SCRIPT POUR LIGHTBOX MODAL   #}
+    <script>
+        $(".showModal").click(function() {
+            $(".modal").addClass("is-active");
+        });
+
+        $(".modal-close").click(function() {
+            $(".modal").removeClass("is-active");
+        });
+
+        $(".modal-background").click(function() {
+            $(".modal").removeClass("is-active");
+        });
+    </script>
+    {#  FIN SCRIPT POUR LIGHTBOX MODAL   #}
 
 {% endblock %}
 

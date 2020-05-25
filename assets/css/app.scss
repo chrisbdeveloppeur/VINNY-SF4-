@@ -138,6 +138,12 @@ a#logo-header-vinny{
   color: $black-ter;
 }
 
+.modal-content{
+  width: 90% !important;
+}
+
+
+
 
 
 
@@ -405,6 +411,9 @@ div.social-share{
     left: 50%;
     transform: translate(-50%);
   }
+  div.modal-content{
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 1000px){
@@ -450,9 +459,7 @@ div.social-share{
     width: 150px;
   }
 
-  div.modal-content{
-    height: 75vh;
-  }
+
 
   div#navbarNav{
     width: 100vw;
@@ -509,6 +516,18 @@ div.social-share{
     width: 100px;
     height: 100px;
     bottom: 30vh;
+  }
+
+  div.pricing-table{
+    height: 85vh;
+  }
+  div.modal-body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .modal-content{
+    width: 80%;
   }
 
 }
