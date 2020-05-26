@@ -47,7 +47,7 @@
             <div style="z-index: 2;position: sticky;top: 0;">
                 {% block header %}
 
-                    <h2 class="titre-landscape title has-text-weight-bold is-uppercase is-family-monospace" style="color: white;text-shadow:rgb(0, 63, 255) 0px 0px 15px;position: absolute;z-index: 3;left: 50%;transform: translate(-50%);display: none;margin: 5px 0 0 0;justify-content: center;align-items: center;">
+                    <h2 class="titre-landscape title has-text-weight-bold is-uppercase is-family-monospace" style="color: white;text-shadow:rgb(0, 63, 255) 0px 0px 15px;position: absolute;z-index: 3;left: 50%;transform: translate(-50%);display: none;justify-content: center;align-items: center;">
 
                         {% block titre_landscape %}
 
@@ -198,10 +198,12 @@
 
 
 
+
             {#     SCRIPT POUR COOKIE CONSENT     #}
 
             <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 
+        {% block cookie_js %}
             <script>
                 window.cookieconsent.initialise({
                     "palette": {
@@ -214,12 +216,12 @@
                     },
                     "theme": "edgeless",
                     "position": "bottom-right",
-                    "type": "opt-out",
                     "content": {
                         "href": "https://vinnyvixi.com/politique-confidentialite"
                     }
                 });
             </script>
+        {% endblock %}
 
             {#    FIN SCRIPT POUR COOKIE CONSENT     #}
 
