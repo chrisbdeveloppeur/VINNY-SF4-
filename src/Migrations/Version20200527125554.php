@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200524122355 extends AbstractMigration
+final class Version20200527125554 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,8 @@ final class Version20200524122355 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE video ADD CONSTRAINT FK_7CC7DA2CD823E37A FOREIGN KEY (section_id) REFERENCES section_video (id)');
+        $this->addSql('ALTER TABLE section_video CHANGE titre titre VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE video CHANGE section_id section_id INT DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +31,7 @@ final class Version20200524122355 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE video DROP FOREIGN KEY FK_7CC7DA2CD823E37A');
+        $this->addSql('ALTER TABLE section_video CHANGE titre titre VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+        $this->addSql('ALTER TABLE video CHANGE section_id section_id INT NOT NULL');
     }
 }

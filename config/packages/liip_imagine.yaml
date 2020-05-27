@@ -7,7 +7,7 @@ liip_imagine :
         thumb :
 
             # adjust the image quality to 75%
-            quality : 100
+            quality : 75
 
             # list of transformations to apply (the "filters")
             filters :
@@ -20,12 +20,12 @@ liip_imagine :
 
 
         normal_size :
-            quality : 100
+            quality : 75
             filters :
                 thumbnail : { size : [132, 132], mode : outbound }
 
         small_size:
-            quality: 100
+            quality: 50
             filters:
                 thumbnail: { size: [50, 50], mode: outbound }
 

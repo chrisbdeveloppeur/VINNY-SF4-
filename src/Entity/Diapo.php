@@ -23,6 +23,10 @@ class Diapo
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="50",
+     *     maxMessage="Le titre est trop long"
+     * )
      */
     private $titre;
 
@@ -53,7 +57,7 @@ class Diapo
      * @ORM\Column(type="text",nullable=true)
      * @Assert\Length(
      *     max="250",
-     *     maxMessage="250 caractères maximum"
+     *     maxMessage="Le text est trop long"
      * )
      */
     private $text;

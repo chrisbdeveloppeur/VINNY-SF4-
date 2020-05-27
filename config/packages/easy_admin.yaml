@@ -232,14 +232,14 @@ easy_admin:
                 title: 'Ajouter un Diapo'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
-                    - {property: 'text' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo (250 caractères max)"}
+                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo"}
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
             edit:
                 title: 'Modifier un Beat'
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
-                    - {property: 'text' , type: 'textarea', label: "Text", help: "Entrez ici le texte de la diapo (250 caractères max)" }
+                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo" }
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Uploader une image de fond pour la diapo, Format optimisé : 2560 x 1440 pixels .jpeg/jpg/png" }
 
             list:
@@ -250,5 +250,5 @@ easy_admin:
             show:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
-                    - {property: 'text' , type: 'text', label: "Text", css_class: 'is-hidden-touch'}
+                    - {property: 'text' , type: 'text', label: "Text"}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}

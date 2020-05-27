@@ -22,7 +22,8 @@ $footer-padding: 1rem 1.5rem 0rem;
 $size-1: 7rem;
 $size-2: 5rem;
 $size-3: 2.5rem;
-$size-4: 2rem;
+$size-4: 1.7rem;
+
 
 //////////////////////////////////
 
@@ -60,6 +61,9 @@ body {
 }
 
 
+strong{
+  color: white;
+}
 
 #dashboard
 {
@@ -391,7 +395,7 @@ div.social-share{
     height: 85px !important;
   }
 
-  ul.navbar-nav{
+  ul.navbar-nav, a#dashboard, a#deco{
     font-size: 2rem !important;
   }
   .landscape{
@@ -548,5 +552,8 @@ div.social-share{
     width: 125px !important;
   }
 
+  div.text-diapo{
+    font-size: 2rem !important;
+  }
 }
 

@@ -60,6 +60,7 @@ class HomeController extends AbstractController
      */
     public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository)
     {
+
         $beat = $beatRepository->findAll();
         $licence = $licenceRepository->findAll();
         $filtre = $filtreRepository->findAll();
@@ -149,6 +150,8 @@ class HomeController extends AbstractController
     {
         return $this->render('politique_confidentialite/politique_confidentialite.html.twig');
     }
+
+
 
 
 }
