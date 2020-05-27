@@ -130,7 +130,7 @@ a#logo-header-vinny{
   z-index: 1500;
   width: 40px;
   height: 40px;
-  background: rgba(50,50,50,0.7);
+  background: rgba(150,150,150,0.7);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -154,6 +154,10 @@ div.modal-content{
 div.pricing-table-beats{
   width: 95vw;
   height: 65vh;
+}
+
+div.div-filtre{
+  position: fixed;
 }
 
 
@@ -554,6 +558,10 @@ div.social-share{
 
   div.text-diapo{
     font-size: 2rem !important;
+  }
+  
+  div.div-filtre{
+    position: relative;
   }
 }
 
