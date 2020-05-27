@@ -160,6 +160,14 @@ div.div-filtre{
   position: fixed;
 }
 
+div.block-twitter{
+  display: flex;
+}
+div.API-twitter{
+  height: 100%;
+}
+
+
 
 
 
@@ -562,6 +570,13 @@ div.social-share{
   
   div.div-filtre{
     position: relative;
+  }
+
+  div.block-twitter{
+    display: block;
+  }
+  div.API-twitter{
+    height: 50rem;
   }
 }
 
