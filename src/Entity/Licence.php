@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\LicenceRepository")
@@ -18,53 +19,97 @@ class Licence
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="50",
+     *     maxMessage="Le titre est trop long (50 caractères max)"
+     * )
      */
     private $titre;
 
     /**
      * @ORM\Column(type="float", nullable=true)
+     * @Assert\Length(
+     *     max="4",
+     *     maxMessage="Le prix est trop élevé (4 chiffres max)"
+     * )
+     * @Assert\Type(
+     *     type="float",
+     *     message="Vous devez entrer un nombre"
+     * )
      */
     private $euro;
 
     /**
      * @ORM\Column(type="float", nullable=true)
+     * @Assert\Length(
+     *     max="4",
+     *     maxMessage="Le prix est trop élevé (4 chiffres max)"
+     * )
+     * @Assert\Type(
+     *     type="float",
+     *     message="Vous devez entrer un nombre"
+     * )
      */
     private $dollar;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_1;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_2;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_3;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_4;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $color;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_5;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
      */
     private $info_6;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $color;
 
     public function getId(): ?int
     {
@@ -155,18 +200,6 @@ class Licence
         return $this;
     }
 
-    public function getColor(): ?string
-    {
-        return $this->color;
-    }
-
-    public function setColor(?string $color): self
-    {
-        $this->color = $color;
-
-        return $this;
-    }
-
     public function getInfo5(): ?string
     {
         return $this->info_5;
@@ -187,6 +220,18 @@ class Licence
     public function setInfo6(?string $info_6): self
     {
         $this->info_6 = $info_6;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(?string $color): self
+    {
+        $this->color = $color;
 
         return $this;
     }
