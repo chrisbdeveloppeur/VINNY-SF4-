@@ -256,15 +256,18 @@
     {#   SCRIPT POUR LIGHTBOX MODAL   #}
     <script>
         $(".showModal").click(function() {
-            $(".modal").addClass("is-active");
+            // $(".modal").addClass("is-active");
+            $(".modal").css("height","100%");
         });
 
         $(".modal-close").click(function() {
-            $(".modal").removeClass("is-active");
+            // $(".modal").removeClass("is-active");
+            $(".modal").css("height","0");
         });
 
         $(".modal-background").click(function() {
-            $(".modal").removeClass("is-active");
+            // $(".modal").removeClass("is-active");
+            $(".modal").css("height","0");
         });
 
     </script>
