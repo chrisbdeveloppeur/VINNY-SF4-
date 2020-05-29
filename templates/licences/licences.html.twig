@@ -24,13 +24,13 @@
                         <div class="plan-price">
 
                             {% if licence.dollar or licence.euro %}
-                                <span class="plan-price-amount"><span class="plan-price-currency is-family-secondary has-text-grey-light">$</span>{{ licence.dollar }}</span>
+                                <span class="plan-price-amount is-family-monospace is-size-3-desktop"><span class="plan-price-currency is-family-monospace" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
                             {% else %}
                                 <span class="plan-price-amount is-size-3">~</span>
                             {% endif %}
                         </div>
 
-                        <div class="plan-items is-size-5 is-size-3-touch">
+                        <div class="plan-items is-size-5 is-size-3-touch" style="display: grid;height: 100%;">
 
                             {% if licence.info1 %}
                                 <div class="plan-item">{{ licence.info1 }}</div>

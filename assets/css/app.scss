@@ -165,6 +165,12 @@ div.block-twitter{
 }
 div.API-twitter{
   height: 100%;
+  width: 100%;
+}
+div.info-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -386,7 +392,18 @@ div.social-share{
   display: flex;
 }
 
-//    MEDIA QUERIES
+
+
+
+
+
+
+
+
+/////////////////////////////    MEDIA QUERIES      ////////////////////////////////
+
+///// LANDSCAPE //////
+
 @media (max-height: 800px) and (max-width: 1000px) {
   h1.title{
     font-size: 2.5rem !important ;
@@ -432,13 +449,26 @@ div.social-share{
 
 
 
+
+///// WIDESCREEN //////
+
 @media screen and (min-width: 1000px){
   #navbarNav{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
   }
+  div.modal-content{
+    overflow: hidden;
+  }
 }
+
+
+
+
+
+
+///// TOUCHPAD/MOBILE //////
 
 @media screen and (max-width: 1000px){
   .plyr{
@@ -578,6 +608,8 @@ div.social-share{
   }
   div.API-twitter{
     height: 50rem;
+    width: 80%;
+    margin: 70px auto auto auto;
   }
 }
 

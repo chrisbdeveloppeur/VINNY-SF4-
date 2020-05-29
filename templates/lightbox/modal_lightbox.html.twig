@@ -3,7 +3,7 @@
         <div class="modal-background"></div>
         <div class="modal-content" style="border-radius: 0px;background: none;display: flex;justify-content: center;align-items: center;">
 
-{#                        <div class="">#}
+
                             <div class="pricing-table columns pricing-table-beats">
 
                                 {% for licence in licence %}
@@ -12,48 +12,48 @@
                                         <div class="plan-price">
 
                                             {% if licence.dollar or licence.euro %}
-                                                <span class="plan-price-amount is-size-3-desktop"><span class="plan-price-currency is-family-secondary has-text-grey-light">$</span>{{ licence.dollar }}</span>
+                                                <span class="plan-price-amount is-size-3-desktop is-family-monospace"><span class="plan-price-currency is-family-monospace has-text-{{ licence.color }}" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
                                             {% else %}
                                                 <span class="plan-price-amount is-size-3-desktop">~</span>
                                             {% endif %}
                                         </div>
 
-                                        <div class="plan-items is-size-6 is-size-3-touch">
+                                        <div class="plan-items is-size-6 is-size-3-touch" style="display: grid;height: 100%;">
 
                                             {% if licence.info1 %}
-                                                <div class="plan-item">{{ licence.info1 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info1 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                             {% if licence.info2 %}
-                                                <div class="plan-item">{{ licence.info2 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info2 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                             {% if licence.info3 %}
-                                                <div class="plan-item">{{ licence.info3 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info3 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                             {% if licence.info4 %}
-                                                <div class="plan-item">{{ licence.info4 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info4 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                             {% if licence.info5 %}
-                                                <div class="plan-item">{{ licence.info5 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info5 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                             {% if licence.info6 %}
-                                                <div class="plan-item">{{ licence.info6 }}</div>
+                                                <div class="plan-item info-flex">{{ licence.info6 }}</div>
                                             {% else %}
-                                                <div class="plan-item">-</div>
+                                                <div class="plan-item info-flex">-</div>
                                             {% endif %}
 
                                         </div>
@@ -66,7 +66,7 @@
 
 
                             </div>
-{#                        </div>#}
+
         </div>
         <button class="modal-close is-large" style="position: absolute"></button>
     </div>
