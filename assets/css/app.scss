@@ -124,13 +124,15 @@ a#logo-header-vinny{
 
 .arrow_up{
   position: fixed;
-  right: 10px;
-  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 5vh;
   display: flex;
   z-index: 1500;
   width: 40px;
   height: 40px;
   background: rgba(150,150,150,0.7);
+  border: rgba(166, 166, 166, 0.89) solid 3px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -568,7 +570,10 @@ div.social-share{
   .arrow_up{
     width: 100px;
     height: 100px;
-    bottom: 30vh;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    border: rgba(166, 166, 166, 0.89) solid 5px;
   }
 
   div.pricing-table-beats{
