@@ -112,4 +112,25 @@
     {% endif %}
 
 
+    {#   SCRIPT POUR LIGHTBOX video   #}
+    <script>
+        $(".showVideo").click(function() {
+            // $(".modal").addClass("is-active");
+            $(".license-lightbox").css("height","100%");
+        });
+
+        $(".license-lightbox-modal-close").click(function() {
+            // $(".modal").removeClass("is-active");
+            $(".license-lightbox").css("height","0");
+        });
+
+        $(".license-lightbox-modal-background").click(function() {
+            // $(".modal").removeClass("is-active");
+            $(".license-lightbox").css("height","0");
+        });
+
+    </script>
+    {#  FIN SCRIPT POUR LIGHTBOX video   #}
+
+
 {% endblock %}
