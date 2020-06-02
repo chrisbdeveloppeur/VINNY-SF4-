@@ -68,7 +68,18 @@
                                             {% if video.link %}
 
                                             <figure class="is-flex justify-content-center align-items-center" style="background: #121212;margin: 0;">
-                                                <iframe width="100%" height="240px" src="https://www.youtube.com/embed/{{ video.link }}" title="video">
+                                                {#<iframe width="100%" height="240px" src="https://www.youtube-nocookie.com/embed/{{ video.link }}?end=0&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&color=white&disablekb=1" frameborder="0" title="video">
+                                                </iframe>#}
+                                                <iframe width="100%"
+                                                        height="240px"
+                                                        src="https://www.youtube-nocookie.com/embed/{{ video.link }}?end=0&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&color=white&disablekb=1"
+                                                        frameborder="0"
+                                                        title="video"
+                                                        allowfullscreen="allowfullscreen"
+                                                        mozallowfullscreen="mozallowfullscreen"
+                                                        msallowfullscreen="msallowfullscreen"
+                                                        oallowfullscreen="oallowfullscreen"
+                                                        webkitallowfullscreen="webkitallowfullscreen">
                                                 </iframe>
                                             </figure>
 
