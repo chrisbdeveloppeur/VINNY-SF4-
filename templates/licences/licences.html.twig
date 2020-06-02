@@ -24,7 +24,7 @@
                         <div class="plan-price">
 
                             {% if licence.dollar or licence.euro %}
-                                <span class="plan-price-amount is-family-monospace is-size-3-desktop"><span class="plan-price-currency is-family-monospace" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
+                                <span class="plan-price-amount is-family-monospace is-size-3-desktop"><span class="plan-price-currency is-family-monospace has-text-{{ licence.color }}" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
                             {% else %}
                                 <span class="plan-price-amount is-size-3">~</span>
                             {% endif %}

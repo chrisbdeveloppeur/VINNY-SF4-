@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/licences/licences.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/licences/licences.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +70,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/licences/licences.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -134,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
@@ -229,7 +242,6 @@
         <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
         <option value="$PROJECT_DIR$/templates/about/caroussel.html.twig" />
         <option value="$PROJECT_DIR$/templates/about/about.html.twig" />
-        <option value="$PROJECT_DIR$/templates/licences/licences.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Licence.php" />
         <option value="$PROJECT_DIR$/templates/beats/original_beats.html.twig" />
         <option value="$PROJECT_DIR$/templates/beats/like_button.html.twig" />
@@ -240,6 +252,7 @@
         <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
         <option value="$PROJECT_DIR$/templates/videos/videos.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/app.scss" />
+        <option value="$PROJECT_DIR$/templates/licences/licences.html.twig" />
       </list>
     </option>
   </component>
@@ -351,7 +364,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1937" />
@@ -604,17 +617,18 @@
       <workItem from="1590767960018" duration="10058000" />
       <workItem from="1590952395684" duration="2010000" />
       <workItem from="1591013137603" duration="1538000" />
-      <workItem from="1591098604487" duration="7742000" />
+      <workItem from="1591098604487" duration="8132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="698183000" />
+    <option name="totallyTimeSpent" value="698573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19757085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19757085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -629,7 +643,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Floobits" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.3339254" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.3339254" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5021322" side_tool="true" weight="0.24160346" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -865,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/licences/licences.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Diapo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -988,6 +995,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/licences/licences.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
