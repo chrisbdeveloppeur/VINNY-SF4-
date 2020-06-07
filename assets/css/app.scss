@@ -150,11 +150,12 @@ button.modal-close{
 }
 
 div.modal-content{
-  height: 100vh;
+  height: 60vh;
   border: none;
 }
 div.pricing-table-beats{
   width: 95vw;
+  height: 100%;
 }
 
 div.div-filtre{
@@ -625,6 +626,7 @@ div.social-share{
   }
   nav.pagination{
     font-size: 2.5rem;
+    width: 100%;
   }
   div.pagination-control{
     display: grid !important;
@@ -634,7 +636,8 @@ div.social-share{
     grid-row: 2;
   }
   .pagination-control-touch{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    width: 100%;
   }
 }
 
