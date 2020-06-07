@@ -24,7 +24,7 @@ class BeatRepository extends ServiceEntityRepository
     public function findByBpm($value)
     {
             return $this->createQueryBuilder('d')
-                ->andWhere('d.bpm <= :val')
+                ->andWhere('d.bpm = :val')
                 ->setParameter('val', $value)
                 ->getQuery()
                 ->getResult()

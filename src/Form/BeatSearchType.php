@@ -18,8 +18,8 @@ class BeatSearchType extends AbstractType
                 'label' => false,
                 'attr' => [
                     'class' => 'input pagination-control-touch',
-                    'title' => 'BPM (max)',
-                    'placeholder' => 'BPM (max)',
+                    'title' => 'Beat per minutes',
+                    'placeholder' => 'ex : 150',
                     'style' => 'z-index:0',
                     'min' => 0,
                     'max' => 1000
