@@ -173,8 +173,13 @@ div.info-flex{
   justify-content: center;
   align-items: center;
 }
-
-
+nav.pagination{
+  align-items: normal;
+}
+div.pagination{
+  padding-top: 15px;
+  background: rgba(0,0,0,0.5);
+}
 
 
 
@@ -614,6 +619,9 @@ div.social-share{
     height: 50rem;
     width: 80%;
     margin: 70px auto auto auto;
+  }
+  nav.pagination{
+    font-size: 2.5rem;
   }
 }
 

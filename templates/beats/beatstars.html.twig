@@ -6,9 +6,9 @@
     </h2>
 </label>
 
-{% for beat in beat %}
+{% for beat in beatstars %}
 
-    {% if beat.iframe %}
+    {% if not beat.iframe == '' %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin: 0 0 20px 0">
 

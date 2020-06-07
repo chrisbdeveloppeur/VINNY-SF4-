@@ -19,32 +19,14 @@ class BeatRepository extends ServiceEntityRepository
         parent::__construct($registry, Beat::class);
     }
 
-    // /**
-    //  * @return Beat[] Returns an array of Beat objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findByIframe($value)
     {
         return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
+            ->where('b.iframe = :val')
             ->setParameter('val', $value)
-            ->orderBy('b.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
-        ;
+            ;
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Beat
-    {
-        return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

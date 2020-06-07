@@ -26,6 +26,10 @@
 
     {% else %}
 
+        <div class="pagination" style="justify-content: center">
+            {{ knp_pagination_render(video) }}
+        </div>
+
             {% for sectionvideo in section %}
 
                 <div class="column" style="background: rgba(0,0,0,0);box-shadow: rgb(0, 0, 0) 0px 0px 15px;margin-bottom: 20px">
@@ -47,7 +51,10 @@
 
                     </label>
 
+
+
                     <div class="columns is-multiline justify-content-center" style="background: rgba(0,0,0,0.4)">
+
 
                             {% for video in video %}
 
@@ -110,6 +117,10 @@
                 </div>
             {% endfor %}
     {% endif %}
+
+    <div class="pagination" style="justify-content: center">
+        {{ knp_pagination_render(video) }}
+    </div>
 
 
     {#   SCRIPT POUR LIGHTBOX video   #}

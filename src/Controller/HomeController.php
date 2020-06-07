@@ -14,6 +14,7 @@ use App\Repository\LicenceRepository;
 use App\Repository\SectionVideoRepository;
 use App\Repository\VideoRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,14 +27,20 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      */
 
-    public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository)
+    public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, PaginatorInterface $paginator, Request $request)
     {
-        $beat = $beatRepository->findAll();
+        $originalBeat = $paginator->paginate(
+            $beatRepository->findAll(),
+            $request->query->getInt('page', 1),
+            10
+        );
+        $beatstars = $beatRepository->findByIframe(false);
         $licence = $licenceRepository->findAll();
         $filtre = $filtreRepository->findAll();
 
         return $this->render('beats/beats.html.twig', [
-            'beat' => $beat,
+            'beat' => $originalBeat,
+            'beatstars' => $beatstars,
             'licence' => $licence,
             'filtre' => $filtre,
         ]);
@@ -55,31 +62,57 @@ class HomeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/beat", name="beats")
-     */
-    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository)
-    {
-
-        $beat = $beatRepository->findAll();
-        $licence = $licenceRepository->findAll();
-        $filtre = $filtreRepository->findAll();
-
-        return $this->render('beats/beats.html.twig', [
-            'beat' => $beat,
-            'licence' => $licence,
-            'filtre' => $filtre,
-        ]);
-
-    }
+//    /**
+//     * @Route("/beat", name="beats")
+//     */
+//    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, PaginatorInterface $paginator, Request $request)
+//    {
+//
+////        $beatstars = $beatRepository->findByIframe(!null);
+////        $originalBeat = $paginator->paginate(
+////            $beatRepository->findByIframe(null),
+////            $request->query->getInt('page', 1),
+////            3
+////        );
+////        $licence = $licenceRepository->findAll();
+////        $filtre = $filtreRepository->findAll();
+////
+////        return $this->render('beats/beats.html.twig', [
+////            'beat' => $originalBeat,
+////            'beatstars' => $beatstars,
+////            'licence' => $licence,
+////            'filtre' => $filtre,
+////        ]);
+//        $originalBeat = $paginator->paginate(
+//            $beatRepository->findAll(),
+//            $request->query->getInt('page', 1),
+//            6
+//        );
+//        $beatstars = $beatRepository->findByIframe(false);
+//        $licence = $licenceRepository->findAll();
+//        $filtre = $filtreRepository->findAll();
+//
+//        return $this->render('beats/beats.html.twig', [
+//            'beat' => $originalBeat,
+//            'beatstars' => $beatstars,
+//            'licence' => $licence,
+//            'filtre' => $filtre,
+//        ]);
+//
+//    }
 
     /**
      * @Route("/videos", name="videos")
      */
-    public function videos(SectionVideoRepository $sectionVideoRepository, VideoRepository $videoRepository)
+    public function videos(SectionVideoRepository $sectionVideoRepository, VideoRepository $videoRepository, PaginatorInterface $paginator, Request $request)
     {
         $section = $sectionVideoRepository->findAll();
-        $video = $videoRepository->findAll();
+//        $video = $videoRepository->findAll();
+        $video = $paginator->paginate(
+            $videoRepository->findAll(),
+            $request->query->getInt('page', 1),
+            10
+        );
 
         return $this->render('videos/videos.html.twig', [
             'section' => $section,

@@ -97,6 +97,11 @@ class Beat
      */
     private $genre;
 
+    public function __construct()
+    {
+        $this->iframe = '';
+    }
+
 
     public function getId(): ?int
     {

@@ -15,16 +15,17 @@
 
 </label>
 
+
 {% for beat in beat %}
 
 
-{% if not beat.iframe %}
+{% if beat.iframe is null or 'vide'%}
 
     <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative">
 
         <div class="column is-hidden-desktop"  style="padding: 0; position: absolute;width: 100%;height: 100%;background:center / 250px 250px no-repeat
                 {% if beat.beatimagename %}url({{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }})
-                {% else %}url({{ asset('build/images/logo_vinny_letra_2.a861ac20.png') }})
+                {% else %}url({{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }})
                 {% endif %};">
             <div style="background: rgba(0,0,0,0.6);height: 100%;width: 100%">
             </div>

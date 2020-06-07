@@ -62,6 +62,11 @@
 {% block content %}
 
     <div class="column" style="margin-top: 50px">
+
+        <div class="pagination" style="justify-content: center">
+            {{ knp_pagination_render(beat) }}
+        </div>
+
         <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
 
             {% include 'beats/original_beats.html.twig' with {beat: beat} %}
@@ -73,6 +78,11 @@
             {% include 'beats/beatstars.html.twig' with {beat: beat} %}
 
         </div>
+
+        <div class="pagination" style="justify-content: center">
+            {{ knp_pagination_render(beat) }}
+        </div>
+
     </div>
 
     {% include 'lightbox/license_lightbox.html.twig' %}
@@ -80,7 +90,7 @@
     {#      SCRIPT POUR FILTRE BEATS      #}
 
     <script>
-        filterSelection("all")
+        filterSelection("all");
         function filterSelection(c) {
             var x, i;
             x = document.getElementsByClassName("filterDiv");
