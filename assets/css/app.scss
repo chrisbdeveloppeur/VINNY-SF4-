@@ -184,6 +184,9 @@ nav.pagination{
 div.pagination-control{
   justify-content: space-between !important;
 }
+input.pagination-control-touch{
+  text-align: center;
+}
 
 
 
@@ -624,6 +627,9 @@ div.social-share{
     width: 80%;
     margin: 70px auto auto auto;
   }
+  div.pagination{
+    width: 95vw;
+  }
   nav.pagination{
     font-size: 2.5rem;
     width: 100%;
@@ -634,6 +640,9 @@ div.social-share{
   }
   div.bpmSearch{
     grid-row: 2;
+  }
+  div.bpmSearch>div{
+    width: 100%;
   }
   .pagination-control-touch{
     font-size: 2.5rem;

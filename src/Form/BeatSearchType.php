@@ -19,7 +19,10 @@ class BeatSearchType extends AbstractType
                 'attr' => [
                     'class' => 'input pagination-control-touch',
                     'title' => 'BPM (max)',
-                    'placeholder' => 'BPM (max)'
+                    'placeholder' => 'BPM (max)',
+                    'style' => 'z-index:0',
+                    'min' => 0,
+                    'max' => 1000
                 ]
             ])
         ;
