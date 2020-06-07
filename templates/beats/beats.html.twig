@@ -57,15 +57,43 @@
         </div>
 
     </div>
+
+
+
 {% endblock %}
 
 {% block content %}
 
     <div class="column" style="margin-top: 50px">
 
-        <div class="pagination" style="justify-content: center">
-            {{ knp_pagination_render(beat) }}
+
+
+        <div class="field has-addons pagination-control">
+
+            <div class="field has-addons bpmSearch" style="justify-content: center">
+                <div class="control">
+                    {{ form_start(form) }}
+
+                        {{ form_row(form.beatBpmMax) }}
+
+                    {{  form_end(form) }}
+                </div>
+                <div class="control">
+                    <a class="button is-link pagination-control-touch">
+                        Search
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="pagination" style="justify-content: center">
+                {{ knp_pagination_render(beat) }}
+            </div>
+
         </div>
+
+
+
 
         <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
 

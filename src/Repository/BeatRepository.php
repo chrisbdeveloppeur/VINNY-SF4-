@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Beat;
+use App\Entity\BeatSearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+
 
 /**
  * @method Beat|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +19,16 @@ class BeatRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Beat::class);
+    }
+
+    public function findByBpm($value)
+    {
+            return $this->createQueryBuilder('d')
+                ->andWhere('d.bpm <= :val')
+                ->setParameter('val', $value)
+                ->getQuery()
+                ->getResult()
+                ;
     }
 
     public function findByIframe($value)

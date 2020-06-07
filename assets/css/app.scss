@@ -175,10 +175,13 @@ div.info-flex{
 }
 nav.pagination{
   align-items: normal;
+  //padding-top: 15px;
+  //padding-left: 15px;
+  //padding-right: 15px;
+  //background: rgba(0,0,0,0.5);
 }
-div.pagination{
-  padding-top: 15px;
-  background: rgba(0,0,0,0.5);
+div.pagination-control{
+  justify-content: space-between !important;
 }
 
 
@@ -622,6 +625,16 @@ div.social-share{
   }
   nav.pagination{
     font-size: 2.5rem;
+  }
+  div.pagination-control{
+    display: grid !important;
+    justify-content: center !important;
+  }
+  div.bpmSearch{
+    grid-row: 2;
+  }
+  .pagination-control-touch{
+    font-size: 2rem;
   }
 }
 

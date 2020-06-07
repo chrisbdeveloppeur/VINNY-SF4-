@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\BeatSearch;
 use App\Entity\FiltresSelected;
 use App\Entity\Message;
+use App\Form\BeatSearchType;
 use App\Form\FiltresType;
 use App\Form\MessageType;
 use App\Notif\NotifMessage;
@@ -29,12 +31,36 @@ class HomeController extends AbstractController
 
     public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, PaginatorInterface $paginator, Request $request)
     {
-        $originalBeat = $paginator->paginate(
-            $beatRepository->findAll(),
-            $request->query->getInt('page', 1),
-            10
-        );
-        $beatstars = $beatRepository->findByIframe(false);
+        $search = new BeatSearch();
+        $form = $this->createForm(BeatSearchType::class, $search);
+        $form->handleRequest($request);
+        $beatBpMax = $form->get('beatBpmMax')->getData();
+
+        if ($form->isSubmitted() and  $beatBpMax != null){
+            $originalBeat = $paginator->paginate(
+                $beatRepository->findByBpm($beatBpMax),
+                $request->query->getInt('page', 1),
+                10
+            );
+
+            $beatstars = $beatRepository->findByBpm($beatBpMax);
+        }
+        else{
+            $originalBeat = $paginator->paginate(
+                $beatRepository->findAll(),
+                $request->query->getInt('page', 1),
+                10
+            );
+
+            $beatstars = $beatRepository->findByIframe(false);
+        }
+
+
+
+
+//        dd($originalBeat);
+
+
         $licence = $licenceRepository->findAll();
         $filtre = $filtreRepository->findAll();
 
@@ -43,6 +69,7 @@ class HomeController extends AbstractController
             'beatstars' => $beatstars,
             'licence' => $licence,
             'filtre' => $filtre,
+            'form' => $form->createView()
         ]);
 
     }

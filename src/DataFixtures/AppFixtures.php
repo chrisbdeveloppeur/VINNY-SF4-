@@ -44,12 +44,14 @@ class AppFixtures extends Fixture
                     $beat = new Beat();
                     $beat->setTitre($faker->words(1,true));
                     $beat->setGenre($filtre);
+                    $beat->setBpm($faker->numberBetween(5,20) . "0");
                     $manager->persist($beat);
                 }
 
                 $beat = new Beat();
                 $beat->setTitre($faker->words(1,true));
                 $beat->setGenre($filtre);
+                $beat->setBpm($faker->numberBetween(5,20) . "0");
                 $beat->setIframe('//www.beatstars.com/embed/track/?id=4141341');
                 $manager->persist($beat);
 
