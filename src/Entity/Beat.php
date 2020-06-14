@@ -99,7 +99,7 @@ class Beat
 
     public function __construct()
     {
-        $this->iframe = '';
+        $this->iframe = 'vide';
     }
 
 

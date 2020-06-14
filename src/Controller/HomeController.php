@@ -35,15 +35,39 @@ class HomeController extends AbstractController
         $form = $this->createForm(BeatSearchType::class, $search);
         $form->handleRequest($request);
         $beatBpMax = $form->get('beatBpmMax')->getData();
+        $beatBpMin = $form->get('beatBpmMin')->getData();
 
-        if ($form->isSubmitted() and  $beatBpMax != null){
+        if ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax != null) and ($beatBpMin <= $beatBpMax))
+        {
+                $originalBeat = $paginator->paginate(
+                    $beatRepository->findByBpm($beatBpMin, $beatBpMax),
+                    $request->query->getInt('page', 1),
+                    10
+                );
+                $beatstars = $beatRepository->findByBpm($beatBpMin, $beatBpMax);
+        }elseif ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax == null)){
             $originalBeat = $paginator->paginate(
-                $beatRepository->findByBpm($beatBpMax),
+                $beatRepository->findByBpmMin($beatBpMin),
                 $request->query->getInt('page', 1),
                 10
             );
-
-            $beatstars = $beatRepository->findByBpm($beatBpMax);
+            $beatstars = $beatRepository->findByBpmMin($beatBpMin);
+        }elseif ($form->isSubmitted() and  ($beatBpMin == null and $beatBpMax != null)){
+            $originalBeat = $paginator->paginate(
+                $beatRepository->findByBpmMax($beatBpMax),
+                $request->query->getInt('page', 1),
+                10
+            );
+            $beatstars = $beatRepository->findByBpmMax($beatBpMax);
+        }
+        elseif ($form->isSubmitted() and  ($beatBpMin > $beatBpMax)){
+            $this->addFlash('danger', 'Interval error');
+            $originalBeat = $paginator->paginate(
+                $beatRepository->findAll(),
+                $request->query->getInt('page', 1),
+                10
+            );
+            $beatstars = $beatRepository->findByIframe(false);
         }
         else{
             $originalBeat = $paginator->paginate(
@@ -51,14 +75,9 @@ class HomeController extends AbstractController
                 $request->query->getInt('page', 1),
                 10
             );
-
             $beatstars = $beatRepository->findByIframe(false);
         }
 
-
-
-
-//        dd($originalBeat);
 
 
         $licence = $licenceRepository->findAll();

@@ -187,6 +187,9 @@ div.pagination-control{
 input.pagination-control-touch{
   text-align: center;
 }
+div.bpmSearch{
+  width: 60% !important;
+}
 
 
 
@@ -640,6 +643,7 @@ div.social-share{
   }
   div.bpmSearch{
     grid-row: 2;
+    width: 100% !important;
   }
   div.bpmSearch>div{
     width: 100%;
@@ -648,5 +652,6 @@ div.social-share{
     font-size: 2.5rem;
     width: 100%;
   }
+
 }
 

@@ -21,15 +21,37 @@ class BeatRepository extends ServiceEntityRepository
         parent::__construct($registry, Beat::class);
     }
 
-    public function findByBpm($value)
+    public function findByBpmMin($min)
     {
             return $this->createQueryBuilder('d')
-                ->andWhere('d.bpm = :val')
-                ->setParameter('val', $value)
+                ->andWhere('d.bpm >= :min')
+                ->setParameter('min', $min)
                 ->getQuery()
                 ->getResult()
                 ;
     }
+
+    public function findByBpmMax($max)
+    {
+        return $this->createQueryBuilder('d')
+            ->andWhere('d.bpm <= :max')
+            ->setParameter('max', $max)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findByBpm($min, $max)
+    {
+        return $this->createQueryBuilder('d')
+            ->andWhere('d.bpm <= :max AND d.bpm >= :min')
+            ->setParameter('min', $min)
+            ->setParameter('max', $max)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 
     public function findByIframe($value)
     {

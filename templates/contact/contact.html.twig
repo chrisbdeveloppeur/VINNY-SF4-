@@ -27,7 +27,7 @@
 
             {% if form_errors(messageForm) != null %}
                 <div class="form-error notification is-danger is-flex justify-content-center align-items-center column has-text-weight-bold is-size-3-touch">
-                    <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
+                    <button class="delete is-large" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                     {{ form_errors(messageForm) }}
                 </div>
             {% endif %}

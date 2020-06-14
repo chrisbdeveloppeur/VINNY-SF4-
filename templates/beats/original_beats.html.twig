@@ -19,7 +19,7 @@
 {% for beat in beat %}
 
 
-{% if beat.iframe is null or 'vide'%}
+{% if beat.iframe == '' %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative">
 
@@ -94,8 +94,6 @@
                                 </button>
 
                             </div>
-
-                            {{ include('beats/like_button.html.twig') }}
 
                         </div>
 
