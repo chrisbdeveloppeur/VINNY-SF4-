@@ -21,7 +21,7 @@ easy_admin:
               permission: 'ROLE_USER'
             - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: money-check-alt}
             - { entity: 'Diapo',label : 'Carrousel', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: images}
-            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: envelope-open-text}
+#            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: envelope-open-text}
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' , icon: users-cog}
     list:
         batch_actions: ['delete']
@@ -75,27 +75,29 @@ easy_admin:
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type: 'text'}
 
-        Message:
-            label: 'Messages'
-            class: App\Entity\Message
-            disabled_actions: ['new', 'edit']
+#        Message:
+#            label: 'Messages'
+#            class: App\Entity\Message
+#            disabled_actions: ['new', 'edit']
+#
+#            list:
+#                fields:
+#                    - {property: 'nom' , type: 'text'}
+#                    - {property: 'prenom', type: 'text'}
+#                    - {property: 'email', type: 'text'}
+#                    - {property: 'objet' , type: 'text'}
+#                    - {property: 'message' , type: 'text'}
+#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
+#            show:
+#                fields:
+#                    - {property: 'nom' , type: 'text'}
+#                    - {property: 'prenom', type: 'text'}
+#                    - {property: 'email', type: 'text'}
+#                    - {property: 'objet' , type: 'text'}
+#                    - {property: 'message' , type: 'text'}
+#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
 
-            list:
-                fields:
-                    - {property: 'nom' , type: 'text'}
-                    - {property: 'prenom', type: 'text'}
-                    - {property: 'email', type: 'text'}
-                    - {property: 'objet' , type: 'text'}
-                    - {property: 'message' , type: 'text'}
-                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
-            show:
-                fields:
-                    - {property: 'nom' , type: 'text'}
-                    - {property: 'prenom', type: 'text'}
-                    - {property: 'email', type: 'text'}
-                    - {property: 'objet' , type: 'text'}
-                    - {property: 'message' , type: 'text'}
-                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
+
         Licence:
             label: 'Licences'
             class: App\Entity\Licence

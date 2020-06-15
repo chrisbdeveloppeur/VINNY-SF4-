@@ -193,7 +193,7 @@ class HomeController extends AbstractController
             $message = $form->getData();
 
             $entityManager->persist($message);
-            $entityManager->flush();
+//            $entityManager->flush();
 
             $notifMessage->sendMessage($message);
 
