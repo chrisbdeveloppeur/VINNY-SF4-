@@ -108,44 +108,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-//    /**
-//     * @Route("/beat", name="beats")
-//     */
-//    public function beats(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, PaginatorInterface $paginator, Request $request)
-//    {
-//
-////        $beatstars = $beatRepository->findByIframe(!null);
-////        $originalBeat = $paginator->paginate(
-////            $beatRepository->findByIframe(null),
-////            $request->query->getInt('page', 1),
-////            3
-////        );
-////        $licence = $licenceRepository->findAll();
-////        $filtre = $filtreRepository->findAll();
-////
-////        return $this->render('beats/beats.html.twig', [
-////            'beat' => $originalBeat,
-////            'beatstars' => $beatstars,
-////            'licence' => $licence,
-////            'filtre' => $filtre,
-////        ]);
-//        $originalBeat = $paginator->paginate(
-//            $beatRepository->findAll(),
-//            $request->query->getInt('page', 1),
-//            6
-//        );
-//        $beatstars = $beatRepository->findByIframe(false);
-//        $licence = $licenceRepository->findAll();
-//        $filtre = $filtreRepository->findAll();
-//
-//        return $this->render('beats/beats.html.twig', [
-//            'beat' => $originalBeat,
-//            'beatstars' => $beatstars,
-//            'licence' => $licence,
-//            'filtre' => $filtre,
-//        ]);
-//
-//    }
+
 
     /**
      * @Route("/videos", name="videos")

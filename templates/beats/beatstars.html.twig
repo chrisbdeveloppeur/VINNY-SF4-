@@ -8,7 +8,7 @@
 
 {% for beat in beatstars %}
 
-    {% if not beat.iframe == '' %}
+    {% if (beat.iframe is not null)  %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin: 0 0 20px 0">
 

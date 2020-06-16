@@ -190,6 +190,23 @@ input.pagination-control-touch{
 div.bpmSearch{
   width: 60% !important;
 }
+div.video-lightbox{
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+div.video-lightbox-content{
+  width: 80%;
+  height: 70%;
+}
+figure.showVideo:hover{
+  cursor: pointer
+}
 
 
 
@@ -651,6 +668,10 @@ div.social-share{
   .pagination-control-touch{
     font-size: 2.5rem;
     width: 100%;
+  }
+  div.video-lightbox-content{
+    width: 100%;
+    height: 80%;
   }
 
 }

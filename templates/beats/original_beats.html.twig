@@ -19,7 +19,7 @@
 {% for beat in beat %}
 
 
-{% if beat.iframe == '' %}
+{% if beat.iframe is null %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative">
 

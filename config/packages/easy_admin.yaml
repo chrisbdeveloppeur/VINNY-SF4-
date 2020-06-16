@@ -7,7 +7,6 @@ easy_admin:
             css:
                 # ...
                 - 'css/admin.css'
-
         menu:
             - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
             - label: 'Beats'
@@ -24,25 +23,28 @@ easy_admin:
 #            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: envelope-open-text}
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' , icon: users-cog}
     list:
+        title: "Liste des %%entity_label%%"
         batch_actions: ['delete']
         actions:
             - {name: 'show', icon: 'search', label: false, css_class: 'btn btn-secondary'}
             - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-primary'}
             - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
             - {name: 'search'}
+    show:
+        title: "Informations du %%entity_name%%"
     entities:
 
         Beat :
             label: 'Beats'
             class : App\Entity\Beat
-            form :
+            new :
                 title : 'Ajouter un Beat'
                 fields :
                     - {property: 'beatImage' , type : 'vich_image', label : "Illustration (taille optimisé : 132x132)", help : "Format .jpeg/jpg/png"}
                     - {property: 'beatFile' , type : 'file', label : "Fichier audio",type_options: { required: false }}
                     - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
                     - {property: 'titre' , type : 'text'}
-                    - {property: 'artiste' , type : 'text', label : 'Prod. by'}
+                    - {property: 'artiste' , type : 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
                     - {property: 'bpm' , type : 'text'}
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
 
@@ -51,51 +53,34 @@ easy_admin:
                 title: 'Modifier un Beat'
                 fields:
                     - {property: 'beatImage' , type: 'vich_image', label: "Illustration (taille optimisé : 132x132)"}
+                    - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false, disabled: true }}
                     - {property: 'beatFile' , type: 'file', label: "Fichier audio", type_options: { required: false }}
                     - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
                     - {property: 'titre' , type: 'text'}
-                    - {property: 'artiste' , type: 'text', label : 'Prod. by'}
+                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
 
             list:
+#                filters: [{ property: 'iframe', type: 'boolean' }]
+                help: "Ici ajoute ou modifie les beats !"
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration", css_class: 'is-hidden-touch'}
                     - {property: 'titre' , type: 'text'}
-                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig', css_class: 'is-hidden-mobile'}
+                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig', css_class: 'is-hidden-touch'}
                     - {property: 'bpm' , type: 'text', css_class: 'is-hidden-mobile'}
                     - {property: 'genre' , type: 'text', css_class: 'is-hidden-mobile'}
+                    - {property: 'iframe', type: 'boolean'}
             show:
                 fields:
                     - {property: 'titre' , type: 'text'}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
+                    - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false }}
                     - {property: 'beatFile', label : "Player", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
                     - {property: 'iframe' , type : 'text', label : "Iframe"}
-                    - {property: 'artiste' , type: 'text', label : 'Prod. by'}
+                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type: 'text'}
-
-#        Message:
-#            label: 'Messages'
-#            class: App\Entity\Message
-#            disabled_actions: ['new', 'edit']
-#
-#            list:
-#                fields:
-#                    - {property: 'nom' , type: 'text'}
-#                    - {property: 'prenom', type: 'text'}
-#                    - {property: 'email', type: 'text'}
-#                    - {property: 'objet' , type: 'text'}
-#                    - {property: 'message' , type: 'text'}
-#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
-#            show:
-#                fields:
-#                    - {property: 'nom' , type: 'text'}
-#                    - {property: 'prenom', type: 'text'}
-#                    - {property: 'email', type: 'text'}
-#                    - {property: 'objet' , type: 'text'}
-#                    - {property: 'message' , type: 'text'}
-#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
 
 
         Licence:
@@ -138,29 +123,8 @@ easy_admin:
                     - {property: 'info_5' , type: 'text'}
                     - {property: 'info_6' , type: 'text'}
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
-
-        Admin :
-            label: 'Comptes Administrateur'
-            class : App\Entity\Admin
-            form :
-                title : 'Ajouter un compte Administrateur'
-                fields :
-                    - {property: 'email' , type : 'text', label : "email"}
-                    - {property: 'password' , type : 'password', label : "Mot de passe"}
-#                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
-            edit:
-                title: 'Modifier un compte Administrateur'
-                fields:
-                    - {property: 'email' , type: 'text', label: "email"}
-                    - {property: 'password' , type: 'text', label: "Mot de passe"}
-#                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
-
-
-            list:
-                fields:
-                    - {property: 'email' , type: 'text', label: "email"}
-                    - {property: 'roles' , type: 'array', label: "Roles"}
-                    - {property: 'date' , type: 'date', format: 'j/n/Y'}
+            show:
+                title: "Informations de la %%entity_name%%"
 
 
         SectionVideo:
@@ -182,7 +146,7 @@ easy_admin:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'couleur' , type: 'text', label: "Couleur"}
             show:
-#                title: 'Ajouter une rubrique de videos'
+                title: "Informations de la %%entity_name%%"
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'couleur' , type: 'text', label: "Couleur"}
@@ -211,6 +175,8 @@ easy_admin:
                     - {property: 'info' , type: 'text', label: "Info", css_class: 'is-hidden-touch'}
                     - {property: 'link' , type: 'text', label: "lien url", css_class: 'is-hidden-touch'}
                     - {property: 'section' , type: 'text'}
+            show:
+                title: "Informations de la %%entity_name%%"
 
         Filtre:
             label: 'Filtres'
@@ -226,6 +192,9 @@ easy_admin:
             list:
                 fields:
                     - {property: 'genre',type: 'text', label: "Genre"}
+            show:
+                fields:
+                    - {property: 'genre' , type: 'text', label: "Genre"}
 
         Diapo:
             label: 'Diapositives'
@@ -248,9 +217,55 @@ easy_admin:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'text' , type: 'text', label: "Text", css_class: 'is-hidden-touch'}
-                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
+                    - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration", css_class: 'is-hidden-touch'}
             show:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'text' , type: 'text', label: "Text"}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
+
+        Admin:
+            label: 'Comptes Administrateur'
+            class: App\Entity\Admin
+            form:
+                title: 'Ajouter un compte Administrateur'
+                fields:
+                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'password' , type: 'password', label: "Mot de passe"}
+            #                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+            edit:
+                title: 'Modifier un compte Administrateur'
+                fields:
+                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'password' , type: 'text', label: "Mot de passe"}
+            #                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+            list:
+                fields:
+                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'roles' , type: 'array', label: "Roles"}
+                    - {property: 'date' , type: 'date', format: 'j/n/Y'}
+            show:
+                title: "Informations de l'%%entity_name%%"
+
+
+#        Message:
+#            label: 'Messages'
+#            class: App\Entity\Message
+#            disabled_actions: ['new', 'edit']
+#
+#            list:
+#                fields:
+#                    - {property: 'nom' , type: 'text'}
+#                    - {property: 'prenom', type: 'text'}
+#                    - {property: 'email', type: 'text'}
+#                    - {property: 'objet' , type: 'text'}
+#                    - {property: 'message' , type: 'text'}
+#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}
+#            show:
+#                fields:
+#                    - {property: 'nom' , type: 'text'}
+#                    - {property: 'prenom', type: 'text'}
+#                    - {property: 'email', type: 'text'}
+#                    - {property: 'objet' , type: 'text'}
+#                    - {property: 'message' , type: 'text'}
+#                    - {property: 'date' , type: 'datetime', format: 'j/n/Y H:i:s'}

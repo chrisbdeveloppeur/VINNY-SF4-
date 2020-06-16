@@ -1,9 +1,16 @@
-<div class="container" id="app">
-    <div class="lign is-active" style="transition: .5s;height: 0;">
-        <div class="video-lightbox-background"></div>
-        <div class="video-lightbox-modal-content" style="border-radius: 0px;background: none;display: flex;justify-content: center;align-items: center;">
 
+    <div class="lign is-active video-lightbox" id="video-lightbox-{{ video.id }}">
+        <div class="video-lightbox-background" style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center">
+            <div class="video-lightbox-content" id="video-lightbox-content-{{ video.id }}" style="border-radius: 0px;background: none;display: flex;justify-content: center;align-items: center;">
+
+                            <iframe id="{{ video.id }}" width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/{{ video.link }}?modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&color=white&disablekb=1"
+                                    title="{{ video.titre }}"
+                                    allowfullscreen="allowfullscreen">
+                            </iframe>
+
+            </div>
+            <button class="video-lightbox-close modal-close is-large"></button>
         </div>
-        <button class="video-lightbox-modal-close is-large" style="position: absolute"></button>
     </div>
-</div>

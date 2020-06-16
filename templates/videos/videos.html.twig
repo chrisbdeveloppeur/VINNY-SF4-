@@ -14,17 +14,23 @@
     Videos
 {% endblock %}
 
+{% block video_lightbox %}
+    {% for video in video %}
+        {% include 'lightbox/video_lightbox.html.twig' %}
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
 
-    {% if section is empty %}
+{#    {% if section is empty %}#}
 
-        {{ include('includes/comming_soon.html.twig') }}
+{#        {{ include('includes/comming_soon.html.twig') }}#}
 
-    {% elseif video is empty %}
+{#    {% elseif video is empty %}#}
 
-        {{ include('includes/comming_soon.html.twig') }}
+{#        {{ include('includes/comming_soon.html.twig') }}#}
 
-    {% else %}
+{#    {% else %}#}
 
         <div class="pagination" style="justify-content: center">
             {{ knp_pagination_render(video) }}
@@ -72,29 +78,9 @@
                                             </label>
                                         {% endif %}
 
-                                            {% if video.link %}
-
-                                            <figure class="is-flex justify-content-center align-items-center" style="background: #121212;margin: 0;">
-                                                {#<iframe width="100%" height="240px" src="https://www.youtube-nocookie.com/embed/{{ video.link }}?end=0&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&color=white&disablekb=1" frameborder="0" title="video">
-                                                </iframe>#}
-                                                <iframe width="100%"
-                                                        height="240px"
-                                                        src="https://www.youtube-nocookie.com/embed/{{ video.link }}?end=0&modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&color=white&disablekb=1"
-                                                        frameborder="0"
-                                                        title="video"
-                                                        allowfullscreen="allowfullscreen"
-                                                        mozallowfullscreen="mozallowfullscreen"
-                                                        msallowfullscreen="msallowfullscreen"
-                                                        oallowfullscreen="oallowfullscreen"
-                                                        webkitallowfullscreen="webkitallowfullscreen">
-                                                </iframe>
+                                            <figure class="is-flex justify-content-center align-items-center showVideo" id="showVideo-{{ video.id }}" style="background: #121212;margin: 0;">
+                                                <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="no video link" title="{{ video.titre }}" style="height:240px;">
                                             </figure>
-
-                                            {% else %}
-                                                <figure style="background: rgba(0,0,0,0.2);margin: 0;">
-                                                    <img src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="no video link" title="no video" style="height:240px;">
-                                                </figure>
-                                            {% endif %}
 
                                         {% if video.info is not null %}
                                             <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="has-text-weight-light is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
@@ -110,38 +96,53 @@
 
                                 {% endif %}
 
+                                {#   SCRIPT POUR LIGHTBOX video   #}
+                                <script>
+
+                                    $("#showVideo-{{ video.id }}").click(function() {
+                                        //OPEN LIGHTBOX//
+                                        $("#video-lightbox-{{ video.id }}").css("display","flex");
+                                    });
+
+                                    $(".video-lightbox-close").click(function() {
+                                        //STOP VIDEO//
+                                        $('#{{ video.id }}').each(function(index) {
+                                            $(this).attr('src', $(this).attr('src'));
+                                            return false;
+                                        });
+                                        //HIDE LIGHTBOX//
+                                        $("#video-lightbox-{{ video.id }}").css("display","none");
+                                    });
+
+                                    $(".video-lightbox-background").click(function() {
+                                        //STOP VIDEO//
+                                        $('#{{ video.id }}').each(function(index) {
+                                            $(this).attr('src', $(this).attr('src'));
+                                            return false;
+                                        });
+                                        //HIDE LIGHTBOX//
+                                        $("#video-lightbox-{{ video.id }}").css("display","none");
+                                    });
+
+                                </script>
+                                {#  FIN SCRIPT POUR LIGHTBOX video   #}
+
                             {% endfor %}
 
                     </div>
 
                 </div>
+
             {% endfor %}
-    {% endif %}
+
+{#    {% endif %}#}
 
     <div class="pagination" style="justify-content: center">
         {{ knp_pagination_render(video) }}
     </div>
 
 
-    {#   SCRIPT POUR LIGHTBOX video   #}
-    <script>
-        $(".showVideo").click(function() {
-            // $(".modal").addClass("is-active");
-            $(".license-lightbox").css("height","100%");
-        });
 
-        $(".license-lightbox-modal-close").click(function() {
-            // $(".modal").removeClass("is-active");
-            $(".license-lightbox").css("height","0");
-        });
-
-        $(".license-lightbox-modal-background").click(function() {
-            // $(".modal").removeClass("is-active");
-            $(".license-lightbox").css("height","0");
-        });
-
-    </script>
-    {#  FIN SCRIPT POUR LIGHTBOX video   #}
 
 
 {% endblock %}

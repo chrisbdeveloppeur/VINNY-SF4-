@@ -56,15 +56,8 @@
                     </h2>
 
 
-                    {% if is_granted('ROLE_USER') %}
+                    {% include('includes/header/header.html.twig') %}
 
-                        {% include('includes/header/admin_header.html.twig') %}
-
-                    {% else %}
-
-                        {% include('includes/header/header.html.twig') %}
-
-                    {% endif %}
 
                         <section class="titre-wave" style="z-index:1;background:#121212 center / 100% 100% no-repeat url('{{ asset('build/images/audio_bars.62a6b06d.png')}}');width: 100%">
                             <div class="has-text-centered" style="position: relative">
@@ -76,9 +69,6 @@
                                         {% endblock %}
 
                                     </h1>
-
-{#                                <input style="position: absolute;left: 5px;top: 5px;" type="file" id="thebeat" accept="audio/*" />#}
-{#                                <canvas style="position: absolute;left: 0;top: 0;z-index: -1" id="canvas"></canvas>#}
 
                                 {% block visualizer %}
                                     {% if is_granted('ROLE_USER') %}
@@ -102,6 +92,9 @@
             </div>
 
 
+            {% block video_lightbox %}
+
+            {% endblock %}
 
 
 

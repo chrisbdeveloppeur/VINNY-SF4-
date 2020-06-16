@@ -68,6 +68,7 @@ class AppFixtures extends Fixture
                 $video->setTitre($faker->words(3,true));
                 $video->setInfo($faker->words(4,true));
                 $video->setSection($section);
+                $video->setLink('4YszR1SHTP4');
                 $manager->persist($video);
             }
         }
