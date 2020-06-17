@@ -62,8 +62,6 @@ easy_admin:
                     - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
 
             list:
-#                filters: [{ property: 'iframe', type: 'boolean' }]
-                help: "Ici ajoute ou modifie les beats !"
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration", css_class: 'is-hidden-touch'}
                     - {property: 'titre' , type: 'text'}
@@ -227,19 +225,21 @@ easy_admin:
         Admin:
             label: 'Comptes Administrateur'
             class: App\Entity\Admin
-            form:
-                title: 'Ajouter un compte Administrateur'
-                fields:
-                    - {property: 'email' , type: 'text', label: "email"}
-                    - {property: 'password' , type: 'password', label: "Mot de passe"}
-            #                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+            password_encoding: { algorithm: 'bcrypt', cost: 12 }
+#            new:
+#                title: 'Ajouter un compte Administrateur'
+#                fields:
+#                    - {property: 'email' , type: 'text', label: "email"}
+#                    - {property: 'password' , type: 'repeated', label: "Mot de passe"}
+#                    - {property: 'roles' ,label : "Roles", type: 'collection'}
             edit:
                 title: 'Modifier un compte Administrateur'
                 fields:
                     - {property: 'email' , type: 'text', label: "email"}
-                    - {property: 'password' , type: 'text', label: "Mot de passe"}
-            #                    - {property: 'roles' ,label : "Roles", type: 'choice',type_options: {choices: {'ADMIN':['ROLE_USER'],'SUPER-ADMIN':['ROLE_ADMIN']} }}
+#                    - {property: 'password' , type: 'repeated', label: "Mot de passe"}
+                    - {property: 'roles' ,label : "Roles", type: 'collection'}
             list:
+                actions: ['-new']
                 fields:
                     - {property: 'email' , type: 'text', label: "email"}
                     - {property: 'roles' , type: 'array', label: "Roles"}
