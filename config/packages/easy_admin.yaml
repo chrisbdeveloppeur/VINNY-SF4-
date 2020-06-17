@@ -70,7 +70,7 @@ easy_admin:
                     - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig', css_class: 'is-hidden-touch'}
                     - {property: 'bpm' , type: 'text', css_class: 'is-hidden-mobile'}
                     - {property: 'genre' , type: 'text', css_class: 'is-hidden-mobile'}
-                    - {property: 'iframe', type: 'boolean'}
+                    - {property: 'iframe', label: 'Lien Beatstar', type: 'boolean'}
             show:
                 fields:
                     - {property: 'titre' , type: 'text'}

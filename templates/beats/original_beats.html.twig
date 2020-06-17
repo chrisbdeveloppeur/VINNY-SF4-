@@ -3,7 +3,7 @@
 
         <p class="has-background-black-bis has-icons-left is-family-code is-size-3" style="padding: 10px; margin-bottom: 0">
 
-            <span class="icon is-small has-text-info" style="margin:0 7px">
+            <span class="icon is-small text-info" style="margin:0 7px">
                 <i class="fas fa-headphones"></i>
             </span>
 
@@ -17,7 +17,7 @@
 
 
 {% for beat in beat %}
-
+    {% set i = ( i | default(0) ) + 1 %}
 
 {% if beat.iframe is null %}
 
@@ -51,7 +51,7 @@
 
                         <div class="columns is-centered is-vcentered has-text-centered is-size-4-mobile" style=" color: white;margin: 0;padding:0;height:50%">
 
-                            <div class="column">
+                            <div class="column" id="track-title{{ i }}">
                                 <label for="titre" style="margin: auto"><strong class="has-text-white">Title : </strong></label>
                                 {% if beat.titre %}
                                     {{ beat.titre }}
@@ -97,7 +97,7 @@
 
                         </div>
 
-                            <audio controls controlsList="nodownload" preload="metadata" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered"
+                            <audio controls controlsList="nodownload" preload="metadata" id="audio-{{ i }}" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered"
                                    style="width: 100%;
                                    height: 50%;
                                    --plyr-color-main:rgba(0,0,0,0);
@@ -125,7 +125,98 @@
 
 {% endif %}
 
+    {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
+    <script>
 
+        let audio{{ i }} = document.getElementById("audio-{{ i }}");
+        let trackTitle{{ i }} = document.getElementById("track-title{{ i }}");
+        let trackTitlePlayer{{ i }} = document.querySelector("#track-title");
+        let sectionPlayer{{ i }} = document.getElementById("player_old");
+        let barTime{{ i }} = document.querySelector("#timeLine");
+        let barCurrentTime{{ i }} = document.querySelector("#currentTime");
+        let cursor{{ i }} = document.querySelector("#cursor");
+
+        audio{{ i }}.addEventListener('play', function () {
+            {#console.log(trackTitle{{ i }}.innerText);#}
+            {#console.log(audio{{ i }});#}
+            {#console.log(sectionPlayer{{ i }});#}
+            trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;
+            barProgessTime(audio{{ i }});
+        });
+
+
+
+
+        ////////////////////////////////////  BAR DE TEMPS MUSIQUE  //////////////////////////
+
+        function barProgessTime(audio)
+        {
+
+            audio.addEventListener('timeupdate', (event) =>
+            {
+                // console.log(audio.currentTime);
+                barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";
+                cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";
+            });
+        }
+
+
+
+
+        {#let timeLinePaddLeft{{ i }} = getComputedStyle(timeLine);#}
+
+        {#let timeLinePaddLeft2{{ i }} = timeLinePaddLeft{{ i }}.perspectiveOrigin.split(' ');#}
+
+        {#let timeLinePaddLeft3{{ i }} = timeLinePaddLeft2{{ i }}[0].split('px');#}
+
+        {#let paddingLeft{{ i }} = timeLinePaddLeft3{{ i }}[0]/2;#}
+
+        {#console.log(paddingLeft{{ i }});#}
+
+
+
+        {#function moveBarTime(paddingLeft)#}
+        {#{#}
+        {#    barTime{{ i }}.addEventListener('mousemove', function()#}
+        {#    {#}
+        {#        console.log(event.clientX + "px");#}
+        {#        barCurrentTime{{ i }}.style.width =event.clientX + "px";#}
+        {#        cursor{{ i }}.style.left = event.clientX + "px"#}
+        {#    }, false);#}
+        {#}#}
+
+
+
+        {#barTime{{ i }}.addEventListener('mousedown', function()#}
+        {#{#}
+        {#    moveBarTime(paddingLeft{{ i }});#}
+        {#    // console.log("dragOn OK")#}
+        {#    barTime{{ i }}.addEventListener('mousemove', function()#}
+        {#    {#}
+        {#        timeLine.style.position = "relative";#}
+        {#        cursor{{ i }}.style.left = event.clientX + "px"#}
+        {#    }, false);#}
+
+        {#    barTime{{ i }}.removeEventListener('mousemove', function(){}, true);#}
+
+        {#    window.addEventListener('mouseup', function()#}
+        {#    {#}
+        {#        // console.log("MOUSE UP");#}
+        {#        barTime{{ i }}.removeEventListener('mousemove', function()#}
+        {#        {}, true);#}
+        {#        // console.log("dragOff OK")#}
+        {#        timeLine.style.position = "relative"#}
+
+        {#    })#}
+
+
+        {#}, false)#}
+
+        //////////////////////////////////// FIN //////////////////////////
+
+
+    </script>
+    {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
 
 {% endfor %}
 

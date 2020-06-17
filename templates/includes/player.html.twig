@@ -6,53 +6,19 @@
 
     <div class="btn">
 
-{#        <img id="previous" src="{{ asset('build/images/previous_w.8277fdf0.svg') }}" alt="previous">#}
-
-{#        <div class="btnPPS">#}
-{#            <img id="play" src="{{ asset('build/images/play_w.73a5583a.svg') }}" alt="play">#}
-{#            <img id="stop" src="{{ asset('build/images/stop_w.f2868521.svg') }}" alt="stop">#}
-{#        </div>#}
-
-{#        <img id="next" src="{{ asset('build/images/next_w.d29a417e.svg') }}" alt="next">#}
-
         <div id="trackMin">
 
-            <!-- <a href="#beats">Track
-                <div></div>
-            </a> -->
-            <p class="is-size-4-touch">Track</p>
+            <p class="is-size-4-touch" id="track-title">Track</p>
 
-            <div id="timeLine">
+            <div id="timeLine" style="position: relative">
                 <div id="cursor"></div>
-                <div id="currentTime"></div>
+                <div id="currentTime" class="bg-info" style="position:absolute;top: 0;z-index: -1;transition: .3s"></div>
             </div>
-
-            <audio id="audio">
-                {% for beat in beat %}
-                    {#         <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/mp3" />#}
-{#                <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" type="audio/ogg" />#}
-                {% endfor %}
-            </audio>
 
         </div>
 
-{#        <div id="trackMax">#}
-{#            <a href="#beats">Track</a>#}
-{#        </div>#}
-
-{#        <div class="arrow">#}
-{#            <img id="arrow" src="{{ asset('build/images/arrowd.7da2026c.svg') }}" alt="arrow">#}
-{#        </div>#}
 
     </div>
-
-    <!-- <div class="bar">
-        <div class="bar2">
-            <div class="cursor">
-
-            </div>
-        </div>
-    </div> -->
 
 </section>
 
@@ -106,7 +72,7 @@
     div.btn
     {
         width:100%;
-        height:25px;
+        height:50px;
         background: rgba(255,255,255,0.7);
         border-radius:0;
         box-shadow: 0 0 10px 3px rgba(0,0,0,0.7);
@@ -252,7 +218,6 @@
         justify-content:end;
         height:100%;
         width:0%;
-        background:white;
     }
     #cursor
     {
@@ -270,8 +235,5 @@
 </style>
 
 
-<script>
-{#{{ include('includes/playerjs_old.html.twig') }}#}
-</script>
 
 

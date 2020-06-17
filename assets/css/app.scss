@@ -207,6 +207,9 @@ div.video-lightbox-content{
 figure.showVideo:hover{
   cursor: pointer
 }
+span.span-youtube{
+  background-color: rgba(0,0,0,0.7);
+}
 
 
 
@@ -423,6 +426,9 @@ div.plyr__time:hover{
 
 div.social-share{
   display: flex;
+}
+i.youtube-video-class{
+  font-size: 5rem;
 }
 
 
@@ -673,6 +679,15 @@ div.social-share{
     width: 100%;
     height: 80%;
   }
-
+  button.video-lightbox-close{
+    top: 25px;
+    right:25px;
+  }
+  .img-youtube{
+    width: 80%;
+  }
+  i.youtube-video-class{
+    font-size: 15rem;
+  }
 }
 

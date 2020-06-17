@@ -9,20 +9,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Beat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Beat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_admin.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/beats/beatstars.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/beatstars.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/beats/beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/beats.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/comming_soon.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/header/admin_header.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/header/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/header/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/player.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/player.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/videos/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/videos/videos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/knp_paginator.fr.yml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,56 +90,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="657">
+              <caret line="343" column="22" selection-start-line="343" selection-start-column="22" selection-end-line="343" selection-end-column="22" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#843#868#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#4715#4750#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/includes/player.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
+            <state relative-caret-position="476">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding>
-                <element signature="e#503#536#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="672" column="16" selection-start-line="672" selection-start-column="16" selection-end-line="672" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,11 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text-color-dark</find>
-      <find>modal-close</find>
-      <find>pricin</find>
-      <find>nav-link</find>
-      <find>pric</find>
       <find>logo_vinny_letra_2</find>
       <find>trackMin</find>
       <find>strong</find>
@@ -189,6 +158,11 @@
       <find>modal-cl</find>
       <find>light</find>
       <find>figure</find>
+      <find>video-lightbox</find>
+      <find>close</find>
+      <find>background-info</find>
+      <find>background</find>
+      <find>timeLine</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-</dir>
@@ -213,7 +187,6 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/public/css/admin.css" />
         <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
-        <option value="$PROJECT_DIR$/templates/includes/player.html.twig" />
         <option value="$PROJECT_DIR$/deploy.bat" />
         <option value="$PROJECT_DIR$/templates/includes/footer/footer.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Diapo.php" />
@@ -233,16 +206,13 @@
         <option value="$PROJECT_DIR$/src/Repository/BeatRepository.php" />
         <option value="$PROJECT_DIR$/src/Form/BeatSearchType.php" />
         <option value="$PROJECT_DIR$/templates/contact/contact.html.twig" />
-        <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/templates/beats/beatstars.html.twig" />
-        <option value="$PROJECT_DIR$/templates/beats/original_beats.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/header/admin_header.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/header/header.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Beat.php" />
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Admin.php" />
-        <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
         <option value="$PROJECT_DIR$/translations/easy_admin.fr.yml" />
         <option value="$PROJECT_DIR$/translations/easy_admin.fr.yaml" />
         <option value="$PROJECT_DIR$/config/packages/translation.yaml" />
@@ -252,6 +222,10 @@
         <option value="$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/app.scss" />
         <option value="$PROJECT_DIR$/templates/videos/videos.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
+        <option value="$PROJECT_DIR$/templates/beats/original_beats.html.twig" />
+        <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
+        <option value="$PROJECT_DIR$/templates/includes/player.html.twig" />
       </list>
     </option>
   </component>
@@ -369,9 +343,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -509,7 +483,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VINNY-SF4-_old" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -633,18 +607,18 @@
       <workItem from="1592159602904" duration="3000" />
       <workItem from="1592246237684" duration="7033000" />
       <workItem from="1592301984288" duration="1599000" />
-      <workItem from="1592307012508" duration="19207000" />
+      <workItem from="1592307012508" duration="38142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="777069000" />
+    <option name="totallyTimeSpent" value="796004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -694,9 +668,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/beats/images/11406562_10206970219480049_3938190068637512871_o.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -917,22 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="e#865#869#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="e#1838#1847#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="e#1973#1989#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
@@ -968,13 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="205" column="49" selection-start-line="205" selection-start-column="49" selection-end-line="205" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/admin.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -998,6 +946,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/licences/licences.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lightbox/license_lightbox.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-695">
+          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+          <folding>
+            <element signature="e#865#869#0#Twig" expanded="true" />
+            <element signature="e#1846#1855#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="688" column="23" selection-start-line="688" selection-start-column="23" selection-end-line="688" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="82" column="104" selection-start-line="82" selection-start-column="104" selection-end-line="82" selection-end-column="104" />
+          <folding>
+            <element signature="e#503#536#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#2;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#3;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1010,85 +1047,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/licences/licences.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
+        <state relative-caret-position="657">
+          <caret line="343" column="22" selection-start-line="343" selection-start-column="22" selection-end-line="343" selection-end-column="22" />
           <folding>
+            <element signature="e#843#868#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
             <element signature="e#4715#4750#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lightbox/license_lightbox.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="81" />
+        <state relative-caret-position="417">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
           <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Video.php">
+    <entry file="file://$PROJECT_DIR$/templates/includes/player.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+        <state relative-caret-position="476">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="672" column="16" selection-start-line="672" selection-start-column="16" selection-end-line="672" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/videos/videos.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
-          <folding>
-            <element signature="e#503#536#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#figure#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
