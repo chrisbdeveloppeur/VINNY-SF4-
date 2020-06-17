@@ -5,17 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/config/packages/easy_admin.yaml" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/beats/beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/beats.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/player.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/player.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="163" column="15" lean-forward="true" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
+            <state relative-caret-position="577">
+              <caret line="162" column="85" selection-start-line="162" selection-start-column="85" selection-end-line="162" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -623,16 +613,15 @@
       <workItem from="1592301984288" duration="1599000" />
       <workItem from="1592307012508" duration="38471000" />
       <workItem from="1592357730995" duration="285000" />
-      <workItem from="1592391699409" duration="15755000" />
+      <workItem from="1592391699409" duration="16477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="812373000" />
+    <option name="totallyTimeSpent" value="813095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
@@ -649,7 +638,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Floobits" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32827735" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.2524377" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.2524377" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5021322" side_tool="true" weight="0.24160346" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1064,8 +1053,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="163" column="15" lean-forward="true" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
+        <state relative-caret-position="577">
+          <caret line="162" column="85" selection-start-line="162" selection-start-column="85" selection-end-line="162" selection-end-column="85" />
         </state>
       </provider>
     </entry>
