@@ -14,23 +14,24 @@
 {% block titre %}
     Beats
 
+{#    {% if is_granted('ROLE_USER') %}#}
         <button type="button" id="arrow-deploy-player" class="btn-primary is-size-3" style="background: rgba(0,0,0,0);box-shadow: none;border: none;position: absolute;right: 14px;cursor: pointer;outline: none;">
-            <i class="fas fa-sort-down" title="Previous beat" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+            <i class="fas fa-sort-down" title="Previous beat" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
         </button>
+{#    {% endif %}#}
 
 {% endblock %}
 
+{% block visualizer %}
+        <canvas id="canvas"></canvas>
+{% endblock %}
+
 {% block audiocontrol %}
-    {% if is_granted('ROLE_USER') %}
-        {#                            <audio style="box-shadow: black 0 0 20px 1px;background:#121212;width: 100%;height: 25px" id="audio" controls></audio>#}
+
         {% block player %}
             {% include 'includes/player.html.twig' %}
         {% endblock %}
-    {% else %}
-        <div style="box-shadow: black 0 0 20px 1px;background: #121212;width: 100%;height: 5px;">
 
-        </div>
-    {% endif %}
 {% endblock %}
 
 {% block filtre %}
@@ -240,80 +241,8 @@
 
 
 
-    {#  SCRIPT VISU SOUND WAVE    #}
 
-    <script>
 
-        window.onload = function() {
-
-            var file = document.getElementById("thefile");
-
-            var audio = document.getElementById("audio");
-
-            file.onchange = function() {
-                var files = this.files;
-                audio.src = URL.createObjectURL(files[0]);
-                audio.load();
-                audio.play();
-                var context = new AudioContext();
-                var src = context.createMediaElementSource(audio);
-                var analyser = context.createAnalyser();
-
-                var canvas = document.getElementById("canvas");
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight * 0.3 ;
-                var ctx = canvas.getContext("2d");
-
-                src.connect(analyser);
-                analyser.connect(context.destination);
-
-                analyser.fftSize = 512;
-
-                var bufferLength = analyser.frequencyBinCount;
-
-                var dataArray = new Uint8Array(bufferLength);
-
-                var WIDTH = canvas.width;
-                var HEIGHT = canvas.height;
-
-                var barWidth = (WIDTH / bufferLength) * 2.5;
-                var barHeight;
-                var x = 0;
-
-                function renderFrame() {
-                    requestAnimationFrame(renderFrame);
-
-                    x = 0;
-
-                    analyser.getByteFrequencyData(dataArray);
-
-                    ctx.fillStyle = "#121212";
-                    ctx.strokeStyle = "rgba(0,0,0,1)";
-                    ctx.lineCap = 'round';
-                    ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-                    for (var i = 0; i < bufferLength; i++) {
-                        barHeight = dataArray[i];
-
-                        var r = barHeight;
-                        var g = barHeight;
-                        var b = 2;
-
-                        ctx.fillStyle = "rgb(" + r + "," + g + ",255)";
-                        ctx.lineCap = 'round';
-                        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
-
-                        x += barWidth + 1;
-                    }
-                }
-
-                audio.play();
-                renderFrame();
-            };
-        };
-    </script>
-
-    {# FIN SCRIPT VISU SOUND WAVE    #}
 
     {#   SCRIPT POUR LIGHTBOX MODAL   #}
     <script>
@@ -369,26 +298,26 @@
 
 
         function deployPlayerOn(){
-            sectionPlayer.style.display = "flex";
             arrowDeploy.style.display = "none";
+            sectionPlayer.style.display = "flex";
             deployStatus = true;
             setTimeout(function () {
                 sectionPlayer.style.opacity = "1";
                 sectionPlayer.style.height = "50px";
-            }, 300);
-            return deployStatus;
+            }, 0);
+            // return deployStatus;
 
         }
 
         function deployPlayerOff(){
+            arrowDeploy.style.display = "inline";
             sectionPlayer.style.opacity = "0";
             sectionPlayer.style.height = "0px";
+            deployStatus = false;
             setTimeout(function () {
                 sectionPlayer.style.display = "none";
-                arrowDeploy.style.display = "inline";
-                deployStatus = false;
-            }, 500);
-
+            }, 100);
+            // return deployStatus;
         }
 
     </script>

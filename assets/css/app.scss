@@ -230,13 +230,14 @@ section#player_old
 {
   margin: 0;
   bottom:0;
-  z-index: 1;
-  transition : 0.75s cubic-bezier(.5,-0.45,.27,1.55) !important;
+  z-index: 2;
+  transition : .1s;
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.7);
   background: rgba(255,255,255,1);
   display: none;
   height: 0px;
   opacity: 0;
+  position: relative;
 }
 
 
@@ -627,13 +628,13 @@ section#player_old .btn-primary:hover{
 
 
 //   POUR AUDIO WAVE
-#thefile {
-  z-index: 100;
-}
 
 #canvas {
   width: 100%;
-  height: 100%
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 //    FIN AUDIO WAVE

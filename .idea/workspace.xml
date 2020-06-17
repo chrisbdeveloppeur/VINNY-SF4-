@@ -5,7 +5,13 @@
     <bookmark url="file://$PROJECT_DIR$/config/packages/easy_admin.yaml" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="" />
+    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/beats/beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/beats.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/player.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/player.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,24 +73,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="342" column="25" selection-start-line="342" selection-start-column="25" selection-end-line="342" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="e#616#749#0#HTML" expanded="true" />
                 <element signature="e#757#820#0#HTML" expanded="true" />
+                <element signature="e#843#868#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="162" column="85" selection-start-line="162" selection-start-column="85" selection-end-line="162" selection-end-column="85" />
+            <state relative-caret-position="351">
+              <caret line="146" column="51" lean-forward="true" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -92,15 +99,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/includes/player.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            <state>
+              <caret column="55" selection-start-column="55" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#1;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#2;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#button#2;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#section#0;n#!!top" expanded="true" />
@@ -121,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1061">
-              <caret line="301" column="14" selection-start-line="301" selection-start-column="14" selection-end-line="301" selection-end-column="14" />
+            <state relative-caret-position="230">
+              <caret line="239" column="21" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -131,11 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>strong</find>
-      <find>a#</find>
-      <find>arr</find>
-      <find>modal-close is-large</find>
-      <find>audio</find>
       <find>i.do</find>
       <find>.pric</find>
       <find>.pricing</find>
@@ -161,6 +161,11 @@
       <find>timeLine</find>
       <find>id</find>
       <find>id=</find>
+      <find>visual</find>
+      <find>canvas</find>
+      <find>audio</find>
+      <find>files</find>
+      <find>player_old</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-</dir>
@@ -211,7 +216,6 @@
         <option value="$PROJECT_DIR$/translations/easy_admin.fr.yaml" />
         <option value="$PROJECT_DIR$/config/packages/translation.yaml" />
         <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Video.php" />
         <option value="$PROJECT_DIR$/templates/videos/videos.html.twig" />
         <option value="$PROJECT_DIR$/templates/lightbox/video_lightbox.html.twig" />
@@ -220,10 +224,11 @@
         <option value="$PROJECT_DIR$/src/Entity/Admin.php" />
         <option value="$PROJECT_DIR$/src/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/app.scss" />
-        <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
-        <option value="$PROJECT_DIR$/templates/includes/player.html.twig" />
         <option value="$PROJECT_DIR$/templates/beats/original_beats.html.twig" />
+        <option value="$PROJECT_DIR$/templates/includes/player.html.twig" />
+        <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
       </list>
     </option>
   </component>
@@ -457,6 +462,13 @@
               <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
               <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VINNY-SF4-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VINNY-SF4-" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="licences" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -613,22 +625,23 @@
       <workItem from="1592301984288" duration="1599000" />
       <workItem from="1592307012508" duration="38471000" />
       <workItem from="1592357730995" duration="285000" />
-      <workItem from="1592391699409" duration="16477000" />
+      <workItem from="1592391699409" duration="26446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="813095000" />
+    <option name="totallyTimeSpent" value="823064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31527627" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -638,7 +651,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Floobits" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.2524377" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.2524377" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5021322" side_tool="true" weight="0.24160346" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -673,16 +686,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/images/logo/VINNY_LOGO_LETRA_2_SIN_SOMBRA.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Filtre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/MessageType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -886,36 +889,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lightbox/license_lightbox.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
-          <folding>
-            <element signature="e#865#869#0#Twig" expanded="true" />
-            <element signature="e#1846#1855#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,35 +985,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+    <entry file="file://$PROJECT_DIR$/templates/includes/nav_title.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/header/header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1061">
-          <caret line="301" column="14" selection-start-line="301" selection-start-column="14" selection-end-line="301" selection-end-column="14" />
+        <state relative-caret-position="850">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+          <folding>
+            <element signature="e#865#869#0#Twig" expanded="true" />
+            <element signature="e#1846#1855#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="342" column="25" selection-start-line="342" selection-start-column="25" selection-end-line="342" selection-end-column="25" />
+        <state relative-caret-position="17">
+          <caret line="4536" column="4" selection-start-line="4536" selection-start-column="4" selection-end-line="4536" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
-            <element signature="e#616#749#0#HTML" expanded="true" />
-            <element signature="e#757#820#0#HTML" expanded="true" />
+            <element signature="e#3948#3980#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="239" column="21" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/player.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        <state>
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#2;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#section#0;n#!!top" expanded="true" />
@@ -1053,8 +1053,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="162" column="85" selection-start-line="162" selection-start-column="85" selection-end-line="162" selection-end-column="85" />
+        <state relative-caret-position="351">
+          <caret line="146" column="51" lean-forward="true" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#616#749#0#HTML" expanded="true" />
+            <element signature="e#757#820#0#HTML" expanded="true" />
+            <element signature="e#843#868#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
