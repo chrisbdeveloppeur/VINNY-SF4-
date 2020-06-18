@@ -27,6 +27,7 @@ const beatstars_3 = require('../images/icons/beatstars-logo-b.png');
 const favicon = require('../images/logo/vinny_logo_reducidisimo_favicon.png');
 const favicon2 = require('../images/logo/vinny_logo_circulo_favicon.png');
 const icon_play = require('../images/icons/player/play_w.svg');
+const header_background_image = require('../images/studio.png');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

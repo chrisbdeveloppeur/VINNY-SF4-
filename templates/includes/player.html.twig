@@ -41,7 +41,7 @@
 
     </div>
 
-    <div class="btn-right column is-2" style="display: flex;justify-content: space-between;align-items: center">
+    <div class="btn-right column is-2" style="display: flex;{% if is_granted('ROLE_USER') %}justify-content: space-between;{% else %}justify-content: end;{% endif %}align-items: center">
         {% if is_granted('ROLE_USER') %}
             <button type="button" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-step-forward" title="Next beat" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
@@ -52,11 +52,11 @@
                     :
                     <div id="track-time">--</div>
                 </div>
-
+        {% endif %}
             <button type="button" id="cross-hide-player" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-times-circle" title="Hide player" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
             </button>
-        {% endif %}
+
     </div>
 
 </section>

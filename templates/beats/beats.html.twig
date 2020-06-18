@@ -16,7 +16,7 @@
 
 {#    {% if is_granted('ROLE_USER') %}#}
         <button type="button" id="arrow-deploy-player" class="btn-primary is-size-3" style="background: rgba(0,0,0,0);box-shadow: none;border: none;position: absolute;right: 14px;cursor: pointer;outline: none;">
-            <i class="fas fa-sort-down" title="Previous beat" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+            <i class="fas fa-sort-down" title="Extend player" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
         </button>
 {#    {% endif %}#}
 
@@ -313,10 +313,11 @@
             arrowDeploy.style.display = "inline";
             sectionPlayer.style.opacity = "0";
             sectionPlayer.style.height = "0px";
+            sectionPlayer.style.display = "none";
             deployStatus = false;
-            setTimeout(function () {
-                sectionPlayer.style.display = "none";
-            }, 100);
+            // setTimeout(function () {
+            //     sectionPlayer.style.display = "none";
+            // }, 100);
             // return deployStatus;
         }
 
