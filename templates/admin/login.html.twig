@@ -15,16 +15,15 @@
     Log in
 {% endblock %}
 
-{% block entete %}
-    <div class="column has-text-weight-bold has-text-centered" style="position: relative">
-        <label class="subtitle has-text-centered is-3 is-family-monospace is-size-3-touch" for="">Please enter your administrator credentials</label>
-    </div>
-{% endblock %}
 
 {% block content %}
 
         <div class="container column is-full-touch is-two-fifths-desktop">
             <form method="post">
+
+                <div class="field has-text-centered">
+                    <h1 class="is-size-2-touch">Veuillez entrer vos identifiants</h1>
+                </div>
 
                 {% include 'includes/flash_message.html.twig' %}
 
@@ -55,7 +54,17 @@
                         </span>
                     </p>
                 </div>
-                <div class="field is-flex" style="justify-content: center;">
+                <div class="field is-flex" style="justify-content: space-between;">
+
+{#                    <div class="level">#}
+{#                        <div class="level-right">#}
+                            <a href="{{ path('lost_password') }}" class="button is-info is-small is-size-4-touch">
+                                <i class="fas fa-key"></i>&nbsp;
+                                Forgot password ?
+                            </a>
+{#                        </div>#}
+{#                    </div>#}
+
                     <p class="control">
 
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">

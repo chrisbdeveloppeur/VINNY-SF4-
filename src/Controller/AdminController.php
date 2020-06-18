@@ -2,13 +2,13 @@
 
 namespace App\Controller;
 
-//use App\Entity\Admin;
-//use EasyCorp\Bundle\EasyAdminBundle\Controller\EasyAdminController;
-//use Symfony\Component\Security\Core\Encoder\EncoderFactory;
-//use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
+
+use App\Form\RegistrationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
@@ -31,6 +31,8 @@ class AdminController extends AbstractController
 
         return $this->render('admin/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
+
+
 
     /**
      * @Route("/logout", name="app_logout")
