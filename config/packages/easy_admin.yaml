@@ -235,17 +235,21 @@ easy_admin:
             edit:
                 title: 'Modifier un compte Administrateur'
                 fields:
-                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'email' , type: 'text', label: "Email"}
 #                    - {property: 'password' , type: 'repeated', label: "Mot de passe"}
                     - {property: 'roles' ,label : "Roles", type: 'collection'}
             list:
                 actions: ['-new']
                 fields:
-                    - {property: 'email' , type: 'text', label: "email"}
+                    - {property: 'email' , type: 'email', label: "Email"}
                     - {property: 'roles' , type: 'array', label: "Roles"}
                     - {property: 'date' , type: 'date', format: 'j/n/Y'}
             show:
                 title: "Informations de l'%%entity_name%%"
+                fields:
+                    - {property: 'email' , type: 'email', label: "Email"}
+                    - {property: 'roles' , type: 'array', label: "Roles"}
+                    - {property: 'date', type: 'date', format: 'j/n/Y', label: 'Date de création'}
 
 
 #        Message:

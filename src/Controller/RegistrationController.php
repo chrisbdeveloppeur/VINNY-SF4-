@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Admin;
 use App\Form\RegistrationFormType;
-use App\Security\AdminLoginAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
+
 
 class RegistrationController extends AbstractController
 {
@@ -22,7 +21,6 @@ class RegistrationController extends AbstractController
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, EntityManagerInterface $entityManager): Response
     {
-//        $user = new Admin();
         $form = $this->createForm(RegistrationFormType::class);
         $form->handleRequest($request);
 
@@ -41,7 +39,6 @@ class RegistrationController extends AbstractController
             );
 
             $entityManager->persist($user);
-
             $entityManager->flush();
 
             $this->addFlash('warning', 'Le compte administrateur : ' . $user->getEmail() . ' a bien été créé !');
