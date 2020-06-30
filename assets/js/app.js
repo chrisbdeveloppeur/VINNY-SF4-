@@ -28,6 +28,11 @@ const favicon = require('../images/logo/vinny_logo_reducidisimo_favicon.png');
 const favicon2 = require('../images/logo/vinny_logo_circulo_favicon.png');
 const icon_play = require('../images/icons/player/play_w.svg');
 const header_background_image = require('../images/studio.png');
+const horizon_svg = require('../images/skyline_w.svg');
+const sound_svg = require('../images/sound_w.svg');
+const video_svg = require('../images/video_w.svg');
+const license_chat_svg = require('../images/undraw_typing_jie3.svg');
+
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

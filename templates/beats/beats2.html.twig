@@ -35,7 +35,7 @@
 {% endblock %}
 
 {% block filtre %}
-    <div class="columns is-flex align-items-center has-background-black-bis div-filtre" style="margin: 0;z-index: 2;width: 100%;box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
+    <div class="columns is-flex align-items-center has-background-black-bis div-filtre" style="margin: 0;z-index: 1;width: 100%;box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
         <label class="is-flex align-items-center" for="genres" style="margin: auto 0;">
             <div class="column">
                 <strong class="has-text-white is-size-5 is-size-3-touch landscape" style="white-space: nowrap">Genres :</strong>
@@ -117,12 +117,9 @@
 
         </div>
 
-
-
-
         <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
 
-            {% include 'beats/original_beats.html.twig' with {beat: beat} %}
+            {% include 'beats/beatstars.html.twig' with {beat: beat} %}
 
         </div>
 
@@ -132,7 +129,7 @@
 
     </div>
 
-    {% include 'lightbox/license_lightbox.html.twig' %}
+
 
     {#      SCRIPT POUR FILTRE BEATS      #}
 
@@ -189,49 +186,7 @@
     {#      FIN SCRIPT POUR FILTRE BEATS      #}
 
 
-    {#   SCRIPT PLYR   #}
-    <script>
-        var players = Plyr.setup('.js-plyr', {
-            "controls":['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions','pip', 'airplay', 'fullscreen']
-        });
 
-        {#   AUTOPAUSE   #}
-        var i = 1;
-
-
-        players.forEach(function (instance) {
-            instance.on('ready', function (event) {
-                instance.elements.container.setAttribute('id', 'plyId-' + i);
-                instance.plyId = 'plyr-' + i;
-                let lenght = players.length;
-                var j = i+1;
-                if (j > lenght){
-                    j = 1;
-                }
-                let nextId = 'plyId-' + j;
-                i++;
-                instance.on('ended', function (event) {
-                    console.log(nextId);
-                    let nextBeat = document.getElementById(nextId);
-                    console.log(nextBeat.children[1]);
-                    nextBeat.children[1].play();
-                });
-            });
-            instance.on('play', function (event) {
-                var currentPid = instance.plyId;
-                players.forEach(function (instance) {
-                    if (currentPid != instance.plyId) {
-                        instance.pause();
-                    }
-                });
-            });
-
-        });
-
-        {#  FIN AUTOPAUSE   #}
-
-    </script>
-    {#  FIN SCRIPT PLYR   #}
 
 
 
@@ -260,63 +215,7 @@
 
 
 
-    {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
-    <script>
 
-        let sectionPlayer = document.getElementById("player_old");
-        let deployStatus = false ;
-        let arrowDeploy = document.getElementById('arrow-deploy-player');
-        let crossHide = document.getElementById('cross-hide-player');
-
-        // audio.addEventListener('play', function () {;
-        //     deployPlayerOn();
-        // });
-
-        arrowDeploy.addEventListener('click', function () {
-            if (deployStatus === false) {
-                deployPlayerOn();
-            }else if (deployStatus === true){
-                deployPlayerOff();
-            }
-        });
-
-
-        crossHide.addEventListener('click', function () {
-            console.log(deployStatus);
-            if (deployStatus === false) {
-                deployPlayerOn();
-            }else if(deployStatus === true){
-                deployPlayerOff();
-            }
-        });
-
-
-        function deployPlayerOn(){
-            arrowDeploy.style.display = "none";
-            sectionPlayer.style.display = "flex";
-            deployStatus = true;
-            setTimeout(function () {
-                sectionPlayer.style.opacity = "1";
-                sectionPlayer.style.height = "50px";
-            }, 0);
-            // return deployStatus;
-
-        }
-
-        function deployPlayerOff(){
-            arrowDeploy.style.display = "inline";
-            sectionPlayer.style.opacity = "0";
-            sectionPlayer.style.height = "0px";
-            sectionPlayer.style.display = "none";
-            deployStatus = false;
-            // setTimeout(function () {
-            //     sectionPlayer.style.display = "none";
-            // }, 100);
-            // return deployStatus;
-        }
-
-    </script>
-    {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
 
 {% endblock %}
 

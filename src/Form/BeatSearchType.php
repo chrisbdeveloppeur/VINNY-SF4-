@@ -21,11 +21,10 @@ class BeatSearchType extends AbstractType
                 'invalid_message' => 'Please enter a valid BPM number Min',
                 'attr' => [
                     'class' => 'input pagination-control-touch',
-                    'title' => 'Beat per minutes Min',
+                    'title' => 'Number between 0 and 500',
                     'placeholder' => 'Min',
                     'style' => 'z-index:0',
-                    'min' => 0,
-                    'max' => 1000
+                    'pattern' => '([0-9]|[1-8][0-9]|9[0-9]|[1-4][0-9]{2}|500)'
                 ]
             ])
 
@@ -36,12 +35,12 @@ class BeatSearchType extends AbstractType
                 'invalid_message' => 'Please enter a valid PBM number Max',
                 'attr' => [
                     'class' => 'input pagination-control-touch',
-                    'title' => 'Beat per minutes Max',
+                    'title' => 'Number between 0 and 500',
                     'placeholder' => 'Max',
                     'style' => 'z-index:0',
-                    'min' => 0,
-                    'max' => 1000
+                    'pattern' => '([0-9]|[1-8][0-9]|9[0-9]|[1-4][0-9]{2}|500)'
                 ]
+
             ])
         ;
     }
