@@ -170,27 +170,19 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/cookies", name="cookies")
-     */
-    public function cookies()
-    {
-        return $this->render('includes/cookies.html.twig');
-    }
-
-    /**
-     * @Route("/mentions-legales", name="mentions-legales")
+     * @Route("/diclamer", name="mentions-legales")
      */
     public function mentionsLegales()
     {
-        return $this->render('mentions_legales/mentions_legales.html.twig');
+        return $this->render('mentions_legales/page.html.twig');
     }
 
     /**
-     * @Route("/politique-confidentialite", name="politique-confidentialite")
+     * @Route("/privacy-policy", name="politique-confidentialite")
      */
     public function politiqueConfidentialite()
     {
-        return $this->render('politique_confidentialite/politique_confidentialite.html.twig');
+        return $this->render('politique_confidentialite/page.html.twig');
     }
 
 

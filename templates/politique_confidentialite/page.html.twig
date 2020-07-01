@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}{% include('includes/nav_title.html.twig') %} Politique de confidentialité{% endblock %}#}
+{% block title %}{% include('includes/nav_title.html.twig') %} Privacy Policy{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Confidantialité (FR). Confidentiality">
+{% endblock %}
+
+{% block titre_landscape %}
+{#    Confidentialité#}
+    Privacy Policy
+{% endblock %}
+
+{% block titre %}
+{#    Confidentialité#}
+    Privacy Policy
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="padding: 50px 0">
+    {{ include('politique_confidentialite/politique_confidantialite_eng.html.twig') }}
+
+{#    {{ include('politique_confidentialite/politique_confidentialite_fr.html.twig') }}#}
+    </div>
+
+{% endblock %}
+
+{% block cookie_js %}
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "rgba(0,0,0,0.8)"
+                },
+                "button": {
+                    "background": "#30aae4"
+                }
+            },
+            "theme": "edgeless",
+            "position": "bottom-right",
+            "type": "opt-out",
+            "content": {
+                "href": "https://vinnyvixi.com/politique-confidentialite"
+            }
+        });
+    </script>
+{% endblock %}

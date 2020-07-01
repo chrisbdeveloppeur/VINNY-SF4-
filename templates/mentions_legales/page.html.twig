@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block description %}
+    <meta name="description" content="Legal Notice (FR). Mentions légales">
+{% endblock %}
+
+{#{% block title %}{% include('includes/nav_title.html.twig') %} Mentions légales{% endblock %}#}
+{% block title %}{% include('includes/nav_title.html.twig') %} Disclamer{% endblock %}
+
+{% block titre_landscape %}
+    <div class="is-size-4 has-text-weight-bold is-uppercase is-family-monospace">
+{#        Mentions légales#}
+        Disclaimer
+    </div>
+{% endblock %}
+
+{% block titre %}
+{#    Mentions légales#}
+    Disclaimer
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="padding: 50px 0">
+    {{ include('mentions_legales/mentions_legales_eng.html.twig') }}
+
+{#    {{ include('mentions_legales/mentions_legales_fr.html.twig') }}#}
+    </div>
+{% endblock %}
