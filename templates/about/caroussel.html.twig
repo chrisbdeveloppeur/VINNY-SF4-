@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide is-hidden-touch" data-ride="carousel" style="box-shadow: rgb(0, 0, 0) 0px 0px 15px;width: 100%">
+<div id="carouselExampleIndicators" class="carousel slide is-hidden-touch" data-ride="carousel" style="box-shadow: rgb(0, 0, 0) 0px 0px 15px;width: 100%;margin-bottom: .75rem">
     <ol class="carousel-indicators" style="z-index: 1">
 
         {% for diapo in diapo %}
@@ -20,11 +20,15 @@
 
             <div class="carousel-item active">
             {% if diapo.diapoimagename %}
+                <div style="position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7)">
+                </div>
                 <img class="d-block w-100" height="200px" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="First slide">
             {% else %}
+                <div style="position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7)">
+                </div>
                 <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
             {% endif %}
-                <div class="carousel-caption d-none d-md-block" style="position: absolute;top: 0;height: 100%;background: rgba(0,0,0,0.7)">
+                <div class="carousel-caption d-none d-md-block" style="position: absolute;top: 0;height: 100%">
                     <h5 style="{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center">{{ diapo.titre|raw }}</h5>
                     <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.text|raw }}</div>
                 </div>
@@ -34,11 +38,15 @@
 
                 <div class="carousel-item">
                     {% if diapo.diapoimagename %}
+                        <div style="position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7)">
+                        </div>
                         <img class="d-block w-100" height="200px" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide">
                     {% else %}
+                        <div style="position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7)">
+                        </div>
                         <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide">
                     {% endif %}
-                    <div class="carousel-caption d-none d-md-block" style="position: absolute;top: 0;height: 100%;background: rgba(0,0,0,0.7)">
+                    <div class="carousel-caption d-none d-md-block" style="position: absolute;top: 0;height: 100%">
                         <h5 style="{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center">{{ diapo.titre|raw }}</h5>
                         <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.text|raw }}</div>
                     </div>

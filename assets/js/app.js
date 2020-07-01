@@ -30,7 +30,7 @@ const icon_play = require('../images/icons/player/play_w.svg');
 const header_background_image = require('../images/studio.png');
 const horizon_svg = require('../images/skyline_w.svg');
 const sound_svg = require('../images/sound_w.svg');
-const video_svg = require('../images/video_w.svg');
+const video_svg = require('../images/video.svg');
 const license_chat_svg = require('../images/undraw_typing_jie3.svg');
 
 
