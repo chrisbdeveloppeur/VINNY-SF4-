@@ -49,7 +49,7 @@ class Beat
      * @var File|null
      * @Assert\File(
      *     maxSize="20Mi",
-     *     mimeTypes={"audio/mpeg","application/x-font-gdos"})
+     *     mimeTypes={"audio/mpeg","application/octet-stream","application/x-font-gdos"})
      */
     private $beatFile;
 

@@ -94,6 +94,14 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/beat", name="beat")
+     */
+    public function beat()
+    {
+        return $this->redirectToRoute('home');
+    }
+
+    /**
      * @Route("/about", name="about")
      */
     public function about(DiapoRepository $diapoRepository)
