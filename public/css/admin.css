@@ -48,7 +48,8 @@ aside.main-sidebar i.fa{
 }
 
 body{
-    background:top no-repeat url('../build/images/vinny_logo_reducidisimo.e28edbc4.png');
+    background:rgba(0,0,0,.9) top no-repeat url('../build/images/vinny_logo_reducidisimo.e28edbc4.png');
+    /*background-color: ;*/
 }
 
 .content-header{
