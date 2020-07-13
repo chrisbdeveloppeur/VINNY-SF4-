@@ -1,7 +1,6 @@
 <?php
 namespace App\Entity;
 
-use Symfony\Component\Validator\Constraints as Assert;
 
 class BeatSearch {
 
@@ -20,7 +19,7 @@ class BeatSearch {
     /**
      * @return int|null
      */
-    public function getBeatBpmMin(): ?int
+    public function getBeatBpmMin()
     {
         return $this->beatBpmMin;
     }
@@ -29,7 +28,7 @@ class BeatSearch {
      * @param int|null $beatBpmMin
      * @return BeatSearch
      */
-    public function setBeatBpmMin(int $beatBpmMin): BeatSearch
+    public function setBeatBpmMin($beatBpmMin): BeatSearch
     {
         $this->beatBpmMin = $beatBpmMin;
         return $this;
@@ -38,7 +37,7 @@ class BeatSearch {
     /**
      * @return int|null
      */
-    public function getBeatBpmMax(): ?int
+    public function getBeatBpmMax()
     {
         return $this->beatBpmMax;
     }
@@ -47,7 +46,7 @@ class BeatSearch {
      * @param int|null $beatBpmMax
      * @return BeatSearch
      */
-    public function setBeatBpmMax(int $beatBpmMax): BeatSearch
+    public function setBeatBpmMax($beatBpmMax): BeatSearch
     {
         $this->beatBpmmax = $beatBpmMax;
         return $this;

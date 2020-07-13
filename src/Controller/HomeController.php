@@ -37,6 +37,33 @@ class HomeController extends AbstractController
         $beatBpMax = $form->get('beatBpmMax')->getData();
         $beatBpMin = $form->get('beatBpmMin')->getData();
 
+//        if ($form->isSubmitted() and $form->isValid()){
+//            $originalBeat = $paginator->paginate(
+//                $beatRepository->findByBpm($search),
+//                $request->query->getInt('page', 1),
+//                10
+//            );
+//            $beatstars = $beatRepository->findByBpm($search);
+//        }elseif($form->isSubmitted() and !$form->isValid()) {
+//            $this->addFlash('error', 'Invalids values');
+//            $originalBeat = $paginator->paginate(
+//                $beatRepository->findByBpm($search),
+//                $request->query->getInt('page', 1),
+//                12
+//            );
+//            $beatstars = $beatRepository->findByBpm($search);
+//        }else{
+//            $originalBeat = $paginator->paginate(
+//                $beatRepository->findByBpm($search),
+//                $request->query->getInt('page', 1),
+//                10
+//            );
+//            $beatstars = $beatRepository->findByBpm($search);
+//        }
+
+//        dd($originalBeat);
+
+
         if ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax != null) and ($beatBpMin <= $beatBpMax))
         {
 

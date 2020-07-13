@@ -26,6 +26,7 @@ class BeatRepository extends ServiceEntityRepository
             return $this->createQueryBuilder('d')
                 ->andWhere('d.bpm >= :min')
                 ->setParameter('min', $min)
+                ->orderBy('d.updatedAt', 'DESC')
                 ->getQuery()
                 ->getResult()
                 ;
@@ -36,6 +37,7 @@ class BeatRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('d')
             ->andWhere('d.bpm <= :max')
             ->setParameter('max', $max)
+            ->orderBy('d.updatedAt', 'DESC')
             ->getQuery()
             ->getResult()
             ;
@@ -47,10 +49,36 @@ class BeatRepository extends ServiceEntityRepository
             ->andWhere('d.bpm <= :max AND d.bpm >= :min')
             ->setParameter('min', $min)
             ->setParameter('max', $max)
+            ->orderBy('d.updatedAt', 'DESC')
             ->getQuery()
             ->getResult()
             ;
     }
+
+//    public function findByBpm(BeatSearch $beatSearch)
+//    {
+//
+//        $query = $this->createQueryBuilder('d');
+//
+//        if ($beatSearch->getBeatBpmMax()){
+//            $query->andWhere('d.bpm <= :bmax')
+//                ->setParameter('bmax', $beatSearch->getBeatBpmMax())
+//            ;
+//            dd($beatSearch->getBeatBpmMax());
+//        }
+//
+//        if ($beatSearch->getBeatBpmMin()){
+//            $query->andWhere('d.bpm >= :bmin')
+//                ->setParameter('bmin', $beatSearch->getBeatBpmMin())
+//            ;
+//        }
+//
+//        $query->orderBy('d.updatedAt', 'DESC')
+//                ->getQuery()
+//                ->getResult();
+//
+//        return $query;
+//    }
 
 
     public function findByIframe($value)
