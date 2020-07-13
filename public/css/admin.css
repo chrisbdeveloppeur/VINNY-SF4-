@@ -14,7 +14,7 @@
     padding: 12px;
     box-shadow: var(--box-shadow-lg);
     font-family: 'Khand', sans-serif;
-    font-weight: light;
+    font-weight: lighter;
     font-size: 1rem;
 }
 .main-sidebar a{

@@ -10,12 +10,12 @@ easy_admin:
         menu:
             - { label: 'Retour au site', url: 'https://vinnyvixi.com/', rel: 'index', icon: home }
             - label: 'Beats'
-              children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: music}
+              children: [{ entity: 'Beat', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: music, label: 'Mes beats'}
                          { entity: 'Filtre',rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: filter }]
               permission: 'ROLE_USER'
             - label: 'Videos'
               children:
-                  - { entity: 'Video', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: video}
+                  - { entity: 'Video', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: video,label: 'Mes videos'}
                   - { entity: 'SectionVideo', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: columns}
               permission: 'ROLE_USER'
             - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: money-check-alt}
