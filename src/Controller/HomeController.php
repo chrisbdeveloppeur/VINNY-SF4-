@@ -39,28 +39,38 @@ class HomeController extends AbstractController
 
         if ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax != null) and ($beatBpMin <= $beatBpMax))
         {
+
                 $originalBeat = $paginator->paginate(
                     $beatRepository->findByBpm($beatBpMin, $beatBpMax),
                     $request->query->getInt('page', 1),
                     10
                 );
                 $beatstars = $beatRepository->findByBpm($beatBpMin, $beatBpMax);
-        }elseif ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax == null)){
+
+        }elseif ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax == null))
+        {
+
             $originalBeat = $paginator->paginate(
                 $beatRepository->findByBpmMin($beatBpMin),
                 $request->query->getInt('page', 1),
                 10
             );
             $beatstars = $beatRepository->findByBpmMin($beatBpMin);
-        }elseif ($form->isSubmitted() and  ($beatBpMin == null and $beatBpMax != null)){
+
+        }elseif ($form->isSubmitted() and  ($beatBpMin == null and $beatBpMax != null))
+        {
+
             $originalBeat = $paginator->paginate(
                 $beatRepository->findByBpmMax($beatBpMax),
                 $request->query->getInt('page', 1),
                 10
             );
             $beatstars = $beatRepository->findByBpmMax($beatBpMax);
+
         }
-        elseif ($form->isSubmitted() and  ($beatBpMin > $beatBpMax)){
+        elseif ($form->isSubmitted() and  ($beatBpMin > $beatBpMax))
+        {
+
             $this->addFlash('danger', 'Interval error');
             $originalBeat = $paginator->paginate(
                 $beatRepository->findAll(),
@@ -68,14 +78,17 @@ class HomeController extends AbstractController
                 10
             );
             $beatstars = $beatRepository->findByIframe(false);
+
         }
         else{
+
             $originalBeat = $paginator->paginate(
                 $beatRepository->findAll(),
                 $request->query->getInt('page', 1),
                 10
             );
             $beatstars = $beatRepository->findByIframe(false);
+
         }
 
 

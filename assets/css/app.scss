@@ -5,19 +5,14 @@ $link : #bccce0;
 $danger : #a44a3f;
 $link-hover: #30aae4;
 $text : black;
-//$navbar-burger-color : #66cde4;
-//$navbar-item-color : #66cde4;
 $navbar-item-hover-color: black;
-//$navbar-item-hover-background-color: #bccce0;
 $title-size : 2.5rem;
-$family-primary : 'Handlee', cursive;
-//$family-monospace : 'Permanent Marker', cursive;
-//$family-monospace:'Rubik Mono One', sans-serif;
-//$family-monospace: 'Covered By Your Grace', cursive;
+
+$family-primary : 'Amiko', sans-serif;
 $family-monospace: 'Rock Salt', cursive;
-$family-secondary:'Days One', sans-serif;
-//$family-code :'Khand', sans-serif;
+$family-secondary:'BenchNine', sans-serif;
 $family-code : 'Heebo', sans-serif;
+
 $footer-padding: 1rem 1.5rem 0rem;
 $size-1: 7rem;
 $size-2: 5rem;
@@ -58,6 +53,7 @@ body {
   background: none;
   color: white !important;
   text-shadow:rgb(0, 63, 255) 0px 0px 15px;
+  font-size: larger;
 }
 
 
