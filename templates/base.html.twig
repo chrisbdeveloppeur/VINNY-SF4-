@@ -19,7 +19,6 @@
 
         {% block fonts %}
             <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;500;900&display=swap" rel="stylesheet">
         {% endblock %}
@@ -104,16 +103,18 @@
 
 
 
-            <section class="is-flex justify-content-center" style="min-height: 70vh;position:relative;">
+            <section class="is-flex justify-content-center" style="min-height: 70vh;position:relative;margin-bottom: 100px">
 
                 <div class="column is-full-touch is-four-fifths is-size-3-touch">
 
-                    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch" style="position: relative;margin-top:50px;">
+                    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
                         {% block entete %}
                         {% endblock %}
                     </h2>
+
                     {% block content %}
                     {% endblock %}
+
                 </div>
 
                 </section>

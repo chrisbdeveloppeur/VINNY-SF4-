@@ -20,17 +20,17 @@
     {% endfor %}
 {% endblock %}
 
+{% block entete %}
+    Watch, Like and share my multiple Beats also available on my
+    <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link is-hidden-touch">
+        <span class="icon">
+            <i  class="fab fa-youtube"></i>
+        </span>Youtube
+    </a>
+    channel
+{% endblock %}
+
 {% block content %}
-
-{#    {% if section is empty %}#}
-
-{#        {{ include('includes/comming_soon.html.twig') }}#}
-
-{#    {% elseif video is empty %}#}
-
-{#        {{ include('includes/comming_soon.html.twig') }}#}
-
-{#    {% else %}#}
 
         <div class="pagination" style="justify-content: center">
             {{ knp_pagination_render(video) }}
