@@ -90,6 +90,11 @@
                                 {% endif %}
                             </div>
 
+                            {% if date(beat.updatedat) >= date('-14days') %}
+                                <span id="newAnimation" class="tag has-text-black-bis has-text-weight-bold is-hidden-touch">New!</span>
+                                <span id="newAnimationTouch" class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop">New!</span>
+                            {% endif %}
+
                             <div class="is-flex is-centered is-vcentered justify-content-center">
 
                                 <button type="button" class="btn btn-primary showModal" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
