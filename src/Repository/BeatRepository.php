@@ -21,6 +21,15 @@ class BeatRepository extends ServiceEntityRepository
         parent::__construct($registry, Beat::class);
     }
 
+    public function sortByDate()
+    {
+        return $this->createQueryBuilder('d')
+            ->orderBy('d.updatedAt', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     public function findByBpmMin($min)
     {
             return $this->createQueryBuilder('d')
@@ -54,31 +63,6 @@ class BeatRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
-
-//    public function findByBpm(BeatSearch $beatSearch)
-//    {
-//
-//        $query = $this->createQueryBuilder('d');
-//
-//        if ($beatSearch->getBeatBpmMax()){
-//            $query->andWhere('d.bpm <= :bmax')
-//                ->setParameter('bmax', $beatSearch->getBeatBpmMax())
-//            ;
-//            dd($beatSearch->getBeatBpmMax());
-//        }
-//
-//        if ($beatSearch->getBeatBpmMin()){
-//            $query->andWhere('d.bpm >= :bmin')
-//                ->setParameter('bmin', $beatSearch->getBeatBpmMin())
-//            ;
-//        }
-//
-//        $query->orderBy('d.updatedAt', 'DESC')
-//                ->getQuery()
-//                ->getResult();
-//
-//        return $query;
-//    }
 
 
     public function findByIframe($value)

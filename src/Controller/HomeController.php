@@ -37,86 +37,35 @@ class HomeController extends AbstractController
         $beatBpMax = $form->get('beatBpmMax')->getData();
         $beatBpMin = $form->get('beatBpmMin')->getData();
 
-//        if ($form->isSubmitted() and $form->isValid()){
-//            $originalBeat = $paginator->paginate(
-//                $beatRepository->findByBpm($search),
-//                $request->query->getInt('page', 1),
-//                10
-//            );
-//            $beatstars = $beatRepository->findByBpm($search);
-//        }elseif($form->isSubmitted() and !$form->isValid()) {
-//            $this->addFlash('error', 'Invalids values');
-//            $originalBeat = $paginator->paginate(
-//                $beatRepository->findByBpm($search),
-//                $request->query->getInt('page', 1),
-//                12
-//            );
-//            $beatstars = $beatRepository->findByBpm($search);
-//        }else{
-//            $originalBeat = $paginator->paginate(
-//                $beatRepository->findByBpm($search),
-//                $request->query->getInt('page', 1),
-//                10
-//            );
-//            $beatstars = $beatRepository->findByBpm($search);
-//        }
-
-//        dd($originalBeat);
-
 
         if ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax != null) and ($beatBpMin <= $beatBpMax))
         {
-
-                $originalBeat = $paginator->paginate(
-                    $beatRepository->findByBpm($beatBpMin, $beatBpMax),
-                    $request->query->getInt('page', 1),
-                    10
-                );
-                $beatstars = $beatRepository->findByBpm($beatBpMin, $beatBpMax);
+            $originalBeat = $beatRepository->findByBpm($beatBpMin, $beatBpMax);
+            $beatstars = $beatRepository->findByBpm($beatBpMin, $beatBpMax);
 
         }elseif ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax == null))
         {
-
-            $originalBeat = $paginator->paginate(
-                $beatRepository->findByBpmMin($beatBpMin),
-                $request->query->getInt('page', 1),
-                10
-            );
+            $originalBeat = $beatRepository->findByBpmMin($beatBpMin);
             $beatstars = $beatRepository->findByBpmMin($beatBpMin);
 
         }elseif ($form->isSubmitted() and  ($beatBpMin == null and $beatBpMax != null))
         {
-
-            $originalBeat = $paginator->paginate(
-                $beatRepository->findByBpmMax($beatBpMax),
-                $request->query->getInt('page', 1),
-                10
-            );
+            $originalBeat = $beatRepository->findByBpmMax($beatBpMax);
             $beatstars = $beatRepository->findByBpmMax($beatBpMax);
 
         }
         elseif ($form->isSubmitted() and  ($beatBpMin > $beatBpMax))
         {
-
-            $this->addFlash('danger', 'Interval error');
-            $originalBeat = $paginator->paginate(
-                $beatRepository->findAll(),
-                $request->query->getInt('page', 1),
-                10
-            );
+            $this->addFlash('danger','Interval error !');
+            $originalBeat = $beatRepository->sortByDate();
             $beatstars = $beatRepository->findByIframe(false);
 
         }
         else{
-
-            $originalBeat = $paginator->paginate(
-                $beatRepository->findAll(),
-                $request->query->getInt('page', 1),
-                10
-            );
+            $originalBeat = $beatRepository->sortByDate();
             $beatstars = $beatRepository->findByIframe(false);
-
         }
+
 
 
 
@@ -164,7 +113,6 @@ class HomeController extends AbstractController
     public function videos(SectionVideoRepository $sectionVideoRepository, VideoRepository $videoRepository, PaginatorInterface $paginator, Request $request)
     {
         $section = $sectionVideoRepository->findAll();
-//        $video = $videoRepository->findAll();
         $video = $paginator->paginate(
             $videoRepository->findAll(),
             $request->query->getInt('page', 1),

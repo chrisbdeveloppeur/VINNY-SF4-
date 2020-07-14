@@ -90,7 +90,7 @@
                                 {% endif %}
                             </div>
 
-                            {% if date(beat.updatedat) > date('-5days') %}
+                            {% if date(beat.updatedat) > date('-15days') %}
                                 <span id="newAnimation" class="tag has-text-black-bis has-text-weight-bold is-hidden-touch">New!</span>
                                 <span id="newAnimationTouch" class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop">New!</span>
                             {% endif %}
