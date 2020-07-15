@@ -42,7 +42,7 @@ body {
 
 .nav-item, .nav-link
 {
-  transition: 0.5s;
+  transition: 0.2s;
   border-radius: 2px;
   font-family: $family-monospace;
   color: #63c5da !important;
@@ -52,7 +52,7 @@ body {
   background: none;
   color: white !important;
   text-shadow:rgb(0, 63, 255) 0px 0px 15px;
-  font-size: larger;
+  font-size: 1.4rem;
 }
 
 
