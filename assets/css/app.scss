@@ -52,7 +52,6 @@ body {
   background: none;
   color: white !important;
   text-shadow:rgb(0, 63, 255) 0px 0px 15px;
-  font-size: 1.4rem;
 }
 
 
@@ -788,6 +787,9 @@ i.youtube-video-class{
   }
   div.modal-content{
     overflow: hidden;
+  }
+  .nav-link:hover{
+    font-size: 1.4rem;
   }
 }
 
