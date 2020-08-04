@@ -27,23 +27,22 @@
 
 {% endblock %}
 
-{% block cookie_js %}
-    <script>
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "rgba(0,0,0,0.8)"
-                },
-                "button": {
-                    "background": "#30aae4"
-                }
-            },
-            "theme": "edgeless",
-            "position": "bottom-right",
-            "type": "opt-out",
-            "content": {
-                "href": "https://vinnyvixi.com/politique-confidentialite"
-            }
-        });
-    </script>
-{% endblock %}
+{#{% block cookie_js %}#}
+{#    <script>#}
+{#        window.cookieconsent.initialise(#}{#}#}
+{#            "palette": #}{#}#}
+{#                "popup": #}{#}#}
+{#                    "background": "rgba(0,0,0,0.8)"#}
+{#                },#}
+{#                "button": #}{#}#}
+{#                    "background": "#30aae4"#}
+{#                }#}
+{#            },#}
+{#            "theme": "edgeless",#}
+{#            "position": "bottom-right",#}
+{#            "content": #}{#}#}
+{#                "href": "{{ path('politique-confidentialite') }}"#}
+{#            }#}
+{#        });#}
+{#    </script>#}
+{#{% endblock %}#}
