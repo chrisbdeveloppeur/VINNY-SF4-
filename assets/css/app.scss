@@ -42,9 +42,10 @@ body {
 
 .nav-item, .nav-link
 {
-  transition: 0.2s;
+  font-size: 1.2rem;
+  transition: 0.5s;
   border-radius: 2px;
-  font-family: $family-monospace;
+  font-family: $family-primary;
   color: #63c5da !important;
 }
 .nav-link:hover
@@ -792,7 +793,7 @@ i.youtube-video-class{
     overflow: hidden;
   }
   .nav-link:hover{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -876,6 +877,10 @@ i.youtube-video-class{
     align-items: center;
   }
 
+  .nav-link{
+    font-family: $family-monospace;
+    font-size: 1.9rem;
+  }
   .nav-link:hover
   {
     color: white !important;
