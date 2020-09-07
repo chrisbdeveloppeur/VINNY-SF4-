@@ -76,11 +76,13 @@
             <div class="columns align-items-center justify-content-center" style="position: relative;margin-bottom: 40px; box-shadow: 0 0 10px 3px rgb(0, 0, 0);">
 
                 <div class="column">
-                    {% if diapo.diapoimagename %}
-                        <img class="d-block w-100" height="200px" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide" style="text-align: center">
-                    {% else %}
-                        <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide" style="text-align: center">
-                    {% endif %}
+                    <figure class="" style="display: flex;justify-content: center;align-items: center">
+                        {% if diapo.diapoimagename %}
+                            <img class="d-block w-100" height="200px" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide" style="text-align: center">
+                        {% else %}
+                            <img class="d-block w-100" height="200px" src="{{ asset('build/images/BM.09ac0c25.jpg') }}" alt="slide" style="text-align: center">
+                        {% endif %}
+                    </figure>
                 </div>
 
 
