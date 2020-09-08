@@ -70,7 +70,7 @@
 
 
 
-<div class="" style="width: 100%">
+<div class="section" style="width: 100%">
     {% for diapo in diapo %}
 
             <div class="columns" id="imgPresentation" style="position: relative;margin-bottom: 40px; box-shadow: 0 0 10px 3px rgb(0, 0, 0);">
@@ -87,7 +87,7 @@
                 </div>
                 {% endif %}
 
-                <div class="column" style="background: rgba(0,0,0,0.7)">
+                <div class="column" style="background: rgba(26,26,26,.8);">
                     <h5 style="padding-top: .75rem;display: flex;{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-3 has-text-info is-family-monospace justify-content-center align-items-center has-text-centered">{{ diapo.titre|raw }}</h5>
                     <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.text|raw }}</div>
                 </div>

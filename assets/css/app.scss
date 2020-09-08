@@ -31,7 +31,7 @@ $size-4: 1.7rem;
 *
 {
   font-family: $family-code;
-  font-weight: 200;
+  font-weight: 400;
   //font-size: 1.5rem;
 }
 
@@ -46,6 +46,7 @@ body {
   transition: 0.5s;
   border-radius: 2px;
   font-family: $family-code;
+  font-weight: 200;
   color: #63c5da !important;
 }
 .nav-link:hover
