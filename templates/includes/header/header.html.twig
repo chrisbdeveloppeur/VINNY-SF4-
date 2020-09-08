@@ -4,7 +4,7 @@
         <img src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="logo" title="VinnyVixi" decoding="auto">
     </a>
 
-    <div class="header-background-image" style="background: center / cover no-repeat url({{ asset('build/images/studio.57748376.png') }});box-shadow: 0px 0px 30px 10px black;">
+    <div class="header-background-image" style="background: center / contain no-repeat url({{ asset('build/images/studio.e0e2579c.png') }});box-shadow: 0px 0px 30px 10px black;">
         <div class="header-background-layer">
         </div>
     </div>
@@ -40,7 +40,7 @@
 
 
     <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
-        <ul class="navbar-nav is-size-2-touch is-size-4 mr-auto">
+        <ul class="navbar-nav is-size-2-touch is-size-5 mr-auto">
 
             <li class="nav-item">
                 <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny">
@@ -73,7 +73,7 @@
         {% block navbarend %}
 
             {% if is_granted('ROLE_USER') %}
-            <div class="navbar-nav is-size-2-touch is-size-4" style="white-space: nowrap;">
+            <div class="navbar-nav is-size-2-touch is-size-5" style="white-space: nowrap;">
 
                     <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
                         Dashboard
