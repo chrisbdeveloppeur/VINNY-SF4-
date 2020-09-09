@@ -43,7 +43,6 @@ body {
 
 .nav-item, .nav-link
 {
-  transition: 0.5s;
   border-radius: 2px;
   font-family: $family-code;
   font-weight: 200;
@@ -791,18 +790,24 @@ i.youtube-video-class{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    border: solid rgba(100,100,100,.5) 1px;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.8);
+    width: 40%;
   }
   div.modal-content{
     overflow: hidden;
   }
   .nav-link:hover{
-    font-size: 1.5rem;
+    text-decoration: underline !important;
+    font-weight: normal;
   }
   #imgPresentation:nth-child(odd) {
     flex-direction: row-reverse;
   }
-  #navbarNav{
-    background: rgba(0,0,0,0.8);
+  ul.navbar-nav{
+    width: 100%;
+    justify-content: space-evenly;
   }
 }
 
