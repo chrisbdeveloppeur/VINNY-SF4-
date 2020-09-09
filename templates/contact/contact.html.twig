@@ -21,6 +21,8 @@
     </h2>
 {% endblock %}
 
+
+
 {% block content %}
 
             {% include 'includes/flash_message.html.twig' %}
@@ -114,6 +116,10 @@
 
 
 
-
+    <script>
+        let navLinkContact = document.getElementById('navLinkContact');
+        navLinkContact.classList.add("navlink-active");
+    </script>
 
 {% endblock %}
+
