@@ -178,7 +178,7 @@
         audio{{ i }}.addEventListener('play', function () {
             trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;
             barProgessTime(audio{{ i }});
-            deployPlayerOn();
+            // deployPlayerOn();
             visualizerCanvas(audio{{ i }});
             canvas{{ i }}.style.display = "initial"
         });
@@ -256,11 +256,11 @@
                     for (var i = 0; i < bufferLength; i++) {
                         barHeight = dataArray[i];
 
-                        var r = barHeight;
+                        var r = 0;
                         var g = barHeight;
-                        var b = 2;
+                        var b = 255;
 
-                        ctx.fillStyle = "rgb(" + r + "," + g + ",255)";
+                        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
                         ctx.lineCap = 'round';
                         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 

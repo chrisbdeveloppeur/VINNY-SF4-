@@ -14,9 +14,9 @@
 {% block titre %}
     Beats
 
-        {#<button type="button" id="arrow-deploy-player" class="btn-primary is-size-3" style="background: rgba(0,0,0,0);box-shadow: none;border: none;position: absolute;right: 14px;cursor: pointer;outline: none;">#}
-        {#    <i class="fas fa-sort-down" title="Extend player" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>#}
-        {#</button>#}
+{#        <button type="button" id="arrow-deploy-player" class="btn-primary is-size-3" style="background: rgba(0,0,0,0);box-shadow: none;border: none;position: absolute;right: 14px;cursor: pointer;outline: none;">#}
+{#            <i class="fas fa-sort-down" title="Extend player" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>#}
+{#        </button>#}
 
 {% endblock %}
 
@@ -268,9 +268,6 @@
         let arrowDeploy = document.getElementById('arrow-deploy-player');
         let crossHide = document.getElementById('cross-hide-player');
 
-        // audio.addEventListener('play', function () {;
-        //     deployPlayerOn();
-        // });
 
         arrowDeploy.addEventListener('click', function () {
             if (deployStatus === false) {
@@ -299,7 +296,6 @@
                 sectionPlayer.style.opacity = "1";
                 sectionPlayer.style.height = "50px";
             }, 0);
-            // return deployStatus;
 
         }
 
@@ -309,10 +305,6 @@
             sectionPlayer.style.height = "0px";
             sectionPlayer.style.display = "none";
             deployStatus = false;
-            // setTimeout(function () {
-            //     sectionPlayer.style.display = "none";
-            // }, 100);
-            // return deployStatus;
         }
 
     </script>
