@@ -15,8 +15,10 @@
     Contact
 {% endblock %}
 
+{% block section_bg %}background:center / cover no-repeat url('{{ asset('build/images/contact_hands_edited_resized_2.748d90e6.jpg')}}'){% endblock %}
+
 {% block entete %}
-    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(26,26,26,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
+    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
         Feel free to chat with me by  filling the form down below
     </h2>
 {% endblock %}
@@ -43,7 +45,7 @@
             {{ form_start(messageForm) }}
 
 
-            <div class="column is-flex box justify-content-around" style="background: center / cover no-repeat url({{ asset('build/images/contact_hands_edited_resized_sombre.231f91e8.jpg') }});box-shadow: rgb(0, 0, 0) 0px 0px 15px;position: relative">
+            <div class="column is-flex box justify-content-around" style="background: rgba(0,0,0,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;position: relative">
 
                 {#<div class="is-hidden-touch" style="opacity:.7;position: absolute;top: 0;left:0;margin:2%;height: 20%;width: 20%;background:center /contain no-repeat url({{ asset('build/images/undraw_typing_jie3.529b71af.svg') }})">
                 </div>#}

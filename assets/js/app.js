@@ -37,12 +37,16 @@ const youtube = require('../images/icons/youtube.png');
 const contact = require('../images/contact_hands_edited_resized.jpg');
 const contact_sombre = require('../images/contact_hands_edited_resized_sombre.jpg');
 const contact_2 = require('../images/contact_hands_2_resized.jpg');
+const contact_2_2 = require('../images/contact_hands_edited_resized_2.jpg');
 const vinny_FL_1 = require('../images/vinny_FL1_edited_resized.jpg');
 const vinny_FL_2 = require('../images/vinny_FL2_edited_resized.jpg');
 const vinny_about = require('../images/about_vinny_resized.jpg');
 const video_1 = require('../images/video_1.jpg');
 const video_2 = require('../images/video_2.png');
+const video_3 = require('../images/video_3.jpg');
 const beats_1 = require('../images/beats_1.jpg');
+const beats_2 = require('../images/beats_2_edited_resized.jpg');
+const vinny_about_session_bg = require('../images/vinny_about_session_bg.jpg');
 
 
 

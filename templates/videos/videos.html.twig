@@ -20,8 +20,10 @@
     {% endfor %}
 {% endblock %}
 
+{% block section_bg %}background:center / cover no-repeat url('{{ asset('build/images/video_3.7ae7ba12.jpg')}}'){% endblock %}
+
 {% block entete %}
-    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(26,26,26,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
+    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
         Watch, Like and share my multiple Beats also available on my
         <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link is-hidden-touch has-text-weight-bold" title="vinnyvixi's youtube channel">
         <span class="icon">
@@ -72,7 +74,7 @@
 
 
 
-                    <div class="columns is-multiline justify-content-center" style="background: rgba(0,0,0,0.4)">
+                    <div class="columns is-multiline justify-content-center" style="background: rgba(0,0,0,0.8)">
 
 
                             {% for video in video %}
