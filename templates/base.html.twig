@@ -44,9 +44,118 @@
 
                     </h2>
 
+                    {% block header_dynamic %}
+                        <nav class="navbar navbar-expand-lg navbar-dark has-background-black-bis" style="z-index: 1;box-shadow: rgb(0, 0, 0) 0px 0px 5px 5px;">
 
-                    {% include('includes/header/header.html.twig') %}
+                            <a id="logo-header-vinny" href="{{ path('home') }}">
+                                <img src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="logo" title="VinnyVixi" decoding="auto">
+                            </a>
 
+                            {% block img_header %}
+                                <div class="header-background-image" style="background: center / contain no-repeat url({{ asset('build/images/beats_1.f19e5c84.jpg') }});box-shadow: 0px 0px 30px 10px black;">
+                                    <div class="header-background-layer">
+                                    </div>
+                                </div>
+                            {% endblock %}
+
+
+                            {% block social_network %}
+                                <div class="is-hidden-touch" style="display:flex;position: absolute;right:0;top: 0;height: 100%;width: 20%;justify-content: space-evenly;align-items: center">
+
+                                    <a  target="_blank"href="https://www.twitter.com/VinnyVixi" class="has-text-link">
+                                        <span class="icon is-medium">
+                                            <i  class="fab fa-twitter fa-lg"></i>
+                                        </span>
+                                    </a>
+
+                                    <a  target="_blank"href="https://www.instagram.com/vinnyvixi" class="has-text-link">
+                                        <span class="icon is-medium">
+                                            <i  class="fab fa-instagram fa-lg"></i>
+                                        </span>
+                                    </a>
+
+                                    <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link">
+                                        <span class="icon is-medium">
+                                            <i  class="fab fa-youtube fa-lg"></i>
+                                        </span>
+                                    </a>
+
+                                    <a  target="_blank"href="https://www.soundcloud.com/vinnyvixi" class="has-text-link">
+                                        <span class="icon is-medium">
+                                            <i  class="fab fa-soundcloud fa-lg"></i>
+                                        </span>
+                                    </a>
+
+                                    <a  target="_blank"href="https://www.beatstars.com/vinnyvixi/feed" class="has-text-link">
+                                        <span class="">
+                                            <img width="23px" src="{{ asset('build/images/beatstars-logo-b.5cbb6d76.png') }}" alt="beatstars">
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endblock %}
+
+
+
+                            <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                                    style="border: none;outline: none;margin: 0px;height: 50px">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+
+                            <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
+                                <ul class="navbar-nav is-size-2-touch is-size-5 mr-auto">
+
+                                    <li class="nav-item">
+                                        <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny" id="navLinkHome">
+                                            Beats
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ path('videos') }}" class="nav-link" title="Videos" id="navLinkVideos">
+                                            Videos
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ path('licenses') }}" class="nav-link" title="Licenses" id="navLinkLicenses">
+                                            Licenses
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ path('about') }}" class="nav-link" title="About Vinny" id="navLinkAbout">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ path('contact') }}" class="nav-link" title="Contact Vinny" id="navLinkContact">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+
+
+                                {% block navbarend %}
+
+                                    {% if is_granted('ROLE_USER') %}
+                                        <div class="navbar-nav is-size-2-touch is-size-5" style="white-space: nowrap;">
+
+                                            <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
+                                                Dashboard
+                                            </a>
+
+                                            <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">
+                                                Log out
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+                                {% endblock %}
+                            </div>
+
+                        </nav>
+                    {% endblock %}
 
                         <section class="titre-wave" style="z-index:1;background:#121212;width: 100%">
                             <div class="has-text-centered" style="position: relative;box-shadow: rgb(0, 0, 0) 0px 0px 5px 2px;">

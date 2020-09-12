@@ -4,10 +4,12 @@
         <img src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="logo" title="VinnyVixi" decoding="auto">
     </a>
 
-    <div class="header-background-image" style="background: center / contain no-repeat url({{ asset('build/images/studio.e0e2579c.png') }});box-shadow: 0px 0px 30px 10px black;">
-        <div class="header-background-layer">
+    {% block img_header %}
+        <div class="header-background-image" style="background: center / contain no-repeat url({{ asset('build/images/studio.e0e2579c.png') }});box-shadow: 0px 0px 30px 10px black;">
+            <div class="header-background-layer">
+            </div>
         </div>
-    </div>
+    {% endblock %}
 
 
     {% block social_network %}
