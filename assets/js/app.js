@@ -50,6 +50,7 @@ const vinny_about_session_bg = require('../images/vinny_about_session_bg.jpg');
 const carte_son = require('../images/carte_son.jpg');
 const matos = require('../images/matos_vinny_edited_resized.jpg');
 const donation_paypal = require('../images/icons/support.svg');
+const coin_link = require('../images/icons/coin_link.svg');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

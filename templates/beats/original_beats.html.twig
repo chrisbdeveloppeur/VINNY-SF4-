@@ -48,8 +48,6 @@
                     </div>
                 </div>
 
-
-
                     <div class="column landscape-padding">
 
                         <div class="columns is-centered is-vcentered has-text-centered is-size-4-mobile" style=" color: white;margin: 0;padding:0;height:50%">
@@ -149,6 +147,26 @@
 {#                            </a>#}
 
 {#                        </div>#}
+
+                    </div>
+
+                    <div class="column is-2 is-flex justify-content-center">
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="width: -moz-available;display: flex;flex-direction: column;justify-content: space-evenly;align-items: center">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                                <div class="has-text-centered has-text-link has-text-weight-bold"><input type="hidden" name="on0" value="{{ beat.titre }}">License</div>
+
+                                <div class="select is-small">
+                                    <select name="os0">
+                                        <option value="BASIC">BASIC $15,00 USD</option>
+                                        <option value="PRENIUM">PRENIUM $30,00 USD</option>
+                                        <option value="STEMS">STEMS $100,00 USD</option>
+                                    </select>
+                                </div>
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                            <input style="padding: .5rem" type="image" width="50rem" src="{{ asset('build/images/coin_link.6f3b1bf7.svg') }}" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+                        </form>
 
                     </div>
 
