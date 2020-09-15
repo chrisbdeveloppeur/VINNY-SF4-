@@ -84,11 +84,11 @@
                                     <div class="column is-one-third is-full-touch has-text-centered">
 
                                         {% if video.titre is not null %}
-                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }} is-size-3-touch">
                                                 {{ video.titre }}
                                             </label>
                                         {% else %}
-                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }} is-size-3-touch">
                                                 ~
                                             </label>
                                         {% endif %}
@@ -101,11 +101,11 @@
                                             </figure>
 
                                         {% if video.info is not null %}
-                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="has-text-weight-light is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }} is-size-3-touch">
                                                 {{ video.info }}
                                             </label>
                                         {% else %}
-                                            <label style="align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class="is-flex justify-content-center has-text-white-bis has-background-black-bis is-size-3-touch">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }} is-size-3-touch">
                                                 ~
                                             </label>
                                         {% endif %}
