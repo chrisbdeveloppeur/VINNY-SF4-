@@ -1,10 +1,10 @@
-<label class="label column is-centered has-background-black-bis" style="position: relative" >
+<label class="label column is-centered has-background-black" style="position: relative" >
 
-    <div style="opacity:.1;height: 100%;width: 100%;z-index:0;position:absolute;top: 0;left:0;background: center / contain repeat url({{ asset('build/images/sound_w.8743b84b.svg') }})"></div>
+    <div style="opacity:.1;height: 100%;width: 100%;z-index:0;position:absolute;top: 0;left:0;background: center / 100% 100vw repeat url({{ asset('build/images/audio_wave.9a42a784.svg') }})"></div>
 
     <h2 class="columns has-text-white" style=" z-index: 1;justify-content: center">
 
-        <p class=" has-icons-left is-family-code is-size-3" style="padding: 10px; margin-bottom: 0;">
+        <p class=" has-icons-left is-family-code is-size-3" style="padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">
 
             <span class="icon is-small text-info" style="margin:0 7px">
                 <i class="fas fa-headphones"></i>
@@ -254,7 +254,7 @@
                 var WIDTH = canvas.width;
                 var HEIGHT = canvas.height;
 
-                var barWidth = (WIDTH / bufferLength) * 2.5;
+                var barWidth = (WIDTH / bufferLength) * 2;
                 var barHeight;
                 var x = 0;
 
@@ -266,9 +266,9 @@
                     analyser.getByteFrequencyData(dataArray);
 
                     ctx.fillStyle = "#121212";
-                    ctx.strokeStyle = "rgba(0,0,0,1)";
+                    ctx.strokeStyle = "black";
                     ctx.globalAlpha = 1;
-                    ctx.lineCap = 'round';
+                    ctx.lineCap = "round";
                     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
                     for (var i = 0; i < bufferLength; i++) {
@@ -279,7 +279,7 @@
                         var b = 255;
 
                         ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-                        ctx.lineCap = 'round';
+                        ctx.lineCap = "round";
                         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 
                         x += barWidth + 1;

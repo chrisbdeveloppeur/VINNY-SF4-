@@ -20,7 +20,6 @@ const second_background = require('../images/headphones.jpg');
 const baner1 = require('../images/sound_2.jpg');
 const baner2 = require('../images/sound_2-2.jpg');
 const baner3 = require('../images/sound_light_b.jpg');
-const baner4 = require('../images/audio_bars.png');
 const beatstars_1 = require('../images/icons/beatstars.png');
 const beatstars_2 = require('../images/icons/beatstars-logo.png');
 const beatstars_3 = require('../images/icons/beatstars-logo-b.png');
@@ -52,6 +51,7 @@ const matos = require('../images/matos_vinny_edited_resized.jpg');
 const donation_paypal = require('../images/icons/support.svg');
 const donation_bg = require('../images/donation_bg.svg');
 const coin_link = require('../images/icons/coin_link.svg');
+const audio_wave = require('../images/audio_wave.svg');
 
 
 
