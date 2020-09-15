@@ -76,33 +76,37 @@
 
         </div>
 
-        <div class="column footer-grid" style="display: flex;flex-direction: row;justify-content: center;align-items: center">
-            <p class="has-text-centered has-text-link" style="margin: 0">Support me</p>
-            <a style="margin: 0 1rem" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Yoobsound%40gmail.com&currency_code=EUR&source=url" class="has-text-link">
-                    <span class="">
-                        <i class="fas fa-donate fa-2x"></i>
-                    </span>
+        <div class="column footer-grid" style="">
+
+
+            <a class="button is-small is-size-4-touch is-outlined is-link" style="margin: 0 1rem" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Yoobsound%40gmail.com&currency_code=EUR&source=url" >
+                <p class="has-text-centered" style="margin: 0">Support me</p>
+                    <span class="icon is-normal">
+                        <i class="fab fa-paypal fa-lg">
+
+                        </i>
             </a>
+
         </div>
 
         <div class="column footer-grid">
 
             <span class="footer-clumn-right">
-                <a href="{{ path('conditions-generales') }}" class="has-text-link" style="margin: auto;padding: 0 5px">
+                <a href="{{ path('conditions-generales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Politique de confidentialité#}
                     Terms & Conditions
                 </a>
             </span>
 
             <span class="footer-clumn-right">
-                <a href="{{ path('politique-confidentialite') }}" class="has-text-link" style="margin: auto;padding: 0 5px">
+                <a href="{{ path('politique-confidentialite') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Politique de confidentialité#}
                     Privacy Policy
                 </a>
             </span>
 
             <span class="footer-column-right">
-                <a href="{{ path('mentions-legales') }}" class="has-text-link" style="margin: auto;padding: 0 5px">
+                <a href="{{ path('mentions-legales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Mentions légales#}
                     Disclaimer
                 </a>
