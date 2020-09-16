@@ -288,6 +288,17 @@ div.form-error ul{
   margin-bottom: 0;
 }
 
+#buttonDonation{
+  background: rgba(0,0,0,.8);
+}
+#buttonDonation:hover{
+  color: white;
+  text-shadow: rgb(0, 40, 255) 0px 0px 15px;
+  //box-shadow: rgb(150, 200, 255) 0px 0px 15px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 15px 3px;
+  background: #0a0a0a;
+}
+
 
 
 
