@@ -140,7 +140,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact(Request $request, EntityManagerInterface $entityManager, NotifMessage $notifMessage)
+    public function contact(Request $request, NotifMessage $notifMessage)
     {
         $form = $this->createForm(MessageType::class);
         $form->handleRequest($request);
@@ -150,9 +150,6 @@ class HomeController extends AbstractController
              * @var Message $message
              */
             $message = $form->getData();
-
-            $entityManager->persist($message);
-//            $entityManager->flush();
 
             $notifMessage->sendMessage($message);
 

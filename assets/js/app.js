@@ -52,6 +52,8 @@ const donation_paypal = require('../images/icons/support.svg');
 const donation_bg = require('../images/donation_bg.svg');
 const coin_link = require('../images/icons/coin_link.svg');
 const audio_wave = require('../images/audio_wave.svg');
+const ghetto = require('../images/ghetto.svg');
+const phone_bg = require('../images/phone_bg.svg');
 
 
 
