@@ -9,6 +9,9 @@
     --border-radius: 2px;
     /*--label-color: white;*/
 }
+*{
+    font-family: Amiko;
+}
 
 .main-sidebar{
     padding: 12px;
@@ -21,11 +24,12 @@
     color: white;
 }
 aside.main-sidebar{
-    background-color: #292929;
+    background-color: #0a0a0a;
+    box-shadow: rgba(0,0,0,0.8) 0 0 5px 3px;
 }
 
 .content-body{
-background-color: rgba(255,255,255,0.5);
+background-color: rgba(10, 10, 10, 0.9);
 }
 .sidebar-menu a{
     padding: 5px;
@@ -35,6 +39,15 @@ background-color: rgba(255,255,255,0.5);
 }
 aside.main-sidebar i.fa{
     color: white !important;
+}
+.datagrid tbody tr:hover td, .datagrid tbody tr:hover th {
+    background: none;
+}
+.datagrid td, .datagrid th {
+    border-bottom: rgba(255,255,255,.2) 1px solid;
+}
+#navigation-toggler {
+    color: white;
 }
 
 
@@ -48,12 +61,25 @@ aside.main-sidebar i.fa{
 }
 
 body{
-    background:rgba(0,0,0,.9) top no-repeat url('../build/images/vinny_logo_reducidisimo.e28edbc4.png');
-    /*background-color: ;*/
+    background:#121212 top fixed no-repeat url('../build/images/vinny_logo_reducidisimo.e28edbc4.png');
 }
 
 .content-header{
-    background: #292929;
+    background: #0a0a0a;
+    border-bottom: none;
+}
+.content-footer {
+    background: #0a0a0a !important;
+}
+.datagrid thead {
+    background: #0a0a0a;
+    color: white;
+}
+.datagrid thead span {
+    color: inherit;
+}
+.datagrid thead a{
+    color: #6174d1;
 }
 
 h1.title{
@@ -63,6 +89,7 @@ h1.title{
 
 .content{
     background-color: rgba(0,0,0,0);
+    box-shadow: rgba(0,0,0,0.8) 0 0 5px 3px;
 }
 .content-footer{
     background-color: rgba(255, 255, 255, 0.71);
@@ -70,7 +97,18 @@ h1.title{
 td.actions{
     white-space: nowrap;
 }
-
+td{
+    color: white;
+}
+.main-header #header-logo a strong{
+    font-family: "Rock Salt";
+    color: white;
+    text-shadow: rgb(0, 40, 255) 0px 0px 15px;
+}
+.navbar-custom-menu .user{
+    color: white !important;
+    text-shadow: rgb(0, 40, 255) 0px 0px 15px;
+}
 
 
 
