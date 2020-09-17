@@ -40,6 +40,8 @@
 
 {#    </div>#}
 
+    {{ include('includes/donation.html.twig') }}
+
     <div class="block-twitter" style="box-shadow: rgb(0, 0, 0) 0px 0px 15px;background: rgba(0,0,0,.8);margin-bottom: .75rem">
         <div class="column social-share is-half is-full-touch" style="align-items: center;justify-content: space-evenly">
 
@@ -54,10 +56,6 @@
             </figure>
         </div>
     </div>
-
-
-
-    {{ include('includes/donation.html.twig') }}
 
     <script>
         let navLinkAbout = document.getElementById('navLinkAbout');

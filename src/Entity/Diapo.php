@@ -37,8 +37,8 @@ class Diapo
      * @var File|null
      * @Assert\Image(
      *     maxSize="8Mi",
-     *     mimeTypes={"image/jpeg", "image/png"},
-     *     mimeTypesMessage = "Seul les fichier jpg/jpeg/png sont acceptés")
+     *     mimeTypes={"image/jpeg", "image/png", "image/svg+xml"},
+     *     mimeTypesMessage = "Seul les fichier jpg/jpeg/png/svg sont acceptés")
      */
     private $diapoImage;
 

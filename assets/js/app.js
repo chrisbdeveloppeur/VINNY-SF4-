@@ -47,6 +47,7 @@ const beats_1 = require('../images/beats_1.jpg');
 const beats_2 = require('../images/beats_2_edited_resized.jpg');
 const vinny_about_session_bg = require('../images/vinny_about_session_bg.jpg');
 const carte_son = require('../images/carte_son.jpg');
+const carte_son_2 = require('../images/carte_son_2.svg');
 const matos = require('../images/matos_vinny_edited_resized.jpg');
 const donation_paypal = require('../images/icons/support.svg');
 const donation_bg = require('../images/donation_bg.svg');
