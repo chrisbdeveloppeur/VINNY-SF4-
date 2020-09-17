@@ -199,6 +199,7 @@
         var players = Plyr.setup('.js-plyr', {
             "controls":['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions','pip', 'airplay', 'fullscreen']
         });
+        players.volume = 0.1;
 
         {#   AUTOPAUSE   #}
         var i = 1;
