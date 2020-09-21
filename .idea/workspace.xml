@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
     </list>
@@ -98,14 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-              <folding>
-                <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -155,11 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13617">
-              <caret line="801" column="10" selection-start-line="801" selection-start-column="6" selection-end-line="801" selection-end-column="10" />
+            <state relative-caret-position="397">
+              <caret line="849" column="24" selection-start-line="849" selection-start-column="24" selection-end-line="849" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -168,8 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>div.info</find>
-      <find>pricing</find>
       <find>modal-conten</find>
       <find>pricing-ta</find>
       <find>info-flex</find>
@@ -198,6 +194,8 @@
       <find>plyr</find>
       <find>titre-wa</find>
       <find>google</find>
+      <find>.nav-link</find>
+      <find>.navbar-nav</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\K4gur0\PhpstormProjects\VINNY-SF4-</dir>
@@ -257,10 +255,10 @@
         <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
         <option value="$PROJECT_DIR$/templates/about/about.html.twig" />
         <option value="$PROJECT_DIR$/templates/includes/donation.html.twig" />
-        <option value="$PROJECT_DIR$/assets/css/app.scss" />
         <option value="$PROJECT_DIR$/templates/beats/beats.html.twig" />
-        <option value="$PROJECT_DIR$/templates/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/index.html.twig" />
+        <option value="$PROJECT_DIR$/assets/css/app.scss" />
       </list>
     </option>
   </component>
@@ -730,12 +728,14 @@
       <workItem from="1600277544890" duration="11692000" />
       <workItem from="1600330769943" duration="963000" />
       <workItem from="1600356579020" duration="5244000" />
-      <workItem from="1600376762924" duration="987000" />
+      <workItem from="1600376762924" duration="2223000" />
+      <workItem from="1600592296400" duration="290000" />
+      <workItem from="1600718390029" duration="566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1038484000" />
+    <option name="totallyTimeSpent" value="1040576000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,9 +748,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28464818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.17590618" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -765,7 +764,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Floobits" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3268206" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49716598" weight="0.29035753" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49716598" visible="true" weight="0.28710726" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.502834" side_tool="true" weight="0.29307282" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1057,6 +1056,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
@@ -1085,27 +1091,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13617">
-          <caret line="801" column="10" selection-start-line="801" selection-start-column="6" selection-end-line="801" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="397">
+          <caret line="849" column="24" selection-start-line="849" selection-start-column="24" selection-end-line="849" selection-end-column="24" />
         </state>
       </provider>
     </entry>

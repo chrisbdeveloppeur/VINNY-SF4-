@@ -55,7 +55,7 @@ body {
 
 .nav-item, .nav-link
 {
-  transition: .1s;
+  transition: cubic-bezier(.47,.39,.44,1.7) .2s;
   border-radius: 2px;
   font-family: $family-code;
   font-weight: 200;
@@ -65,6 +65,7 @@ body {
 .nav-link:hover
 {
   background: none;
+  font-size: larger;
   color: white !important;
   text-shadow:rgb(0, 63, 255) 0px 0px 15px;
 }
@@ -835,7 +836,7 @@ i.youtube-video-class{
     overflow: hidden;
   }
   .nav-link:hover{
-    font-weight: bold;
+    font-weight: bolder;
   }
   .nav-link:after{
     font-weight: bold;
@@ -845,6 +846,8 @@ i.youtube-video-class{
   }
   ul.navbar-nav{
     width: 100%;
+    height: 50px;
+    align-items: center;
     justify-content: space-evenly;
   }
 }
