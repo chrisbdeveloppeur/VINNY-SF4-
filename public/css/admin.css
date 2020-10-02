@@ -10,8 +10,10 @@
     /*--label-color: white;*/
     --form-bg:rgba(10, 10, 10, 0.9);
 }
+
+
 *{
-    font-family: Amiko;
+    font-family: 'Amiko', sans-serif;
 }
 
 .main-sidebar{
@@ -110,7 +112,7 @@ td{
     color: white;
 }
 .main-header #header-logo a strong{
-    font-family: "Rock Salt";
+    font-family: 'Rock Salt', cursive;
     color: white;
     text-shadow: rgb(0, 40, 255) 0px 0px 15px;
 }
@@ -140,7 +142,6 @@ body.show .form-horizontal {
         display: none;
     }
 }
-
 
 
 
