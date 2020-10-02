@@ -12,8 +12,10 @@
 }
 
 
+
+
 *{
-    font-family: 'Amiko', sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .main-sidebar{
@@ -112,13 +114,13 @@ td{
     color: white;
 }
 .main-header #header-logo a strong{
-    font-family: 'Rock Salt', cursive;
+    font-family: sans-serif;
     color: white;
-    text-shadow: rgb(0, 40, 255) 0px 0px 15px;
+    text-shadow: rgb(0, 40, 255) 0 0 15px;
 }
 .navbar-custom-menu .user{
     color: white !important;
-    text-shadow: rgb(0, 40, 255) 0px 0px 15px;
+    text-shadow: rgb(0, 40, 255) 0 0 15px;
 }
 .fa-search{
     color: #000 !important;
