@@ -15,7 +15,7 @@
 
 
 *{
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Amiko, sans-serif;
 }
 
 .main-sidebar{
@@ -114,7 +114,7 @@ td{
     color: white;
 }
 .main-header #header-logo a strong{
-    font-family: sans-serif;
+    font-family: "Rock Salt", sans-serif;
     color: white;
     text-shadow: rgb(0, 40, 255) 0 0 15px;
 }
