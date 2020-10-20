@@ -52,7 +52,7 @@
                     <div class="field">
                         <label class="label is-size-3-touch has-text-white">Last name</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.nom, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Last name', 'placeholder' : 'My name', 'alt' : 'Last name'}
+                            {{ form_widget(messageForm.nom, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Last name', 'placeholder' : 'My name', 'alt' : 'Last name'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-male"></i>
@@ -63,7 +63,7 @@
                     <div class="field">
                         <label class="label is-size-3-touch has-text-white">First name</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.prenom, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'First name', 'placeholder' : 'My First name', 'alt' : 'First name'}
+                            {{ form_widget(messageForm.prenom, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'First name', 'placeholder' : 'My First name', 'alt' : 'First name'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-user"></i>
@@ -75,7 +75,7 @@
                     <div class="field">
                         <label class="label is-size-3-touch has-text-white">Email *</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.email, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Email *', 'placeholder' : 'ex : mymail@gmail.com', 'alt' : 'email'}
+                            {{ form_widget(messageForm.email, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Email *', 'placeholder' : 'ex : mymail@gmail.com', 'alt' : 'email'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-envelope"></i>
@@ -88,7 +88,7 @@
                     <div class="field">
                         <label class="label is-size-3-touch has-text-white">Subject</label>
                         <div class="control has-icons-left is-size-3-touch">
-                            {{ form_row(messageForm.objet, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Subject', 'placeholder' : 'Enter the subject', 'alt' : 'subject'}
+                            {{ form_widget(messageForm.objet, {'attr' : { 'class' : 'is-size-3-touch input','title' : 'Subject', 'placeholder' : 'Enter the subject', 'alt' : 'subject'}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-hashtag"></i>
@@ -100,7 +100,7 @@
                     <div class="field">
                         <label class="label is-size-3-touch has-text-white">Message *</label>
                         <div class="control">
-                            {{ form_row(messageForm.message, {'attr' : { 'class' : 'is-size-3-touch textarea ','title' : 'Message *', 'placeholder' : 'My message', 'alt' : 'message'}
+                            {{ form_widget(messageForm.message, {'attr' : { 'class' : 'is-size-3-touch textarea ','title' : 'Message *', 'placeholder' : 'My message', 'alt' : 'message'}
                             }) }}
                         </div>
                     </div>

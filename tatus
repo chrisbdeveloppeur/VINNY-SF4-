@@ -1,0 +1,551 @@
+[33mcommit 0b50e8a6beb4520d875c1789a2a75c585619cb1a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Oct 8 19:57:25 2020 +0200
+
+    MAJ DESKTOP Fixe for back office fonts
+
+[33mcommit efa45c419dfb24e3ea7c0edb91fa99b7df3ed90b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Oct 8 19:15:16 2020 +0200
+
+    MAJ DESKTOP Fixe for back office fonts
+
+[33mcommit 8cde416d6fb801f0e5e7c74a7d8b8600dc77276e[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Fri Oct 2 14:47:16 2020 +0200
+
+    MAJ LAPTOP front fix
+
+[33mcommit fe428d995baf22aed10fba0ca21807818cbbc49d[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Fri Oct 2 14:25:30 2020 +0200
+
+    MAJ LAPTOP front fix
+
+[33mcommit 1930e33f3c93366aa2441da339d47c52a11bfbc8[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 22 00:01:33 2020 +0200
+
+    MAJ DESKTOP fix margin bottom donation 5rem
+
+[33mcommit f120adccc9b0c4f6a7aecbcba72618b8673f1c2c[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Sep 21 22:11:21 2020 +0200
+
+    MAJ DESKTOP transition effect nav-link
+
+[33mcommit 33d9927a40675aa4718323f27ee06e2ee004d92c[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 23:25:22 2020 +0200
+
+    MAJ DESKTOP ajout des balise google tag manager
+
+[33mcommit ddb01430fdf8350a1b06a9b66431906c857ab314[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 19:34:54 2020 +0200
+
+    MAJ DESKTOP modificaiton bg image about
+
+[33mcommit e237054c5a8073e5ab90e4a19a8864ba7341fd9d[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 19:29:49 2020 +0200
+
+    MAJ DESKTOP modificaiton bg image about
+
+[33mcommit 0c2d9d067ab13071d182ff82df101518b588471f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 19:12:35 2020 +0200
+
+    MAJ DESKTOP add audio visualizer on mobile
+
+[33mcommit 85ef5bcd4b13e5f5bec32e7d1004a5b5954ed6f0[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 19:04:12 2020 +0200
+
+    MAJ DESKTOP modificaiton bg image about
+
+[33mcommit ec026fee33b6b6d5c65a5aa5fc7272396c3d0561[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 19:02:27 2020 +0200
+
+    MAJ DESKTOP modificaiton bg image about
+
+[33mcommit 10434b2ff8f31e4de14dd3e28aff39c4f5f6cfd2[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 17:35:51 2020 +0200
+
+    MAJ DESKTOP modificaiton bg image about
+
+[33mcommit c4864893c1219c1a8863bc47c58665e71f7a3238[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 10:25:37 2020 +0200
+
+    MAJ DESKTOP fix donation button
+
+[33mcommit 6795dbe7250879d595b9db27fcf8ea1c6fd50cfa[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 00:31:26 2020 +0200
+
+    MAJ DEKSTOP correctif minimal front for bg touch
+
+[33mcommit 56124932fff3ffc29ef40c9dc2dc326fa1b79781[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 00:29:18 2020 +0200
+
+    MAJ DEKSTOP correctif minimal front for bg touch
+
+[33mcommit a7726efd334f7a7e5190308e211364e74952aff2[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 00:19:45 2020 +0200
+
+    MAJ DEKSTOP rectif donation and add in beats page
+
+[33mcommit 92e7d034bbf5901b68fc5df630a860cf8640eadc[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 17 00:14:51 2020 +0200
+
+    MAJ DEKSTOP correctif minimal front for bg touch
+
+[33mcommit c4527447a59ffe715e68473b395bdf1727eaa212[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 16 23:43:21 2020 +0200
+
+    MAJ DEKSTOP correctif minimal front for bg touch
+
+[33mcommit 87a8785b3eedf7ebd00be7fc1b1e129e9a7cb705[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 16 23:16:58 2020 +0200
+
+    MAJ DEKSTOP modification front pour back office
+
+[33mcommit 895ac5ea81bc33b890d2e1a43fa3edafba1fa794[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 16 22:17:26 2020 +0200
+
+    MAJ DEKSTOP correctif minimal front for bg touch
+
+[33mcommit d07a9a22da66bf79bcce05c1742ea63c26faac2b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 23:25:47 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit 5f8e57af94f2528b50ecd8a753784858fc3e1868[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 23:22:15 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit 8e5ce4b197f1325242ba1e80aa77fea99f03f458[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 23:12:43 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit 4ee58504f237e8dc4540e6508796bb5dcf2f7974[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 23:04:21 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit 99d8441116f26bb1f24ffe451caf58d04a23a354[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 22:54:50 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit 831e7a185803bbc3c97b30386bc99133231c6026[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 21:48:47 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit a1a4310c8623d7395978559e10c905a8a9a3b327[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 21:46:52 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit a8d380bb8803210a21713cb934e3c898dc96745f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 21:33:15 2020 +0200
+
+    MAJ DESKTOP fix front minimal
+
+[33mcommit ae5a4990c07d2efa58a102accc6305fd8baad4b4[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 20:47:54 2020 +0200
+
+    MAJ DESKTOP Correctif contact bg size
+
+[33mcommit d3363a0120a6de27888780e0e91a4ca413d1f027[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 20:23:06 2020 +0200
+
+    MAJ DESKTOP Correctif contact bg size
+
+[33mcommit c4985159649b753c427355288a44889d5d496d8d[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 20:05:52 2020 +0200
+
+    MAJ DESKTOP Correctif contact bg size
+
+[33mcommit 725122b0c73941978ea72d886f0e8e5e48a62637[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 20:03:09 2020 +0200
+
+    MAJ DESKTOP Correctif contact bg size
+
+[33mcommit f4c5c5d77558712f91ec8509a3a662848361fd8f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 19:54:07 2020 +0200
+
+    MAJ DESKTOP Correctif contact bg size
+
+[33mcommit 21fda043eb07312d214ab35ed61f3377fa8edd09[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 19:39:57 2020 +0200
+
+    MAJ DESKTOP Add donation button
+
+[33mcommit 55936e82148cb529c094afda458604d6d7a0cbb4[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 15 12:48:41 2020 +0200
+
+    MAJ DESKTOP Add donation button
+
+[33mcommit c6a8ae3b945731183a5bca6994ddf93381a057e4[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Sep 14 14:00:48 2020 +0200
+
+    MAJ DESKTOP Add donation footer and about page
+
+[33mcommit 6dad0f9ca03f8ec32f636b855f51d57b8ac5806c[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 13:52:50 2020 +0200
+
+    MAJ DESKTOP préparation pour système de paiement et donation paypal
+
+[33mcommit 1656a96593cefe108c79919c33e0419488e00e28[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 13:06:15 2020 +0200
+
+    MAJ DESKTOP préparation pour système de paiement et donation paypal
+
+[33mcommit cdd75841656b7a9c6b852c14c00fceead5ddc5df[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 02:39:46 2020 +0200
+
+    MAJ DESKTOP maj front v1.1
+
+[33mcommit 631a3cde59448c6d889eacffa423efd15f0617bc[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 02:34:37 2020 +0200
+
+    MAJ DESKTOP maj front v1.1
+
+[33mcommit 66c6566681512f58f2f431551ede08be901ee827[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 00:37:34 2020 +0200
+
+    MAJ DESKTOP maj front v1.1
+
+[33mcommit 9c636bdb46a2e03c3f535fcb21937cad540fade3[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sun Sep 13 00:35:11 2020 +0200
+
+    MAJ DESKTOP maj front v1.1
+
+[33mcommit 2a8b98d98b16eda32d31fff82e0493583623582a[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sat Sep 12 23:19:24 2020 +0200
+
+    MAJ DESKTOP grosse maj front-end
+
+[33mcommit 90c03760176c59843c4517325efed8e7bbbc0c6f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sat Sep 12 23:00:47 2020 +0200
+
+    MAJ DESKTOP grosse maj front-end
+
+[33mcommit e8602d03e1617312757a9becf569a37e9a332fdf[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sat Sep 12 22:55:57 2020 +0200
+
+    MAJ DESKTOP grosse maj front-end
+
+[33mcommit a9f5f79dce4e61a203f5ca18cfdccafb7ac13cd1[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Sat Sep 12 16:33:44 2020 +0200
+
+    MAJ DESKTOP header illustration par page + modif contact
+
+[33mcommit aed3aff70e49d148cbbcbf88dd2b3b4432f795eb[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 10 03:36:13 2020 +0200
+
+    MAJ DESKTOP Change password
+
+[33mcommit bf8265e464099a19ff16f35fe286c56614dec123[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Sep 10 02:51:42 2020 +0200
+
+    MAJ DESKTOP Change password
+
+[33mcommit ad04682c116aba8dada27ddf8e9b537d103a1a3b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 15:02:42 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 06a391d1a258fdb2cbae72790efef55528949066[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 14:48:18 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 4ddd4d47a7bcfac98376ab35f6d51ad317b7986a[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 14:43:19 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 47ddf6f2c8a5f75491e12b3019732ac9d00a12ea[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 14:40:08 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 8d76135c8fa4b4ea12a615d9042ef84a6586987b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 14:02:40 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit ac4c2a37f58378c4393ab66896646be4a82b3197[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 14:01:15 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 0984703a31490c23070f83efac49793909f946d1[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 13:58:17 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 9fe1166c3e2f6d56ff3c47985f9de3e137bce2ac[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 13:52:31 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 880ec4e3a803fe3f54260ed5d2b4e628587336e5[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 13:09:18 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit e43997694d4581522eae16e0fa57af7eba63d84d[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 12:14:15 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit d32c5ac2219ec1f3232870fa02dd55ee21556e9f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 9 10:51:42 2020 +0200
+
+    MAJ DESKTOP menu nav upgrade form
+
+[33mcommit 41f8546f583cb60e5413c2bf720c2f9eab22e641[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 8 18:32:43 2020 +0200
+
+    MAJ DESKTOP 1.1 prépa Jury doranco
+
+[33mcommit 6594b2a154697066bef316a96aaf911bc78ffaf0[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Sep 8 18:09:27 2020 +0200
+
+    MAJ DESKTOP 1.1 prépa Jury doranco
+
+[33mcommit 3609f25e6fd33d0ea0c4b436953cca06f6cc97fc[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Sep 7 22:50:26 2020 +0200
+
+    MAJ LAPTOP Upgrade 1.0 Jury doranco
+
+[33mcommit f25b5ca847c74d874c4fb01423e9d8f9ecff4274[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Sep 7 22:38:09 2020 +0200
+
+    MAJ LAPTOP Upgrade 1.0 Jury doranco
+
+[33mcommit 05b946a43eb952e587f766ad0d77664a1efea0b4[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Sep 2 22:58:25 2020 +0200
+
+    MAJ DESKTOP Add Soundcloud header button
+
+[33mcommit 2962cc3c5201056e542ff5a181fca6299c438470[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Aug 4 19:52:25 2020 +0200
+
+    MAJ DESKTOP terms and conditions add + Fix front minimal
+
+[33mcommit 031a869b45cc18d8e1e5689685b2760d412c54be[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Aug 4 17:44:20 2020 +0200
+
+    MAJ DESKTOP terms and conditions add + Fix front minimal
+
+[33mcommit cba1291be75c5933a3fdf044ec101267b2847e39[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Aug 4 16:42:42 2020 +0200
+
+    MAJ DESKTOP terms and conditions add + Fix front minimal
+
+[33mcommit 7e4e1cc84ccc5c57a25d8bc07b7e1214440acad3[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Aug 4 13:08:46 2020 +0200
+
+    MAJ DESKTOP terms and conditions add + Fix front minimal
+
+[33mcommit 15387f1464077349c5501669f02da280ac26ab9f[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Fri Jul 24 20:08:47 2020 +0200
+
+    MAJ DESKTOP nav-link hover touch mode fix
+
+[33mcommit 353996ec1ec7d4ef2dd00916e8baf8937aa4c471[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jul 15 13:21:49 2020 +0200
+
+    MAJ LAPTOP Front minimal
+
+[33mcommit 07caec2f25f98d31e3170ea6a2295070620f4dc2[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Jul 14 12:19:23 2020 +0200
+
+    MAJ DESKTOP Remove paginator and sorting by updatedDate
+
+[33mcommit 61fb6929fe6158539b59c4d42323e3b985b65e40[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Jul 14 12:18:38 2020 +0200
+
+    MAJ DESKTOP Remove paginator and sorting by updatedDate
+
+[33mcommit adb6a2f7c465d9aad4eeb58fcaf79321c097e957[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 22:18:51 2020 +0200
+
+    MAJ DESKTOP ad new indicator
+
+[33mcommit 502a7a8f30c6f7f8951867c1131c874dc585263b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 20:25:32 2020 +0200
+
+    MAJ DESKTOP ad new indicator
+
+[33mcommit 08af21c766325b9c9f403c190ce581b70ee0a9cc[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 17:36:39 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit ae8d47bf90f3e4d6448d48e8d3004ea04cce9830[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 17:32:02 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit e346bbc6b5c3ac4d3980a1bd40e00145c0752a4e[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 17:30:42 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit 6443854fd327d471706bdc787ce7955c2f1fae20[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 15:34:37 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit 120e9b6a023cc4d6a6f71e6f3cdb218b9d2eca90[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 15:10:00 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit b233cbbb424ba3026c836fc60ab8970c2d213d8b[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Mon Jul 13 15:04:06 2020 +0200
+
+    MAJ DESKTOP entetes and fonts design
+
+[33mcommit 28a41d5efb6ecd5e79c867b990bbf9ad28a32918[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Jul 2 20:31:34 2020 +0200
+
+    MAJ DESKTOP Page /beat correctif
+
+[33mcommit 82ac88562fc8bf79c2c9b0a45caf394c7665cef8[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Jul 2 00:14:03 2020 +0200
+
+    MAJ DESKTOP privacy_policy & disclamer english
+
+[33mcommit 4f26367f14a288963f11ec8f080a769f1fb28364[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jul 1 23:45:33 2020 +0200
+
+    MAJ DESKTOP privacy_policy & disclamer english
+
+[33mcommit e894c4b65261736ec246fc1f01e4aab850f33a15[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jul 1 15:12:51 2020 +0200
+
+    MAJ DESKTOP Social network buttons
+
+[33mcommit d8f146cb85a9cb6c5eb96574a8712d5c9ffa5906[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Tue Jun 30 13:29:17 2020 +0200
+
+    MAJ DESKTOP illustrations
+
+[33mcommit dce11f3ead8fa24cfd32295c597ac5df73ee449d[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Fri Jun 19 13:35:30 2020 +0200
+
+    MAJ DESKTOP Back office rubrique compte admin
+
+[33mcommit 5c54076d4688ff771595dd0c3fc284aeb971be90[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Jun 18 16:35:48 2020 +0200
+
+    MAJ DESKTOP forgot password
+
+[33mcommit d6e8b1814f7cf385310ef7ded13adcb9a61d4885[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Thu Jun 18 11:42:05 2020 +0200
+
+    MAJ DESKTOP header backgroun img
+
+[33mcommit 28066d3431a16fbf7727164ed080454afae1533c[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jun 17 23:24:13 2020 +0200
+
+    MAJ DESKTOP PLAYER
+
+[33mcommit 526ee8fc643a215d6f011b6d1829bd6f77caa727[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jun 17 23:22:29 2020 +0200
+
+    MAJ DESKTOP PLAYER
+
+[33mcommit e7726df8409b7cd444472d4662ecc567f1205b4e[m
+Author: K4gur0 <kenshin91cb@gmail.com>
+Date:   Wed Jun 17 23:07:37 2020 +0200
+
+    MAJ DESKTOP PLAYER / CANVAS !
