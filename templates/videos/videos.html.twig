@@ -23,7 +23,7 @@
 {% block section_bg %}background:center / cover no-repeat url('{{ asset('build/images/video_3.7ae7ba12.jpg')}}'){% endblock %}
 
 {% block entete %}
-    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
+    <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
         Watch, Like and share my multiple Beats also available on my
         <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link has-text-weight-bold" title="vinnyvixi's youtube channel">
         <span class="icon">
@@ -53,12 +53,9 @@
 
                     <label class="label columns is-centered" style="position: relative">
 
-{#                        <div style="opacity:.1;height: 100%;width: 100%;z-index:0;position:absolute;top: 0;left:0;background: center / contain repeat url({{ asset('build/images/video.d41942d4.svg') }})">#}
-{#                        </div>#}
-
                         <h2 class="column text-uppercase has-text-white {% if sectionvideo.couleur %}bg-{{ sectionvideo.couleur }}{% else %}has-background-dark{% endif %} has-text-centered justify-content-center align-items-center" style="margin-bottom: 0">
 
-                            <p class="has-background-black has-icons-left has-text-weight-bold is-family-code is-size-4 is-size-3-touch" style="display: flex;justify-content: center;align-items: center;padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">
+                            <p class="has-background-black has-icons-left has-text-weight-bold is-family-code" style="display: flex;justify-content: center;align-items: center;padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">
 
                             <span class="icon is-normal is-hidden-touch {% if sectionvideo.couleur %}text-{{ sectionvideo.couleur }}{% else %}has-text-grey{% endif %}" style="margin:0 10px;position:absolute;left: 25px">
                                 <i class="fa fa-film fa-2x"></i>
@@ -84,11 +81,11 @@
                                     <div class="column is-one-third is-full-touch has-text-centered">
 
                                         {% if video.titre is not null %}
-                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }} is-size-3-touch">
+                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
                                                 {{ video.titre }}
                                             </label>
                                         {% else %}
-                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }} is-size-3-touch">
+                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
                                                 ~
                                             </label>
                                         {% endif %}
@@ -101,11 +98,11 @@
                                             </figure>
 
                                         {% if video.info is not null %}
-                                            <label style="font-weight: 400;align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }} is-size-3-touch">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
                                                 {{ video.info }}
                                             </label>
                                         {% else %}
-                                            <label style="font-weight: 400;align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }} is-size-3-touch">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
                                                 ~
                                             </label>
                                         {% endif %}

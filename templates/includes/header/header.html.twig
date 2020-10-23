@@ -46,32 +46,13 @@
                     </span>
         </a>
 
-{#        <div class="column is-flex justify-content-center align-items-center">#}
-{#            <a href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ?sub_confirmation=1">#}
-{#                <figure style="height: 25px;width: 25px">#}
-{#                    <img src="{{ asset('build/images/youtube.a04938a0.png') }}" alt="">#}
-{#                </figure>#}
-{#            </a>#}
-{#        </div>#}
-
-{#        <div class="column is-flex justify-content-center align-items-center">#}
-{#            <div class="g-ytsubscribe" data-channelid="UC2aIv87FmBdtEJcj3DVYryQ" data-layout="default" data-theme="dark" data-count="default"></div>#}
-{#        </div>#}
-
-{#        <div class="column is-flex justify-content-center align-items-center">#}
-{#            <a href="https://twitter.com/VinnyVixi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-lang="en" data-show-count="false">Follow @VinnyVixi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>#}
-{#        </div>#}
-
-{#        <div class="column is-flex justify-content-center align-items-center">#}
-{#            <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvinnyvixi&color=black_white&size=32" style="width: 32px; height: 32px;"></iframe>#}
-{#        </div>#}
     </div>
     {% endblock %}
 
 
 
     <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-            style="border: none;outline: none;margin: 0px;height: 50px">
+            style="border: none;outline: none;margin: 0px;">
         <span></span>
         <span></span>
         <span></span>
@@ -80,7 +61,7 @@
 
 
     <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
-        <ul class="navbar-nav is-size-2-touch is-size-5 mr-auto">
+        <ul class="navbar-nav is-size-5 is-size-4-touch mr-auto">
 
             <li class="nav-item">
                 <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny" id="navLinkHome">
@@ -113,7 +94,7 @@
         {% block navbarend %}
 
             {% if is_granted('ROLE_USER') %}
-            <div class="navbar-nav is-size-2-touch is-size-5" style="white-space: nowrap;">
+            <div class="navbar-nav is-size-5" style="white-space: nowrap;">
 
                     <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
                         Dashboard
