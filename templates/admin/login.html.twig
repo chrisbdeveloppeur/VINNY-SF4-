@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block entete %}
-    <h2 class="subtitle has-text-centered is-4 is-family-primary is-size-3-touch has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
+    <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
         Accéder au back office du site
     </h2>
 {% endblock %}
@@ -30,7 +30,7 @@
 
 
                 {% if error %}
-                    <div class="form-error notification is-danger is-size-3-touch">
+                    <div class="form-error notification is-danger">
                         <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
                         {{ error.messageKey|trans(error.messageData, 'security') }}
                     </div>
@@ -39,8 +39,8 @@
                 <div class="field">
 
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input is-size-3-touch" type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required>
-                        <span class="icon is-small is-left is-size-3-touch" style="z-index: 0;">
+                        <input class="input" type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required>
+                        <span class="icon is-small is-left" style="z-index: 0;">
                           <i class="fas fa-envelope"></i>
                         </span>
                     </p>
@@ -49,15 +49,15 @@
 
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input is-size-3-touch" type="password" name="password" id="inputPassword" placeholder="Password" required>
-                        <span class="icon is-small is-left is-size-3-touch" style="z-index: 0;">
+                        <input class="input" type="password" name="password" id="inputPassword" placeholder="Password" required>
+                        <span class="icon is-small is-left" style="z-index: 0;">
                             <i class="fas fa-lock"></i>
                         </span>
                     </p>
                 </div>
                 <div class="field is-flex" style="justify-content: space-between;">
 
-                    <a href="{{ path('lost_password') }}" class="button is-info is-small is-size-4-touch">
+                    <a href="{{ path('lost_password') }}" class="button is-info is-small">
                         <i class="fas fa-key"></i>&nbsp;
                         Changer mon mot de passe
                     </a>
@@ -66,7 +66,7 @@
 
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                        <button class="button is-small is-info is-size-4-touch">
+                        <button class="button is-small is-info">
                             Log in
                         </button>
                     </p>
