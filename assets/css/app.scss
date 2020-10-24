@@ -60,7 +60,6 @@ body {
   font-family: $family-code;
   font-weight: 200;
   color: #63c5da !important;
-  width: inherit;
 }
 .nav-link:hover
 {
@@ -829,7 +828,7 @@ i.youtube-video-class{
     left: 50%;
     transform: translate(-50%);
     background: rgba(0,0,0,0.7);
-    width: 40%;
+    //width: 40%;
     transition: .1s;
   }
   #navbarNav:hover{

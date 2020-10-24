@@ -107,7 +107,7 @@
 
 
                             <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
-                                <ul class="navbar-nav is-size-5 is-size-4-touch mr-auto">
+                                <ul class="navbar-nav is-size-4-touch mr-auto">
 
                                     <li class="nav-item">
                                         <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny" id="navLinkHome">
@@ -134,25 +134,40 @@
                                             Contact
                                         </a>
                                     </li>
+
+                                    {% block navbarend %}
+
+                                        {% if is_granted('ROLE_USER') %}
+
+                                            <li class="nav-item">
+                                                <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
+                                                    Dashboard
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">
+                                                    Log out
+                                                </a>
+                                            </li>
+
+                                            {#                <div class="navbar-nav is-size-5" style="white-space: nowrap;">#}
+
+                                            {#                    <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">#}
+                                            {#                        Dashboard#}
+                                            {#                    </a>#}
+
+                                            {#                    <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">#}
+                                            {#                        Log out#}
+                                            {#                    </a>#}
+                                            {#                </div>#}
+                                        {% endif %}
+                                    {% endblock %}
+
                                 </ul>
 
 
-                                {% block navbarend %}
 
-                                    {% if is_granted('ROLE_USER') %}
-                                        <div class="navbar-nav" style="white-space: nowrap;">
-
-                                            <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
-                                                Dashboard
-                                            </a>
-
-                                            <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">
-                                                Log out
-                                            </a>
-                                        </div>
-                                    {% endif %}
-
-                                {% endblock %}
                             </div>
 
                         </nav>
