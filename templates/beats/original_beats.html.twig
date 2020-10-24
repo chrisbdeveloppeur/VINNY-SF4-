@@ -1,4 +1,4 @@
-<label class="label column is-centered has-background-black" style="position: relative;margin-bottom: 0" >
+<label class="label column is-centered has-background-black" style="position: relative" >
 
     <div style="opacity:.1;height: 100%;width: 100%;z-index:0;position:absolute;top: 0;left:0;background: center / cover repeat url({{ asset('build/images/astronomy-1867616_1920_B&W.c1190a29.svg') }});background-attachment: fixed"></div>
 
@@ -18,21 +18,21 @@
 
 </label>
 
-{{ include('beats/original_beats_filter_barre.html.twig') }}
+{#{{ include('beats/original_beats_filter_barre.html.twig') }}#}
 
 {% for beat in beat %}
     {% set i = ( i | default(0) ) + 1 %}
 
 {% if beat.iframe is null %}
 
-    <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative">
+    <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative; background: rgba(0,0,0,0.5)">
 
         <div class="column is-hidden-tablet"  style="padding: 0; position: absolute;width: 100%;height: 100%;background:center / contain no-repeat
                 {% if beat.beatimagename %}url({{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }})
                 {% else %}url({{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }})
                 {% endif %};">
-            <div style="background: rgba(0,0,0,0.4);height: 100%;width: 100%">
-            </div>
+{#            <div style="background: rgba(0,0,0,0.4);height: 100%;width: 100%">#}
+{#            </div>#}
         </div>
 
         <div class="column" style="position: relative">
@@ -51,10 +51,10 @@
 
                     <div class="column">
 
-                        <div class="columns is-centered is-vcentered has-text-centered has-text-info" style=" color: white;margin: 0;padding:0;height:50%">
+                        <div class="columns is-centered is-vcentered has-text-centered has-text-light" style=" color: white;margin: 0;padding:0;height:50%">
 
                             <div class="column" id="track-title{{ i }}">
-                                <label style="margin: auto"><strong class="has-text-white is-hidden-tablet">Title : </strong></label>
+                                <label style="margin: auto"><strong class="has-text-info">Title : </strong></label>
                                 {% if beat.titre %}
                                     {{ beat.titre }}
                                 {% else %}
@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="column">
-                                <label style="margin: auto"><strong class="has-text-white is-hidden-tablet">Prod. by : </strong></label>
+                                <label style="margin: auto"><strong class="has-text-info">Prod. by : </strong></label>
                                 {% if beat.artiste %}
                                     {{ beat.artiste }}
                                 {% else %}
@@ -72,7 +72,7 @@
                             </div>
 
                             <div class="column">
-                                <label style="margin: auto"><strong class="has-text-white is-hidden-tablet">BPM : </strong></label>
+                                <label style="margin: auto"><strong class="has-text-info">BPM : </strong></label>
                                 {% if beat.bpm %}
                                     {{ beat.bpm }}
                                 {% else %}
@@ -81,7 +81,7 @@
                             </div>
 
                             <div class="column">
-                                <label style="margin: auto"><strong class="has-text-white is-hidden-tablet">Genre : </strong></label>
+                                <label style="margin: auto"><strong class="has-text-info">Genre : </strong></label>
                                 {% if beat.genre %}
                                     {{ beat.genre }}
                                 {% else %}
