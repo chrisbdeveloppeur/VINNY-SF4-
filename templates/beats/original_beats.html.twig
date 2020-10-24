@@ -41,16 +41,16 @@
                 <div class="is-hidden-touch">
                     <div class="column is-flex is-centered is-vcentered justify-content-center align-items-center">
                         {% if beat.beatimagename %}
-                            <img height="110" width="110" src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
+                            <img height="75" width="75" src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration" style="border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
                         {% else %}
-                            <img height="110" width="110" src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="Illustration" style="height: 110px;width: 100px;border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
+                            <img height="75" width="75" src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="Illustration" style="height: 110px;width: 100px;border-radius:3px;box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
                         {% endif %}
                     </div>
                 </div>
 
                     <div class="column">
 
-                        <div class="columns is-centered is-vcentered has-text-centered" style=" color: white;margin: 0;padding:0;height:50%">
+                        <div class="columns is-centered is-vcentered has-text-centered has-text-info" style=" color: white;margin: 0;padding:0;height:50%">
 
                             <div class="column" id="track-title{{ i }}">
                                 <label style="margin: auto"><strong class="has-text-white">Title : </strong></label>
