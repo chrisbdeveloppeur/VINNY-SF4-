@@ -55,6 +55,8 @@ const coin_link = require('../images/icons/coin_link.svg');
 const audio_wave = require('../images/audio_wave.svg');
 const ghetto = require('../images/ghetto.svg');
 const phone_bg = require('../images/phone_bg.svg');
+const astro_bg = require('../images/astronomy-1867616_1920_B&W.svg');
+const colo_design_blue_bg = require('../images/color-design_blue.svg');
 
 
 
