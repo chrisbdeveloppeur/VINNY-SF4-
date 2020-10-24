@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/original_beats.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="55" column="98" lean-forward="true" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#label#0;n#!!top" expanded="true" />
@@ -682,12 +681,12 @@
       <workItem from="1603298323504" duration="796000" />
       <workItem from="1603307121726" duration="1378000" />
       <workItem from="1603488813218" duration="12755000" />
-      <workItem from="1603532771124" duration="4869000" />
+      <workItem from="1603532771124" duration="5722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1074683000" />
+    <option name="totallyTimeSpent" value="1075536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +699,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21588486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.18443497" />
@@ -1140,7 +1138,7 @@
     <entry file="file://$PROJECT_DIR$/templates/beats/original_beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="55" column="98" lean-forward="true" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#label#0;n#!!top" expanded="true" />
