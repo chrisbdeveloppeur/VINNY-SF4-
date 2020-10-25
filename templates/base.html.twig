@@ -5,7 +5,7 @@
 
         {% endblock %}
 
-        <title>{% include('includes/nav_title.html.twig') %} {% block title %}Accueil{% endblock %}</title>
+        <title>{% include('includes/nav_title.html.twig') %} {% block title %}{% trans %}Home{% endtrans %}{% endblock %}</title>
 
         <link rel="stylesheet" href="https://cdn.plyr.io/3.6.1/plyr.css" />
         <link rel="shortcut icon" type="image/png" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}"/>
