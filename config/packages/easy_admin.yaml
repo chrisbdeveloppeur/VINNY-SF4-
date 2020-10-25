@@ -86,16 +86,17 @@ easy_admin:
             class: App\Entity\Licence
             list:
                 fields:
-                    - {property: 'titre_fr' , type: 'text'}
+                    - {property: 'titre_fr' , type: 'text', label: 'Titre'}
+#                    - {property: 'titre' , type: 'text'}
                     - {property: 'euro', type: 'text'}
-                    - {property: 'dollar', type: 'text'}
-#                    - {property: 'info_1' , type: 'text', css_class: 'is-hidden-touch'}
-#                    - {property: 'info_2' , type: 'text', css_class: 'is-hidden-touch'}
-#                    - {property: 'info_3' , type: 'text', css_class: 'is-hidden-touch'}
-#                    - {property: 'info_4' , type: 'text', css_class: 'is-hidden-touch'}
-#                    - {property: 'info_5' , type: 'text', css_class: 'is-hidden-touch'}
-#                    - {property: 'info_6' , type: 'text', css_class: 'is-hidden-touch'}
-                    - {property: 'color' , type: 'text'}
+#                    - {property: 'dollar', type: 'text'}
+                    - {property: 'info_1_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 1'}
+                    - {property: 'info_2_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 2'}
+                    - {property: 'info_3_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 3'}
+                    - {property: 'info_4_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 4'}
+                    - {property: 'info_5_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 5'}
+                    - {property: 'info_6_fr' , type: 'text', css_class: 'is-hidden-touch', label: 'info 6'}
+#                    - {property: 'color' , type: 'text'}
             form:
                 fields:
                     - { type: 'tab',columns: 4, label: 'En Anglais' }
