@@ -17,7 +17,7 @@
                                         </div>
                                         <div class="plan-price">
 
-                                            {% if licence.dollar or licence.euro %}
+                                            {% if licence.dollar %}
                                                 <span class="plan-price-amount is-size-3-desktop is-family-code"><span class="plan-price-currency is-family-code has-text-{{ licence.color }}" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
                                             {% else %}
                                                 <span class="plan-price-amount is-size-3-desktop">~</span>
@@ -65,7 +65,7 @@
                                         </div>
 
                                         <div class="plan-footer">
-                                            <a title="Contact Vinnyvixi" href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-black-bis " style="border-radius: 0px;">{% trans %}click for next step{% endtrans %}</a>
+                                            <a title="Contact Vinnyvixi" href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-black-bis " style="border-radius: 0;">{% trans %}click for next step{% endtrans %}</a>
                                         </div>
                                     </div>
                                 {% endfor %}
