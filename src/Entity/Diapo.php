@@ -56,7 +56,7 @@ class Diapo
     /**
      * @ORM\Column(type="text",nullable=true)
      * @Assert\Length(
-     *     max="250",
+     *     max="500",
      *     maxMessage="Le text est trop long"
      * )
      */
@@ -74,7 +74,7 @@ class Diapo
     /**
      * @ORM\Column(type="text",nullable=true)
      * @Assert\Length(
-     *     max="250",
+     *     max="500",
      *     maxMessage="Le text est trop long"
      * )
      */
