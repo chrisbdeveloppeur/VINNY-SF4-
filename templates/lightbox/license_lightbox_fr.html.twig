@@ -1,0 +1,79 @@
+<div class="container" id="app">
+    <div class="modal is-active" style="transition: .5s;height: 0;">
+        <div class="modal-background"></div>
+        <div class="modal-content" style="border-radius: 0;background: none;display: flex;align-items: center;">
+
+
+                            <div class="pricing-table columns pricing-table-beats">
+
+                                {% for licence in licence %}
+                                    <div class="pricing-plan is-{{ licence.color }} is-full-touch is-1 column" style="padding: 0;border:none;border-radius: 0px">
+                                        <div class="plan-header has-background-{{ licence.color }}  text-uppercase " style="border-radius: 0px;position: relative">
+                                            <div style="opacity:.3;height: 100%;width: 100%;z-index:0;position:absolute;left:0;top: 0;background: center / cover no-repeat url({{ asset('build/images/skyline_w.acbadcba.svg') }})"></div>
+                                            <div class="has-text-black-bis   has-text-weight-bold" style="position: relative;">
+                                                {{ licence.titrefr }}
+                                            </div>
+
+                                        </div>
+                                        <div class="plan-price">
+
+                                            {% if licence.euro %}
+                                                <span class="plan-price-amount is-size-3-desktop is-family-code"><span class="plan-price-currency is-family-code has-text-{{ licence.color }}" style="font-size: 2rem !important;">$</span>{{ licence.dollar }}</span>
+                                            {% else %}
+                                                <span class="plan-price-amount is-size-3-desktop">~</span>
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="plan-items " style="display: grid;height: 100%;">
+
+                                            {% if licence.info1fr %}
+                                                <div class="plan-item info-flex">{{ licence.info1fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info2fr %}
+                                                <div class="plan-item info-flex">{{ licence.info2fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info3fr %}
+                                                <div class="plan-item info-flex">{{ licence.info3fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info4fr %}
+                                                <div class="plan-item info-flex">{{ licence.info4fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info5fr %}
+                                                <div class="plan-item info-flex">{{ licence.info5fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                            {% if licence.info6fr %}
+                                                <div class="plan-item info-flex">{{ licence.info6fr }}</div>
+                                            {% else %}
+                                                <div class="plan-item info-flex">-</div>
+                                            {% endif %}
+
+                                        </div>
+
+                                        <div class="plan-footer">
+                                            <a title="Contact Vinnyvixi" href="{{ path('contact') }}" class="button is-fullwidth has-text-weight-bold has-text-black-bis " style="border-radius: 0px;">{% trans %}click for next step{% endtrans %}</a>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+
+                            </div>
+
+        </div>
+        <button class="modal-close is-large" style="position: absolute"></button>
+    </div>
+</div>

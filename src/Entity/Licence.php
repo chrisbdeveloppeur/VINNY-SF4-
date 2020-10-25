@@ -111,6 +111,69 @@ class Licence
      */
     private $color;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="50",
+     *     maxMessage="Le titre est trop long (50 caractères max)"
+     * )
+     */
+    private $titre_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_1_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_2_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_3_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_4_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_5_fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="100",
+     *     maxMessage="l'information est trop longue (100 caractères max)"
+     * )
+     */
+    private $info_6_fr;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -232,6 +295,90 @@ class Licence
     public function setColor(?string $color): self
     {
         $this->color = $color;
+
+        return $this;
+    }
+
+    public function getTitreFr(): ?string
+    {
+        return $this->titre_fr;
+    }
+
+    public function setTitreFr(?string $titre_fr): self
+    {
+        $this->titre_fr = $titre_fr;
+
+        return $this;
+    }
+
+    public function getInfo1Fr(): ?string
+    {
+        return $this->info_1_fr;
+    }
+
+    public function setInfo1Fr(?string $info_1_fr): self
+    {
+        $this->info_1_fr = $info_1_fr;
+
+        return $this;
+    }
+
+    public function getInfo2Fr(): ?string
+    {
+        return $this->info_2_fr;
+    }
+
+    public function setInfo2Fr(?string $info_2_fr): self
+    {
+        $this->info_2_fr = $info_2_fr;
+
+        return $this;
+    }
+
+    public function getInfo3Fr(): ?string
+    {
+        return $this->info_3_fr;
+    }
+
+    public function setInfo3Fr(?string $info_3_fr): self
+    {
+        $this->info_3_fr = $info_3_fr;
+
+        return $this;
+    }
+
+    public function getInfo4Fr(): ?string
+    {
+        return $this->info_4_fr;
+    }
+
+    public function setInfo4Fr(?string $info_4_fr): self
+    {
+        $this->info_4_fr = $info_4_fr;
+
+        return $this;
+    }
+
+    public function getInfo5Fr(): ?string
+    {
+        return $this->info_5_fr;
+    }
+
+    public function setInfo5Fr(?string $info_5_fr): self
+    {
+        $this->info_5_fr = $info_5_fr;
+
+        return $this;
+    }
+
+    public function getInfo6Fr(): ?string
+    {
+        return $this->info_6_fr;
+    }
+
+    public function setInfo6Fr(?string $info_6_fr): self
+    {
+        $this->info_6_fr = $info_6_fr;
 
         return $this;
     }

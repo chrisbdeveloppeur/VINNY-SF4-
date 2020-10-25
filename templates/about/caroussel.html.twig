@@ -13,8 +13,13 @@
                 {% endif %}
 
                 <div class="column" style="background: rgba(0,0,0,.8);">
-                    <h5 style="color: white; text-shadow: rgb(0, 40, 255) 0px 0px 15px;padding-top: .75rem;display: flex;{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-4 is-family-monospace justify-content-center align-items-center has-text-centered">{{ diapo.titre|raw }}</h5>
-                    <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.text|raw }}</div>
+                    {% if app.request.locale == 'fr' %}
+                        <h5 style="color: white; text-shadow: rgb(0, 40, 255) 0 0 15px;padding-top: .75rem;display: flex;{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-4 is-family-monospace justify-content-center align-items-center has-text-centered">{{ diapo.titre|raw }}</h5>
+                        <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.text|raw }}</div>
+                    {% elseif app.request.locale == 'en' %}
+                        <h5 style="color: white; text-shadow: rgb(0, 40, 255) 0 0 15px;padding-top: .75rem;display: flex;{% if diapo.text is null %}height: 100%;{% else %}height: 30%;{% endif %}" class="columns is-size-4 is-family-monospace justify-content-center align-items-center has-text-centered">{{ diapo.titrefr|raw }}</h5>
+                        <div style="height: 70%;padding: 30px;" class="columns has-text-centered has-text-white-bis has-text-centered justify-content-center align-items-center is-size-5 is-size-4-widescreen text-diapo">{{ diapo.textfr|raw }}</div>
+                    {% endif %}
                 </div>
 
             </div>

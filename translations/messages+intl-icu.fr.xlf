@@ -119,7 +119,7 @@
       </trans-unit>
       <trans-unit id="iCgGqOG" resname="Filter with bpm">
         <source>Filter with bpm</source>
-        <target>__Filtrer par bpm</target>
+        <target>Filtrer par bpm</target>
       </trans-unit>
       <trans-unit id="ScJmuqq" resname="Search">
         <source>Search</source>
@@ -135,11 +135,11 @@
       </trans-unit>
       <trans-unit id="NOb68Vq" resname="Terms and Conditions">
         <source>Terms and Conditions</source>
-        <target>__Terms and Conditions</target>
+        <target>Conditions générales</target>
       </trans-unit>
       <trans-unit id="D70sjWv" resname="Feel free to chat with me by  filling the form down below">
         <source>Feel free to chat with me by  filling the form down below</source>
-        <target>__Feel free to chat with me by  filling the form down below</target>
+        <target>N'hésitez pas à me contacter en remplissant le formulaire ci-dessous</target>
       </trans-unit>
       <trans-unit id="e0iIBJR" resname="Last name">
         <source>Last name</source>
@@ -167,55 +167,87 @@
       </trans-unit>
       <trans-unit id="lxffs3Z" resname="Support my works">
         <source>Support my works</source>
-        <target>__Support my works</target>
+        <target>Soutenez mes prods</target>
       </trans-unit>
       <trans-unit id="iCahT1c" resname="Donation">
         <source>Donation</source>
-        <target>__Donation</target>
+        <target>Faire un don</target>
       </trans-unit>
       <trans-unit id="Fz9fnya" resname="Terms &amp; Conditions">
         <source>Terms &amp; Conditions</source>
-        <target><![CDATA[__Terms & Conditions]]></target>
+        <target>Conditions générales</target>
       </trans-unit>
       <trans-unit id="UG.zlGI" resname="Privacy Policy">
         <source>Privacy Policy</source>
-        <target>__Privacy Policy</target>
+        <target>Politique de confidentialité</target>
       </trans-unit>
       <trans-unit id="Epxnj85" resname="Disclaimer">
         <source>Disclaimer</source>
-        <target>__Disclaimer</target>
+        <target>Mentions légales</target>
       </trans-unit>
       <trans-unit id="WqYWIZW" resname="Property of the producer Vinivixy, All rights reserved">
         <source>Property of the producer Vinivixy, All rights reserved</source>
-        <target>__Property of the producer Vinivixy, All rights reserved</target>
+        <target>Propriété du producteur Vinnyvixi, Tous droits réservés</target>
       </trans-unit>
       <trans-unit id="BR8B8JW" resname="Track">
         <source>Track</source>
-        <target>__Track</target>
+        <target>Musique</target>
       </trans-unit>
       <trans-unit id="Mh7Xyxx" resname="Want to get a beat? here are my offers">
         <source>Want to get a beat? here are my offers</source>
-        <target>__Want to get a beat? here are my offers</target>
+        <target>Envie de réserver une instrus? voici mes offres</target>
       </trans-unit>
       <trans-unit id="GZRKGJy" resname="Click for next step">
         <source>Click for next step</source>
-        <target>__Click for next step</target>
+        <target>Poursuivre</target>
       </trans-unit>
       <trans-unit id="jFz_3tY" resname="click for next step">
         <source>click for next step</source>
-        <target>__click for next step</target>
+        <target>Poursuivre</target>
       </trans-unit>
       <trans-unit id="noLSsUY" resname="Disclamer">
         <source>Disclamer</source>
-        <target>__Disclamer</target>
+        <target>CGU</target>
       </trans-unit>
       <trans-unit id="m1.afOL" resname="Watch, Like and share my multiple Beats also available on my">
         <source>Watch, Like and share my multiple Beats also available on my</source>
-        <target>__Watch, Like and share my multiple Beats also available on my</target>
+        <target>Regardez, Likez et Partagez mes productions également disponibles sur ma chaîne</target>
       </trans-unit>
       <trans-unit id="aeNlaM2" resname="channel">
         <source>channel</source>
-        <target>__channel</target>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="n7e7zc8" resname="Beats per minute">
+        <source>Beats per minute</source>
+        <target>Battement par minutes</target>
+      </trans-unit>
+      <trans-unit id="nv5zPls" resname="Prod. by">
+        <source>Prod. by</source>
+        <target>Prod. par</target>
+      </trans-unit>
+      <trans-unit id="lMD7qtI" resname="Property of the producer Vinnyvixi, All rights reserved">
+        <source>Property of the producer Vinnyvixi, All rights reserved</source>
+        <target>Propriété du producteur Vinnyvixi, Tous droits réservés</target>
+      </trans-unit>
+      <trans-unit id="9L8y_qo" resname="My name">
+        <source>My name</source>
+        <target>Mon nom</target>
+      </trans-unit>
+      <trans-unit id="WtyWT0c" resname="My first name">
+        <source>My first name</source>
+        <target>Mon prénom</target>
+      </trans-unit>
+      <trans-unit id="ScXVeiJ" resname="ex : mymail@gmail.com">
+        <source>ex : mymail@gmail.com</source>
+        <target>ex : monEmail@gmail.com</target>
+      </trans-unit>
+      <trans-unit id="V9rPE36" resname="Enter the subject">
+        <source>Enter the subject</source>
+        <target>Entrez l'objet</target>
+      </trans-unit>
+      <trans-unit id="rMFHyIf" resname="My message">
+        <source>My message</source>
+        <target>Mon message</target>
       </trans-unit>
     </body>
   </file>

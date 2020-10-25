@@ -98,8 +98,8 @@ easy_admin:
                     - {property: 'color' , type: 'text'}
             form:
                 fields:
+                    - { type: 'group',columns: 4, label: 'En Anglais' }
                     - {property: 'titre' , type: 'text'}
-                    - {property: 'euro', type: 'text'}
                     - {property: 'dollar', type: 'text'}
                     - {property: 'info_1' , type: 'text'}
                     - {property: 'info_2' , type: 'text'}
@@ -107,22 +107,20 @@ easy_admin:
                     - {property: 'info_4' , type: 'text'}
                     - {property: 'info_5' , type: 'text'}
                     - {property: 'info_6' , type: 'text'}
-                    - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
-
-            edit:
-                fields:
-                    - {property: 'titre' , type: 'text'}
+                    - { type: 'group',columns: 4, label: 'En Français' }
+                    - {property: 'titre_fr' , type: 'text'}
                     - {property: 'euro', type: 'text'}
-                    - {property: 'dollar', type: 'text'}
-                    - {property: 'info_1' , type: 'text'}
-                    - {property: 'info_2' , type: 'text'}
-                    - {property: 'info_3' , type: 'text'}
-                    - {property: 'info_4' , type: 'text'}
-                    - {property: 'info_5' , type: 'text'}
-                    - {property: 'info_6' , type: 'text'}
+                    - {property: 'info_1_fr' , type: 'text'}
+                    - {property: 'info_2_fr' , type: 'text'}
+                    - {property: 'info_3_fr' , type: 'text'}
+                    - {property: 'info_4_fr' , type: 'text'}
+                    - {property: 'info_5_fr' , type: 'text'}
+                    - {property: 'info_6_fr' , type: 'text'}
+                    - { type: 'group',columns: 4, label: 'Couleur' }
                     - {property: 'color' , type: 'choice',type_options: {choices: {'Bleu':'info','Vert':'success','Rouge':'danger', 'Jaune' : 'warning'}}}
             show:
                 title: "Informations de la %%entity_name%%"
+
 
 
         SectionVideo:
@@ -199,14 +197,21 @@ easy_admin:
             class: App\Entity\Diapo
             form:
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
-                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo"}
+                    - { type: 'group',columns: 4, label: 'En Anglais' }
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo en Anglais"}
+                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo en Anglais"}
+                    - { type: 'group',columns: 4, label: 'En Français' }
+                    - {property: 'titre_fr' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo en Français"}
+                    - {property: 'text_fr' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo en Français"}
+                    - { type: 'group',columns: 4, label: 'Upload du fichier image' }
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Format optimisé : 800 x 480 pixels .jpeg/jpg/png/svg" }
 
             edit:
                 fields:
-                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo"}
-                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo" }
+                    - {property: 'titre' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo en Anglais"}
+                    - {property: 'text' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo en Anglais"}
+                    - {property: 'titre_fr' , type: 'text', label: "Titre", help: "Entrez ici le titre de la diapo en Français"}
+                    - {property: 'text_fr' , type: 'text_editor', label: "Text", help: "Entrez ici le texte de la diapo en Français"}
                     - {property: 'diapoImage' , type: 'vich_image', label: "Image de fond",type_options: { required: false }, help: "Format optimisé : 800 x 480 pixels .jpeg/jpg/png/svg" }
 
             list:
@@ -218,6 +223,8 @@ easy_admin:
                 fields:
                     - {property: 'titre' , type: 'text', label: "Titre"}
                     - {property: 'text' , type: 'text', label: "Text"}
+                    - {property: 'titre_fr' , type: 'text', label: "Titre"}
+                    - {property: 'text_fr' , type: 'text', label: "Text"}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_diapo_image.html.twig', label : "Illustration"}
 
         Admin:

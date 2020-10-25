@@ -18,6 +18,10 @@
 
 {% block content %}
     <div class="box" style="padding: 50px;background: rgba(255,255,255,.8)">
-    {{ include('conditions_generales/conditions_generales_eng.html.twig') }}
+        {% if app.request.locale == 'fr' %}
+            {{ include('conditions_generales/conditions_generales_eng.html.twig') }}
+        {% elseif app.request.locale == 'en' %}
+            {{ include('conditions_generales/conditions_generales_eng.html.twig') }}
+        {% endif %}
     </div>
 {% endblock %}

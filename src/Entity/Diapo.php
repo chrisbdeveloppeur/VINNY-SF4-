@@ -62,6 +62,24 @@ class Diapo
      */
     private $text;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="50",
+     *     maxMessage="Le titre est trop long"
+     * )
+     */
+    private $titre_fr;
+
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     * @Assert\Length(
+     *     max="250",
+     *     maxMessage="Le text est trop long"
+     * )
+     */
+    private $text_fr;
+
 
     public function getId(): ?int
     {
@@ -142,6 +160,39 @@ class Diapo
 
         return $this;
     }
+
+    public function getTitreFr(): ?string
+    {
+        return $this->titre_fr;
+    }
+
+    public function setTitreFr(?string $titre_fr): self
+    {
+        $this->titre_fr = $titre_fr;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTextFr()
+    {
+        return $this->text_fr;
+    }
+
+    /**
+     * @param mixed $text_fr
+     */
+    public function setTextFr($text_fr)
+    {
+        $this->text_fr = $text_fr;
+        return $this;
+    }
+
+
+
+
 
 
 

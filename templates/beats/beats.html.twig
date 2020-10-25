@@ -87,7 +87,7 @@
 
             {{ form_start(form) }}
             <div class="field has-addons bpmSearch" style="justify-content: center">
-                <p class="control" title="Beats per minute">
+                <p class="control" title="{% trans %}Beats per minute{% endtrans %}">
                     <a class="button is-static pagination-control-touch" style="border-radius: 0;">
                         BPM
                     </a>
@@ -124,7 +124,11 @@
 
     </div>
 
-    {% include 'lightbox/license_lightbox.html.twig' %}
+    {% if app.request.locale == 'en' %}
+        {% include 'lightbox/license_lightbox.html.twig' %}
+    {% elseif app.request.locale == 'fr' %}
+        {% include 'lightbox/license_lightbox_fr.html.twig' %}
+    {% endif %}
 
 
 

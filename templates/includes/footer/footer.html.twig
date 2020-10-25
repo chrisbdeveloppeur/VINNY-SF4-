@@ -89,23 +89,22 @@
 
         <div class="column footer-grid">
 
-            <span class="footer-clumn-right">
-                <a href="{{ path('conditions-generales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
-{#                    Politique de confidentialité#}
-                    {% trans %}Terms & Conditions{% endtrans %}
-                </a>
-            </span>
+            {% if app.request.locale == 'en' %}
+                <span class="footer-clumn-right">
+                    <a href="{{ path('conditions-generales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
+                        {% trans %}Terms & Conditions{% endtrans %}
+                    </a>
+                </span>
+            {% endif %}
 
             <span class="footer-clumn-right">
                 <a href="{{ path('politique-confidentialite') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
-{#                    Politique de confidentialité#}
                     {% trans %}Privacy Policy{% endtrans %}
                 </a>
             </span>
 
             <span class="footer-column-right">
                 <a href="{{ path('mentions-legales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
-{#                    Mentions légales#}
                     {% trans %}Disclaimer{% endtrans %}
                 </a>
             </span>
@@ -120,8 +119,7 @@
 
     <div class="column has-text-centered ">
         <span class="has-text-dark">
-{#            © 2020 | www.vinnyvixi.com [ALPHA] | Propriété du producteur Vinivixy, Tout droits réservés.#}
-            © 2020 | www.vinnyvixi.com | {% trans %}Property of the producer Vinivixy, All rights reserved{% endtrans %}.
+            © 2020 | www.vinnyvixi.com | {% trans %}Property of the producer Vinnyvixi, All rights reserved{% endtrans %}.
         </span>
     </div>
 

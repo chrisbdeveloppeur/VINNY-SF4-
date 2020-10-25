@@ -7,7 +7,7 @@
 {% block title %}{% trans %}Disclamer{% endtrans %}{% endblock %}
 
 {% block titre_landscape %}
-    <div class="has-text-weight-bold is-uppercase is-family-monospace">
+    <div class="has-text-weight-bold is-uppercase is-family-monospace is-size-7-touch" style="height: 100%;display: flex;justify-content: center;align-items: center;text-align: center;line-height: normal;">
         {% trans %}Disclaimer{% endtrans %}
     </div>
 {% endblock %}
@@ -19,7 +19,11 @@
 {% block content %}
 
     <div class="box" style="padding: 50px;background: rgba(255,255,255,.8)">
-    {{ include('mentions_legales/mentions_legales_eng.html.twig') }}
+        {% if app.request.locale == 'fr' %}
+            {{ include('mentions_legales/mentions_legales_fr.html.twig') }}
+        {% elseif app.request.locale == 'en' %}
+            {{ include('mentions_legales/mentions_legales_eng.html.twig') }}
+        {% endif %}
     </div>
 
 {% endblock %}
