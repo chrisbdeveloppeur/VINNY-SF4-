@@ -130,6 +130,9 @@ body.show .form-horizontal {
     background: rgba(10, 10, 10, 0.9);
 }
 
+.form-tabs .nav-tabs{
+    background: rgba(0,0,0,0);
+}
 
 
 
