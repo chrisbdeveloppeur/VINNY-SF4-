@@ -176,6 +176,24 @@
 
                                     {% endblock %}
 
+                                    <div class="column is-flex justify-content-end is-hidden-desktop">
+                                        {% for locale in locales %}
+                                            {% if locale != app.request.locale %}
+                                                <a href="{{ path('change_locale', {'locale': locale} ) }}">
+                                                    <div class="tags has-addons">
+                                                        <div class="tag">
+                                                            {% trans %}Switch to{% endtrans %}
+                                                        </div>
+                                                        <div class="tag is-small is-info is-uppercase">
+                                                            {{ locale }}
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+
                                 </ul>
 
                             </div>
