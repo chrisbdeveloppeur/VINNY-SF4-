@@ -5,9 +5,12 @@ vich_uploader:
         beat_image:
             uri_prefix: /beats/images
             upload_destination: '%kernel.project_dir%/public/beats/images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
         beat_file:
             uri_prefix: /beats/file
             upload_destination: '%kernel.project_dir%/public/beats/file'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
         diapo:
             uri_prefix: /caroussel/images
             upload_destination: '%kernel.project_dir%/public/caroussel/images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

@@ -21,6 +21,7 @@
 {#{{ include('beats/original_beats_filter_barre.html.twig') }}#}
 
 {% for beat in beat %}
+
     {% set i = ( i | default(0) ) + 1 %}
 
 {% if beat.iframe is null %}
@@ -31,8 +32,7 @@
                 {% if beat.beatimagename %}url({{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }})
                 {% else %}url({{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }})
                 {% endif %};">
-{#            <div style="background: rgba(0,0,0,0.4);height: 100%;width: 100%">#}
-{#            </div>#}
+
         </div>
 
         <div class="column" style="position: relative">
@@ -104,7 +104,7 @@
 
                         </div>
 
-                            <audio controls controlsList="nodownload" preload="metadata" id="audio-{{ i }}" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered"
+                            <audio controls preload="metadata" id="audio-{{ i }}" class="js-plyr beatFormBeatList columns is-centered align-items-end has-text-centered"
                                    style="width: 100%;
                                    height: 50%;
                                    --plyr-color-main:rgba(0,0,0,0);

@@ -65,7 +65,7 @@ easy_admin:
                 fields:
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration", css_class: 'is-hidden-touch'}
                     - {property: 'titre' , type: 'text'}
-                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig', css_class: 'is-hidden-touch'}
+                    - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
                     - {property: 'bpm' , type: 'text', css_class: 'is-hidden-mobile'}
                     - {property: 'genre' , type: 'text', css_class: 'is-hidden-mobile'}
                     - {property: 'iframe', label: 'Lien Beatstar', type: 'boolean'}
