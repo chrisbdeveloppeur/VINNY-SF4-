@@ -4,26 +4,20 @@
     <meta name="description" content="Terms and Conditions (EN). Termes et conditions (FR)">
 {% endblock %}
 
-{#{% block title %}{% include('includes/nav_title.html.twig') %} Mentions légales{% endblock %}#}
-{% block title %}{% include('includes/nav_title.html.twig') %} Terms and Conditions{% endblock %}
+{% block title %}Terms and Conditions{% endblock %}
 
 {% block titre_landscape %}
     <div class="has-text-weight-bold is-uppercase is-family-monospace">
-{#        Mentions légales#}
         Terms and Conditions
     </div>
 {% endblock %}
 
 {% block titre %}
-{#    Mentions légales#}
     Terms and Conditions
 {% endblock %}
 
 {% block content %}
-
     <div class="box" style="padding: 50px;background: rgba(255,255,255,.8)">
     {{ include('conditions_generales/conditions_generales_eng.html.twig') }}
-
-{#    {{ include('mentions_legales/mentions_legales_fr.html.twig') }}#}
     </div>
 {% endblock %}

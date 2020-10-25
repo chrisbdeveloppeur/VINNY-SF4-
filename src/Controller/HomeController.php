@@ -20,7 +20,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 
 class HomeController extends AbstractController
@@ -29,14 +29,13 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      */
 
-    public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, PaginatorInterface $paginator, Request $request)
+    public function home(BeatRepository $beatRepository, LicenceRepository $licenceRepository, FiltreRepository $filtreRepository, TranslatorInterface $translator, Request $request)
     {
         $search = new BeatSearch();
         $form = $this->createForm(BeatSearchType::class, $search);
         $form->handleRequest($request);
         $beatBpMax = $form->get('beatBpmMax')->getData();
         $beatBpMin = $form->get('beatBpmMin')->getData();
-
 
         if ($form->isSubmitted() and  ($beatBpMin != null and $beatBpMax != null) and ($beatBpMin <= $beatBpMax))
         {
@@ -56,7 +55,8 @@ class HomeController extends AbstractController
         }
         elseif ($form->isSubmitted() and  ($beatBpMin > $beatBpMax))
         {
-            $this->addFlash('danger','Interval error !');
+            $message = $translator->trans('Interval error !');
+            $this->addFlash('danger',$message);
             $originalBeat = $beatRepository->sortByDate();
             $beatstars = $beatRepository->findByIframe(false);
 
@@ -187,6 +187,18 @@ class HomeController extends AbstractController
     }
 
 
+    /**
+     * @Route("/change-locale/{locale}", name="change_locale")
+     */
+    public function changeLocale($locale, Request $request)
+    {
+        // On stock la lanque demandée dans la session
+        $request->getSession()->set('_locale', $locale);
+        $request->setLocale($locale);
+
+        // On reviens sur la page précédente
+        return $this->redirect($request->headers->get('referer'));
+    }
 
 
 }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% include('includes/nav_title.html.twig') %} About{% endblock %}
+{% block title %}{% trans %} About{% endtrans %}{% endblock %}
 
 {% block description %}
     <meta name="description" content="What you should know about the Beat Maker Vinny Vixi. Ce que vous devez savoir du Beat Maker Vinny Vixi">
@@ -8,11 +8,11 @@
 
 
 {% block titre_landscape %}
-    About
+    {% trans %}About{% endtrans %}
 {% endblock %}
 
 {% block titre %}
-    About
+    {% trans %}About{% endtrans %}
 {% endblock %}
 
 {% block section_bg %}background: center / cover no-repeat url('{{ asset('build/images/ghetto.7f343eea.svg')}}'){% endblock %}
@@ -36,9 +36,8 @@
 
         {% include('about/caroussel.html.twig') %}
 
-    {{ include('includes/donation.html.twig') }}
-
     <div class="block-twitter" style="box-shadow: rgb(0, 0, 0) 0px 0px 15px;background: rgba(0,0,0,.8);margin-bottom: .75rem">
+
         <div class="column social-share is-half is-full-touch" style="align-items: center;justify-content: space-evenly">
 
             <div class="API-twitter" style="display: flex;align-items: center;justify-content: center;">
@@ -46,12 +45,22 @@
             </div>
 
         </div>
+
         <div class="column is-half is-full-touch">
-            <figure style="height: 100%;width: 100%;display: flex;align-items: center;justify-content: center">
-                <img width="70%" src="{{ asset('build/images/vinny_logo_reducidisimo.e28edbc4.png') }}" alt="logo vinnyvixi">
+
+            <label class="label is-size-4 is-family-monospace has-text-centered" style="color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">Check out all my channels !</label>
+
+            {% include 'includes/socials_networks.html.twig' %}
+
+            <figure style="width: 100%;display: flex;align-items: center;justify-content: center">
+                <img width="50%" src="{{ asset('build/images/vinny_logo_reducidisimo.13fc4ae4.svg') }}" alt="logo vinnyvixi">
             </figure>
+
         </div>
     </div>
+
+    {{ include('includes/donation.html.twig') }}
+
 
     <script>
         let navLinkAbout = document.getElementById('navLinkAbout');

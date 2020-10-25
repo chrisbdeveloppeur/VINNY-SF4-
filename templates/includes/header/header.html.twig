@@ -65,27 +65,27 @@
 
             <li class="nav-item">
                 <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny" id="navLinkHome">
-                    Beats
+                    {% trans %}Beats{% endtrans %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ path('videos') }}" class="nav-link" title="Videos" id="navLinkVideos">
-                    Videos
+                    {% trans %}Videos{% endtrans %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ path('licenses') }}" class="nav-link" title="Licenses" id="navLinkLicenses">
-                    Licenses
+                    {% trans %}Licenses{% endtrans %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ path('about') }}" class="nav-link" title="About Vinny" id="navLinkAbout">
-                    About
+                    {% trans %}About{% endtrans %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ path('contact') }}" class="nav-link" title="Contact Vinny" id="navLinkContact">
-                    Contact
+                    {% trans %}Contact{% endtrans %}
                 </a>
             </li>
 
@@ -95,26 +95,16 @@
 
                     <li class="nav-item">
                         <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
-                            Dashboard
+                            {% trans %}Dashboard{% endtrans %}
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">
-                            Log out
+                            {% trans %}Log out{% endtrans %}
                         </a>
                     </li>
 
-    {#                <div class="navbar-nav is-size-5" style="white-space: nowrap;">#}
-
-    {#                    <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">#}
-    {#                        Dashboard#}
-    {#                    </a>#}
-
-    {#                    <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">#}
-    {#                        Log out#}
-    {#                    </a>#}
-    {#                </div>#}
                 {% endif %}
             {% endblock %}
         </ul>

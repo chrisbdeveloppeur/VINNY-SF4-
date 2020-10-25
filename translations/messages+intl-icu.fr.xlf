@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="uIbuNRu" resname="Beats">
+        <source>Beats</source>
+        <target>Instrus</target>
+      </trans-unit>
+      <trans-unit id="T.t_ojh" resname="Beats by Vinny">
+        <source>Beats by Vinny</source>
+        <target>Productions de Vinnyvixi</target>
+      </trans-unit>
+      <trans-unit id="Mgc5rIn" resname="Interval error !">
+        <source>Interval error !</source>
+        <target>Erreur d'intervalle !</target>
+      </trans-unit>
+      <trans-unit id="yaljlGP" resname="Videos">
+        <source>Videos</source>
+        <target>Vidéos</target>
+      </trans-unit>
+      <trans-unit id="bV2QBHl" resname="Licenses">
+        <source>Licenses</source>
+        <target>Licences</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="SWFhRVF" resname="Log out">
+        <source>Log out</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="cbcbzyg" resname="Switch to">
+        <source>Switch to</source>
+        <target>Mettre en</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

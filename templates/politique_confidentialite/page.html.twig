@@ -1,19 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{#{% block title %}{% include('includes/nav_title.html.twig') %} Politique de confidentialité{% endblock %}#}
-{% block title %}{% include('includes/nav_title.html.twig') %} Privacy Policy{% endblock %}
+{% block title %}Privacy Policy{% endblock %}
 
 {% block description %}
     <meta name="description" content="Confidentiality (EN). Confidantialité (FR)">
 {% endblock %}
 
 {% block titre_landscape %}
-{#    Confidentialité#}
     Privacy Policy
 {% endblock %}
 
 {% block titre %}
-{#    Confidentialité#}
     Privacy Policy
 {% endblock %}
 
@@ -21,8 +18,6 @@
 
     <div class="box" style="padding: 50px;background: rgba(255,255,255,.8)">
     {{ include('politique_confidentialite/politique_confidantialite_eng.html.twig') }}
-
-{#    {{ include('politique_confidentialite/politique_confidentialite_fr.html.twig') }}#}
     </div>
 
 {% endblock %}

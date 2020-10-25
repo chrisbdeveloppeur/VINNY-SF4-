@@ -5,7 +5,7 @@
 
         {% endblock %}
 
-        <title>{% block title %}Vinny Vixi Prod.{% endblock %}</title>
+        <title>{% include('includes/nav_title.html.twig') %} {% block title %}Accueil{% endblock %}</title>
 
         <link rel="stylesheet" href="https://cdn.plyr.io/3.6.1/plyr.css" />
         <link rel="shortcut icon" type="image/png" href="{{ asset('build/images/vinny_logo_circulo_favicon.ec1beae4.png') }}"/>
@@ -61,37 +61,58 @@
 
 
                             {% block social_network %}
-                                <div class="is-hidden-touch" style="display:flex;position: absolute;right:0;top: 0;height: 100%;width: 20%;justify-content: space-evenly;align-items: center">
+                                <div class="is-hidden-touch column is-flex flex-column" style="display:flex;position: absolute;right:0;top: 0;height: 100%;width: 20%">
 
-                                    <a  target="_blank"href="https://www.twitter.com/VinnyVixi" class="has-text-link">
+                                    <div class="column is-flex justify-content-end">
+                                        {% for locale in locales %}
+                                            {% if locale != app.request.locale %}
+                                                <a href="{{ path('change_locale', {'locale': locale} ) }}">
+                                                    <div class="tags has-addons">
+                                                        <div class="tag">
+                                                            {% trans %}Switch to{% endtrans %}
+                                                        </div>
+                                                        <div class="tag is-small is-info is-uppercase">
+                                                            {{ locale }}
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="column is-flex justify-content-end">
+                                        <a  target="_blank"href="https://www.twitter.com/VinnyVixi" class="has-text-link">
                                         <span class="icon is-medium">
                                             <i  class="fab fa-twitter fa-lg"></i>
                                         </span>
-                                    </a>
+                                        </a>
 
-                                    <a  target="_blank"href="https://www.instagram.com/vinnyvixi" class="has-text-link">
+                                        <a  target="_blank"href="https://www.instagram.com/vinnyvixi" class="has-text-link">
                                         <span class="icon is-medium">
                                             <i  class="fab fa-instagram fa-lg"></i>
                                         </span>
-                                    </a>
+                                        </a>
 
-                                    <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link">
+                                        <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link">
                                         <span class="icon is-medium">
                                             <i  class="fab fa-youtube fa-lg"></i>
                                         </span>
-                                    </a>
+                                        </a>
 
-                                    <a  target="_blank"href="https://www.soundcloud.com/vinnyvixi" class="has-text-link">
+                                        <a  target="_blank"href="https://www.soundcloud.com/vinnyvixi" class="has-text-link">
                                         <span class="icon is-medium">
                                             <i  class="fab fa-soundcloud fa-lg"></i>
                                         </span>
-                                    </a>
+                                        </a>
 
-                                    <a  target="_blank"href="https://www.beatstars.com/vinnyvixi/feed" class="has-text-link">
+                                        <a  target="_blank"href="https://www.beatstars.com/vinnyvixi/feed" class="has-text-link">
                                         <span class="">
                                             <img width="23" src="{{ asset('build/images/beatstars-logo-b.5cbb6d76.png') }}" alt="beatstars">
                                         </span>
-                                    </a>
+                                        </a>
+                                    </div>
+
                                 </div>
                             {% endblock %}
 
@@ -110,28 +131,28 @@
                                 <ul class="navbar-nav is-size-4-touch mr-auto">
 
                                     <li class="nav-item">
-                                        <a href="{{ path('home') }}" class="nav-link" title="Beats by Vinny" id="navLinkHome">
-                                            Beats
+                                        <a href="{{ path('home') }}" class="nav-link" title="{% trans %}Beats by Vinny{% endtrans %}" id="navLinkHome">
+                                            {% trans %}Beats{% endtrans %}
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ path('videos') }}" class="nav-link" title="Videos" id="navLinkVideos">
-                                            Videos
+                                            {% trans %}Videos{% endtrans %}
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ path('licenses') }}" class="nav-link" title="Licenses" id="navLinkLicenses">
-                                            Licenses
+                                            {% trans %}Licenses{% endtrans %}
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ path('about') }}" class="nav-link" title="About Vinny" id="navLinkAbout">
-                                            About
+                                            {% trans %}About{% endtrans %}
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ path('contact') }}" class="nav-link" title="Contact Vinny" id="navLinkContact">
-                                            Contact
+                                            {% trans %}Contact{% endtrans %}
                                         </a>
                                     </li>
 
@@ -141,34 +162,26 @@
 
                                             <li class="nav-item">
                                                 <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">
-                                                    Dashboard
+                                                    {% trans %}Dashboard{% endtrans %}
                                                 </a>
                                             </li>
 
                                             <li class="nav-item">
                                                 <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">
-                                                    Log out
+                                                    {% trans %}Log out{% endtrans %}
                                                 </a>
                                             </li>
 
-                                            {#                <div class="navbar-nav is-size-5" style="white-space: nowrap;">#}
-
-                                            {#                    <a href="{{ path('easyadmin') }}" class="nav-link" id="dashboard" style="text-shadow: none">#}
-                                            {#                        Dashboard#}
-                                            {#                    </a>#}
-
-                                            {#                    <a href="{{ path('admin_app_logout') }}" class="nav-link" id="deco" style="text-shadow: none">#}
-                                            {#                        Log out#}
-                                            {#                    </a>#}
-                                            {#                </div>#}
                                         {% endif %}
+
                                     {% endblock %}
 
                                 </ul>
 
-
-
                             </div>
+
+
+
 
                         </nav>
                     {% endblock %}

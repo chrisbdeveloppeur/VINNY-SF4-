@@ -10,6 +10,7 @@ import '../css/app.scss';
 
 const logo = require('../images/logo/vinny_logo_circulo.png');
 const logo2 = require('../images/logo/vinny_logo_reducidisimo.png');
+const logo2_2 = require('../images/logo/vinny_logo_reducidisimo.svg');
 const logo3 = require('../images/logo/logo_vinny_letra_2.png');
 const BMSTARS = require('../images/BMSTARS.jpg');
 const BM = require('../images/BM.jpg');
