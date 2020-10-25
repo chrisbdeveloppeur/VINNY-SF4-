@@ -54,7 +54,7 @@
                         <div class="columns is-centered is-vcentered has-text-centered has-text-light" style=" color: white;margin: 0;padding:0;height:50%">
 
                             <div class="column" id="track-title{{ i }}">
-                                <label style="margin: auto"><strong class="has-text-info">Title : </strong></label>
+                                <label style="margin: auto"><strong class="has-text-info">{% trans %}Title{% endtrans %} : </strong></label>
                                 {% if beat.titre %}
                                     {{ beat.titre }}
                                 {% else %}
@@ -90,8 +90,8 @@
                             </div>
 
                             {% if date(beat.updatedat) > date('-15days') %}
-                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-touch newAnimation">New!</span>
-                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop newAnimationTouch">New!</span>
+                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-touch newAnimation">{% trans %}New{% endtrans %}!</span>
+                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop newAnimationTouch">{% trans %}New{% endtrans %}!</span>
                             {% endif %}
 
                             <div class="is-flex is-centered is-vcentered justify-content-center">

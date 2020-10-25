@@ -8,16 +8,16 @@
 
 
 {% block titre_landscape %}
-    Log in
+    {% trans %}Log in{% endtrans %}
 {% endblock %}
 
 {% block titre %}
-    Log in
+    {% trans %}Log in{% endtrans %}
 {% endblock %}
 
 {% block entete %}
     <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
-        Accéder au back office du site
+        {% trans %}Connect to Back-Office{% endtrans %}
     </h2>
 {% endblock %}
 
@@ -59,7 +59,7 @@
 
                     <a href="{{ path('lost_password') }}" class="button is-info is-small">
                         <i class="fas fa-key"></i>&nbsp;
-                        Changer mon mot de passe
+                        {% trans %}Change my password{% endtrans %}
                     </a>
 
                     <p class="control">
@@ -67,7 +67,7 @@
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
                         <button class="button is-small is-info">
-                            Log in
+                            {% trans %}Log in{% endtrans %}
                         </button>
                     </p>
                 </div>

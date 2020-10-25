@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Videos{% endblock %}
+{% block title %}{% trans %}Videos{% endtrans %}{% endblock %}
 
 {% block description %}
     <meta name="description" content="Browse the list of clips and other YouTube videos. Parcourrez la liste des clips et autre vidéos Youtube.">
 {% endblock %}
 
 {% block titre_landscape %}
-    Videos
+    {% trans %}Videos{% endtrans %}
 {% endblock %}
 
 {% block titre %}
-    Videos
+    {% trans %}Videos{% endtrans %}
 {% endblock %}
 
 {% block video_lightbox %}
@@ -24,13 +24,13 @@
 
 {% block entete %}
     <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
-        Watch, Like and share my multiple Beats also available on my
+        {% trans %}Watch, Like and share my multiple Beats also available on my{% endtrans %}
         <a  target="_blank"href="https://www.youtube.com/channel/UC2aIv87FmBdtEJcj3DVYryQ" class="has-text-link has-text-weight-bold" title="vinnyvixi's youtube channel">
         <span class="icon">
             <i  class="fab fa-youtube"></i>
         </span>Youtube
         </a>
-        channel
+        {% trans %}channel{% endtrans %}
     </h2>
 {% endblock %}
 

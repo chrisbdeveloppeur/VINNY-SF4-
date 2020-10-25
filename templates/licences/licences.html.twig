@@ -1,29 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Licenses{% endblock %}
+{% block title %}{% trans %}Licenses{% endtrans %}{% endblock %}
 
 {% block description %}
     <meta name="description" content="Here you will find each license terms to use Beat Maker productions. Vous trouverez ici chaque modalités des licences pour exploiter les productions du Beat Maker.">
 {% endblock %}
 
 {% block titre_landscape %}
-    Licenses
+    {% trans %}Licenses{% endtrans %}
 {% endblock %}
 
 {% block titre %}
-    Licenses
+    {% trans %}Licenses{% endtrans %}
 {% endblock %}
 
 {% block section_bg %}background:top / cover no-repeat url('{{ asset('build/images/matos_vinny_edited_resized.1e9057d6.jpg')}}'){% endblock %}
 
 {% block entete %}
     <h2 class="subtitle has-text-centered is-4 is-family-primary  has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
-        Want to get a beat? here are my offers
+        {% trans %}Want to get a beat? here are my offers{% endtrans %}
     </h2>
 {% endblock %}
 
 {% block img_header %}
-    <div class="header-background-image" style="background: center / auto 100% no-repeat url({{ asset('build/images/contact_hands_2_resized.486d3640.jpg') }});box-shadow: 0px 0px 30px 10px black;">
+    <div class="header-background-image" style="background: center / auto 100% no-repeat url({{ asset('build/images/contact_hands_2_resized.486d3640.jpg') }});box-shadow: 0 0 30px 10px black;">
         <div class="header-background-layer">
         </div>
     </div>
@@ -34,8 +34,8 @@
             <a class="pricing-table " href="{{ path('contact') }}" >
 
                 {% for licence in licence %}
-                    <div class="pricing-plan is-{{ licence.color }} is-full-touch is-1 column" style="padding: 0;border:none;border-radius: 0px;background: none" title="{{ licence.titre }}">
-                        <div class="plan-header has-background-{{ licence.color }} has-text-black text-uppercase" style="border-radius: 0px;position: relative">
+                    <div class="pricing-plan is-{{ licence.color }} is-full-touch is-1 column" style="padding: 0;border:none;border-radius: 0;background: none" title="{{ licence.titre }}">
+                        <div class="plan-header has-background-{{ licence.color }} has-text-black text-uppercase" style="border-radius: 0;position: relative">
                                 <div style="opacity:.2;height: 100%;width: 100%;z-index:0;position:absolute;left:0;top:0;background: center / cover no-repeat url({{ asset('build/images/skyline_w.acbadcba.svg') }})"></div>
                                 <div class="has-text-weight-bold " style="z-index: 0;position: relative">
                                     {{ licence.titre }}
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="plan-footer">
-                            <div class="button is-fullwidth has-text-weight-bold has-text-black " style="border-radius: 0px;">Click for next step</div>
+                            <div class="button is-fullwidth has-text-weight-bold has-text-black " style="border-radius: 0px;">{% trans %}Click for next step{% endtrans %}</div>
                         </div>
                     </div>
                 {% endfor %}

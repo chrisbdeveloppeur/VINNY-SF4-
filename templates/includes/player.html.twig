@@ -5,17 +5,17 @@
         {% if is_granted('ROLE_USER') %}
         <div class="" style="white-space: nowrap">
             <button type="button" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                <i class="fas fa-stop" title="Stop" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+                <i class="fas fa-stop" title="Stop" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
 
             <button type="button" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                <i class="fas fa-play" title="Play" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+                <i class="fas fa-play" title="Play" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
         </div>
 
         <div class="">
             <button type="button" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                <i class="fas fa-step-backward" title="Previous beat" style="color: black;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+                <i class="fas fa-step-backward" title="Previous beat" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
         </div>
         {% endif %}
@@ -26,7 +26,7 @@
 
         <div id="trackMin">
 
-            <p class="is-size-4-touch" id="track-title">Track</p>
+            <p class="is-size-4-touch" id="track-title">{% trans %}Track{% endtrans %}</p>
 
             <div id="timeLine" style="position: relative;">
                 <div id="cursor"></div>

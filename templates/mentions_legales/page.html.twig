@@ -4,16 +4,16 @@
     <meta name="description" content="Legal Notice (EN). Mentions légales (FR)">
 {% endblock %}
 
-{% block title %}Disclamer{% endblock %}
+{% block title %}{% trans %}Disclamer{% endtrans %}{% endblock %}
 
 {% block titre_landscape %}
     <div class="has-text-weight-bold is-uppercase is-family-monospace">
-        Disclaimer
+        {% trans %}Disclaimer{% endtrans %}
     </div>
 {% endblock %}
 
 {% block titre %}
-    Disclaimer
+    {% trans %}Disclaimer{% endtrans %}
 {% endblock %}
 
 {% block content %}
@@ -21,4 +21,5 @@
     <div class="box" style="padding: 50px;background: rgba(255,255,255,.8)">
     {{ include('mentions_legales/mentions_legales_eng.html.twig') }}
     </div>
+
 {% endblock %}

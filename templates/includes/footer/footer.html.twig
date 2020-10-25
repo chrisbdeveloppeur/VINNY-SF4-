@@ -1,4 +1,4 @@
-<footer class="footer has-background-black has-text-white" style="position: relative;bottom:0 ;width: 100%;box-shadow: rgb(0, 0, 0) 0px 0px 5px 2px;">
+<footer class="footer has-background-black has-text-white" style="position: relative;bottom:0 ;width: 100%;box-shadow: rgb(0, 0, 0) 0 0 5px 2px;">
 
     <div class="content has-text-centered columns block-footer">
 
@@ -80,7 +80,7 @@
 
 
             <a class="button is-small is-outlined is-link" style="margin: 0 1rem" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Yoobsound%40gmail.com&currency_code=EUR&source=url" >
-                <p class="has-text-centered" style="margin: 0">Support my works</p>
+                <p class="has-text-centered" style="margin: 0">{% trans %}Support my works{% endtrans %}</p>
                 <span class="icon is-normal"></span>
                 <i class="fab fa-paypal fa-lg"></i>
             </a>
@@ -92,21 +92,21 @@
             <span class="footer-clumn-right">
                 <a href="{{ path('conditions-generales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Politique de confidentialité#}
-                    Terms & Conditions
+                    {% trans %}Terms & Conditions{% endtrans %}
                 </a>
             </span>
 
             <span class="footer-clumn-right">
                 <a href="{{ path('politique-confidentialite') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Politique de confidentialité#}
-                    Privacy Policy
+                    {% trans %}Privacy Policy{% endtrans %}
                 </a>
             </span>
 
             <span class="footer-column-right">
                 <a href="{{ path('mentions-legales') }}" class="has-text-link" style="margin: auto;padding: 0 .75rem">
 {#                    Mentions légales#}
-                    Disclaimer
+                    {% trans %}Disclaimer{% endtrans %}
                 </a>
             </span>
 
@@ -121,7 +121,7 @@
     <div class="column has-text-centered ">
         <span class="has-text-dark">
 {#            © 2020 | www.vinnyvixi.com [ALPHA] | Propriété du producteur Vinivixy, Tout droits réservés.#}
-            © 2020 | www.vinnyvixi.com | Property of the producer Vinivixy, All rights reserved.
+            © 2020 | www.vinnyvixi.com | {% trans %}Property of the producer Vinivixy, All rights reserved{% endtrans %}.
         </span>
     </div>
 
