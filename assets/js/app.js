@@ -58,6 +58,8 @@ const ghetto = require('../images/ghetto.svg');
 const phone_bg = require('../images/phone_bg.svg');
 const astro_bg = require('../images/astronomy-1867616_1920_B&W.svg');
 const colo_design_blue_bg = require('../images/color-design_blue.svg');
+const fr_flag = require('../images/icons/country/france.svg');
+const uk_flag = require('../images/icons/country/united-kingdom.svg');
 
 
 

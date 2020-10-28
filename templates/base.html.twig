@@ -66,16 +66,21 @@
                                     <div class="column is-flex justify-content-end">
                                         {% for locale in locales %}
                                             {% if locale != app.request.locale %}
-                                                <a href="{{ path('change_locale', {'locale': locale} ) }}">
+                                                <a href="{{ path('change_locale', {'locale': locale} ) }}" title="{% trans %}Switch language to french{% endtrans %}">
                                                     <div class="tags has-addons">
-                                                        <div class="tag">
+                                                        <div class="tag is-link has-text-weight-bold">
                                                             {% trans %}Switch to{% endtrans %}
                                                         </div>
-                                                        <div class="tag is-small is-info is-uppercase">
-                                                            {{ locale }}
+                                                        <div class="tag is-link" style="position: relative">
+                                                            <span class="icon">
+                                                            {% if app.request.locale == 'fr' %}
+                                                                <img height="100" width="100" src="{{ asset('build/images/united-kingdom.386cc387.svg') }}" alt="{{ app.request.locale }}">
+                                                            {% elseif app.request.locale == 'en' %}
+                                                                <img height="100" width="100" src="{{ asset('build/images/france.78126112.svg') }}" alt="{{ app.request.locale }}">
+                                                            {% endif %}
+                                                            </span>
                                                         </div>
                                                     </div>
-
                                                 </a>
                                             {% endif %}
                                         {% endfor %}
@@ -179,16 +184,21 @@
                                     <div class="column is-flex justify-content-end is-hidden-desktop">
                                         {% for locale in locales %}
                                             {% if locale != app.request.locale %}
-                                                <a href="{{ path('change_locale', {'locale': locale} ) }}">
+                                                <a href="{{ path('change_locale', {'locale': locale} ) }}" title="{% trans %}Switch language to french{% endtrans %}">
                                                     <div class="tags has-addons">
-                                                        <div class="tag">
+                                                        <div class="tag is-link has-text-weight-bold">
                                                             {% trans %}Switch to{% endtrans %}
                                                         </div>
-                                                        <div class="tag is-small is-info is-uppercase">
-                                                            {{ locale }}
+                                                        <div class="tag is-link" style="position: relative">
+                                                            <span class="icon">
+                                                            {% if app.request.locale == 'fr' %}
+                                                                <img height="100" width="100" src="{{ asset('build/images/united-kingdom.386cc387.svg') }}" alt="{{ app.request.locale }}">
+                                                            {% elseif app.request.locale == 'en' %}
+                                                                <img height="100" width="100" src="{{ asset('build/images/france.78126112.svg') }}" alt="{{ app.request.locale }}">
+                                                            {% endif %}
+                                                            </span>
                                                         </div>
                                                     </div>
-
                                                 </a>
                                             {% endif %}
                                         {% endfor %}

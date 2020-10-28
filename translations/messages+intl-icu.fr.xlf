@@ -249,6 +249,10 @@
         <source>My message</source>
         <target>Mon message</target>
       </trans-unit>
+      <trans-unit id="sOKWINR" resname="Switch language to french">
+        <source>Switch language to french</source>
+        <target>Changer la langue en Anglais</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
