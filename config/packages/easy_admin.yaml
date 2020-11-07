@@ -44,7 +44,7 @@ easy_admin:
                     - {property: 'beatFile' , type : 'file', label : "Fichier audio",type_options: { required: false }}
 #                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
                     - {property: 'titre' , type : 'text'}
-                    - {property: 'artiste' , type : 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
+                    - {property: 'artiste' , type : 'text', label : 'Prod. by', help: "Si vide : Vinny Vixi"}
                     - {property: 'bpm' , type : 'text'}
                     - {property: 'genre' , type : 'entity', type_options: { class: 'App\Entity\Filtre' } }
 
