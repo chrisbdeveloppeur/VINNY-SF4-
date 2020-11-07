@@ -21,11 +21,18 @@
             <source class="audio" src="{{ vich_uploader_asset(item, 'beatFile') }}" type="audio/ogg" />
         </audio>
 
+        {% if vich_uploader_asset(item, 'beatFile') %}
         <a href="{{ vich_uploader_asset(item, 'beatFile') }}" download="">
             <button>
                 Telecharger
             </button>
         </a>
+        {% else %}
+            <a href="#" disabled="">
+                Auccun fichier audio uploadé
+            </a>
+        {% endif %}
+
     </div>
 
 
@@ -56,7 +63,7 @@
 
         <a href="{{ vich_uploader_asset(item, 'beatFile') }}">
             <button>
-                Telecharger le fichier audio
+                Telecharger
             </button>
         </a>
     </div>

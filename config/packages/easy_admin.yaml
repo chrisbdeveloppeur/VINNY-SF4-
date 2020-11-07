@@ -42,11 +42,11 @@ easy_admin:
                 fields :
                     - {property: 'beatImage' , type : 'vich_image', label : "Illustration (taille optimisé : 132x132)", help : "Format .jpeg/jpg/png/svg"}
                     - {property: 'beatFile' , type : 'file', label : "Fichier audio",type_options: { required: false }}
-                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
+#                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
                     - {property: 'titre' , type : 'text'}
                     - {property: 'artiste' , type : 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
                     - {property: 'bpm' , type : 'text'}
-                    - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
+                    - {property: 'genre' , type : 'entity', type_options: { class: 'App\Entity\Filtre' } }
 
 
             edit:
@@ -55,11 +55,11 @@ easy_admin:
                     - {property: 'beatImage' , type: 'vich_image', label: "Illustration (taille optimisé : 132x132)", help : "Format .jpeg/jpg/png/svg"}
                     - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false, disabled: true }}
                     - {property: 'beatFile' , type: 'file', label: "Fichier audio", type_options: { required: false }}
-                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
-                    - {property: 'titre' , type: 'text'}
-                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
+#                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
+                    - {property: 'titre' , type: 'text', help: "Titre affiché sur le site"}
+                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "Si vide : Vinny Vixi"}
                     - {property: 'bpm' , type: 'text'}
-                    - {property: 'genre' , type : 'easyadmin_autocomplete', type_options: { class: 'App\Entity\Filtre' } }
+                    - {property: 'genre' , type : 'entity', type_options: { class: 'App\Entity\Filtre' } }
 
             list:
                 fields:
@@ -68,15 +68,15 @@ easy_admin:
                     - {property: 'beatFile', label : "", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
                     - {property: 'bpm' , type: 'text', css_class: 'is-hidden-mobile'}
                     - {property: 'genre' , type: 'text', css_class: 'is-hidden-mobile'}
-                    - {property: 'iframe', label: 'Lien Beatstar', type: 'boolean'}
+#                    - {property: 'iframe', label: 'Lien Beatstar', type: 'boolean'}
             show:
                 fields:
-                    - {property: 'titre' , type: 'text'}
+                    - {property: 'titre' , type: 'text', help: "Titre affiché sur le site"}
                     - {property: 'beatImage' , type : 'image', template: 'includes/vich_uploader_image.html.twig', label : "Illustration"}
                     - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false }}
                     - {property: 'beatFile', label : "Player", type : 'audio', template: 'includes/vich_uploader_audio.html.twig'}
-                    - {property: 'iframe' , type : 'text', label : "Iframe"}
-                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "par défaut : Vinny Vixi"}
+#                    - {property: 'iframe' , type : 'text', label : "Iframe"}
+                    - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "Si vide : Vinny Vixi"}
                     - {property: 'bpm' , type: 'text'}
                     - {property: 'genre' , type: 'text'}
 
