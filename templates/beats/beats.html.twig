@@ -266,53 +266,53 @@
 
 
     {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
-    <script>
+{#    <script>#}
 
-        let sectionPlayer = document.getElementById("player_old");
-        let deployStatus = false ;
-        let arrowDeploy = document.getElementById('arrow-deploy-player');
-        let crossHide = document.getElementById('cross-hide-player');
-
-
-        arrowDeploy.addEventListener('click', function () {
-            if (deployStatus === false) {
-                deployPlayerOn();
-            }else if (deployStatus === true){
-                deployPlayerOff();
-            }
-        });
+{#        let sectionPlayer = document.getElementById("player_old");#}
+{#        let deployStatus = false ;#}
+{#        let arrowDeploy = document.getElementById('arrow-deploy-player');#}
+{#        let crossHide = document.getElementById('cross-hide-player');#}
 
 
-        crossHide.addEventListener('click', function () {
-            console.log(deployStatus);
-            if (deployStatus === false) {
-                deployPlayerOn();
-            }else if(deployStatus === true){
-                deployPlayerOff();
-            }
-        });
+{#        arrowDeploy.addEventListener('click', function () {#}
+{#            if (deployStatus === false) {#}
+{#                deployPlayerOn();#}
+{#            }else if (deployStatus === true){#}
+{#                deployPlayerOff();#}
+{#            }#}
+{#        });#}
 
 
-        function deployPlayerOn(){
-            arrowDeploy.style.display = "none";
-            sectionPlayer.style.display = "flex";
-            deployStatus = true;
-            setTimeout(function () {
-                sectionPlayer.style.opacity = "1";
-                sectionPlayer.style.height = "50px";
-            }, 0);
+{#        crossHide.addEventListener('click', function () {#}
+{#            console.log(deployStatus);#}
+{#            if (deployStatus === false) {#}
+{#                deployPlayerOn();#}
+{#            }else if(deployStatus === true){#}
+{#                deployPlayerOff();#}
+{#            }#}
+{#        });#}
 
-        }
 
-        function deployPlayerOff(){
-            arrowDeploy.style.display = "inline";
-            sectionPlayer.style.opacity = "0";
-            sectionPlayer.style.height = "0px";
-            sectionPlayer.style.display = "none";
-            deployStatus = false;
-        }
+{#        function deployPlayerOn(){#}
+{#            arrowDeploy.style.display = "none";#}
+{#            sectionPlayer.style.display = "flex";#}
+{#            deployStatus = true;#}
+{#            setTimeout(function () {#}
+{#                sectionPlayer.style.opacity = "1";#}
+{#                sectionPlayer.style.height = "50px";#}
+{#            }, 0);#}
 
-    </script>
+{#        }#}
+
+{#        function deployPlayerOff(){#}
+{#            arrowDeploy.style.display = "inline";#}
+{#            sectionPlayer.style.opacity = "0";#}
+{#            sectionPlayer.style.height = "0px";#}
+{#            sectionPlayer.style.display = "none";#}
+{#            deployStatus = false;#}
+{#        }#}
+
+{#    </script>#}
     {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
 
 {% endblock %}

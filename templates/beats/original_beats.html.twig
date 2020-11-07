@@ -4,7 +4,7 @@
 
     <div class="columns has-text-white" style=" z-index: 1;justify-content: center">
 
-        <p class=" has-icons-left is-family-code is-size-4" style="padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">
+        <p class=" has-icons-left is-family-code is-size-4" style="padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0 0 15px;">
 
             <span class="icon is-small text-info" style="margin:0 7px">
                 <i class="fas fa-headphones"></i>
@@ -147,11 +147,11 @@
 
 
         audio{{ i }}.addEventListener('play', function () {
-            trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;
-            barProgessTime(audio{{ i }});
+            {#trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;#}
+            {#barProgessTime(audio{{ i }});#}
             // deployPlayerOn();
             visualizerCanvas(audio{{ i }});
-            canvas{{ i }}.style.display = "initial"
+            canvas{{ i }}.style.display = "flex"
         });
 
         {#audio{{ i }}.addEventListener('pause', function () {#}
@@ -159,23 +159,21 @@
         {#});#}
 
 
-
-
         //////////////////////////////////////////////////////////////////////////
         ///////////////         BARE DE TEMPS PLAYER          ////////////////////
         //////////////////////////////////////////////////////////////////////////
-        function barProgessTime(audio)
-        {
+        {#function barProgessTime(audio)#}
+        {#{#}
 
-            audio.addEventListener('timeupdate', (event) =>
-            {
-                // console.log(audio.currentTime.toString());
-                {#currentTrackTime{{ i }}.innerHTML = audio.currentTime.toString();#}
-                {#trackTime{{ i }}.innerHTML = audio.duration.toString();#}
-                barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";
-                cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";
-            });
-        }
+        {#    audio.addEventListener('timeupdate', (event) =>#}
+        {#    {#}
+        {#        // console.log(audio.currentTime.toString());#}
+        {#        #}{#currentTrackTime{{ i }}.innerHTML = audio.currentTime.toString();#}
+        {#        #}{#trackTime{{ i }}.innerHTML = audio.duration.toString();#}
+        {#        barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";#}
+        {#        cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";#}
+        {#    });#}
+        {#}#}
         //////////////////////////////////////////////////////////////////////////
         //////////////////////////         FIN          //////////////////////////
         //////////////////////////////////////////////////////////////////////////
