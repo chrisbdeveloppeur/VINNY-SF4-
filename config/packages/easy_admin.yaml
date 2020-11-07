@@ -53,8 +53,8 @@ easy_admin:
                 title: 'Modifier un Beat'
                 fields:
                     - {property: 'beatImage' , type: 'vich_image', label: "Illustration (taille optimisé : 132x132)", help : "Format .jpeg/jpg/png/svg"}
-                    - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false, disabled: true }}
-                    - {property: 'beatFile' , type: 'file', label: "Fichier audio", type_options: { required: false }}
+                    - {property: 'beatName' ,label : "Nom du fichier", type : 'text',type_options: { required: false, disabled: true } }
+                    - {property: 'beatFile' , type: 'file', label: "Fichier audio", type_options: { required: false } }
 #                    - {property: 'iframe' , type : 'text', label : "Source iframe (Remplace le fichier audio)", help : "Entrez ici la source (src) d'une balise iframe <br>Exemple : <strong>//www.beatstars.com/embed/track/?id=4141341</strong>" }
                     - {property: 'titre' , type: 'text', help: "Titre affiché sur le site"}
                     - {property: 'artiste' , type: 'text', label : 'Prod. by', help: "Si vide : Vinny Vixi"}

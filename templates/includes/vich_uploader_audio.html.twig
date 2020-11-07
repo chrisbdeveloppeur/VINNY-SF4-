@@ -4,6 +4,8 @@
 {#    <audio controls src="{{ vich_uploader_asset(item, 'beatFile') }}"></audio>#}
 
     <div style="text-align: center">
+        {% if vich_uploader_asset(item, 'beatFile') %}
+
         <audio controls preload="metadata" class=" columns is-centered align-items-end has-text-centered is-hidden-touch"
                style="width: 100%;
                                    height: 100%;
@@ -21,7 +23,7 @@
             <source class="audio" src="{{ vich_uploader_asset(item, 'beatFile') }}" type="audio/ogg" />
         </audio>
 
-        {% if vich_uploader_asset(item, 'beatFile') %}
+
         <a href="{{ vich_uploader_asset(item, 'beatFile') }}" download="">
             <button>
                 Telecharger
