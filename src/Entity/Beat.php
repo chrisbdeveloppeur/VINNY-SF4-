@@ -48,7 +48,7 @@ class Beat
      *
      * @var File|null
      * @Assert\File(
-     *     maxSize="20Mi",
+     *     maxSize="100Mi",
      *     mimeTypes={"audio/mpeg","application/octet-stream","application/x-font-gdos","audio/x-wav"})
      */
     private $beatFile;
@@ -95,9 +95,15 @@ class Beat
      */
     private $genre;
 
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $createdDate;
+
     public function __construct()
     {
         $this->iframe = null;
+        $this->createdDate = new \DateTime('now');;
     }
 
 
@@ -264,6 +270,18 @@ class Beat
     public function setGenre(?Filtre $genre): self
     {
         $this->genre = $genre;
+
+        return $this;
+    }
+
+    public function getCreatedDate(): ?\DateTimeInterface
+    {
+        return $this->createdDate;
+    }
+
+    public function setCreatedDate(?\DateTimeInterface $createdDate): self
+    {
+        $this->createdDate = $createdDate;
 
         return $this;
     }

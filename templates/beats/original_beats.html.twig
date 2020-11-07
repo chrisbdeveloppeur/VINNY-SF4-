@@ -89,7 +89,7 @@
                                 {% endif %}
                             </div>
 
-                            {% if date(beat.updatedat) > date('-15days') %}
+                            {% if (date(beat.createddate) > date('-15days')) and (beat.createddate != null) %}
                                 <span class="tag has-text-black-bis has-text-weight-bold is-hidden-touch newAnimation">{% trans %}New{% endtrans %}!</span>
                                 <span class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop newAnimationTouch">{% trans %}New{% endtrans %}!</span>
                             {% endif %}
@@ -97,7 +97,7 @@
                             <div class="is-flex is-centered is-vcentered justify-content-center">
 
                                 <button type="button" class="btn btn-primary showModal" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                                    <i class="fas fa-comment-dollar is-size-3" title="Licenses" style="color: white;text-shadow: rgb(0, 63, 255) 0px 0px 10px;"></i>
+                                    <i class="fas fa-comment-dollar is-size-3" title="Licenses" style="color: white;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
                                 </button>
 
                             </div>
