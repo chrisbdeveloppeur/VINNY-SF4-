@@ -24,7 +24,7 @@
 
     {% set i = ( i | default(0) ) + 1 %}
 
-{% if beat.iframe is null %}
+{% if (beat.iframe is null) and (beat.beatName) %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative; background: rgba(0,0,0,0.5)">
 
