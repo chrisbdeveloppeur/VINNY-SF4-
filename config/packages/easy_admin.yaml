@@ -19,7 +19,7 @@ easy_admin:
                   - { entity: 'SectionVideo', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER', icon: columns}
               permission: 'ROLE_USER'
             - { entity: 'Licence',label : 'Licenses', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: money-check-alt}
-            - { entity: 'Diapo',label : 'Images', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: images}
+            - { entity: 'Diapo',label : 'A propos', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: images}
 #            - { entity: 'Message',label : 'Messages', rel: 'dns-prefetch preconnect', permission : 'ROLE_USER' , icon: envelope-open-text}
             - { entity: 'Admin',label : 'Comptes Administrateurs', rel: 'dns-prefetch preconnect', permission : 'ROLE_ADMIN' , icon: users-cog}
     list:
