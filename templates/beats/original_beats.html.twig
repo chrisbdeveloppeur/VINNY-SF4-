@@ -18,13 +18,11 @@
 
 </div>
 
-{#{{ include('beats/original_beats_filter_barre.html.twig') }}#}
-
 {% for beat in beat %}
 
-    {% set i = ( i | default(0) ) + 1 %}
-
 {% if (beat.iframe is null) and (beat.beatName) %}
+
+    {% set i = ( i | default(0) ) + 1 %}
 
     <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative; background: rgba(0,0,0,0.5)">
 
@@ -130,9 +128,6 @@
     </div>
 
 
-{% endif %}
-
-    {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
     <script>
 
         let audio{{ i }} = document.getElementById("audio-{{ i }}");
@@ -140,47 +135,66 @@
         let trackTitlePlayer{{ i }} = document.querySelector("#track-title");
         let barTime{{ i }} = document.querySelector("#timeLine");
         let barCurrentTime{{ i }} = document.querySelector("#currentTime");
-        let cursor{{ i }} = document.querySelector("#cursor");
+        {#let cursor{{ i }} = document.querySelector("#cursor");#}
         let currentTrackTime{{ i }} = document.querySelector("#current-time");
         let trackTime{{ i }} = document.querySelector("#track-time");
         let canvas{{ i }} = document.getElementById("canvas");
 
 
         audio{{ i }}.addEventListener('play', function () {
-            {#trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;#}
-            {#barProgessTime(audio{{ i }});#}
-            // deployPlayerOn();
+            trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;
+            sectionPlayer.style.display = 'flex';
+            arrowDeploy.style.display= 'none';
+            barProgessTime(audio{{ i }});
             visualizerCanvas(audio{{ i }});
-            canvas{{ i }}.style.display = "flex"
+            canvas{{ i }}.style.display = "flex";
+            {#console.log(currentBeat{{ i }});#}
         });
 
-        {#audio{{ i }}.addEventListener('pause', function () {#}
-        {#    canvas{{ i }}.style.display = "none"#}
-        {#});#}
 
+        {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
 
         //////////////////////////////////////////////////////////////////////////
         ///////////////         BARE DE TEMPS PLAYER          ////////////////////
         //////////////////////////////////////////////////////////////////////////
-        {#function barProgessTime(audio)#}
-        {#{#}
+        function barProgessTime(audio)
+        {
 
-        {#    audio.addEventListener('timeupdate', (event) =>#}
-        {#    {#}
-        {#        // console.log(audio.currentTime.toString());#}
-        {#        #}{#currentTrackTime{{ i }}.innerHTML = audio.currentTime.toString();#}
-        {#        #}{#trackTime{{ i }}.innerHTML = audio.duration.toString();#}
-        {#        barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";#}
-        {#        cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";#}
-        {#    });#}
-        {#}#}
+            String.prototype.toMMSS = function () {
+                var sec_num = parseInt(this, 10); // don't forget the second param
+                var hours   = Math.floor(sec_num / 3600);
+                var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+                var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+                if (minutes < 10) {minutes = minutes;}
+                if (seconds < 10) {seconds = "0"+seconds;}
+                return minutes+':'+seconds;
+            };
+
+            audio.addEventListener('timeupdate', (event) =>
+            {
+                let currentTime = Math.trunc(audio.currentTime.toString());
+                let Time = Math.trunc(audio.duration.toString());
+                currentTrackTime{{ i }}.innerHTML = currentTime.toString().toMMSS();
+                trackTime{{ i }}.innerHTML = Time.toString().toMMSS();
+                barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";
+                cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";
+            });
+        }
         //////////////////////////////////////////////////////////////////////////
         //////////////////////////         FIN          //////////////////////////
         //////////////////////////////////////////////////////////////////////////
 
+    </script>
+
+{% endif %}
 
 
 
+
+    <script>
+
+        {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
 
         //////////////////////////////////////////////////////////////////////////
         ///////////////         CANVAS VUSIAL          ///////////////////////////
@@ -240,7 +254,7 @@
                 renderFrame();
 
         }
-        //////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////
         ///////////////        FIN CANVAS VUSIAL          ////////////////////////
         //////////////////////////////////////////////////////////////////////////
 
