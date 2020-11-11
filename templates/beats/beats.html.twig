@@ -35,15 +35,15 @@
             </div>
         </div>
 
-        <div id="myBtnContainer" class="buttons are-small column is-flex" style="margin: auto 0;padding: 0">
+        <div id="myBtnContainer" class="buttons are-small columns is-multiline" style="margin: auto 0;width: 100%">
 
-            <div class="column is-flex align-items-center justify-content-center">
+            <div class="column is-flex align-items-center ">
                 <button class="button is-small active is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" style="margin: auto 0;padding: 2px 1rem;" type="submit" onclick="filterSelection('all')"> {% trans %}All{% endtrans %}</button>
             </div>
 
             {% for filtre in filtre %}
 
-                <div class="column is-flex align-items-center justify-content-center">
+                <div class="column is-flex align-items-center">
 
                     <button class="button is-small is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" value="{{ filtre.genre }}" style="margin: auto 0;padding: 2px 1rem;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
