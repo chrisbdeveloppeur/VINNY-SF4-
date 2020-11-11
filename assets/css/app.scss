@@ -496,9 +496,9 @@ div#player .btn-primary:hover{
 
 #arrow-deploy-player{
   display: inline;
-  position: fixed;
+  position: absolute;
   right: .4rem;
-  top: 10.5rem;
+  top: 0;
   z-index: 4;
   color: white;
   text-shadow: rgb(0, 40, 255) 0 0 15px ;
