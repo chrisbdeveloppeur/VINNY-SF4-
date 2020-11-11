@@ -209,7 +209,6 @@
         var players = Plyr.setup('.js-plyr', {
             "controls":['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions','pip', 'airplay', 'fullscreen']
         });
-        players.volume = "0.1";
 
         {#   AUTONEXT & AUTOPAUSE   #}
         var i = 1;
@@ -302,6 +301,7 @@
 
         players.forEach(function (instance) {
 
+            instance.volume = 0.3;
             instance.on('ready', function (event) {
 
                 instance.elements.container.setAttribute('id', 'plyId-' + i);
