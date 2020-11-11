@@ -257,6 +257,30 @@
         <source>Unknow</source>
         <target>Sans titre</target>
       </trans-unit>
+      <trans-unit id="yufVe8B" resname="Stop">
+        <source>Stop</source>
+        <target>Stop</target>
+      </trans-unit>
+      <trans-unit id="Q25hAW4" resname="Play">
+        <source>Play</source>
+        <target>Lecture</target>
+      </trans-unit>
+      <trans-unit id="9D9prSZ" resname="Previous beat">
+        <source>Previous beat</source>
+        <target>Précédent</target>
+      </trans-unit>
+      <trans-unit id="x8.M1_9" resname="Next beat">
+        <source>Next beat</source>
+        <target>Suivant</target>
+      </trans-unit>
+      <trans-unit id="P94W0vj" resname="Hide player">
+        <source>Hide player</source>
+        <target>Réduire</target>
+      </trans-unit>
+      <trans-unit id="ValThsd" resname="Show player">
+        <source>Show player</source>
+        <target>Agrandir</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
