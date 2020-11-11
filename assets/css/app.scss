@@ -233,6 +233,7 @@ div.header-background-image{
   position: absolute;
   top: 0;
   left: 0;
+  box-shadow: 0 0 30px 10px black;;
 }
 div.header-background-layer{
   width: 100%;
@@ -814,10 +815,10 @@ i.youtube-video-class{
     //--plyr-range-thumb-active-shadow-width: 10px !important;
   }
   div.header-background-image{
-    height: 90px !important;
+    height: 80px !important;
   }
   div.header-background-layer {
-    height: 90px !important;
+    height: 80px !important;
   }
   div.video-lightbox-content{
     height: 90% !important;
@@ -839,6 +840,7 @@ i.youtube-video-class{
     background: rgba(0,0,0,0.7);
     //width: 40%;
     transition: .1s;
+    height: 50px;
   }
   #navbarNav:hover{
     background: rgba(0,0,0,0.9);

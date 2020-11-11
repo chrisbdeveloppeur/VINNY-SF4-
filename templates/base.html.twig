@@ -53,7 +53,7 @@
                             </a>
 
                             {% block img_header %}
-                                <div class="header-background-image" style="background: center / auto 100% no-repeat url({{ asset('build/images/beats_1.f19e5c84.jpg') }});box-shadow: 0 0 30px 10px black;">
+                                <div class="header-background-image" style="background: center / auto 100% no-repeat url({{ asset('build/images/beats_1.f19e5c84.jpg') }});">
                                     <div class="header-background-layer">
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
 
 
                             <div class="collapse navbar-collapse has-text-centered" id="navbarNav">
-                                <ul class="navbar-nav is-size-4-touch mr-auto">
+                                <ul class="navbar-nav is-size-4-touch mr-auto" style="position: relative;z-index: 1;padding: 3rem 0">
 
                                     <li class="nav-item">
                                         <a href="{{ path('home') }}" class="nav-link" title="{% trans %}Beats by Vinny{% endtrans %}" id="navLinkHome">
@@ -181,6 +181,8 @@
 
                                     {% endblock %}
 
+                                </ul>
+
                                     <div class="column is-flex justify-content-center is-hidden-desktop">
                                         {% for locale in locales %}
                                             {% if locale != app.request.locale %}
@@ -203,8 +205,6 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
-
-                                </ul>
 
                             </div>
 
