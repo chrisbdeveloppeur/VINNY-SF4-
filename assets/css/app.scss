@@ -470,6 +470,14 @@ div.cursor:hover
   cursor:pointer;
 }
 
+.block-timeline{
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 80%;
+  align-items: center;
+}
 #timeLine
 {
   height:100%;
