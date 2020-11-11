@@ -1,19 +1,19 @@
-<div id="player" class="has-background-light is-hidden-touch" style="align-items: center">
+<div id="player" class="has-background-light" style="align-items: center">
 
-    <div class="btn-left" style="display: flex;justify-content: space-between;align-items: center;width: 20%">
+    <div class="btn-left" style="display: flex;justify-content: space-between;align-items: center;">
 
         <div class="" style="white-space: nowrap">
-            <button type="button" class="btn-primary is-size-5" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 stopBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-stop" title="Stop" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
 
-            <button type="button" class="btn-primary is-size-5" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                <i class="fas fa-play" title="Play" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
+            <button type="button" class="btn-primary is-size-4 playBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+                <i id="playIcon" class="fas fa-play" title="Play" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
         </div>
 
         <div class="">
-            <button type="button" class="btn-primary is-size-5" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 prevBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-step-backward" title="Previous beat" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
         </div>
@@ -32,17 +32,17 @@
     </div>
 
 
-    <div class="btn-right" style="display: flex;justify-content: space-between;align-items: center;width: 20%">
-            <button id="nextBeatBtn" type="button" class="btn-primary is-size-5" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+    <div class="btn-right" style="display: flex;justify-content: space-between;align-items: center;">
+            <button type="button" class="btn-primary is-size-4 nextBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-step-forward" title="Next beat" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
 
-                <div style="display: flex;justify-content: space-evenly;align-items: center;width: 30%">
+                <div class="is-hidden-touch" style="display: flex;justify-content: space-evenly;align-items: center;width: 30%">
                     <div id="current-time">--</div>
                     <div> / </div>
                     <div id="track-time">--</div>
                 </div>
-            <button type="button" id="cross-hide-player" class="btn-primary is-size-5" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" id="cross-hide-player" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                 <i class="fas fa-times-circle" title="Hide player" style="color: black;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
             </button>
 

@@ -253,6 +253,10 @@
         <source>Switch language to french</source>
         <target>Changer la langue en Anglais</target>
       </trans-unit>
+      <trans-unit id="ZqPe6z7" resname="Unknow">
+        <source>Unknow</source>
+        <target>Sans titre</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

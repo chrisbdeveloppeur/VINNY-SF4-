@@ -135,20 +135,17 @@
         let trackTitlePlayer{{ i }} = document.querySelector("#track-title");
         let barTime{{ i }} = document.querySelector("#timeLine");
         let barCurrentTime{{ i }} = document.querySelector("#currentTime");
-        {#let cursor{{ i }} = document.querySelector("#cursor");#}
         let currentTrackTime{{ i }} = document.querySelector("#current-time");
         let trackTime{{ i }} = document.querySelector("#track-time");
         let canvas{{ i }} = document.getElementById("canvas");
 
 
         audio{{ i }}.addEventListener('play', function () {
-            trackTitlePlayer{{ i }}.innerHTML = trackTitle{{ i }}.innerText;
-            sectionPlayer.style.display = 'flex';
-            arrowDeploy.style.display= 'none';
+            deployPlayer();
+            trackTitlePlayer{{ i }}.innerHTML = "{% if beat.titre %}{{ beat.titre }}{% else %}{% trans %}Unknow{% endtrans %}{% endif %}";
             barProgessTime(audio{{ i }});
             visualizerCanvas(audio{{ i }});
             canvas{{ i }}.style.display = "flex";
-            {#console.log(currentBeat{{ i }});#}
         });
 
 

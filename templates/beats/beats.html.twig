@@ -17,11 +17,6 @@
 
 {% block visualizer %}
         <canvas id="canvas"></canvas>
-        <div id="arrow-deploy-player" class="is-hidden-touch">
-            <span class="icon is-medium">
-                <i class="fas fa-lg fa-sort-down"></i>
-            </span>
-        </div>
 {% endblock %}
 
 {% block audiocontrol %}
@@ -68,6 +63,14 @@
     <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
         {% trans %}Welcome to the beatmaker Vinnyvixi's website{% endtrans %}
     </h2>
+{% endblock %}
+
+{% block arrow_deploy_player %}
+    <div id="arrow-deploy-player" class="">
+        <span class="icon is-medium">
+            <i class="fas fa-2x fa-sort-down"></i>
+        </span>
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -164,7 +167,7 @@
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
             for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
+                if (arr1.indexOf(arr2[i]) === -1) {
                     element.className += " " + arr2[i];
                 }
             }
@@ -203,10 +206,95 @@
         var players = Plyr.setup('.js-plyr', {
             "controls":['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions','pip', 'airplay', 'fullscreen']
         });
-        players.volume = 0.1;
+        players.volume = .1;
 
         {#   AUTONEXT & AUTOPAUSE   #}
         var i = 1;
+
+        let playBtn = document.querySelector("button.playBtn");
+        let playIcon = document.getElementById('playIcon');
+        let nextBtn = document.querySelector('button.nextBtn');
+        let prevBtn = document.querySelector('button.prevBtn');
+        let stopBtn = document.querySelector('button.stopBtn');
+
+        let allAudio = document.getElementsByTagName("audio");
+
+        function takeCurrentBeat(media) {
+            playBtn.name = media.id;
+        }
+
+        {#     PLAY BUTTON HEADER     #}
+        playBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            if (currentAudio == null){
+                currentAudio = allAudio[0];
+            }
+            if (currentAudio.paused === false) {
+                currentAudio.pause();
+            }else{
+                currentAudio.play();
+            }
+        });
+
+        {#     NEXT BUTTON HEADER     #}
+        nextBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            let nextAudio;
+
+            if (currentAudio == null){
+                currentAudio = allAudio[0];
+            }
+
+            for (i = 0; i<allAudio.length; i++){
+                if (currentAudio === allAudio[i]){
+                   nextAudio = allAudio[i+1];
+                }
+            }
+
+            if (currentAudio === allAudio[allAudio.length - 1]) {
+                currentAudio.currentTime = 0;
+                allAudio[0].play();
+            }else if (currentAudio != null) {
+                currentAudio.currentTime = 0;
+                nextAudio.play();
+            }
+        });
+
+        {#     PREVIOUS BUTTON HEADER     #}
+        prevBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            let prevAudio;
+
+            if (currentAudio == null){
+                currentAudio = allAudio[0];
+            }
+
+            for (i = 0; i<allAudio.length; i++){
+                if (currentAudio === allAudio[i]){
+                    prevAudio = allAudio[i-1];
+                }
+            }
+
+            if (currentAudio === allAudio[0]) {
+                currentAudio.currentTime = 0;
+                allAudio[allAudio.length - 1].play();
+            }else if (currentAudio != null) {
+                currentAudio.currentTime = 0;
+                prevAudio.play();
+            }
+        });
+
+
+        {#     STOP BUTTON HEADER     #}
+        stopBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            if (currentAudio != null){
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+        });
+
+
 
 
         players.forEach(function (instance) {
@@ -228,10 +316,27 @@
                     nextBeat.children[1].play();
                 });
             });
+
+            instance.on('pause', function () {
+                let count = 0;
+
+                for (i = 0; i<allAudio.length; i++){
+                    if (allAudio[i].paused === true){
+                       count++;
+                        if (count === allAudio.length) {
+                            playIcon.classList.replace('fa-pause', 'fa-play');
+                        }
+                    }
+                }
+
+            });
+
             instance.on('play', function (event) {
+                playIcon.classList.replace('fa-play', 'fa-pause');
                 var currentPid = instance.plyId;
+                takeCurrentBeat(instance.media);
                 players.forEach(function (instance) {
-                    if (currentPid != instance.plyId) {
+                    if (currentPid !== instance.plyId) {
                         instance.pause();
                     }
                 });
@@ -278,15 +383,28 @@
         let arrowDeploy = document.getElementById('arrow-deploy-player');
         let crossHide = document.getElementById('cross-hide-player');
 
-        arrowDeploy.addEventListener('click', function () {
-            sectionPlayer.style.display = "flex";
-            arrowDeploy.style.display = "none";
-        });
+        function deployPlayer(){
 
-        crossHide.addEventListener('click', function () {
-            sectionPlayer.style.display = "none";
+            sectionPlayer.style.display = "flex";
+            setTimeout(function () {
+                sectionPlayer.style.height = "50px";
+                sectionPlayer.style.opacity = "1";
+            },50);
+            arrowDeploy.style.display = "none";
+        }
+
+        function hidePlayer(){
+            sectionPlayer.style.height = "0";
+            sectionPlayer.style.opacity = "0";
+            setTimeout(function () {
+                sectionPlayer.style.display = "none";
+            },200);
             arrowDeploy.style.display = "flex";
-        });
+        }
+
+
+        arrowDeploy.addEventListener('click', deployPlayer);
+        crossHide.addEventListener('click', hidePlayer);
 
     </script>
     {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
