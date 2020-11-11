@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/beats/beats.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/beats/beats.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="214" column="18" lean-forward="true" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
+            <state relative-caret-position="177">
+              <caret line="302" selection-start-line="302" selection-end-line="302" />
               <folding>
                 <element signature="e#1127#1218#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -113,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="852">
-              <caret line="492" column="69" lean-forward="true" selection-start-line="492" selection-start-column="69" selection-end-line="492" selection-end-column="69" />
+              <caret line="492" column="69" selection-start-line="492" selection-start-column="69" selection-end-line="492" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -630,12 +631,12 @@
       <workItem from="1604786142937" duration="2786000" />
       <workItem from="1604829994849" duration="601000" />
       <workItem from="1604952488441" duration="12555000" />
-      <workItem from="1605036907992" duration="25553000" />
+      <workItem from="1605036907992" duration="25806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1160664000" />
+    <option name="totallyTimeSpent" value="1160917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1070,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="852">
-          <caret line="492" column="69" lean-forward="true" selection-start-line="492" selection-start-column="69" selection-end-line="492" selection-end-column="69" />
+          <caret line="492" column="69" selection-start-line="492" selection-start-column="69" selection-end-line="492" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1089,8 +1090,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="214" column="18" lean-forward="true" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
+        <state relative-caret-position="177">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
           <folding>
             <element signature="e#1127#1218#0#HTML" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
