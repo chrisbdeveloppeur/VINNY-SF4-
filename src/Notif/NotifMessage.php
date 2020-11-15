@@ -28,7 +28,7 @@ class NotifMessage
     public function sendMessage(Message $message)
     {
         $mail = (new \Swift_Message('Message en provenance de vinnyvixi.com'))
-            ->setFrom('admin@vinnyvixi.com')
+            ->setFrom($message->getEmail())
             /**
              * Ci dessous entrez l'adresse de l'utilisateur concerné : $message->getEmail()
              */
