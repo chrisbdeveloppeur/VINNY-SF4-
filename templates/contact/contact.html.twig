@@ -35,11 +35,18 @@
 
             {% include 'includes/flash_message.html.twig' %}
 
-            {% if form_errors(messageForm) != null %}
-                <div class="form-error notification is-danger is-flex justify-content-center align-items-center column has-text-weight-bold ">
-                    <button class="delete" onclick="this.parentElement.parentElement.removeChild(this.parentElement);"></button>
-                    {{ form_errors(messageForm) }}
-                </div>
+            {% if form_errors(messageForm) %}
+                <article class="message is-small is-danger is-size-6-desktop">
+                    <div class="message-header">
+                        <p>Oops !</p>
+                        <span class="icon is-small has-text-white">
+                                          <i class="fas fa-lg fa-exclamation-triangle"></i>
+                                        </span>
+                    </div>
+                    <div class="message-body">
+                        {{ form_errors(messageForm) }}
+                    </div>
+                </article>
             {% endif %}
 
             {{ form_start(messageForm, {'attr' : {'id' : 'messageForm'} } ) }}

@@ -22,11 +22,11 @@ class Message
      * @Assert\Regex(
      *     pattern="/[<>{}\/]/",
      *     match=false,
-     *     message="Your last name cannot contain special characters (ex: / {} <>)",
+     *     message="Your last name cannot contain special characters",
      *)
      * @Assert\Length(
      *     max="150",
-     *     maxMessage="150 Chars max allowed for your last-name"
+     *     maxMessage="150 Chars max allowed for your last name"
      * )
      */
     private $nom;
@@ -36,11 +36,11 @@ class Message
      * @Assert\Regex(
      *     pattern="/[<>{}\/]/",
      *     match=false,
-     *     message="Your first name cannot contain special characters (ex: / {} <>)",
+     *     message="Your first name cannot contain special characters",
      *)
      *  @Assert\Length(
      *     max="150",
-     *     maxMessage="150 Chars max allowed for your first-name"
+     *     maxMessage="150 Chars max allowed for your first name"
      * )
      */
     private $prenom;
@@ -51,7 +51,7 @@ class Message
      * @Assert\Regex(
      *     pattern="/[<>{}\/]/",
      *     match=false,
-     *     message="Your email cannot contain special characters (ex: / {} <>)",
+     *     message="Your email cannot contain special characters",
      *     )
      */
     private $email;
@@ -61,11 +61,11 @@ class Message
      * @Assert\Regex(
      *     pattern="/[<>{}\/]/",
      *     match=false,
-     *     message="Your subject cannot contain special characters (ex: / {} <>)",
+     *     message="The subject cannot contain special characters",
      * )
      * @Assert\Length(
      *     max="50",
-     *     maxMessage="50 Chars max allowed for your subject"
+     *     maxMessage="50 Chars max allowed for the subject"
      * )
      */
     private $objet;
@@ -75,11 +75,11 @@ class Message
      * @Assert\Regex(
      *     pattern="/[<>{}\/]/",
      *     match=false,
-     *     message="Your message cannot contain special characters (ex: / {} <>)",
+     *     message="The message cannot contain special characters",
      * )
      * @Assert\Length(
      *     max="1000",
-     *     maxMessage="1000 Chars max allowed for your subject"
+     *     maxMessage="1000 Chars max allowed for the message"
      * )
      */
     private $message;

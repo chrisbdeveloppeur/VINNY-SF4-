@@ -155,7 +155,7 @@ class HomeController extends AbstractController
 
             $flashMessage = $translator->trans('Your email has been sent, Thanks !');
 
-            $this->addFlash('success', $flashMessage);
+            $this->addFlash('info', $flashMessage);
 
             return $this->redirectToRoute('contact');
         }

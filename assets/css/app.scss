@@ -29,9 +29,12 @@ $pricing-item-border:rgba(50,50,50,.8) solid 1px;
 }
 $pricing-item-color : white;
 
-$box-radius: 0px;
+$box-radius: 0;
 //$tag-radius: 0px;
 
+$message-radius: 0;
+$message-body-radius: 0;
+$message-header-radius: 0;
 
 //////////////////////////////////
 
@@ -47,6 +50,9 @@ $box-radius: 0px;
   font-family: $family-code;
   font-weight: 400;
   //font-size: 1.5rem;
+}
+.grecaptcha-badge{
+  z-index: 1;
 }
 
 body {
