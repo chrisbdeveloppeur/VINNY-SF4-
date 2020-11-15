@@ -285,6 +285,10 @@
         <source>Your email has been sent, Thanks !</source>
         <target>Votre message à bien été envoyé, merci !</target>
       </trans-unit>
+      <trans-unit id="PHUT.rO" resname="Operation success !">
+        <source>Operation success !</source>
+        <target>Opération effectuée avec succès !</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

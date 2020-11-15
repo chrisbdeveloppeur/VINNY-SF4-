@@ -405,51 +405,42 @@
         <source>This value is not a valid HTML5 color.</source>
         <target>Cette valeur n'est pas une couleur HTML5 valide.</target>
       </trans-unit>
-
-      <trans-unit id="Your last name cannot contain special characters">
-         <source>Your last name cannot contain special characters</source>
-         <target>Votre Nom ne peux contenir de charactères spéciaux</target>
+      <trans-unit id="4r7xFft" resname="Your last name cannot contain special characters">
+        <source>Your last name cannot contain special characters</source>
+        <target>Votre Nom ne peux contenir de charactères spéciaux</target>
       </trans-unit>
-      <trans-unit id="Your first name cannot contain special characters">
-         <source>Your first name cannot contain special characters</source>
-         <target>Votre Prénom ne peux contenir de charactères spéciaux</target>
+      <trans-unit id="C8rI6qC" resname="Your first name cannot contain special characters">
+        <source>Your first name cannot contain special characters</source>
+        <target>Votre Prénom ne peux contenir de charactères spéciaux</target>
       </trans-unit>
-
-      <trans-unit id="Your email cannot contain special characters">
-         <source>Your email cannot contain special characters</source>
-         <target>Votre Email ne peux contenir de charactères spéciaux</target>
+      <trans-unit id="P_nhgvE" resname="Your email cannot contain special characters">
+        <source>Your email cannot contain special characters</source>
+        <target>Votre Email ne peux contenir de charactères spéciaux</target>
       </trans-unit>
-
-      <trans-unit id="The subject cannot contain special characters">
-         <source>The subject cannot contain special characters</source>
-         <target>Le sujet ne peux contenir de charactères spéciaux</target>
+      <trans-unit id="5BLPjZm" resname="The subject cannot contain special characters">
+        <source>The subject cannot contain special characters</source>
+        <target>Le sujet ne peux contenir de charactères spéciaux</target>
       </trans-unit>
-
-      <trans-unit id="The message cannot contain special characters">
-         <source>The message cannot contain special characters</source>
-         <target>Le message ne peux contenir de charactères spéciaux</target>
+      <trans-unit id="WBteD_O" resname="The message cannot contain special characters">
+        <source>The message cannot contain special characters</source>
+        <target>Le message ne peux contenir de charactères spéciaux</target>
       </trans-unit>
-
-      <trans-unit id="150 Chars max allowed for your last name">
-         <source>150 Chars max allowed for your last name</source>
-         <target>150 charactères autorisés pour votre nom</target>
+      <trans-unit id="pf2mHp6" resname="150 Chars max allowed for your last name">
+        <source>150 Chars max allowed for your last name</source>
+        <target>150 charactères autorisés pour votre nom</target>
       </trans-unit>
-
-      <trans-unit id="150 Chars max allowed for your first name">
-         <source>150 Chars max allowed for your first name</source>
-         <target>150 charactères autorisés pour votre Prénom</target>
+      <trans-unit id="5uDjNhu" resname="150 Chars max allowed for your first name">
+        <source>150 Chars max allowed for your first name</source>
+        <target>150 charactères autorisés pour votre Prénom</target>
       </trans-unit>
-
-      <trans-unit id="50 Chars max allowed for the subject">
-         <source>50 Chars max allowed for the subject</source>
-         <target>50 charactères autorisés pour le sujet</target>
+      <trans-unit id="FbPrjIF" resname="50 Chars max allowed for the subject">
+        <source>50 Chars max allowed for the subject</source>
+        <target>50 charactères autorisés pour le sujet</target>
       </trans-unit>
-
-      <trans-unit id="1000 Chars max allowed for the message">
-         <source>1000 Chars max allowed for the message</source>
-         <target>1000 charactères autorisés pour le message</target>
+      <trans-unit id="Lk_y2Qx" resname="1000 Chars max allowed for the message">
+        <source>1000 Chars max allowed for the message</source>
+        <target>1000 charactères autorisés pour le message</target>
       </trans-unit>
-
     </body>
   </file>
 </xliff>

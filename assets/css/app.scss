@@ -292,10 +292,6 @@ a.link-privacy-policy{
   }
 }
 
-div.form-error ul{
-  margin-bottom: 0;
-}
-
 #buttonDonation{
   background: rgba(0,0,0,.8);
 }
@@ -310,6 +306,10 @@ div.BDC_CaptchaImageDiv a{
   opacity: 0;
   pointer-events: none;
   cursor: none;
+}
+ul{
+  margin-bottom: 0 !important;
+  list-style: square inside;
 }
 
 
