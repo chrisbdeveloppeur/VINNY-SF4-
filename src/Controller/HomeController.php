@@ -140,7 +140,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact(Request $request, NotifMessage $notifMessage)
+    public function contact(Request $request, NotifMessage $notifMessage, TranslatorInterface $translator)
     {
         $form = $this->createForm(MessageType::class);
         $form->handleRequest($request);
@@ -153,7 +153,9 @@ class HomeController extends AbstractController
 
             $notifMessage->sendMessage($message);
 
-            $this->addFlash('success', 'Your email has been sent, Thanks !');
+            $flashMessage = $translator->trans('Your email has been sent, Thanks !');
+
+            $this->addFlash('success', $flashMessage);
 
             return $this->redirectToRoute('contact');
         }

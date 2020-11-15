@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Message;
-use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -57,12 +56,6 @@ class MessageType extends AbstractType
                     ]
                 )
             )
-
-            ->add('captchaCode', CaptchaType::class, array(
-                'captchaConfig' => 'ExampleCaptcha',
-                'label' => false,
-                'error_bubbling' => true,
-            ))
 
         ;
     }

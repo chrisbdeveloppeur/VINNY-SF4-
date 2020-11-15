@@ -42,10 +42,10 @@
                 </div>
             {% endif %}
 
-            {{ form_start(messageForm) }}
+            {{ form_start(messageForm, {'attr' : {'id' : 'messageForm'} } ) }}
 
 
-            <div class="column is-flex box justify-content-around" style="background: rgba(0,0,0,0.8);box-shadow: rgb(0, 0, 0) 0px 0px 15px;position: relative">
+            <div class="column is-flex box justify-content-around" style="background: rgba(0,0,0,0.8);box-shadow: rgb(0, 0, 0) 0 0 15px;position: relative">
 
                 <article class="column is-half-desktop has-text-centered">
 
@@ -110,20 +110,14 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <label class="label has-text-white"></label>
-                        <div class="control" style="display: flex;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            ">
-                            {{ form_widget(messageForm.captchaCode, {'attr': {'class': 'input is-primary'}}) }}
-                        </div>
-                    </div>
-
-                    <div class="field is-grouped justify-content-center" title="Submit">
+                     <div class="field is-grouped justify-content-center" title="Submit">
                         <div class="control">
-                            <button class="button is-info " type="submit">{% trans %}Submit{% endtrans %}</button>
+                            <button class="button is-info g-recaptcha"
+                                    type="submit"
+                                    data-sitekey="6Ld6IuMZAAAAAJSdtLkfkAok438-Xm_UPHkzxi0V"
+                                    data-callback='onSubmit'
+                                    data-action='submit'
+                            >{% trans %}Submit{% endtrans %}</button>
                         </div>
                     </div>
 
@@ -138,6 +132,13 @@
         let navLinkContact = document.getElementById('navLinkContact');
         navLinkContact.classList.add("navlink-active");
     </script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("messageForm").submit();
+        }
+    </script>
+
 
 {% endblock %}
 

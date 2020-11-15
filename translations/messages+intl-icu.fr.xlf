@@ -281,6 +281,10 @@
         <source>Show player</source>
         <target>Agrandir</target>
       </trans-unit>
+      <trans-unit id="xQ8CfZK" resname="Your email has been sent, Thanks !">
+        <source>Your email has been sent, Thanks !</source>
+        <target>Votre message à bien été envoyé, merci !</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
