@@ -66,9 +66,6 @@ class HomeController extends AbstractController
             $beatstars = $beatRepository->findByIframe(false);
         }
 
-
-
-
         $licence = $licenceRepository->findAll();
         $filtre = $filtreRepository->findAll();
 
