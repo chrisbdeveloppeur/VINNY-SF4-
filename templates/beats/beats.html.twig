@@ -361,17 +361,14 @@
     {#   SCRIPT POUR LIGHTBOX MODAL   #}
     <script>
         $(".showModal").click(function() {
-            // $(".modal").addClass("is-active");
             $(".modal").css("height","100%");
         });
 
         $(".modal-close").click(function() {
-            // $(".modal").removeClass("is-active");
             $(".modal").css("height","0");
         });
 
         $(".modal-background").click(function() {
-            // $(".modal").removeClass("is-active");
             $(".modal").css("height","0");
         });
 
@@ -388,21 +385,11 @@
         let crossHide = document.getElementById('cross-hide-player');
 
         function deployPlayer(){
-
             sectionPlayer.style.display = "flex";
-            // setTimeout(function () {
-            //     sectionPlayer.style.height = "50px";
-            //     sectionPlayer.style.opacity = "1";
-            // },50);
             arrowDeploy.style.display = "none";
         }
 
         function hidePlayer(){
-            // sectionPlayer.style.height = "0";
-            // sectionPlayer.style.opacity = "0";
-            // setTimeout(function () {
-            //     sectionPlayer.style.display = "none";
-            // },200);
             sectionPlayer.style.display = "none";
             arrowDeploy.style.display = "flex";
         }
