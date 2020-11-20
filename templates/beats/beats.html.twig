@@ -38,14 +38,14 @@
         <div id="myBtnContainer" class="buttons are-small columns is-multiline" style="margin: auto 0;">
 
 {#            <div class="column is-flex align-items-center ">#}
-                <button class="button is-xsmall active is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" style="margin-bottom: 0;padding: 2px 1rem;" type="submit" onclick="filterSelection('all')"> {% trans %}All{% endtrans %}</button>
+                <button class="button is-xsmall active is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" style="margin-top: 0.5rem;padding: 2px 1rem;" type="submit" onclick="filterSelection('all')"> {% trans %}All{% endtrans %}</button>
 {#            </div>#}
 
             {% for filtre in filtre %}
 
                 {% if filtre.beats is not empty %}
 {#                <div class="column is-flex align-items-center">#}
-                    <button class="button is-xsmall is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" value="{{ filtre.genre }}" style="margin-bottom: 0;padding: 2px 1rem;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
+                    <button class="button is-xsmall is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" value="{{ filtre.genre }}" style="margin-top: 0.5rem;padding: 2px 1rem;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
                     </button>
 
