@@ -82,6 +82,10 @@ class Beat
 
     /**
      * @ORM\Column(type="float", nullable=true)
+     * @Assert\Type(
+     *     type="float",
+     *     message="La valeur est incorrecte"
+     * )
      */
     private $bpm;
 

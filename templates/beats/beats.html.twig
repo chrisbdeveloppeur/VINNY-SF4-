@@ -43,13 +43,14 @@
 
             {% for filtre in filtre %}
 
+                {% if filtre.beats is not empty %}
                 <div class="column is-flex align-items-center">
-
                     <button class="button is-small is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" value="{{ filtre.genre }}" style="margin: auto 0;padding: 2px 1rem;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
                     </button>
 
                 </div>
+                {% endif %}
 
             {% endfor %}
 
