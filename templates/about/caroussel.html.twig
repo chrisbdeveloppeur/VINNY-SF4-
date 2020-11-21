@@ -7,7 +7,7 @@
                 {% if diapo.diapoimagename %}
                 <div class="column" style="padding: 0">
                     <figure class="image is-5by3" style="display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;margin: 0">
-                            <img class="" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="slide" style="text-align: center;object-fit: cover" title="{{ diapo.titre|raw }}">
+                            <img class="" src="{{ vich_uploader_asset(diapo, 'diapoImage') }}" alt="img - {{ diapo.titre|raw }} - vinnyvixi beats" style="text-align: center;object-fit: cover" title="{{ diapo.titre|raw }}">
                     </figure>
                 </div>
                 {% endif %}
