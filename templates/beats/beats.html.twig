@@ -37,19 +37,14 @@
 
         <div id="myBtnContainer" class="buttons are-small columns is-multiline" style="margin: auto 0;">
 
-{#            <div class="column is-flex align-items-center ">#}
                 <button class="button is-xsmall active is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" style="margin-top: 0.5rem;padding: 2px 1rem;" type="submit" onclick="filterSelection('all')"> {% trans %}All{% endtrans %}</button>
-{#            </div>#}
 
             {% for filtre in filtre %}
 
                 {% if filtre.beats is not empty %}
-{#                <div class="column is-flex align-items-center">#}
                     <button class="button is-xsmall is-light is-outlined is-family-sans-serif font-weight-bold is-uppercase" value="{{ filtre.genre }}" style="margin-top: 0.5rem;padding: 2px 1rem;" type="submit"  onclick="filterSelection('{{ filtre.genre }}')">
                         {{ filtre.genre }}
                     </button>
-
-{#                </div>#}
                 {% endif %}
 
             {% endfor %}
@@ -68,7 +63,7 @@
 {% endblock %}
 
 {% block entete %}
-    <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0px 0px 10px">
+    <h2 class="subtitle has-text-centered is-4 is-family-primary has-text-white-bis" style="position: relative;margin-top:50px;padding: 10px;border-radius: 5px;background: rgba(0,0,0,.8);box-shadow: rgb(0, 0, 0) 0 0 10px">
         {% trans %}Welcome to the beatmaker Vinnyvixi's website{% endtrans %}
     </h2>
 {% endblock %}
@@ -126,7 +121,7 @@
 
 
 
-        <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0px 0px 15px;">
+        <div class="column has-text-centered box" style="background: rgba(23,162,176,0.7);box-shadow: rgb(0, 0, 0) 0 0 15px;">
 
             {% include 'beats/original_beats.html.twig' with {beat: beat} %}
 
@@ -219,6 +214,9 @@
         let nextBtn = document.querySelector('button.nextBtn');
         let prevBtn = document.querySelector('button.prevBtn');
         let stopBtn = document.querySelector('button.stopBtn');
+        let loopBtn = document.querySelector('button.loopBtn');
+        let loopIcon = document.getElementById('loopIcon');
+        let initialStyleLoopBtn = loopIcon.style;
 
         let allAudio = document.getElementsByTagName("audio");
 
@@ -243,6 +241,7 @@
         nextBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let nextAudio;
+            loopBeat();
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
@@ -267,6 +266,7 @@
         prevBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let prevAudio;
+            loopBeat();
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
@@ -298,6 +298,24 @@
         });
 
 
+        {#     LOOP BUTTON HEADER     #}
+        loopBtn.addEventListener('click', loopBeat);
+
+        function loopBeat() {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            if (currentAudio !== null) {
+                if (currentAudio.classList.contains('loop-actived')) {
+                    currentAudio.classList.remove('loop-actived');
+                    loopIcon.style = initialStyleLoopBtn;
+                }else{
+                    currentAudio.classList.add('loop-actived');
+                    loopIcon.style.color = "#0028ff";
+                    currentAudio.classList.add('loop-actived');
+                }
+            }
+        }
+
+
 
 
         players.forEach(function (instance) {
@@ -317,7 +335,14 @@
 
                 instance.on('ended', function (event) {
                     let nextBeat = document.getElementById(nextId);
-                    nextBeat.children[1].play();
+                    let audio = instance.media;
+
+                    if (audio.classList.contains('loop-actived')) {
+                        audio.currentTime = 0;
+                        audio.play();
+                    }else {
+                        nextBeat.children[1].play();
+                    }
                 });
             });
 

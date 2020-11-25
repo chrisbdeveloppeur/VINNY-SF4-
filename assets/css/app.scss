@@ -345,6 +345,14 @@ div#player i{
 div#player i:hover{
   text-shadow: #0028ff 0 0 5px;
 }
+div#player button{
+  background: rgba(0,0,0,0);
+  box-shadow: none;
+  border: none;
+}
+//i#loopIcon{
+//  color: #0028ff !important;
+//}
 
 div.player-timeline
 {
@@ -372,6 +380,19 @@ div.player-timeline div.btnPPS
   width:auto;
   justify-content:space-evenly;
   transition:0.5s;
+}
+div.mainPlayerBeat{
+  display: flex;
+  align-items: center;
+}
+//div.mainPlayerBeat span{
+//  padding-left: 0.75rem;
+//}
+.plyr--full-ui{
+  width: 100%;
+}
+.plyr__controls:first-child{
+  padding-left: .3rem;
 }
 
 div#trackMin
@@ -772,6 +793,7 @@ div.social-share{
 i.youtube-video-class{
   font-size: 5rem;
 }
+
 
 
 

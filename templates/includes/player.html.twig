@@ -3,17 +3,22 @@
     <div class="btn-left" style="display: flex;justify-content: space-between;align-items: center;">
 
         <div class="" style="white-space: nowrap">
-            <button type="button" class="btn-primary is-size-4 stopBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 is-size-5-touch stopBtn">
                 <i class="fas fa-stop" title="{% trans %}Stop{% endtrans %}"></i>
             </button>
 
-            <button type="button" class="btn-primary is-size-4 playBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 is-size-5-touch playBtn">
                 <i id="playIcon" class="fas fa-play" title="{% trans %}Play{% endtrans %}"></i>
             </button>
+
+            <button type="button" class="btn-primary is-size-4 is-size-5-touch loopBtn">
+                <i id="loopIcon" class="fas fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>
+            </button>
+
         </div>
 
         <div class="">
-            <button type="button" class="btn-primary is-size-4 prevBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 is-size-5-touch prevBtn">
                 <i class="fas fa-step-backward" title="{% trans %}Previous beat{% endtrans %}" ></i>
             </button>
         </div>
@@ -33,7 +38,7 @@
 
 
     <div class="btn-right" style="display: flex;justify-content: space-between;align-items: center;">
-            <button type="button" class="btn-primary is-size-4 nextBtn" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" class="btn-primary is-size-4 is-size-5-touch nextBtn">
                 <i class="fas fa-step-forward" title="{% trans %}Next beat{% endtrans %}"></i>
             </button>
 
@@ -42,7 +47,7 @@
                     <div> / </div>
                     <div id="track-time">--</div>
                 </div>
-            <button type="button" id="cross-hide-player" class="btn-primary is-size-4" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+            <button type="button" id="cross-hide-player" class="btn-primary is-size-4 is-size-5-touch">
                 <i class="fas fa-times-circle" title="{% trans %}Hide player{% endtrans %}"></i>
             </button>
 
