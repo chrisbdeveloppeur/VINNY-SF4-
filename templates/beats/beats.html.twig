@@ -241,7 +241,8 @@
         nextBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let nextAudio;
-            loopBeat();
+            currentAudio.classList.remove('loop-actived');
+            loopIcon.style = initialStyleLoopBtn;
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
@@ -266,7 +267,8 @@
         prevBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let prevAudio;
-            loopBeat();
+            currentAudio.classList.remove('loop-actived');
+            loopIcon.style = initialStyleLoopBtn;
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
