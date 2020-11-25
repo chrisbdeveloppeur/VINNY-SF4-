@@ -73,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="291">
-              <caret line="250" column="26" selection-start-line="250" selection-start-column="26" selection-end-line="250" selection-end-column="26" />
+              <caret line="373" column="61" selection-start-line="373" selection-start-column="61" selection-end-line="373" selection-end-column="61" />
               <folding>
                 <element signature="e#2644#2784#0#HTML" expanded="true" />
                 <element signature="e#4676#4755#0#HTML" expanded="true" />
@@ -677,12 +677,12 @@
       <workItem from="1605893117020" duration="5726000" />
       <workItem from="1605953601996" duration="2481000" />
       <workItem from="1606036829050" duration="72000" />
-      <workItem from="1606324290290" duration="15643000" />
+      <workItem from="1606324290290" duration="17126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1206961000" />
+    <option name="totallyTimeSpent" value="1208444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1141,7 +1141,7 @@
     <entry file="file://$PROJECT_DIR$/templates/beats/beats.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="250" column="26" selection-start-line="250" selection-start-column="26" selection-end-line="250" selection-end-column="26" />
+          <caret line="373" column="61" selection-start-line="373" selection-start-column="61" selection-end-line="373" selection-end-column="61" />
           <folding>
             <element signature="e#2644#2784#0#HTML" expanded="true" />
             <element signature="e#4676#4755#0#HTML" expanded="true" />

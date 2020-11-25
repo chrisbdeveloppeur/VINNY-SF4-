@@ -301,18 +301,20 @@
 
 
         {#     LOOP BUTTON HEADER     #}
-        loopBtn.addEventListener('click', loopBeat);
-
-        function loopBeat() {
+        loopBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
-            if (currentAudio !== null) {
-                if (currentAudio.classList.contains('loop-actived')) {
-                    currentAudio.classList.remove('loop-actived');
+            loopBeat(currentAudio);
+        });
+
+        function loopBeat(audio) {
+            if (audio !== null) {
+                if (audio.classList.contains('loop-actived')) {
+                    audio.classList.remove('loop-actived');
                     loopIcon.style = initialStyleLoopBtn;
                 }else{
-                    currentAudio.classList.add('loop-actived');
+                    audio.classList.add('loop-actived');
                     loopIcon.style.color = "#0028ff";
-                    currentAudio.classList.add('loop-actived');
+                    audio.classList.add('loop-actived');
                 }
             }
         }
@@ -368,6 +370,10 @@
                 takeCurrentBeat(instance.media);
                 players.forEach(function (instance) {
                     if (currentPid !== instance.plyId) {
+                        if (instance.media.classList.contains('loop-actived')){
+                            instance.media.classList.remove('loop-actived');
+                            loopIcon.style = initialStyleLoopBtn;
+                        }
                         instance.pause();
                     }
                 });
