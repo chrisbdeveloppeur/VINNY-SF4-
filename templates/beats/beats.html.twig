@@ -326,6 +326,11 @@
 
 
         {#    FUNCTION STOP BEAT (PLAYER HEADER)     #}
+        stopBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            stopBeat(currentAudio);
+        });
+
         function stopBeat(audio) {
             if (audio != null){
                 for (i=0; i<allAudio.length; i++){
