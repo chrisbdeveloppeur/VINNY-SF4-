@@ -8,20 +8,20 @@
 
         <div class="" style="white-space: nowrap">
 
-            <button type="button" class="btn-primary is-size-4 stopBtn">
-                <i class="fas fa-stop" title="{% trans %}Stop{% endtrans %}"></i>
-            </button>
-
-            <button type="button" class="btn-primary is-size-4 playBtn">
-                <i id="playIcon" class="fas fa-play" title="{% trans %}Play{% endtrans %}"></i>
+            <button type="button" class="btn-primary is-size-4 loopBtn">
+                <i id="loopIcon" class="fas fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>
             </button>
 
             <button type="button" class="btn-primary is-size-4 prevBtn">
                 <i class="fas fa-step-backward" title="{% trans %}Previous beat{% endtrans %}" ></i>
             </button>
 
-            <button type="button" class="btn-primary is-size-4 loopBtn">
-                <i id="loopIcon" class="fas fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>
+            <button type="button" class="btn-primary is-size-4 stopBtn">
+                <i class="fas fa-stop" title="{% trans %}Stop{% endtrans %}"></i>
+            </button>
+
+            <button type="button" class="btn-primary is-size-4 playBtn">
+                <i id="playIcon" class="fas fa-play" title="{% trans %}Play{% endtrans %}"></i>
             </button>
 
             <button type="button" class="btn-primary is-size-4 nextBtn">
@@ -34,26 +34,35 @@
 
     <div class="has-text-centered block-timeline is-hidden-touch">
 
-            <div id="track-title" class="has-text-weight-bold is-size-7-touch">{% trans %}Track{% endtrans %}</div>
+            <div class="has-text-weight-bold is-size-7-touch track-title">{% trans %}Track{% endtrans %}</div>
 
-            <div id="timeLine">
-                <div id="cursor" class="is-hidden"></div>
-                <div id="currentTime"></div>
+            <div class="timeLine">
+{#                <div id="cursor"></div>#}
+                <div class="bar-current-time"></div>
             </div>
 
     </div>
 
 
-    <div class="btn-right is-hidden-mobile">
-        <div style="display: flex;justify-content: space-evenly;align-items: center;width: 30%">
-            <div id="current-time">--</div>
+    <div class="btn-right">
+        <div class="beat-time-display">
+            <div class="current-time">--</div>
             <div> / </div>
-            <div id="track-time">--</div>
+            <div class="track-time">--</div>
         </div>
     </div>
 
-</div>
+    <div class="has-text-centered block-timeline-mobile is-hidden-desktop">
+        <div class="timeLine">
+            <div class="bar-current-time"></div>
+        </div>
+    </div>
 
+    <div class="has-text-white is-size-7-touch is-hidden-desktop track-title track-title-mobile has-background-black-bis is-italic">
+        {% trans %}No title{% endtrans %}
+    </div>
+
+</div>
 
 
 

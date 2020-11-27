@@ -297,6 +297,14 @@
         <source>Loop</source>
         <target>Boucle</target>
       </trans-unit>
+      <trans-unit id="qB0AouA" resname="No Title">
+        <source>No Title</source>
+        <target>Sans titre</target>
+      </trans-unit>
+      <trans-unit id="MKOwLL7" resname="No title">
+        <source>No title</source>
+        <target>Sans titre</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

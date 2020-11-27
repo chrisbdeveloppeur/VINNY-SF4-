@@ -116,7 +116,7 @@
 {#                                <i id="" class="fas fa-lg fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>#}
 {#                            </span>#}
 
-                                <audio controls preload="metadata" id="audio-{{ i }}" class="js-plyr beatFormBeatList is-centered align-items-end has-text-centered"
+                                <audio controls preload="metadata" title="{{ beat.titre }}" id="audio-{{ i }}" class="js-plyr beatFormBeatList is-centered align-items-end has-text-centered"
                                        style="width: 100%;
                                    height: 50%;
                                    --plyr-color-main:rgba(0,0,0,0);
@@ -147,23 +147,23 @@
 
     <script>
 
-        let audio{{ i }} = document.getElementById("audio-{{ i }}");
-        let trackTitle{{ i }} = document.getElementById("track-title{{ i }}");
-        let trackTitlePlayer{{ i }} = document.querySelector("#track-title");
-        let barTime{{ i }} = document.querySelector("#timeLine");
-        let barCurrentTime{{ i }} = document.querySelector("#currentTime");
-        let currentTrackTime{{ i }} = document.querySelector("#current-time");
-        let trackTime{{ i }} = document.querySelector("#track-time");
-        let canvas{{ i }} = document.getElementById("canvas");
+        {#let audio{{ i }} = document.getElementById("audio-{{ i }}");#}
+        {#let trackTitle{{ i }} = document.getElementById("track-title{{ i }}");#}
+        {#let trackTitlePlayer{{ i }} = document.querySelector("#track-title");#}
+        {#let barTime{{ i }} = document.querySelector("#timeLine");#}
+        {#let barCurrentTime{{ i }} = document.querySelector("#currentTime");#}
+        {#let currentTrackTime{{ i }} = document.querySelector("#current-time");#}
+        {#let trackTime{{ i }} = document.querySelector("#track-time");#}
+        {#let canvas{{ i }} = document.getElementById("canvas");#}
 
 
-        audio{{ i }}.addEventListener('play', function () {
-            deployPlayer();
-            trackTitlePlayer{{ i }}.innerHTML = "{% if beat.titre %}{{ beat.titre }}{% else %}{% trans %}Unknow{% endtrans %}{% endif %}";
-            barProgessTime(audio{{ i }});
-            visualizerCanvas(audio{{ i }});
-            canvas{{ i }}.style.display = "flex";
-        });
+        {#audio{{ i }}.addEventListener('play', function () {#}
+        {#    deployPlayer();#}
+        {#    trackTitlePlayer{{ i }}.innerHTML = "{% if beat.titre %}{{ beat.titre }}{% else %}{% trans %}Unknow{% endtrans %}{% endif %}";#}
+        {#    barProgessTime(audio{{ i }});#}
+        {#    visualizerCanvas(audio{{ i }});#}
+        {#    canvas{{ i }}.style.display = "flex";#}
+        {#});#}
 
 
         {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
@@ -171,30 +171,30 @@
         //////////////////////////////////////////////////////////////////////////
         ///////////////         BARE DE TEMPS PLAYER          ////////////////////
         //////////////////////////////////////////////////////////////////////////
-        function barProgessTime(audio)
-        {
+        {#function barProgessTime(audio)#}
+        {#{#}
 
-            String.prototype.toMMSS = function () {
-                var sec_num = parseInt(this, 10); // don't forget the second param
-                var hours   = Math.floor(sec_num / 3600);
-                var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-                var seconds = sec_num - (hours * 3600) - (minutes * 60);
+        {#    String.prototype.toMMSS = function () {#}
+        {#        var sec_num = parseInt(this, 10); // don't forget the second param#}
+        {#        var hours   = Math.floor(sec_num / 3600);#}
+        {#        var minutes = Math.floor((sec_num - (hours * 3600)) / 60);#}
+        {#        var seconds = sec_num - (hours * 3600) - (minutes * 60);#}
 
-                if (minutes < 10) {minutes = minutes;}
-                if (seconds < 10) {seconds = "0"+seconds;}
-                return minutes+':'+seconds;
-            };
+        {#        if (minutes < 10) {minutes = minutes;}#}
+        {#        if (seconds < 10) {seconds = "0"+seconds;}#}
+        {#        return minutes+':'+seconds;#}
+        {#    };#}
 
-            audio.addEventListener('timeupdate', (event) =>
-            {
-                let currentTime = Math.trunc(audio.currentTime.toString());
-                let Time = Math.trunc(audio.duration.toString());
-                currentTrackTime{{ i }}.innerHTML = currentTime.toString().toMMSS();
-                trackTime{{ i }}.innerHTML = Time.toString().toMMSS();
-                barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";
-                cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";
-            });
-        }
+        {#    audio.addEventListener('timeupdate', (event) =>#}
+        {#    {#}
+        {#        let currentTime = Math.trunc(audio.currentTime.toString());#}
+        {#        let Time = Math.trunc(audio.duration.toString());#}
+        {#        currentTrackTime{{ i }}.innerHTML = currentTime.toString().toMMSS();#}
+        {#        trackTime{{ i }}.innerHTML = Time.toString().toMMSS();#}
+        {#        barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";#}
+        {#        cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";#}
+        {#    });#}
+        {#}#}
         //////////////////////////////////////////////////////////////////////////
         //////////////////////////         FIN          //////////////////////////
         //////////////////////////////////////////////////////////////////////////

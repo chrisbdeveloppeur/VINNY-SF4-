@@ -148,6 +148,27 @@
     </script>
 
 
+
+    {#   SCRIPT POUR LIGHTBOX MODAL   #}
+    <script>
+        $(".showModal").click(function() {
+            $(".modal").css("height","100%");
+        });
+
+        $(".modal-close").click(function() {
+            $(".modal").css("height","0");
+        });
+
+        $(".modal-background").click(function() {
+            $(".modal").css("height","0");
+        });
+
+    </script>
+    {#  FIN SCRIPT POUR LIGHTBOX MODAL   #}
+
+
+
+
     {#      SCRIPT POUR FILTRE BEATS      #}
 
     <script>
@@ -244,8 +265,6 @@
         nextBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let nextAudio;
-            currentAudio.classList.remove('loop-actived');
-            loopIcon.style = initialStyleLoopBtn;
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
@@ -270,8 +289,6 @@
         prevBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             let prevAudio;
-            currentAudio.classList.remove('loop-actived');
-            loopIcon.style = initialStyleLoopBtn;
 
             if (currentAudio == null){
                 currentAudio = allAudio[0];
@@ -312,12 +329,15 @@
         function loopBeat(audio) {
             if (audio !== null) {
                 if (audio.classList.contains('loop-actived')) {
-                    audio.classList.remove('loop-actived');
+                    for (i=0; i<allAudio.length; i++){
+                        allAudio[i].classList.remove('loop-actived');
+                    }
                     loopIcon.style = initialStyleLoopBtn;
                 }else{
-                    audio.classList.add('loop-actived');
-                    loopIcon.style.color = "#0028ff";
-                    audio.classList.add('loop-actived');
+                    for (i=0; i<allAudio.length; i++){
+                        allAudio[i].classList.add('loop-actived');
+                    }
+                    loopIcon.style.color = "white";
                 }
             }
         }
@@ -368,15 +388,32 @@
             });
 
             instance.on('play', function (event) {
+                let currentAudio = instance.media;
+
+                deployPlayer();
+                barProgessTime(currentAudio);
+                visualizerCanvas(currentAudio);
+
+                if (currentAudio.getAttribute('title')) {
+                    for (i=0; i<trackTitlePlayer.length; i++){
+                        trackTitlePlayer[i].innerHTML = currentAudio.getAttribute('title');
+                    }
+                }else {
+                    for (i=0; i<trackTitlePlayer.length; i++){
+                        trackTitlePlayer[i].innerHTML = "{% trans %}No title{% endtrans %}";
+                    }
+                }
+
+                canvas.style.display = "flex";
                 playIcon.classList.replace('fa-play', 'fa-pause');
                 var currentPid = instance.plyId;
-                takeCurrentBeat(instance.media);
+                takeCurrentBeat(currentAudio);
                 players.forEach(function (instance) {
                     if (currentPid !== instance.plyId) {
-                        if (instance.media.classList.contains('loop-actived')){
-                            instance.media.classList.remove('loop-actived');
-                            loopIcon.style = initialStyleLoopBtn;
-                        }
+                        // if (currentAudio.classList.contains('loop-actived')){
+                        //     currentAudio.classList.remove('loop-actived');
+                        //     loopIcon.style = initialStyleLoopBtn;
+                        // }
                         instance.pause();
                     }
                 });
@@ -394,27 +431,15 @@
 
 
 
-    {#   SCRIPT POUR LIGHTBOX MODAL   #}
-    <script>
-        $(".showModal").click(function() {
-            $(".modal").css("height","100%");
-        });
-
-        $(".modal-close").click(function() {
-            $(".modal").css("height","0");
-        });
-
-        $(".modal-background").click(function() {
-            $(".modal").css("height","0");
-        });
-
-    </script>
-    {#  FIN SCRIPT POUR LIGHTBOX MODAL   #}
 
 
 
     {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
     <script>
+
+        /////////////////////////////////////////////////////////////////////
+        ///////////         DEPLOY / HIDE PLAYER HEADER          ////////////
+        /////////////////////////////////////////////////////////////////////
 
         let sectionPlayer = document.getElementById("player");
         let arrowDeploy = document.getElementById('arrow-deploy-player');
@@ -440,18 +465,60 @@
         arrowDeploy.addEventListener('click', deployPlayer);
         crossHide.addEventListener('click', hidePlayer);
 
-    </script>
-    {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
+
+        //////////////////////////////////////////////////////////////////////////
+        ///////////////         BARE DE PROGRESSION PLAYER    ////////////////////
+        //////////////////////////////////////////////////////////////////////////
+
+        let audio = document.getElementById(playBtn.name.toString());
+        let trackTitle = document.getElementById("track-title");
+        let trackTitlePlayer = document.querySelectorAll(".track-title");
+        let barTime = document.querySelectorAll(".timeLine");
+        let barCurrentTime = document.querySelectorAll(".bar-current-time");
+        let currentTrackTime = document.querySelectorAll(".current-time");
+        let trackTime = document.querySelectorAll(".track-time");
+        let canvas = document.getElementById("canvas");
 
 
+        function barProgessTime(audio)
+        {
+            ///////////////    CONVERSION MUSIC TIME    ////////////////////
+            String.prototype.toMMSS = function () {
+                var sec_num = parseInt(this, 10); // don't forget the second param
+                var hours   = Math.floor(sec_num / 3600);
+                var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+                var seconds = sec_num - (hours * 3600) - (minutes * 60);
 
-    <script>
+                if (minutes < 10) {minutes = minutes;}
+                if (seconds < 10) {seconds = "0"+seconds;}
+                return minutes+':'+seconds;
+            };
 
-        {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
+            ///////////////     CURRENT TIME BAR MOVE     ////////////////////
+            audio.addEventListener('timeupdate', (event) =>
+            {
+                let currentTime = Math.trunc(audio.currentTime.toString());
+                let Time = Math.trunc(audio.duration.toString());
+
+                for (i=0; i<currentTrackTime.length; i++) {
+                    currentTrackTime[i].innerHTML = currentTime.toString().toMMSS();
+                }
+
+                for (i=0; i<trackTime.length; i++) {
+                    trackTime[i].innerHTML = Time.toString().toMMSS();
+                }
+
+                for (i=0; i<barCurrentTime.length; i++) {
+                    barCurrentTime[i].style.width = audio.currentTime / (audio.duration / 100) + "%";
+                }
+            });
+        }
+
 
         //////////////////////////////////////////////////////////////////////////
         ///////////////         CANVAS VUSIAL          ///////////////////////////
         //////////////////////////////////////////////////////////////////////////
+
         function visualizerCanvas(audio) {
             var context = new AudioContext();
             var src = context.createMediaElementSource(audio);
@@ -507,9 +574,6 @@
             renderFrame();
 
         }
-        // //////////////////////////////////////////////////////////////////////////
-        ///////////////        FIN CANVAS VUSIAL          ////////////////////////
-        //////////////////////////////////////////////////////////////////////////
 
     </script>
     {#  FIN SCRIPT POUR PLAYER AUDIO HEADER   #}
