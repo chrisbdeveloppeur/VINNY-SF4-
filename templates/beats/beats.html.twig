@@ -54,7 +54,7 @@
 
         <div id="arrow-deploy-player" title="{% trans %}Show player{% endtrans %}">
             <span class="icon">
-                <i class="fas fa-2x fa-sort-down"></i>
+                <i class="fas fa-2x fa-caret-left"></i>
             </span>
         </div>
 
@@ -418,15 +418,24 @@
         let sectionPlayer = document.getElementById("player");
         let arrowDeploy = document.getElementById('arrow-deploy-player');
         let crossHide = document.getElementById('cross-hide-player');
+        let playerWidth = sectionPlayer.clientWidth;
+        sectionPlayer.style.right = "-" + playerWidth + "px";
+        console.log(sectionPlayer.style.right);
 
         function deployPlayer(){
-            sectionPlayer.style.display = "flex";
+            sectionPlayer.style.visibility = "visible";
+            sectionPlayer.style.right = "0";
             arrowDeploy.style.display = "none";
         }
 
         function hidePlayer(){
-            sectionPlayer.style.display = "none";
-            arrowDeploy.style.display = "flex";
+            playerWidth = sectionPlayer.clientWidth;
+            sectionPlayer.style.right = "-" + playerWidth + "px";
+            setTimeout(function () {
+                sectionPlayer.style.visibility = "hidden";
+                arrowDeploy.style.display = "flex";
+            }, 300);
+
         }
 
 
