@@ -339,6 +339,11 @@
                     }
                     loopIcon.style.color = "white";
                 }
+            }else {
+                for (i=0; i<allAudio.length; i++){
+                    allAudio[i].classList.add('loop-actived');
+                }
+                loopIcon.style.color = "white";
             }
         }
 
@@ -410,10 +415,6 @@
                 takeCurrentBeat(currentAudio);
                 players.forEach(function (instance) {
                     if (currentPid !== instance.plyId) {
-                        // if (currentAudio.classList.contains('loop-actived')){
-                        //     currentAudio.classList.remove('loop-actived');
-                        //     loopIcon.style = initialStyleLoopBtn;
-                        // }
                         instance.pause();
                     }
                 });

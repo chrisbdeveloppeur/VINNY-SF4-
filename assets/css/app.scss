@@ -343,6 +343,7 @@ div#player{
   position: relative;
   transition: .5s cubic-bezier(.68,-0.55,.27,1.55);
   justify-content: space-between;
+  box-shadow: rgb(0, 0, 0) 0 0 15px;
 }
 
 div#player i{
