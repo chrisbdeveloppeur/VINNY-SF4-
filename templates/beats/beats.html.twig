@@ -261,12 +261,7 @@
             }
         });
 
-        {#     NEXT BUTTON HEADER     #}
-        nextBtn.addEventListener('click', function () {
-            let currentAudio = document.getElementById(playBtn.name.toString());
-            nextBeat(currentAudio);
-        });
-
+        {#    FUNCTION NEXT BEAT (PLAYER HEADER)     #}
         function nextBeat(audio) {
             let nextAudio;
 
@@ -293,12 +288,7 @@
             }
         }
 
-        {#     PREVIOUS BUTTON HEADER     #}
-        prevBtn.addEventListener('click', function () {
-            let currentAudio = document.getElementById(playBtn.name.toString());
-            previousBeat(currentAudio);
-        });
-
+        {#     FUNCTION PREVIOUS BEAT (PLAYER HEADER)     #}
         function previousBeat(audio) {
             let prevAudio;
             for (i=0; i<allAudio.length; i++){
@@ -325,16 +315,15 @@
         }
 
 
-        {#     STOP BUTTON HEADER     #}
-        stopBtn.addEventListener('click', function () {
-            let currentAudio = document.getElementById(playBtn.name.toString());
-            if (currentAudio != null){
+        {#    FUNCTION STOP BEAT (PLAYER HEADER)     #}
+        function stopBeat(audio) {
+            if (audio != null){
                 for (i=0; i<allAudio.length; i++){
                     allAudio[i].pause();
                 }
-                currentAudio.currentTime = 0;
+                audio.currentTime = 0;
             }
-        });
+        }
 
 
         {#     LOOP BUTTON HEADER     #}
@@ -368,6 +357,21 @@
 
 
         players.forEach(function (instance) {
+
+            stopBtn.addEventListener('click', function () {
+                let currentAudio = document.getElementById(playBtn.name.toString());
+                stopBeat(currentAudio);
+            });
+
+            prevBtn.addEventListener('click', function () {
+                let currentAudio = document.getElementById(playBtn.name.toString());
+                previousBeat(currentAudio);
+            });
+
+            nextBtn.addEventListener('click', function () {
+                let currentAudio = document.getElementById(playBtn.name.toString());
+                nextBeat(currentAudio);
+            });
 
             instance.volume = 0.3;
             instance.on('ready', function (event) {
