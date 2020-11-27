@@ -256,8 +256,10 @@
             }
             if (currentAudio.paused === false) {
                 currentAudio.pause();
+                playIcon.classList.replace('fa-play', 'fa-pause');
             }else{
                 currentAudio.play();
+                playIcon.classList.replace('fa-pause', 'fa-play');
             }
         });
 
