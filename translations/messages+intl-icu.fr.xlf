@@ -289,6 +289,14 @@
         <source>Operation success !</source>
         <target>Opération effectuée avec succès !</target>
       </trans-unit>
+      <trans-unit id="Hpg9.wE" resname="Deploy player">
+        <source>Deploy player</source>
+        <target>Afficher le player</target>
+      </trans-unit>
+      <trans-unit id="8vagGIm" resname="Loop">
+        <source>Loop</source>
+        <target>Boucle</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
