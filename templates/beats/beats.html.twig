@@ -274,7 +274,7 @@
                 if (allAudio[i] === audio){
                     nextAudio = allAudio[i+1];
                 }else {
-                    allAudio[i].pause();
+                    allAudio[i].currentTime = 0;
                 }
             }
 
@@ -305,7 +305,7 @@
                 if (audio === allAudio[i]){
                     prevAudio = allAudio[i-1];
                 }else {
-                    allAudio[i].pause();
+                    allAudio[i].currentTime = 0;
                 }
             }
 
