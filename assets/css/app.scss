@@ -335,13 +335,9 @@ ul{
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 div#player{
-
   display: flex;
   visibility: hidden;
-  //opacity: 0;
-  //right: -2000px;
-  //height: 0;
-  transition: .8s cubic-bezier(.68,-0.55,.27,1.55);
+  transition: .5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 div#player i{
