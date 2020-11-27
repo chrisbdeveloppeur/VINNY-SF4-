@@ -266,22 +266,24 @@
             let currentAudio = document.getElementById(playBtn.name.toString());
             let nextAudio;
 
-            if (currentAudio == null){
-                currentAudio = allAudio[0];
-            }
-
             for (i = 0; i<allAudio.length; i++){
-                if (currentAudio === allAudio[i]){
-                   nextAudio = allAudio[i+1];
+                if (allAudio[i] === currentAudio){
+                    nextAudio = allAudio[i+1];
                 }
             }
 
-            if (currentAudio === allAudio[allAudio.length - 1]) {
-                currentAudio.currentTime = 0;
-                allAudio[0].play();
-            }else if (currentAudio != null) {
-                currentAudio.currentTime = 0;
-                nextAudio.play();
+            if (currentAudio == null){
+                allAudio[1].play();
+            }
+
+            if (currentAudio != null) {
+                if (currentAudio === allAudio[allAudio.length - 1]) {
+                    currentAudio.currentTime = 0;
+                    allAudio[0].play();
+                }else {
+                    currentAudio.currentTime = 0;
+                    nextAudio.play();
+                }
             }
         });
 
@@ -290,22 +292,24 @@
             let currentAudio = document.getElementById(playBtn.name.toString());
             let prevAudio;
 
-            if (currentAudio == null){
-                currentAudio = allAudio[0];
-            }
-
-            for (i = 0; i<allAudio.length; i++){
+            for (i=0; i<allAudio.length; i++){
                 if (currentAudio === allAudio[i]){
                     prevAudio = allAudio[i-1];
                 }
             }
 
-            if (currentAudio === allAudio[0]) {
-                currentAudio.currentTime = 0;
+            if (currentAudio == null){
                 allAudio[allAudio.length - 1].play();
-            }else if (currentAudio != null) {
-                currentAudio.currentTime = 0;
-                prevAudio.play();
+            }
+
+            if (currentAudio != null){
+                if (currentAudio === allAudio[0]) {
+                    currentAudio.currentTime = 0;
+                    allAudio[allAudio.length - 1].play();
+                }else {
+                    currentAudio.currentTime = 0;
+                    prevAudio.play();
+                }
             }
         });
 
@@ -314,7 +318,9 @@
         stopBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
             if (currentAudio != null){
-                currentAudio.pause();
+                for (i=0; i<allAudio.length; i++){
+                    allAudio[i].pause();
+                }
                 currentAudio.currentTime = 0;
             }
         });
