@@ -397,49 +397,52 @@
                         nextBeat.children[1].play();
                     }
                 });
-            });
 
-            instance.on('pause', function () {
-                let count = 0;
+                instance.on('pause', function () {
+                    let count = 0;
 
-                for (i = 0; i<allAudio.length; i++){
-                    if (allAudio[i].paused === true){
-                       count++;
-                        if (count === allAudio.length) {
-                            playIcon.classList.replace('fa-pause', 'fa-play');
+                    for (i = 0; i<allAudio.length; i++){
+                        if (allAudio[i].paused === true){
+                            count++;
+                            if (count === allAudio.length) {
+                                playIcon.classList.replace('fa-pause', 'fa-play');
+                            }
                         }
                     }
-                }
 
-            });
-
-            instance.on('play', function (event) {
-                let currentAudio = instance.media;
-
-                deployPlayer();
-                barProgessTime(currentAudio);
-                visualizerCanvas(currentAudio);
-
-                if (currentAudio.getAttribute('title')) {
-                    for (i=0; i<trackTitlePlayer.length; i++){
-                        trackTitlePlayer[i].innerHTML = currentAudio.getAttribute('title');
-                    }
-                }else {
-                    for (i=0; i<trackTitlePlayer.length; i++){
-                        trackTitlePlayer[i].innerHTML = "{% trans %}No title{% endtrans %}";
-                    }
-                }
-
-                canvas.style.display = "flex";
-                playIcon.classList.replace('fa-play', 'fa-pause');
-                var currentPid = instance.plyId;
-                takeCurrentBeat(currentAudio);
-                players.forEach(function (instance) {
-                    if (currentPid !== instance.plyId) {
-                        instance.pause();
-                    }
                 });
+
+                instance.on('play', function (event) {
+                    let currentAudio = instance.media;
+
+                    deployPlayer();
+                    barProgessTime(currentAudio);
+                    visualizerCanvas(currentAudio);
+
+                    if (currentAudio.getAttribute('title')) {
+                        for (i=0; i<trackTitlePlayer.length; i++){
+                            trackTitlePlayer[i].innerHTML = currentAudio.getAttribute('title');
+                        }
+                    }else {
+                        for (i=0; i<trackTitlePlayer.length; i++){
+                            trackTitlePlayer[i].innerHTML = "{% trans %}No title{% endtrans %}";
+                        }
+                    }
+
+                    canvas.style.display = "flex";
+                    playIcon.classList.replace('fa-play', 'fa-pause');
+                    var currentPid = instance.plyId;
+                    takeCurrentBeat(currentAudio);
+                    players.forEach(function (instance) {
+                        if (currentPid !== instance.plyId) {
+                            instance.pause();
+                        }
+                    });
+                });
+
             });
+
+
 
         });
 
