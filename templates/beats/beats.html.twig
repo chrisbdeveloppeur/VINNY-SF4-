@@ -261,7 +261,12 @@
             }
         });
 
-        {#    FUNCTION NEXT BEAT (PLAYER HEADER)     #}
+        {#     FUNCTION NEXT BEAT (PLAYER HEADER)     #}
+        nextBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            nextBeat(currentAudio);
+        });
+
         function nextBeat(audio) {
             let nextAudio;
 
@@ -289,6 +294,11 @@
         }
 
         {#     FUNCTION PREVIOUS BEAT (PLAYER HEADER)     #}
+        prevBtn.addEventListener('click', function () {
+            let currentAudio = document.getElementById(playBtn.name.toString());
+            previousBeat(currentAudio);
+        });
+
         function previousBeat(audio) {
             let prevAudio;
             for (i=0; i<allAudio.length; i++){
@@ -357,21 +367,6 @@
 
 
         players.forEach(function (instance) {
-
-            stopBtn.addEventListener('click', function () {
-                let currentAudio = document.getElementById(playBtn.name.toString());
-                stopBeat(currentAudio);
-            });
-
-            prevBtn.addEventListener('click', function () {
-                let currentAudio = document.getElementById(playBtn.name.toString());
-                previousBeat(currentAudio);
-            });
-
-            nextBtn.addEventListener('click', function () {
-                let currentAudio = document.getElementById(playBtn.name.toString());
-                nextBeat(currentAudio);
-            });
 
             instance.volume = 0.3;
             instance.on('ready', function (event) {
