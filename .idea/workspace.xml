@@ -5,9 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/config/packages/easy_admin.yaml" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-    </list>
+    <list default="true" id="a3b5762d-5e2c-424f-8a87-d3424a20bfff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -658,12 +656,12 @@
       <workItem from="1605953601996" duration="2481000" />
       <workItem from="1606036829050" duration="72000" />
       <workItem from="1606324290290" duration="17126000" />
-      <workItem from="1606391662615" duration="7782000" />
+      <workItem from="1606391662615" duration="8195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1216226000" />
+    <option name="totallyTimeSpent" value="1216639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
