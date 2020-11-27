@@ -264,58 +264,65 @@
         {#     NEXT BUTTON HEADER     #}
         nextBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
+            nextBeat(currentAudio);
+        });
+
+        function nextBeat(audio) {
             let nextAudio;
 
             for (i = 0; i<allAudio.length; i++){
-                if (allAudio[i] === currentAudio){
+                if (allAudio[i] === audio){
                     nextAudio = allAudio[i+1];
                 }else {
                     allAudio[i].pause();
                 }
             }
 
-            if (currentAudio == null){
+            if (audio == null){
                 allAudio[1].play();
             }
 
-            if (currentAudio != null) {
-                if (currentAudio === allAudio[allAudio.length - 1]) {
-                    currentAudio.currentTime = 0;
+            if (audio != null) {
+                if (audio === allAudio[allAudio.length - 1]) {
+                    audio.currentTime = 0;
                     allAudio[0].play();
                 }else {
-                    currentAudio.currentTime = 0;
+                    audio.currentTime = 0;
                     nextAudio.play();
                 }
             }
-        });
+        }
 
         {#     PREVIOUS BUTTON HEADER     #}
         prevBtn.addEventListener('click', function () {
             let currentAudio = document.getElementById(playBtn.name.toString());
-            let prevAudio;
+            previousBeat(currentAudio);
+        });
 
+        function previousBeat(audio) {
+            let prevAudio;
             for (i=0; i<allAudio.length; i++){
-                if (currentAudio === allAudio[i]){
+                if (audio === allAudio[i]){
                     prevAudio = allAudio[i-1];
                 }else {
                     allAudio[i].pause();
                 }
             }
 
-            if (currentAudio == null){
+            if (audio == null){
                 allAudio[allAudio.length - 1].play();
             }
 
-            if (currentAudio != null){
-                if (currentAudio === allAudio[0]) {
-                    currentAudio.currentTime = 0;
+            if (audio != null){
+                if (audio === allAudio[0]) {
+                    audio.currentTime = 0;
                     allAudio[allAudio.length - 1].play();
                 }else {
-                    currentAudio.currentTime = 0;
+                    audio.currentTime = 0;
                     prevAudio.play();
                 }
             }
-        });
+        }
 
 
         {#     STOP BUTTON HEADER     #}
