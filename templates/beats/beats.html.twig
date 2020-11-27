@@ -269,6 +269,8 @@
             for (i = 0; i<allAudio.length; i++){
                 if (allAudio[i] === currentAudio){
                     nextAudio = allAudio[i+1];
+                }else {
+                    allAudio[i].pause();
                 }
             }
 
@@ -295,6 +297,8 @@
             for (i=0; i<allAudio.length; i++){
                 if (currentAudio === allAudio[i]){
                     prevAudio = allAudio[i-1];
+                }else {
+                    allAudio[i].pause();
                 }
             }
 
