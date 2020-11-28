@@ -49,13 +49,13 @@
 
             {% for sectionvideo in section %}
 
-                <div class="column" style="background: rgba(0,0,0,0);box-shadow: rgb(0, 0, 0) 0px 0px 15px;margin-bottom: 20px">
+                <div class="column" style="background: rgba(0,0,0,0);box-shadow: rgb(0, 0, 0) 0 0 15px;margin-bottom: 20px">
 
-                    <label class="label columns is-centered" style="position: relative">
+                    <div class="label columns is-centered" style="position: relative">
 
                         <h2 class="column text-uppercase has-text-white {% if sectionvideo.couleur %}bg-{{ sectionvideo.couleur }}{% else %}has-background-dark{% endif %} has-text-centered justify-content-center align-items-center" style="margin-bottom: 0">
 
-                            <p class="has-background-black has-icons-left has-text-weight-bold is-family-code" style="display: flex;justify-content: center;align-items: center;padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0px 0px 15px;">
+                            <p class="has-background-black has-icons-left has-text-weight-bold is-family-code" style="display: flex;justify-content: center;align-items: center;padding: 10px; margin-bottom: 0;color: white;text-shadow: rgb(0, 40, 255) 0 0 15px;">
 
                             <span class="icon is-normal is-hidden-touch {% if sectionvideo.couleur %}text-{{ sectionvideo.couleur }}{% else %}has-text-grey{% endif %}" style="margin:0 10px;position:absolute;left: 25px">
                                 <i class="fa fa-film fa-2x"></i>
@@ -67,7 +67,7 @@
 
                         </h2>
 
-                    </label>
+                    </div>
 
 
 
@@ -81,11 +81,11 @@
                                     <div class="column is-one-third is-full-touch has-text-centered">
 
                                         {% if video.titre is not null %}
-                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" for="titre" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
+                                            <label style="align-items: center;min-height:30px;overflow: hidden;margin: 0" title="{{ video.titre }}" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
                                                 {{ video.titre }}
                                             </label>
                                         {% else %}
-                                            <label style="align-items: center;min-height:30px;margin: 0" for="titre" title="no title" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
+                                            <label style="align-items: center;min-height:30px;margin: 0" title="no title" class="is-flex justify-content-center align-items-center has-text-black has-text-weight-bold bg-{{ sectionvideo.couleur }}">
                                                 ~
                                             </label>
                                         {% endif %}
@@ -98,11 +98,11 @@
                                             </figure>
 
                                         {% if video.info is not null %}
-                                            <label style="font-weight: 400;align-items: center;min-height:30px;overflow: hidden;margin: 0"  for="titre" title="{{ video.info }}" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;overflow: hidden;margin: 0" title="{{ video.info }}" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
                                                 {{ video.info }}
                                             </label>
                                         {% else %}
-                                            <label style="font-weight: 400;align-items: center;min-height:30px;margin: 0;" for="titre" title="no info" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
+                                            <label style="font-weight: 400;align-items: center;min-height:30px;margin: 0;"title="no info" class="is-flex justify-content-center has-text-black bg-{{ sectionvideo.couleur }}">
                                                 ~
                                             </label>
                                         {% endif %}

@@ -305,6 +305,10 @@
         <source>No title</source>
         <target>Sans titre</target>
       </trans-unit>
+      <trans-unit id=".IsVRCW" resname="Elements containing an * object are required">
+        <source>Elements containing an * object are required</source>
+        <target>Les éléments contenant un * sont obligatoires</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
