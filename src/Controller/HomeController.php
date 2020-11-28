@@ -80,7 +80,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/beat", name="beat")
+     * @Route("/beats", name="beat")
      */
     public function beat()
     {
