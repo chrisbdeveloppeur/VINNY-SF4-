@@ -272,8 +272,6 @@
         function nextBeat(audio) {
             let nextAudio;
 
-            stopBeat(audio);
-
             for (i = 0; i<allAudio.length; i++){
                 if (allAudio[i] === audio){
                     nextAudio = allAudio[i+1];
@@ -305,8 +303,6 @@
 
         function previousBeat(audio) {
             let prevAudio;
-
-            stopBeat(audio);
 
             for (i=0; i<allAudio.length; i++){
                 if (audio === allAudio[i]){
