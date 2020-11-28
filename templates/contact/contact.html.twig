@@ -52,15 +52,22 @@
             {{ form_start(messageForm, {'attr' : {'id' : 'messageForm'} } ) }}
 
 
-            <div class="column is-flex box justify-content-around" style="background: rgba(0,0,0,0.8);box-shadow: rgb(0, 0, 0) 0 0 15px;position: relative">
+            <div class="column is-flex box justify-content-around box-contact">
 
                 <article class="column is-half-desktop has-text-centered">
+
+                        <h3 class="subtitle has-text-left is-7 is-family-secondary  has-text-white-bis">
+                            <span class="icon is-small has-text-info">
+                                <i class="fas fa-lg fa-info-circle"></i>
+                            </span>
+                            {% trans %}Elements containing an * object are required{% endtrans %}
+                        </h3>
 
                     <div class="field">
                         <label class="label  has-text-white">{% trans %}Last name{% endtrans %}</label>
                         <div class="control has-icons-left ">
                             {% set placeholderName = 'My name'|trans %}
-                            {{ form_widget(messageForm.nom, {'attr' : { 'class' : ' input','title' : 'Last name', 'placeholder' : placeholderName, 'alt' : 'Last name'}
+                            {{ form_widget(messageForm.nom, {'attr' : { 'class' : ' input','title' : 'Last name', 'placeholder' : placeholderName}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-male"></i>
@@ -72,7 +79,7 @@
                         <label class="label  has-text-white">{% trans %}First name{% endtrans %}</label>
                         <div class="control has-icons-left ">
                             {% set placeholderFirstName = 'My first name'|trans %}
-                            {{ form_widget(messageForm.prenom, {'attr' : { 'class' : ' input','title' : 'First name', 'placeholder' : placeholderFirstName, 'alt' : 'First name'}
+                            {{ form_widget(messageForm.prenom, {'attr' : { 'class' : ' input','title' : 'First name', 'placeholder' : placeholderFirstName}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-user"></i>
@@ -85,7 +92,7 @@
                         <label class="label  has-text-white">{% trans %}Email{% endtrans %} *</label>
                         <div class="control has-icons-left ">
                             {% set placeholderEmail = 'ex : mymail@gmail.com'|trans %}
-                            {{ form_widget(messageForm.email, {'attr' : { 'class' : ' input','title' : 'Email *', 'placeholder' : placeholderEmail, 'alt' : 'email'}
+                            {{ form_widget(messageForm.email, {'attr' : { 'class' : ' input','title' : 'Email *', 'placeholder' : placeholderEmail}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-envelope"></i>
@@ -99,7 +106,7 @@
                         <label class="label  has-text-white">{% trans %}Subject{% endtrans %}</label>
                         <div class="control has-icons-left ">
                             {% set placeholderSubject = 'Enter the subject'|trans %}
-                            {{ form_widget(messageForm.objet, {'attr' : { 'class' : ' input','title' : 'Subject', 'placeholder' : placeholderSubject, 'alt' : 'subject'}
+                            {{ form_widget(messageForm.objet, {'attr' : { 'class' : ' input','title' : 'Subject', 'placeholder' : placeholderSubject}
                             }) }}
                             <span class="icon is-small is-left" style="z-index: 0;">
                                 <i class="fas fa-hashtag"></i>
@@ -112,7 +119,7 @@
                         <label class="label  has-text-white">{% trans %}Message{% endtrans %} *</label>
                         <div class="control">
                             {% set placeholderMessage = 'My message'|trans %}
-                            {{ form_widget(messageForm.message, {'attr' : { 'class' : ' textarea ','title' : 'Message *', 'placeholder' : placeholderMessage, 'alt' : 'message'}
+                            {{ form_widget(messageForm.message, {'attr' : { 'class' : ' textarea ','title' : 'Message *', 'placeholder' : placeholderMessage}
                             }) }}
                         </div>
                     </div>

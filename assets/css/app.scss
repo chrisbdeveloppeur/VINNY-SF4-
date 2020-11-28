@@ -319,7 +319,14 @@ ul{
   align-items: center;
 }
 
-
+.logo-vinny-about{
+  width: 50%;
+}
+.box-contact{
+  background: rgba(0,0,0,0.8);
+  box-shadow: rgb(0, 0, 0) 0 0 15px;
+  position: relative;
+}
 
 
 
@@ -941,7 +948,7 @@ i.youtube-video-class{
   .nav-link:after{
     font-weight: bold;
   }
-  #imgPresentation:nth-child(odd) {
+  .imgPresentation:nth-child(odd) {
     flex-direction: row-reverse;
   }
   ul.navbar-nav{
