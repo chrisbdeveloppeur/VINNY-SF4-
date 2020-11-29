@@ -272,20 +272,23 @@
         function nextBeat(audio) {
             let nextAudio;
 
-            for (i = 0; i<allAudio.length; i++){
-                if (allAudio[i] === audio){
-                    if (audio === allAudio[allAudio.length-1]) {
-                        nextAudio = allAudio[0];
-                    }else {
-                        nextAudio = allAudio[i+1];
-                    }
-                }else {
-                    allAudio[i].currentTime = 0;
-                }
-            }
-
             if (audio != null) {
                 audio.currentTime = 0;
+                audio.pause();
+
+                for (i = 0; i<allAudio.length; i++){
+                    if (allAudio[i] === audio){
+                        if (audio === allAudio[allAudio.length-1]) {
+                            nextAudio = allAudio[0];
+                        }else {
+                            nextAudio = allAudio[i+1];
+                        }
+                    }else {
+                        allAudio[i].currentTime = 0;
+                        allAudio[i].pause();
+                    }
+                }
+
                 nextAudio.play();
             }else {
                 nextAudio = allAudio[1];
@@ -302,20 +305,23 @@
         function previousBeat(audio) {
             let prevAudio;
 
-            for (i = 0; i<allAudio.length; i++){
-                if (audio === allAudio[i]){
-                    if (audio === allAudio[0]) {
-                        prevAudio = allAudio[allAudio.length - 1];
-                    }else {
-                        prevAudio = allAudio[i - 1];
-                    }
-                }else {
-                    allAudio[i].currentTime = 0;
-                }
-            }
-
             if (audio != null){
                 audio.currentTime = 0;
+                audio.pause();
+
+                for (i = 0; i<allAudio.length; i++){
+                    if (audio === allAudio[i]){
+                        if (audio === allAudio[0]) {
+                            prevAudio = allAudio[allAudio.length - 1];
+                        }else {
+                            prevAudio = allAudio[i - 1];
+                        }
+                    }else {
+                        allAudio[i].currentTime = 0;
+                        allAudio[i].pause();
+                    }
+                }
+
                 prevAudio.play();
             }else {
                 prevAudio = allAudio[allAudio.length - 1];
