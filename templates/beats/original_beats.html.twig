@@ -20,192 +20,131 @@
 
 {% for beat in beat %}
 
-{% if (beat.iframe is null) and (beat.beatName) %}
+    {% if (beat.iframe is null) and (beat.beatName) %}
 
-    {% set i = ( i | default(0) ) + 1 %}
+        {% set i = ( i | default(0) ) + 1 %}
 
-    <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative;">
+        <div class="filterDiv {{ beat.genre }}" style="margin-bottom: 10px;position: relative;">
 
-        <div class="column is-hidden-tablet"  style="padding: 0; position: absolute;width: 100%;height: 100%;background:center / cover no-repeat
-                {% if beat.beatimagename %}url({{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }})
-                {% else %}url({{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }})
-                {% endif %};">
+            <div class="column is-hidden-tablet"  style="padding: 0; position: absolute;width: 100%;height: 100%;background:center / cover no-repeat
+                    {% if beat.beatimagename %}url({{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }})
+                    {% else %}url({{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }})
+                    {% endif %};">
 
-        </div>
+            </div>
 
-        <div class="column" style="position: relative">
+            <div class="column" style="position: relative">
 
-            <div class="columns has-text-centered align-items-center" style="background: rgba(0,0,0,.75)">
+                <div class="columns has-text-centered align-items-center" style="background: rgba(0,0,0,.75)">
 
-                <div class="is-hidden-mobile">
-                    <div class="column is-flex is-centered is-vcentered justify-content-center align-items-center">
-                        {% if beat.beatimagename %}
-                            <img height="110" width="110" src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration - {{ beat.titre }} - vinnyvixi beats" style="border-radius:3px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
-                        {% else %}
-                            <img height="110" width="110" src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="Illustration - {{ beat.titre }} - vinnyvixi beats" style="height: 110px;width: 100px;border-radius:3px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
-                        {% endif %}
-                    </div>
-                </div>
-
-                    <div class="column" style="position: relative">
-
-                        <div class="is-flex is-centered is-vcentered justify-content-center is-hidden-desktop" style="position: absolute; top: 0;right: 0;">
-                            <button type="button" class="btn btn-primary showModal" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
-                                <i class="fas fa-comment-dollar is-size-3" title="Licenses" style="color: white;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
-                            </button>
-                        </div>
-
-                        <div class="columns is-centered is-vcentered has-text-left has-text-light" style=" color: white;margin: 0;padding:0;height:50%">
-
-                            <div class="column" id="track-title{{ i }}">
-                                <label style="margin: auto"><strong class="has-text-info">{% trans %}Title{% endtrans %} : </strong></label>
-                                {% if beat.titre %}
-                                    {{ beat.titre }}
-                                {% else %}
-                                    N/C
-                                {% endif %}
-                            </div>
-
-                            <div class="column">
-                                <label style="margin: auto"><strong class="has-text-info">{% trans %}Prod. by{% endtrans %} : </strong></label>
-                                {% if beat.artiste %}
-                                    {{ beat.artiste }}
-                                {% else %}
-                                    Vinny Vixi
-                                {% endif %}
-                            </div>
-
-                            <div class="column">
-                                <label style="margin: auto"><strong class="has-text-info">BPM : </strong></label>
-                                {% if beat.bpm %}
-                                    {{ beat.bpm }}
-                                {% else %}
-                                    N/C
-                                {% endif %}
-                            </div>
-
-                            <div class="column">
-
-                                    <label style="margin: auto"><strong class="has-text-info">Genre : </strong></label>
-                                    {% if beat.genre %}
-                                        {{ beat.genre }}
-                                    {% else %}
-                                        N/C
-                                    {% endif %}
-
-                            </div>
-
-                            {% if (date(beat.createddate) > date('-15days')) and (beat.createddate != null) %}
-                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-touch newAnimation">{% trans %}New{% endtrans %}!</span>
-                                <span class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop newAnimationTouch">{% trans %}New{% endtrans %}!</span>
+                    <div class="is-hidden-mobile">
+                        <div class="column is-flex is-centered is-vcentered justify-content-center align-items-center">
+                            {% if beat.beatimagename %}
+                                <img height="110" width="110" src="{{ vich_uploader_asset(beat, 'beatImage') | imagine_filter('normal_size') }}" alt="Illustration - {{ beat.titre }} - vinnyvixi beats" style="border-radius:3px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
+                            {% else %}
+                                <img height="110" width="110" src="{{ asset('build/images/logo_vinny_letra_2.620e7de0.png') }}" alt="Illustration - {{ beat.titre }} - vinnyvixi beats" style="height: 110px;width: 100px;border-radius:3px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1); background: rgba(255,255,255,0.1)">
                             {% endif %}
+                        </div>
+                    </div>
 
-                            <div class="is-flex is-centered is-vcentered justify-content-center is-hidden-touch">
+                        <div class="column" style="position: relative">
 
+                            <div class="is-flex is-centered is-vcentered justify-content-center is-hidden-desktop" style="position: absolute; top: 0;right: 0;">
                                 <button type="button" class="btn btn-primary showModal" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
                                     <i class="fas fa-comment-dollar is-size-3" title="Licenses" style="color: white;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
                                 </button>
+                            </div>
+
+                            <div class="columns is-centered is-vcentered has-text-left has-text-light" style=" color: white;margin: 0;padding:0;height:50%">
+
+                                <div class="column" id="track-title{{ i }}">
+                                    <label style="margin: auto"><strong class="has-text-info">{% trans %}Title{% endtrans %} : </strong></label>
+                                    {% if beat.titre %}
+                                        {{ beat.titre }}
+                                    {% else %}
+                                        N/C
+                                    {% endif %}
+                                </div>
+
+                                <div class="column">
+                                    <label style="margin: auto"><strong class="has-text-info">{% trans %}Prod. by{% endtrans %} : </strong></label>
+                                    {% if beat.artiste %}
+                                        {{ beat.artiste }}
+                                    {% else %}
+                                        Vinny Vixi
+                                    {% endif %}
+                                </div>
+
+                                <div class="column">
+                                    <label style="margin: auto"><strong class="has-text-info">BPM : </strong></label>
+                                    {% if beat.bpm %}
+                                        {{ beat.bpm }}
+                                    {% else %}
+                                        N/C
+                                    {% endif %}
+                                </div>
+
+                                <div class="column">
+
+                                        <label style="margin: auto"><strong class="has-text-info">Genre : </strong></label>
+                                        {% if beat.genre %}
+                                            {{ beat.genre }}
+                                        {% else %}
+                                            N/C
+                                        {% endif %}
+
+                                </div>
+
+                                {% if (date(beat.createddate) > date('-15days')) and (beat.createddate != null) %}
+                                    <span class="tag has-text-black-bis has-text-weight-bold is-hidden-touch newAnimation">{% trans %}New{% endtrans %}!</span>
+                                    <span class="tag has-text-black-bis has-text-weight-bold is-hidden-desktop newAnimationTouch">{% trans %}New{% endtrans %}!</span>
+                                {% endif %}
+
+                                <div class="is-flex is-centered is-vcentered justify-content-center is-hidden-touch">
+
+                                    <button type="button" class="btn btn-primary showModal" data-toggle="modal" data-target=".bd-example-modal-lg" style="background: rgba(0,0,0,0);box-shadow: none;border: none">
+                                        <i class="fas fa-comment-dollar is-size-3" title="Licenses" style="color: white;text-shadow: rgb(0, 63, 255) 0 0 10px;"></i>
+                                    </button>
+
+                                </div>
 
                             </div>
 
+                            <div class="mainPlayerBeat">
+
+    {#                            <span class="icon is-medium loopBtn has-text-light">#}
+    {#                                <i id="" class="fas fa-lg fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>#}
+    {#                            </span>#}
+
+                                    <audio controls preload="metadata" title="{{ beat.titre }}" id="audio-{{ i }}" class="js-plyr beatFormBeatList is-centered align-items-end has-text-centered"
+                                           style="width: 100%;
+                                       height: 50%;
+                                       --plyr-color-main:rgba(0,0,0,0);
+                                       --plyr-audio-controls-background:rgba(0,0,0,0);
+                                       --plyr-range-thumb-background:rgb(255,255,255);
+                                       --plyr-audio-range-thumb-active-shadow-color:rgba(48,170,228,0.4);
+                                       --plyr-range-fill-background:rgba(48,170,228,1);
+                                       --plyr-audio-control-color:white;
+                                       --plyr-audio-control-color-hover:rgba(48,170,228,1);
+                                       --plyr-line-height:1;
+                                    ">
+
+                                        <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" />
+
+                                    </audio>
+
+                            </div>
+
+
                         </div>
 
-                        <div class="mainPlayerBeat">
-
-{#                            <span class="icon is-medium loopBtn has-text-light">#}
-{#                                <i id="" class="fas fa-lg fa-sync-alt" title="{% trans %}Loop{% endtrans %}"></i>#}
-{#                            </span>#}
-
-                                <audio controls preload="metadata" title="{{ beat.titre }}" id="audio-{{ i }}" class="js-plyr beatFormBeatList is-centered align-items-end has-text-centered"
-                                       style="width: 100%;
-                                   height: 50%;
-                                   --plyr-color-main:rgba(0,0,0,0);
-                                   --plyr-audio-controls-background:rgba(0,0,0,0);
-                                   --plyr-range-thumb-background:rgb(255,255,255);
-                                   --plyr-audio-range-thumb-active-shadow-color:rgba(48,170,228,0.4);
-                                   --plyr-range-fill-background:rgba(48,170,228,1);
-                                   --plyr-audio-control-color:white;
-                                   --plyr-audio-control-color-hover:rgba(48,170,228,1);
-                                   --plyr-line-height:1;
-                                ">
-
-                                    <source class="audio" src="{{ vich_uploader_asset(beat, 'beatFile') }}" />
-
-                                </audio>
-
-                        </div>
-
-
-                    </div>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-
-    <script>
-
-        {#let audio{{ i }} = document.getElementById("audio-{{ i }}");#}
-        {#let trackTitle{{ i }} = document.getElementById("track-title{{ i }}");#}
-        {#let trackTitlePlayer{{ i }} = document.querySelector("#track-title");#}
-        {#let barTime{{ i }} = document.querySelector("#timeLine");#}
-        {#let barCurrentTime{{ i }} = document.querySelector("#currentTime");#}
-        {#let currentTrackTime{{ i }} = document.querySelector("#current-time");#}
-        {#let trackTime{{ i }} = document.querySelector("#track-time");#}
-        {#let canvas{{ i }} = document.getElementById("canvas");#}
-
-
-        {#audio{{ i }}.addEventListener('play', function () {#}
-        {#    deployPlayer();#}
-        {#    trackTitlePlayer{{ i }}.innerHTML = "{% if beat.titre %}{{ beat.titre }}{% else %}{% trans %}Unknow{% endtrans %}{% endif %}";#}
-        {#    barProgessTime(audio{{ i }});#}
-        {#    visualizerCanvas(audio{{ i }});#}
-        {#    canvas{{ i }}.style.display = "flex";#}
-        {#});#}
-
-
-        {#  SCRIPT POUR PLAYER AUDIO HEADER   #}
-
-        //////////////////////////////////////////////////////////////////////////
-        ///////////////         BARE DE TEMPS PLAYER          ////////////////////
-        //////////////////////////////////////////////////////////////////////////
-        {#function barProgessTime(audio)#}
-        {#{#}
-
-        {#    String.prototype.toMMSS = function () {#}
-        {#        var sec_num = parseInt(this, 10); // don't forget the second param#}
-        {#        var hours   = Math.floor(sec_num / 3600);#}
-        {#        var minutes = Math.floor((sec_num - (hours * 3600)) / 60);#}
-        {#        var seconds = sec_num - (hours * 3600) - (minutes * 60);#}
-
-        {#        if (minutes < 10) {minutes = minutes;}#}
-        {#        if (seconds < 10) {seconds = "0"+seconds;}#}
-        {#        return minutes+':'+seconds;#}
-        {#    };#}
-
-        {#    audio.addEventListener('timeupdate', (event) =>#}
-        {#    {#}
-        {#        let currentTime = Math.trunc(audio.currentTime.toString());#}
-        {#        let Time = Math.trunc(audio.duration.toString());#}
-        {#        currentTrackTime{{ i }}.innerHTML = currentTime.toString().toMMSS();#}
-        {#        trackTime{{ i }}.innerHTML = Time.toString().toMMSS();#}
-        {#        barCurrentTime{{ i }}.style.width = audio.currentTime / (audio.duration / 100) + "%";#}
-        {#        cursor.style.left = audio.currentTime / (audio.duration / 100) + "%";#}
-        {#    });#}
-        {#}#}
-        //////////////////////////////////////////////////////////////////////////
-        //////////////////////////         FIN          //////////////////////////
-        //////////////////////////////////////////////////////////////////////////
-
-    </script>
-
-{% endif %}
-
-
-
-
+    {% endif %}
 
 
 {% endfor %}
