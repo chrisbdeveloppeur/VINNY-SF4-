@@ -34,7 +34,7 @@
 
     <div class="has-text-centered block-timeline is-hidden-touch">
 
-            <div class="has-text-weight-bold is-size-7-touch track-title">{% trans %}Track{% endtrans %}</div>
+            <a class="has-text-weight-bold is-size-7-touch has-text-dark track-title" href="#">{% trans %}Track{% endtrans %}</a>
 
             <div class="timeLine">
 {#                <div id="cursor"></div>#}
@@ -58,9 +58,11 @@
         </div>
     </div>
 
-    <div class="has-text-white is-size-6-touch is-hidden-desktop track-title track-title-mobile has-background-black-bis is-italic">
-        {% trans %}No title{% endtrans %}
-    </div>
+    <a class="has-text-light is-size-6-touch is-hidden-desktop track-title track-title-mobile has-background-black-bis is-italic">
+        {% trans %}Track{% endtrans %}
+    </a>
+
+
 
 </div>
 

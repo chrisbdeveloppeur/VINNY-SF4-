@@ -49,7 +49,7 @@ $message-header-radius: 0;
 {
   font-family: $family-code;
   font-weight: 400;
-  //font-size: 1.5rem;
+  scroll-behavior: smooth;
 }
 .grecaptcha-badge{
   z-index: 1;
@@ -625,6 +625,12 @@ div#player .btn-primary:hover{
   align-items: center;
   width: 30%;
 }
+
+div.anchor-audio{
+  top: -28vh;
+  position: absolute;
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////       FIN CSS POUR PLAYER        /////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -976,14 +982,14 @@ i.youtube-video-class{
   //  display: none;
   //}
 
-  //.plyr{
-  //  //--plyr-font-size-small : 40px;
-  //  //--plyr-control-icon-size: 50px;
-  //  //--plyr-range-thumb-height: 40px;
-  //  //--plyr-range-track-height: 10px;
-  //  //--plyr-range-thumb-active-shadow-width:10px;
-  //}
-  .plyr__volume{
+  .plyr{
+    //--plyr-font-size-small : 20px;
+    --plyr-control-icon-size: 25px;
+    --plyr-range-thumb-height: 15px;
+    --plyr-range-track-height: 5px;
+    --plyr-range-thumb-active-shadow-width:10px;
+  }
+  .plyr__volume, .plyr__time--current{
     display: none;
   }
 
