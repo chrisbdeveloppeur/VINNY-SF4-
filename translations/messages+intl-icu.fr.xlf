@@ -309,6 +309,22 @@
         <source>Elements containing an * object are required</source>
         <target>Les éléments contenant un * sont obligatoires</target>
       </trans-unit>
+      <trans-unit id="y4v.0VK" resname="Redirect to Shop">
+        <source>Redirect to Shop</source>
+        <target>Redirection en boutique</target>
+      </trans-unit>
+      <trans-unit id="zNNsCOw" resname="Shop Beatstars">
+        <source>Shop Beatstars</source>
+        <target>Boutique Beatstars</target>
+      </trans-unit>
+      <trans-unit id="KJuHNkN" resname="Redirect to shop">
+        <source>Redirect to shop</source>
+        <target>Redirection vers la boutique</target>
+      </trans-unit>
+      <trans-unit id="0Aqua3_" resname="Shop">
+        <source>Shop</source>
+        <target>Boutique</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
