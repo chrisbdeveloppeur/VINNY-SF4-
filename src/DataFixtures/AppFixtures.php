@@ -30,7 +30,7 @@ class AppFixtures extends Fixture
         $admin = new Admin();
         $admin->setRoles(['ROLE_ADMIN']);
         $admin->setEmail('christian.boungou@gmail.com');
-        $password = $this->encoder->encodePassword($admin, '121090cb.K4gur0');
+        $password = $this->encoder->encodePassword($admin, $superAdminPassword);
         $admin->setPassword($password);
         $manager->persist($admin);
 
